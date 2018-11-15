@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Seventeen package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-02-28 13:31:52+0000\n"
+"PO-Revision-Date: 2018-11-02 08:55:49+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,30 +28,30 @@ msgstr "Υποσέλιδο"
 msgid "Scroll down to content"
 msgstr "Κυλήστε προς τα κάτω στο περιεχόμενο."
 
-#: functions.php:167
+#: functions.php:170
 msgctxt "Theme starter content"
 msgid "Coffee"
 msgstr "Καφές"
 
-#: functions.php:163
+#: functions.php:166
 msgctxt "Theme starter content"
 msgid "Sandwich"
 msgstr "Σάντουιτς"
 
-#: functions.php:159
+#: functions.php:162
 msgctxt "Theme starter content"
 msgid "Espresso"
 msgstr "Εσπρέσσο"
 
-#: inc/custom-header.php:126
+#: inc/custom-header.php:128
 msgid "Pause background video"
 msgstr "Παύση βίντεο παρασκηνίου"
 
-#: inc/custom-header.php:125
+#: inc/custom-header.php:127
 msgid "Play background video"
 msgstr "Αναπαραγωγή βίντεο παρασκηνίου"
 
-#: inc/customizer.php:99
+#: inc/customizer.php:109
 msgid "When the two-column layout is assigned, the page title is in one column and content is in the other."
 msgstr "Όταν χρησιμοποιείται η διάταξη δύο στηλών, ο τίτλος της σελίδας είναι στη μία στήλη και το περιεχόμενο στην άλλη."
 
@@ -89,44 +89,44 @@ msgstr "Παρακαλούμε ορίστε ένα αρχείο εικονιδί
 msgid "Please define default parameters in the form of an array."
 msgstr "Παρακαλούμε ορίστε τις προεπιλεγμένες παραμέτρους με μορφή πίνακα."
 
-#: inc/customizer.php:131
+#: inc/customizer.php:143
 msgid "Select pages to feature in each area from the dropdowns. Add an image to a section by setting a featured image in the page editor. Empty sections will not be displayed."
 msgstr "Επιλέξτε τις σελίδες που θα εμφανίζονται σε κάθε περιοχή από τα πτυσσόμενα. Προσθέστε μια εικόνα σε μια ενότητα ορίζοντας μια επιλεγμένη εικόνα στην επεξεργασία σελίδας. Οι κενές ενότητες δεν θα εμφανιστούν."
 
-#: inc/customizer.php:59
+#: inc/customizer.php:64
 msgid "Custom"
 msgstr "Προσαρμοσμένο"
 
-#: inc/customizer.php:57
+#: inc/customizer.php:62
 msgid "Light"
 msgstr "Ανοιχτό"
 
-#: inc/custom-header.php:54
+#: inc/custom-header.php:56
 msgid "Default Header Image"
 msgstr "Προεπιλεγμένη Εικόνα Κεφαλίδας"
 
-#: inc/customizer.php:102 inc/customizer.php:158
+#: inc/customizer.php:112 inc/customizer.php:171
 msgid "Two Column"
 msgstr "Δύο στήλες"
 
-#: inc/customizer.php:101 inc/customizer.php:157
+#: inc/customizer.php:111 inc/customizer.php:170
 msgid "One Column"
 msgstr "Μία στήλη"
 
-#: inc/customizer.php:96
+#: inc/customizer.php:106
 msgid "Page Layout"
 msgstr "Διάταξη σελίδας"
 
-#: inc/customizer.php:81
+#: inc/customizer.php:89
 msgid "Theme Options"
 msgstr "Επιλογές θέματος"
 
-#: inc/customizer.php:55
+#: inc/customizer.php:60
 msgid "Color Scheme"
 msgstr "Χρωματικές επιλογές"
 
 #. translators: %d is the front page section number
-#: inc/customizer.php:130
+#: inc/customizer.php:142
 msgid "Front Page Section %d Content"
 msgstr "Περιεχόμενο ενότητας %d της αρχικής σελίδας"
 
@@ -135,22 +135,22 @@ msgstr "Περιεχόμενο ενότητας %d της αρχικής σελ�
 msgid "<span class=\"screen-reader-text\">Posted on</span> %s"
 msgstr "<span class=\"screen-reader-text\">Δημοσιεύτηκε στισ</span> %s"
 
-#: functions.php:348
+#: functions.php:351
 msgid "Footer 2"
 msgstr "Υποσέλιδο 2"
 
-#: functions.php:338 functions.php:350
+#: functions.php:341 functions.php:353
 msgid "Add widgets here to appear in your footer."
 msgstr "Προσθέστε εδώ μικροεφαρμογές για να εμφανιστούν στο υποσέλιδό σας."
 
-#: functions.php:336
+#: functions.php:339
 msgid "Footer 1"
 msgstr "Υποσέλιδο 1"
 
 #. Translators: If there are characters in your language that are not supported
 #. by Libre Franklin, translate this to 'off'. Do not translate into your own
 #. language.
-#: functions.php:277
+#: functions.php:280
 msgctxt "Libre Franklin font: on or off"
 msgid "on"
 msgstr "ενεργό"
@@ -159,7 +159,7 @@ msgstr "ενεργό"
 msgid "Reply"
 msgstr "Απάντηση"
 
-#: functions.php:64 functions.php:191
+#: functions.php:64 functions.php:194
 #: template-parts/navigation/navigation-top.php:12
 msgid "Top Menu"
 msgstr "Αρχικό μενού"
@@ -222,7 +222,7 @@ msgstr "Μενού"
 msgid "Skip to content"
 msgstr "Μετάβαση στο περιεχόμενο"
 
-#: functions.php:65 functions.php:202
+#: functions.php:65 functions.php:205
 msgid "Social Links Menu"
 msgstr "Μενού Συνδέσμων Κοινωνικών Δικτύων"
 
@@ -230,7 +230,7 @@ msgstr "Μενού Συνδέσμων Κοινωνικών Δικτύων"
 msgid "Comments are closed."
 msgstr "Τα σχόλια είναι απενεργοποιημένα."
 
-#. #-#-#-#-#  twentyseventeen.pot (Twenty Seventeen 1.6)  #-#-#-#-#
+#. #-#-#-#-#  twentyseventeen.pot (Twenty Seventeen 1.7)  #-#-#-#-#
 #. Author URI of the plugin/theme
 #: template-parts/footer/site-info.php:18
 msgid "https://wordpress.org/"
@@ -256,7 +256,7 @@ msgstr "Φαίνεται ότι δε βρέθηκε τίποτα σε αυτή �
 msgid "Previous page"
 msgstr "Προηγούμενη σελίδα"
 
-#: inc/customizer.php:58
+#: inc/customizer.php:63
 msgid "Dark"
 msgstr "Σκούρο"
 
@@ -280,7 +280,7 @@ msgid "One Reply to &ldquo;%s&rdquo;"
 msgstr "Μια σκέψη στο &ldquo;%s&rdquo;"
 
 #. translators: %s: Name of current post
-#: functions.php:378 template-parts/page/content-front-page-panels.php:45
+#: functions.php:381 template-parts/page/content-front-page-panels.php:45
 #: template-parts/page/content-front-page.php:42
 #: template-parts/post/content-audio.php:84
 #: template-parts/post/content-gallery.php:71
@@ -302,15 +302,15 @@ msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
 msgstr[0] "%1$s σχόλιο στο &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s σχόλια στο &ldquo;%2$s&rdquo;"
 
-#: inc/back-compat.php:39 inc/back-compat.php:52 inc/back-compat.php:68
+#: inc/back-compat.php:39 inc/back-compat.php:52 inc/back-compat.php:70
 msgid "Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again."
 msgstr "Το θέμα Twenty Seventeen απαιτεί τουλάχιστον την έκδοση 4.7 του WordPress. Χρησιμοποιείτε την έκδοση %s. Παρακαλούμε αναβαθμίστε και δοκιμάστε ξανά."
 
-#: functions.php:467
+#: functions.php:470
 msgid "Collapse child menu"
 msgstr "Σύμπτυξη υπο-μενού"
 
-#: functions.php:466
+#: functions.php:469
 msgid "Expand child menu"
 msgstr "Επέκταση υπό-μενού"
 
