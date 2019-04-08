@@ -52,6 +52,7 @@
                     if($this->wph->server_htaccess_config   === TRUE)                             
                         //\nRewriteCond %{ENV:REDIRECT_STATUS} !^$"
                         $processing_response['rewrite'] =  "\nRewriteCond %{REQUEST_URI} /+[^\.]+$"
+                                                            . "\nRewriteCond %{REQUEST_METHOD} !POST"
                                                             . "\nRewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]";
                                                             
                     if($this->wph->server_web_config   === TRUE)

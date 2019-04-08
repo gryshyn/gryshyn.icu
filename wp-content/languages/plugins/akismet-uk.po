@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Akismet Anti-Spam - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-11-12 20:01:34+0000\n"
+"PO-Revision-Date: 2019-01-14 18:45:15+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -547,7 +547,7 @@ msgstr "Підтримка Akismet"
 
 #: class.akismet-admin.php:273
 msgid "Cheatin&#8217; uh?"
-msgstr "Мухлюєш, а?!"
+msgstr "Хакер, чи що?"
 
 #: class.akismet-admin.php:343
 msgctxt "comments"
@@ -581,7 +581,7 @@ msgstr[2] "Зараз в черзі спаму <a href=\"%2$s\">%1$s комен�
 
 #: class.akismet-admin.php:373
 msgid "There&#8217;s nothing in your <a href='%s'>spam queue</a> at the moment."
-msgstr "На даний момент <a href='%1$s'>черга спаму</a> порожня."
+msgstr "На даний момент <a href='%s'>черга спаму</a> порожня."
 
 #: class.akismet-admin.php:587
 msgid "Akismet re-checked and cleared this comment."
@@ -883,11 +883,11 @@ msgstr "Ваша підписка для %s призупинена."
 
 #: views/start.php:49
 msgid "No worries! Get in touch and we&#8217;ll sort this out."
-msgstr "Не хвилюйтесь! Зв’яжіться з нами і ми з цим розберемося."
+msgstr "Не хвилюйтесь! Зв'яжіться з нами і ми з цим розберемося."
 
 #: views/start.php:50
 msgid "Contact Akismet support"
-msgstr "Зв’язатися з підтримкою Akismet"
+msgstr "Зв'язатися з підтримкою Akismet"
 
 #: views/start.php:75
 msgid "Activate Akismet"

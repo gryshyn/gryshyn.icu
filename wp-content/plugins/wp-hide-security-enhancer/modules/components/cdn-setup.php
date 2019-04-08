@@ -14,7 +14,7 @@
                     $this->module_settings[]                  =   array(
                                                                     'id'            =>  'cdn_url',
                                                                     'label'         =>  __('CDN Url',    'wp-hide-security-enhancer'),
-                                                                    'description'   =>  __('Some CDN providers (like stackpath.com ) replace site assets with custom url, enter here such url. Oterwise this option should stay empy.', 'wp-hide-security-enhancer'),
+                                                                    'description'   =>  __('Some CDN providers (like stackpath.com ) replace site assets with custom url, enter here such url. Otherwise this option should stay empty.', 'wp-hide-security-enhancer'),
                                                                     
                                                                     'input_type'    =>  'text',
                                                          

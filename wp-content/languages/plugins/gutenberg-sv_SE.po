@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Gutenberg - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-11-13 12:17:13+0000\n"
+"PO-Revision-Date: 2018-11-30 21:56:40+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,6 +11,116 @@ msgstr ""
 "Language: sv_SE\n"
 "Project-Id-Version: Plugins - Gutenberg - Stable (latest release)\n"
 
+#. translators: ARIA label for the Document sidebar tab, selected.
+#: languages/gutenberg-translations.php:1478 build/edit-post/index.js:12
+msgid "Document (selected)"
+msgstr "Dokument (valt)"
+
+#. translators: ARIA label for the Block sidebar tab, selected.
+#: languages/gutenberg-translations.php:1482 build/edit-post/index.js:12
+msgid "Block (selected)"
+msgstr "Block (valt)"
+
+#. Translators: Use this to specify the CSS font family for the default font
+#: lib/client-assets.php:1215
+msgctxt "CSS Font Family for Editor Font"
+msgid "Noto Serif"
+msgstr "Noto Serif"
+
+#: lib/client-assets.php:403
+msgctxt "Google Font Name and Variants"
+msgid "Noto Serif:400,400i,700,700i"
+msgstr "Noto Serif:400,400i,700,700i"
+
+#. translators: %d: number of words
+#: languages/gutenberg-translations.php:1847 build/editor/index.js:50
+msgid "%d word"
+msgid_plural "%d words"
+msgstr[0] "%d ord"
+msgstr[1] "%d ord"
+
+#: gutenberg.php:47
+msgid "https://wordpress.org/plugins/classic-editor/"
+msgstr "https://wordpress.org/plugins/classic-editor/"
+
+#: languages/gutenberg-translations.php:582 build/block-library/index.js:12
+msgid "Link Rel"
+msgstr "Länk-rel"
+
+#: languages/gutenberg-translations.php:579 build/block-library/index.js:12
+msgid "Link CSS Class"
+msgstr "CSS-klass för länk"
+
+#: languages/gutenberg-translations.php:1284 build/edit-post/index.js:12
+msgid "Top Toolbar"
+msgstr "Verktygsfält i toppen"
+
+#: languages/gutenberg-translations.php:713 build/block-library/index.js:12
+msgid "Mark the excerpt of this content. Content before this block will be shown in the excerpt on your archives page."
+msgstr "Markera utdraget för detta innehåll. Innehåll fram till detta block kommer att visas i utdragen på era arkivsidor."
+
+#: languages/gutenberg-translations.php:96 build/block-library/index.js:12
+msgid "Create content, and save it for you and other contributors to reuse across your site. Update the block, and the changes apply everywhere it’s used."
+msgstr "Skapa innehåll och spara det så att du och andra upphovsmän kan återanvända det överallt på er webbplats. Om blocket uppdateras kommer ändringarna att slå igenom överallt där blocket används."
+
+#: languages/gutenberg-translations.php:1461 build/edit-post/index.js:12
+msgid "Permalink"
+msgstr "Permalänk"
+
+#: languages/gutenberg-translations.php:1673 build/editor/index.js:50
+msgid "(selected block)"
+msgstr "(valt block)"
+
+#: languages/gutenberg-translations.php:1606 build/editor/index.js:50
+msgid "Block tools"
+msgstr "Blockverktyg"
+
+#: languages/gutenberg-translations.php:1815 build/editor/index.js:50
+msgid "Given your current role, you can only link a media file, you cannot upload."
+msgstr "Din nuvarande roll ger dig endast behörighet att länka till en mediafil. Du kan inte ladda upp filer."
+
+#: languages/gutenberg-translations.php:1824 build/editor/index.js:50
+msgid "Given your current role, you can only link a video, you cannot upload."
+msgstr "Din nuvarande roll ger dig endast behörighet att länka till en video. Du kan inte ladda upp filer."
+
+#: languages/gutenberg-translations.php:1818 build/editor/index.js:50
+msgid "Given your current role, you can only link an audio, you cannot upload."
+msgstr "Din nuvarande roll ger dig endast behörighet att länka till en ljudfil. Du kan inte ladda upp filer."
+
+#: languages/gutenberg-translations.php:1821 build/editor/index.js:50
+msgid "Given your current role, you can only link an image, you cannot upload."
+msgstr "Din nuvarande roll ger dig endast behörighet att länka till en bild. Du kan inte ladda upp filer."
+
+#: lib/class-wp-rest-autosaves-controller.php:162
+msgid "Sorry, you are not allowed to view revisions of this post."
+msgstr "Du har inte behörighet att se tidigare versioner av detta inlägg."
+
+#: languages/gutenberg-translations.php:1883 build/editor/index.js:50
+msgid "To edit the featured image, you need permission to upload media."
+msgstr "För att redigera den utvalda bilden behöver du behörighet att ladda upp mediafiler."
+
+#: languages/gutenberg-translations.php:1800 build/editor/index.js:50
+msgid "To edit this block, you need permission to upload media."
+msgstr "För att redigera detta block behöver du behörighet att ladda upp media."
+
+#: languages/gutenberg-translations.php:588 build/block-library/index.js:12
+msgid "This image has an empty alt attribute"
+msgstr "Denna bild har ett alt-attribut som är tomt."
+
+#: languages/gutenberg-translations.php:585 build/block-library/index.js:12
+msgid "This image has an empty alt attribute; its file name is %s"
+msgstr "Denna bild har ett alt-attribut som är tomt. Dess filnamn är %s"
+
+#. translators: %s: https://wordpress.org/plugins/classic-editor
+#: gutenberg.php:46
+msgid "The Block Editor requires JavaScript. Please try the <a href=\"%s\">Classic Editor plugin</a>."
+msgstr "Blockredigeraren behöver JavaScript för att fungera. Prova tillägget <a href=\"%s\">Classic Editor</a>."
+
+#. Translators: link is to current page specify classic editor.
+#: gutenberg.php:40
+msgid "The Block Editor requires JavaScript. You can use the <a href=\"%s\">Classic Editor</a>."
+msgstr "Blockredigeraren behöver JavaScript för att fungera. Du kan använda <a href=\"%s\">den klassiska redigeraren</a>."
+
 #. translators: Number of blocks updated.
 #: lib/register.php:550
 msgid "%s block updated."
@@ -18,6 +128,7 @@ msgid_plural "%s blocks updated."
 msgstr[0] "%s block uppdaterat."
 msgstr[1] "%s block uppdaterade."
 
+#. translators: Blocks not updated because they're locked.
 #: lib/register.php:552
 msgid "%s block not updated, somebody is editing it."
 msgid_plural "%s blocks not updated, somebody is editing them."
@@ -50,11 +161,6 @@ msgid_plural "%s blocks permanently deleted."
 msgstr[0] "%s block har raderats permanent."
 msgstr[1] "%s block har raderats permanent."
 
-#: lib/register.php:451
-msgctxt "Block"
-msgid "Add New"
-msgstr "Lägg till ny"
-
 #: lib/register.php:450
 msgctxt "add new on admin bar"
 msgid "Block"
@@ -75,13 +181,10 @@ msgctxt "post type general name"
 msgid "Blocks"
 msgstr "Block"
 
-#: languages/gutenberg-translations.php:2258 lib/client-assets.php:1353
+#: lib/client-assets.php:1002 languages/gutenberg-translations.php:2280
+#: build/editor/index.js:50
 msgid "Thumbnail"
 msgstr "Miniatyr"
-
-#: languages/gutenberg-translations.php:2111
-msgid "Type text or HTML"
-msgstr "Skriv text eller HTML"
 
 #: lib/register.php:453
 msgid "New Block"
@@ -103,30 +206,6 @@ msgstr "Visa block"
 msgid "Edit Block"
 msgstr "Redigera block"
 
-#: languages/gutenberg-translations.php:2334
-msgid "Link inserted"
-msgstr "Länk infogad"
-
-#: languages/gutenberg-translations.php:1557
-msgid "Align text left"
-msgstr "Justera text vänster"
-
-#: languages/gutenberg-translations.php:1563
-msgid "Align text right"
-msgstr "Justera text höger"
-
-#: languages/gutenberg-translations.php:1560
-msgid "Align text center"
-msgstr "Justera text centrerat"
-
-#: languages/gutenberg-translations.php:2114
-msgid "Start writing with text or HTML"
-msgstr "Börja skriva med text eller HTML"
-
-#: languages/gutenberg-translations.php:2328
-msgid "Warning: the link has been inserted but may have errors. Please test it."
-msgstr "Varning: Länken har infogats men kan ha fel. Testa den."
-
 #: lib/register.php:466
 msgid "Block scheduled."
 msgstr "Blocket har schemalagts."
@@ -143,10 +222,6 @@ msgstr "Blocket har publicerats privat."
 msgid "Block published."
 msgstr "Blocket har publicerats."
 
-#: lib/register.php:462
-msgid "Blocks list"
-msgstr "Blocklista"
-
 #: lib/register.php:461
 msgid "Blocks list navigation"
 msgstr "Navigering i blocklistan"
@@ -159,519 +234,552 @@ msgstr "Filtrera blocklistan"
 msgid "No blocks found in Trash."
 msgstr "Inga block hittades i papperskorgen."
 
-#: languages/gutenberg-translations.php:2267
-msgid "%s blocks selected."
-msgstr "%s block är markerade."
-
-#: languages/gutenberg-translations.php:2222 lib/client-assets.php:1356
+#: lib/client-assets.php:1005 languages/gutenberg-translations.php:2244
+#: build/editor/index.js:50
 msgid "Full Size"
 msgstr "Full storlek"
 
-#: languages/gutenberg-translations.php:2207
+#: languages/gutenberg-translations.php:2229 build/editor/index.js:50
 msgid "Link selected"
 msgstr "Länken är markerad"
 
-#: languages/gutenberg-translations.php:1735
+#: languages/gutenberg-translations.php:1730 build/editor/index.js:50
 msgid "Block icon"
 msgstr "Blockikon"
 
-#: languages/gutenberg-translations.php:744 lib/client-assets.php:1632
+#: lib/client-assets.php:1292 languages/gutenberg-translations.php:744
+#: build/block-library/index.js:12 build/editor/index.js:50
 msgid "Start writing or type / to choose a block"
 msgstr "Börja skriva eller tryck på ”/” för att välja ett block"
 
-#: languages/gutenberg-translations.php:740
-msgid "Empty block; start writing or type forward slash to choose a block"
-msgstr "Tomt block: Börja skriva eller tryck på snedstreck för att välja ett block"
-
-#: languages/gutenberg-translations.php:737
+#: languages/gutenberg-translations.php:737 build/block-library/index.js:12
 msgid "Paragraph block"
 msgstr "Textstyckesblock"
 
-#: languages/gutenberg-translations.php:719
+#: languages/gutenberg-translations.php:719 build/block-library/index.js:12
 msgid "Page Break"
 msgstr "Sidbrytning"
 
-#: languages/gutenberg-translations.php:677
-msgid "Stack on mobile"
-msgstr "Stapla på mobilen"
+#: languages/gutenberg-translations.php:1555 build/editor/index.js:50
+msgid "Align text center"
+msgstr "Centrerad text"
 
-#: languages/gutenberg-translations.php:464
-msgid "Drag images, upload new ones or select files from your library."
-msgstr "Dra en bilder, ladda upp nya eller välj befintliga filer i biblioteket."
+#: languages/gutenberg-translations.php:1552 build/editor/index.js:50
+msgid "Align text left"
+msgstr "Vänsterställd text"
 
-#: languages/gutenberg-translations.php:1808
-msgid "Drag an audio, upload a new one or select a file from your library."
-msgstr "Dra en in ljudfil, ladda upp en ny eller välj en befintlig fil i biblioteket."
+#: languages/gutenberg-translations.php:1558 build/editor/index.js:50
+msgid "Align text right"
+msgstr "Högerställd text"
 
-#: languages/gutenberg-translations.php:384
+#: lib/register.php:451
+msgctxt "Block"
+msgid "Add New"
+msgstr "Lägg till nytt"
+
+#: lib/register.php:462
+msgid "Blocks list"
+msgstr "Lista över block"
+
+#: languages/gutenberg-translations.php:385 build/block-library/index.js:12
 msgid "Drag a file, upload a new one or select a file from your library."
-msgstr "Dra en in fil, ladda upp en ny eller välj en befintlig fil i biblioteket."
+msgstr "Dra en fil, ladda upp en ny eller välj en fil från ditt bibliotek."
 
-#: languages/gutenberg-translations.php:1805
+#: languages/gutenberg-translations.php:1803 build/editor/index.js:50
 msgid "Drag a media file, upload a new one or select a file from your library."
-msgstr "Dra en in mediafil, ladda upp en ny eller välj en befintlig fil i biblioteket."
+msgstr "Dra in en mediafil, ladda upp en ny eller välj en fil från ditt mediabibliotek."
 
-#: languages/gutenberg-translations.php:1811
+#: languages/gutenberg-translations.php:1806 build/editor/index.js:50
+msgid "Drag an audio, upload a new one or select a file from your library."
+msgstr "Dra in en ljudfil, ladda upp en ny eller välj en fil från ditt mediabibliotek."
+
+#: languages/gutenberg-translations.php:1809 build/editor/index.js:50
 msgid "Drag an image, upload a new one or select a file from your library."
-msgstr "Dra en in bild, ladda upp en ny eller välj en befintlig fil i biblioteket."
+msgstr "Dra in en bild, ladda upp en ny eller välj en fil från ditt mediabibliotek."
 
-#: languages/gutenberg-translations.php:5
+#: languages/gutenberg-translations.php:466 build/block-library/index.js:12
+msgid "Drag images, upload new ones or select files from your library."
+msgstr "Dra bilder, ladda upp nya eller välj filer från ditt bibliotek."
+
+#: languages/gutenberg-translations.php:740 build/block-library/index.js:12
+msgid "Empty block; start writing or type forward slash to choose a block"
+msgstr "Tomt block. Börja skriva eller tryck på snedstreck för att välja ett block"
+
+#: languages/gutenberg-translations.php:2356 build/format-library/index.js:12
+msgid "Link inserted"
+msgstr "Länken har lagts in"
+
+#: languages/gutenberg-translations.php:680 build/block-library/index.js:12
+msgid "Stack on mobile"
+msgstr "Stapla på mobil"
+
+#: languages/gutenberg-translations.php:2124 build/editor/index.js:50
+msgid "Start writing with text or HTML"
+msgstr "Börja skriva in text eller HTML"
+
+#: languages/gutenberg-translations.php:2121 build/editor/index.js:50
+msgid "Type text or HTML"
+msgstr "Skriv in text eller HTML"
+
+#: languages/gutenberg-translations.php:2350 build/format-library/index.js:12
+msgid "Warning: the link has been inserted but may have errors. Please test it."
+msgstr "Varning: länken har lagts till men kan innehålla fel. Vänligen testa den."
+
+#: languages/gutenberg-translations.php:2289 build/editor/index.js:50
+msgid "%s block selected."
+msgid_plural "%s blocks selected."
+msgstr[0] "%s block markerad."
+msgstr[1] "%s block markerade."
+
+#: languages/gutenberg-translations.php:5 build/annotations/index.js:1
 msgid "Annotation"
 msgstr "Beskrivning"
 
-#: languages/gutenberg-translations.php:2450
+#: languages/gutenberg-translations.php:2472 build/editor/index.js:50
 msgctxt "blocks"
 msgid "Most Used"
 msgstr "Mest använda"
 
 #. translators: Button to fix block content
-#: languages/gutenberg-translations.php:2444
+#: languages/gutenberg-translations.php:2466 build/editor/index.js:50
 msgctxt "imperative verb"
 msgid "Resolve"
 msgstr "Lös upp"
 
-#: languages/gutenberg-translations.php:2437
+#: languages/gutenberg-translations.php:2459 build/editor/index.js:50
 msgctxt "font size name"
 msgid "Huge"
 msgstr "Enorm"
 
-#: languages/gutenberg-translations.php:2434
+#: languages/gutenberg-translations.php:2456 build/editor/index.js:50
 msgctxt "font size name"
 msgid "Large"
 msgstr "Stor"
 
-#: languages/gutenberg-translations.php:2431
+#: languages/gutenberg-translations.php:2453 build/editor/index.js:50
 msgctxt "font size name"
 msgid "Medium"
 msgstr "Medium"
 
-#: languages/gutenberg-translations.php:2428
+#: languages/gutenberg-translations.php:2450 build/editor/index.js:50
 msgctxt "font size name"
 msgid "Small"
 msgstr "Liten"
 
-#: languages/gutenberg-translations.php:2422
+#: languages/gutenberg-translations.php:2444 build/editor/index.js:50
+#: build/components/index.js:19
 msgctxt "font size name"
 msgid "Normal"
 msgstr "Normal"
 
-#: languages/gutenberg-translations.php:2418
+#: languages/gutenberg-translations.php:2440 build/components/index.js:19
 msgctxt "keyboard button"
 msgid "Enter"
 msgstr "Enter"
 
-#: languages/gutenberg-translations.php:2409
+#: languages/gutenberg-translations.php:2431
+#: build/list-reusable-blocks/index.js:1
 msgctxt "button label"
 msgid "Import"
 msgstr "Importera"
 
-#: languages/gutenberg-translations.php:2406
+#: languages/gutenberg-translations.php:2428 build/block-library/index.js:12
 msgctxt "button label"
 msgid "Download"
 msgstr "Ladda ner"
 
-#: languages/gutenberg-translations.php:2403
+#: languages/gutenberg-translations.php:2425 build/block-library/index.js:12
 msgctxt "button label"
 msgid "Embed"
 msgstr "Bädda in"
 
-#: languages/gutenberg-translations.php:2400
+#: languages/gutenberg-translations.php:2422 build/block-library/index.js:12
 msgctxt "block title"
 msgid "Embed"
 msgstr "Bädda in"
 
-#: languages/gutenberg-translations.php:2397
+#: languages/gutenberg-translations.php:2419 build/block-library/index.js:12
 msgctxt "block title"
 msgid "Classic"
 msgstr "Klassisk"
 
-#: languages/gutenberg-translations.php:2391
+#: languages/gutenberg-translations.php:2413 build/block-library/index.js:12
 msgctxt "block style"
 msgid "Large"
 msgstr "Stor"
 
-#: languages/gutenberg-translations.php:2388
+#: languages/gutenberg-translations.php:2410 build/block-library/index.js:12
 msgctxt "block style"
 msgid "Regular"
 msgstr "Vanlig"
 
-#: languages/gutenberg-translations.php:2383
+#: languages/gutenberg-translations.php:2405 build/block-library/index.js:12
 msgctxt "block style"
 msgid "Squared"
 msgstr "Kvadratisk"
 
-#: languages/gutenberg-translations.php:2380
+#: languages/gutenberg-translations.php:2402 build/block-library/index.js:12
 msgctxt "block style"
 msgid "Rounded"
 msgstr "Rundade hörn"
 
 #. translators: accessibility label for external links, where the argument is
 #. the link text
-#: languages/gutenberg-translations.php:2338
+#: languages/gutenberg-translations.php:2360 build/format-library/index.js:12
 msgid "%s (opens in a new tab)"
 msgstr "%s (öppnas i en ny flik)"
 
-#: languages/gutenberg-translations.php:2331
+#: languages/gutenberg-translations.php:2353 build/format-library/index.js:12
 msgid "Link edited."
 msgstr "Länk redigerad."
 
-#: languages/gutenberg-translations.php:2325
+#: languages/gutenberg-translations.php:2347 build/format-library/index.js:12
 msgid "Link removed."
 msgstr "Länk borttagen."
 
-#: languages/gutenberg-translations.php:2313
+#: languages/gutenberg-translations.php:2335 build/format-library/index.js:12
 msgid "media"
 msgstr "media"
 
-#: languages/gutenberg-translations.php:2044
+#: languages/gutenberg-translations.php:2054 build/editor/index.js:50
 msgid "Double-check your settings before publishing."
 msgstr "Dubbelkontrollera dina inställningar innan du publicerar."
 
-#: languages/gutenberg-translations.php:1953
+#: languages/gutenberg-translations.php:1966 build/editor/index.js:50
 msgid "Generating preview…"
 msgstr "Genererar förhandsgranskning…"
 
-#: languages/gutenberg-translations.php:1865
+#: languages/gutenberg-translations.php:1886 build/editor/index.js:50
 msgid "Edit or update the image"
 msgstr "Redigera eller uppdatera bilden"
 
-#: languages/gutenberg-translations.php:1817
+#: languages/gutenberg-translations.php:1827 build/editor/index.js:50
 msgid "Media"
 msgstr "Media"
 
-#. translators: ARIA label for the Block Settings sidebar tab, selected.
-#: languages/gutenberg-translations.php:1487
-msgid "Block settings (selected)"
-msgstr "Blockinställningar (valda)"
-
-#. translators: ARIA label for the Document Settings sidebar tab, selected.
-#: languages/gutenberg-translations.php:1479
-msgid "Document settings (selected)"
-msgstr "Dokumentinställningar (valda)"
-
-#: languages/gutenberg-translations.php:1351
+#: languages/gutenberg-translations.php:1353 build/edit-post/index.js:12
 msgid "Navigate to the nearest toolbar."
 msgstr "Navigera till närmaste verktygsfält."
 
-#: languages/gutenberg-translations.php:1269
+#: languages/gutenberg-translations.php:1271 build/edit-post/index.js:12
 msgid "Hide more tools & options"
 msgstr "Dölj mer verktyg och alternativ"
 
-#: languages/gutenberg-translations.php:1266
+#: languages/gutenberg-translations.php:1268 build/edit-post/index.js:12
 msgid "Show more tools & options"
 msgstr "Visa mer verktyg och alternativ"
 
-#: languages/gutenberg-translations.php:1242
+#. translators: accessibility text for the editor toolbar when Top Toolbar is
+#. off
+#: languages/gutenberg-translations.php:1244 build/edit-post/index.js:12
 msgid "Document tools"
 msgstr "Dokumentverktyg"
 
-#: languages/gutenberg-translations.php:1239
+#. translators: accessibility text for the editor toolbar when Top Toolbar is
+#. on
+#: languages/gutenberg-translations.php:1240 build/edit-post/index.js:12
 msgid "Document and block tools"
 msgstr "Dokument och blockverktyg"
 
-#: languages/gutenberg-translations.php:956
+#: languages/gutenberg-translations.php:956 build/block-library/index.js:12
 msgid "Embed a video from your media library or upload a new one."
 msgstr "Bädda in ett videoklipp från ditt mediebibliotek eller ladda upp ett nytt."
 
-#: languages/gutenberg-translations.php:917
+#: languages/gutenberg-translations.php:917 build/block-library/index.js:12
 msgid "Insert poetry. Use special spacing formats. Or quote song lyrics."
 msgstr "Lägg in poesi. Använd specialformat för radavstånd. Eller citera några rader ur en sångtext."
 
-#: languages/gutenberg-translations.php:836
+#: languages/gutenberg-translations.php:836 build/block-library/index.js:12
 msgid "Add white space between blocks and customize its height."
 msgstr "Lägg in ett tomt utrymme mellan block och anpassa dess höjd."
 
-#: languages/gutenberg-translations.php:824
+#: languages/gutenberg-translations.php:824 build/block-library/index.js:12
 msgid "Insert additional custom elements with a WordPress shortcode."
 msgstr "Lägg in andra anpassade element med hjälp av en WordPress-kortkod."
 
-#: languages/gutenberg-translations.php:806
+#: languages/gutenberg-translations.php:806 build/block-library/index.js:12
 msgid "Create a break between ideas or sections with a horizontal separator."
 msgstr "Skapa en avgränsning mellan olika idéer eller sektioner med hjälp av en horisontell avgränsare."
 
-#: languages/gutenberg-translations.php:797
+#: languages/gutenberg-translations.php:797 build/block-library/index.js:12
 msgid "Give quoted text visual emphasis. \"In quoting others, we cite ourselves.\" — Julio Cortázar"
 msgstr "Framhäv ett citat visuellt. ”När vi citerar andra, citerar vi oss själva.” — Julio Cortázar"
 
-#: languages/gutenberg-translations.php:787
+#: languages/gutenberg-translations.php:787 build/block-library/index.js:12
 msgid "Give special visual emphasis to a quote from your text."
 msgstr "Ge särskild visuell betoning på ett citat från din text."
 
-#: languages/gutenberg-translations.php:756
+#: languages/gutenberg-translations.php:756 build/block-library/index.js:12
 msgid "Start with the building block of all narrative."
 msgstr "Starta med byggstenen för alla berättelser."
 
-#: languages/gutenberg-translations.php:722
+#: languages/gutenberg-translations.php:722 build/block-library/index.js:12
 msgid "Separate your content into a multi-page experience."
 msgstr "Dela upp ditt innehåll till en upplevelse som sträcker sig över flera sidor."
 
-#: languages/gutenberg-translations.php:683
-msgid "Set media and words side-by-side media for a richer layout."
-msgstr "Placera media och ord vid sidan av varandra för en rikare layout."
-
-#: languages/gutenberg-translations.php:674
+#: languages/gutenberg-translations.php:677 build/block-library/index.js:12
 msgid "Media & Text Settings"
 msgstr "Media och textinställningar"
 
-#: languages/gutenberg-translations.php:656
+#: languages/gutenberg-translations.php:659 build/block-library/index.js:12
 msgid "Create a bulleted or numbered list."
 msgstr "Skapa en punktlista eller en numrerad lista."
 
-#: languages/gutenberg-translations.php:607
+#: languages/gutenberg-translations.php:622 build/block-library/index.js:12
 msgid "Display a list of your most recent comments."
 msgstr "Visa en lista med de senaste kommentarerna."
 
-#: languages/gutenberg-translations.php:586
+#: languages/gutenberg-translations.php:597 build/block-library/index.js:12
 msgid "Insert an image to make a visual statement."
 msgstr "Lägg in en bild för att berätta visuellt."
 
-#: languages/gutenberg-translations.php:549
+#: languages/gutenberg-translations.php:552 build/block-library/index.js:12
 msgid "Alternative text describes your image to people who can’t see it. Add a short description with its key details."
 msgstr "Den alternativa texten beskriver din bild för dem som inte kan se den. Lägg till en kort beskrivning av dess viktigaste detaljer."
 
-#: languages/gutenberg-translations.php:519
+#: languages/gutenberg-translations.php:521 build/block-library/index.js:12
 msgid "Add custom HTML code and preview it as you edit."
 msgstr "Lägg till anpassad HTML-kod och förhandsgranska det när du redigerar."
 
-#: languages/gutenberg-translations.php:507
+#: languages/gutenberg-translations.php:509 build/block-library/index.js:12
 msgid "Introduce new sections and organize content to help visitors (and search engines) understand the structure of your content."
 msgstr "Introducera nya sektioner och organisera innehåll för att hjälpa besökare (och sökmotorer) att förstå strukturen på ditt innehåll."
 
-#: languages/gutenberg-translations.php:479
+#: languages/gutenberg-translations.php:487 build/block-library/index.js:12
 msgid "Display multiple images in a rich gallery."
 msgstr "Visa flera bilder i ett fullödigt galleri."
 
-#: languages/gutenberg-translations.php:401
+#: languages/gutenberg-translations.php:402 build/block-library/index.js:12
 msgid "Add a link to a downloadable file."
 msgstr "Lägg till en länk till en nedladdningsbar fil."
 
-#: languages/gutenberg-translations.php:372
+#: languages/gutenberg-translations.php:373 build/block-library/index.js:12
 msgid "Embed videos, images, tweets, audio, and other content from external sources."
 msgstr "Bädda in videoklipp, bilder, tweets, ljud och annat innehåll från externa källor."
 
-#: languages/gutenberg-translations.php:713
-msgid "Want to show only an excerpt of this post on your homepage? Use this block to define where you want the separation."
-msgstr "Vill du bara visa ett utdrag av detta inlägg på din startsida? Använd detta block för att definiera var du vill ha gränsen."
+#: languages/gutenberg-translations.php:686 build/block-library/index.js:12
+msgid "Set media and words side-by-side for a richer layout."
+msgstr "Placera media och ord sida vid sida för en rikare layout."
 
-#: languages/gutenberg-translations.php:354
+#: languages/gutenberg-translations.php:355 build/block-library/index.js:12
 msgid "Resize for smaller devices"
 msgstr "Ändra storlek för mindre enheter"
 
-#: languages/gutenberg-translations.php:342
+#: languages/gutenberg-translations.php:343 build/block-library/index.js:12
 msgid "This embed may not preserve its aspect ratio when the browser is resized."
 msgstr "Denna inbäddning kanske inte behåller sitt bildförhållande om storleken på webbläsarens fönster ändras."
 
-#: languages/gutenberg-translations.php:339
+#: languages/gutenberg-translations.php:340 build/block-library/index.js:12
 msgid "This embed will preserve its aspect ratio when the browser is resized."
 msgstr "Denna inbäddning behåller sitt bildförhållande när storleken på webbläsarens fönster ändras."
 
-#: languages/gutenberg-translations.php:217
+#: languages/gutenberg-translations.php:218 build/block-library/index.js:12
 msgid "Add an image or video with a text overlay — great for headers."
 msgstr "Lägg till en bild eller videoklipp med ett textöverlägg – bra för rubriker."
 
-#: languages/gutenberg-translations.php:211
+#: languages/gutenberg-translations.php:212 build/block-library/index.js:12
 msgid "Drag an image or a video, upload a new one or select a file from your library."
 msgstr "Dra en bild eller ett videoklipp, ladda upp en ny eller välj en fil från ditt bibliotek."
 
-#: languages/gutenberg-translations.php:172
+#: languages/gutenberg-translations.php:172 build/block-library/index.js:12
 msgid "Display code snippets that respect your spacing and tabs."
 msgstr "Visa programkodsutdrag som respekterar dina mellanslag och tabbtecken."
 
-#: languages/gutenberg-translations.php:161
+#: languages/gutenberg-translations.php:161 build/block-library/index.js:12
 msgid "Use the classic WordPress editor."
 msgstr "Använd den klassiska WordPress-redigeraren."
 
-#: languages/gutenberg-translations.php:152
+#: languages/gutenberg-translations.php:152 build/block-library/index.js:12
 msgid "Display a list of all categories."
 msgstr "Visa en lista på alla kategorier."
 
-#: languages/gutenberg-translations.php:131
+#: languages/gutenberg-translations.php:131 build/block-library/index.js:12
 msgid "Prompt visitors to take action with a custom button."
 msgstr "Använd en anpassad knapp för att uppmana besökare att göra något."
 
-#: languages/gutenberg-translations.php:75
+#: languages/gutenberg-translations.php:75 build/block-library/index.js:12
 msgid "Embed a simple audio player."
 msgstr "Bädda in en enkel ljudspelare."
 
-#: languages/gutenberg-translations.php:247
+#: languages/gutenberg-translations.php:248 build/block-library/index.js:12
 msgid "Embed a tweet."
 msgstr "Bädda in en status från Twitter."
 
-#: languages/gutenberg-translations.php:283
+#: languages/gutenberg-translations.php:284 build/block-library/index.js:12
 msgid "Embed a YouTube video."
 msgstr "Bädda in en video från YouTube."
 
-#: languages/gutenberg-translations.php:333
+#: languages/gutenberg-translations.php:334 build/block-library/index.js:12
 msgid "Embed a Vimeo video."
 msgstr "Bädda in en video från Vimeo."
 
-#: languages/gutenberg-translations.php:336
+#: languages/gutenberg-translations.php:337 build/block-library/index.js:12
 msgid "Embed an Animoto video."
 msgstr "Bädda in en video från Animoto."
 
-#: languages/gutenberg-translations.php:223
+#: languages/gutenberg-translations.php:224 build/block-library/index.js:12
 msgid "Embed CollegeHumor content."
 msgstr "Bädda in innehåll från CollegeHumor."
 
-#: languages/gutenberg-translations.php:226
+#: languages/gutenberg-translations.php:227 build/block-library/index.js:12
 msgid "Embed a Dailymotion video."
 msgstr "Bädda in en video från Dailymotion."
 
-#: languages/gutenberg-translations.php:229
+#: languages/gutenberg-translations.php:230 build/block-library/index.js:12
 msgid "Embed Funny or Die content."
 msgstr "Bädda in innehåll från Funny or Die."
 
-#: languages/gutenberg-translations.php:244
+#: languages/gutenberg-translations.php:245 build/block-library/index.js:12
 msgid "Embed Meetup.com content."
 msgstr "Bädda in innehåll från Meetup.com."
 
-#: languages/gutenberg-translations.php:289
+#: languages/gutenberg-translations.php:290 build/block-library/index.js:12
 msgid "Embed a TED video."
 msgstr "Bädda in en video från TED."
 
-#: languages/gutenberg-translations.php:299
+#: languages/gutenberg-translations.php:300 build/block-library/index.js:12
 msgid "Embed a VideoPress video."
 msgstr "Bädda in en video från VideoPress."
 
-#: languages/gutenberg-translations.php:302
+#: languages/gutenberg-translations.php:303 build/block-library/index.js:12
 msgid "Embed a WordPress.tv video."
 msgstr "Bädda in en video från WordPress.tv."
 
-#: languages/gutenberg-translations.php:330
+#: languages/gutenberg-translations.php:331 build/block-library/index.js:12
 msgid "Embed Flickr content."
 msgstr "Bädda in innehåll från Flickr."
 
-#: languages/gutenberg-translations.php:323
+#: languages/gutenberg-translations.php:324 build/block-library/index.js:12
 msgid "Embed Spotify content."
 msgstr "Bädda in innehåll från Spotify."
 
-#: languages/gutenberg-translations.php:320
+#: languages/gutenberg-translations.php:321 build/block-library/index.js:12
 msgid "Embed SoundCloud content."
 msgstr "Bädda in innehåll från SoundCloud."
 
-#: languages/gutenberg-translations.php:280
+#: languages/gutenberg-translations.php:281 build/block-library/index.js:12
 msgid "Embed SmugMug content."
 msgstr "Bädda in innehåll från SmugMug."
 
-#: languages/gutenberg-translations.php:277
+#: languages/gutenberg-translations.php:278 build/block-library/index.js:12
 msgid "Embed Slideshare content."
 msgstr "Bädda in innehåll från Slideshare."
 
-#: languages/gutenberg-translations.php:274
+#: languages/gutenberg-translations.php:275 build/block-library/index.js:12
 msgid "Embed Scribd content."
 msgstr "Bädda in innehåll från Scribd."
 
-#: languages/gutenberg-translations.php:271
+#: languages/gutenberg-translations.php:272 build/block-library/index.js:12
 msgid "Embed Screencast content."
 msgstr "Bädda in innehåll från Screencast."
 
-#: languages/gutenberg-translations.php:268
+#: languages/gutenberg-translations.php:269 build/block-library/index.js:12
 msgid "Embed ReverbNation content."
 msgstr "Bädda in innehåll från ReverbNation."
 
-#: languages/gutenberg-translations.php:262
+#: languages/gutenberg-translations.php:263 build/block-library/index.js:12
 msgid "Embed Polldaddy content."
 msgstr "Bädda in innehåll från Polldaddy."
 
-#: languages/gutenberg-translations.php:256
+#: languages/gutenberg-translations.php:257 build/block-library/index.js:12
 msgid "Embed Mixcloud content."
 msgstr "Bädda in innehåll från Mixcloud."
 
-#: languages/gutenberg-translations.php:241
+#: languages/gutenberg-translations.php:242 build/block-library/index.js:12
 msgid "Embed Kickstarter content."
 msgstr "Bädda in innehåll från Kickstarter."
 
-#: languages/gutenberg-translations.php:238
+#: languages/gutenberg-translations.php:239 build/block-library/index.js:12
 msgid "Embed Issuu content."
 msgstr "Bädda in innehåll från Issuu."
 
-#: languages/gutenberg-translations.php:235
+#: languages/gutenberg-translations.php:236 build/block-library/index.js:12
 msgid "Embed Imgur content."
 msgstr "Bädda in innehåll från Imgur."
 
-#: languages/gutenberg-translations.php:232
+#: languages/gutenberg-translations.php:233 build/block-library/index.js:12
 msgid "Embed Hulu content."
 msgstr "Bädda in innehåll från Hulu."
 
-#: languages/gutenberg-translations.php:220
+#: languages/gutenberg-translations.php:221 build/block-library/index.js:12
 msgid "Embed Cloudup content."
 msgstr "Bädda in innehåll från Cloudup."
 
-#: languages/gutenberg-translations.php:317
-msgid "Embed a WordPress post."
-msgstr "Bädda in ett inlägg från WordPress."
-
-#: languages/gutenberg-translations.php:308
-msgid "Embed an Instagram post."
-msgstr "Bädda in ett inlägg från  Instagram."
-
-#: languages/gutenberg-translations.php:305
-msgid "Embed a Facebook post."
-msgstr "Bädda in ett inlägg från  Facebook."
-
-#: languages/gutenberg-translations.php:292
-msgid "Embed a Tumblr post."
-msgstr "Bädda in ett inlägg från  Tumblr."
-
-#: languages/gutenberg-translations.php:265
+#: languages/gutenberg-translations.php:266 build/block-library/index.js:12
 msgid "Embed a Reddit thread."
 msgstr "Bädda in en tråd från Reddit."
 
-#: languages/gutenberg-translations.php:259
+#: languages/gutenberg-translations.php:260 build/block-library/index.js:12
 msgid "Embed a Photobucket image."
 msgstr "Bädda in en bild från Photobucket."
 
-#: languages/gutenberg-translations.php:286
+#: languages/gutenberg-translations.php:287 build/block-library/index.js:12
 msgid "Embed Speaker Deck content."
 msgstr "Bädda in innehåll från Speaker Deck."
 
-#: lib/rest-api.php:330
+#: languages/gutenberg-translations.php:306 build/block-library/index.js:12
+msgid "Embed a Facebook post."
+msgstr "Bädda in ett inlägg från Facebook."
+
+#: languages/gutenberg-translations.php:293 build/block-library/index.js:12
+msgid "Embed a Tumblr post."
+msgstr "Bädda in ett inlägg från Tumblr."
+
+#: languages/gutenberg-translations.php:318 build/block-library/index.js:12
+msgid "Embed a WordPress post."
+msgstr "Bädda in ett inlägg från  WordPress."
+
+#: languages/gutenberg-translations.php:309 build/block-library/index.js:12
+msgid "Embed an Instagram post."
+msgstr "Bädda in ett inlägg från Instagram."
+
+#: lib/rest-api.php:335
 msgid "Page published privately."
 msgstr "Sidan har publicerats privat."
 
-#: languages/gutenberg-translations.php:1082
+#: languages/gutenberg-translations.php:1079 build/components/index.js:19
 msgid "Home/End"
 msgstr "Home/End"
 
-#: languages/gutenberg-translations.php:1085
+#: languages/gutenberg-translations.php:1082 build/components/index.js:19
 msgid "Go to the first (home) or last (end) day of a week."
 msgstr "Gå till veckans första (Home) eller sista (End) dag."
 
-#: languages/gutenberg-translations.php:2440
+#: languages/gutenberg-translations.php:2462 build/edit-post/index.js:12
 msgctxt "noun"
 msgid "View"
 msgstr "Visa"
 
-#: languages/gutenberg-translations.php:1826
+#: languages/gutenberg-translations.php:1836 build/editor/index.js:50
 msgid "Insert from URL"
 msgstr "Infoga från URL"
 
-#: languages/gutenberg-translations.php:1412
+#: languages/gutenberg-translations.php:1414 build/edit-post/index.js:12
 msgid "General"
 msgstr "Allmänt"
 
-#: languages/gutenberg-translations.php:1273
+#: languages/gutenberg-translations.php:1275 build/edit-post/index.js:12
 msgid "Options"
 msgstr "Alternativ"
 
-#: languages/gutenberg-translations.php:1829
+#: languages/gutenberg-translations.php:1839 build/editor/index.js:50
 msgid "Paste or type URL"
 msgstr "Klistra in eller skriv URL"
 
-#: languages/gutenberg-translations.php:1681
+#: languages/gutenberg-translations.php:1676 build/editor/index.js:50
 msgid "No blocks created yet."
 msgstr "Inga block skapade än."
 
-#: languages/gutenberg-translations.php:1418
+#: languages/gutenberg-translations.php:1420 build/edit-post/index.js:12
 msgid "Enable Tips"
 msgstr "Aktivera tips"
 
-#: languages/gutenberg-translations.php:2415
+#: languages/gutenberg-translations.php:2437 build/block-library/index.js:12
 msgctxt "editor button"
 msgid "Left to right"
 msgstr "Vänster till höger"
 
-#: lib/rest-api.php:332
+#: lib/rest-api.php:337
 msgid "Page scheduled."
 msgstr "Sidan har schemalagts."
 
@@ -679,52 +787,48 @@ msgstr "Sidan har schemalagts."
 msgid "Sorry, you are not allowed to view themes."
 msgstr "Tyvärr, du saknar behörighet att visa teman."
 
-#: languages/gutenberg-translations.php:1463
+#: languages/gutenberg-translations.php:1468 build/edit-post/index.js:12
 msgid "Click to change"
 msgstr "Klicka för att ändra"
 
-#: languages/gutenberg-translations.php:1441
+#: languages/gutenberg-translations.php:1443 build/edit-post/index.js:12
 msgid "Advanced Panels"
 msgstr "Avancerade paneler"
 
-#: languages/gutenberg-translations.php:1421
+#: languages/gutenberg-translations.php:1423 build/edit-post/index.js:12
 msgid "Document Panels"
 msgstr "Dokumentpaneler"
 
-#: languages/gutenberg-translations.php:1603
+#: languages/gutenberg-translations.php:1595 build/editor/index.js:50
 msgid "Styles"
 msgstr "Stilar"
 
-#: languages/gutenberg-translations.php:1291
+#: languages/gutenberg-translations.php:1293 build/edit-post/index.js:12
 msgid "Focus on one block at a time"
 msgstr "Fokusera på ett block i taget"
 
-#: languages/gutenberg-translations.php:1285
+#: languages/gutenberg-translations.php:1287 build/edit-post/index.js:12
 msgid "Access all block and document tools in a single place"
 msgstr "Få åtkomst till alla block- och dokumentverktyg på en enda plats"
 
-#: languages/gutenberg-translations.php:1336
+#: languages/gutenberg-translations.php:1338 build/edit-post/index.js:12
 msgid "Open the block navigation menu."
 msgstr "Öppna blocknavigationsmenyn."
 
-#: languages/gutenberg-translations.php:1297
+#: languages/gutenberg-translations.php:1299 build/edit-post/index.js:12
 msgid "Work without distraction"
 msgstr "Arbeta utan att distraheras"
 
-#: languages/gutenberg-translations.php:1678
+#: languages/gutenberg-translations.php:1670 build/editor/index.js:50
 msgid "Block Navigation"
 msgstr "Navigering mellan block"
 
 #. translators: %s: post type singular name
-#: languages/gutenberg-translations.php:2014
+#: languages/gutenberg-translations.php:2024 build/editor/index.js:50
 msgid "%s address"
 msgstr "Adress för %s"
 
-#: languages/gutenberg-translations.php:2056
-msgid "Save as Pending"
-msgstr "Spara som ”inväntar granskning”"
-
-#: languages/gutenberg-translations.php:2425
+#: languages/gutenberg-translations.php:2447 build/components/index.js:19
 msgctxt "font size name"
 msgid "Custom"
 msgstr "Anpassat"
@@ -733,232 +837,174 @@ msgstr "Anpassat"
 msgid "Limit result set to themes assigned one or more statuses."
 msgstr "Begränsa resultatet till teman som har tilldelats en eller flera statusar."
 
-#: lib/client-assets.php:400
+#: lib/client-assets.php:244
 msgid "M j, Y g:i a"
 msgstr "j M Y H:i"
 
-#: languages/gutenberg-translations.php:1148
+#: languages/gutenberg-translations.php:1148 build/components/index.js:19
 msgid "Minutes"
 msgstr "Minuter"
 
-#: languages/gutenberg-translations.php:1145
-msgid "Hours"
-msgstr "Timmar"
-
-#: languages/gutenberg-translations.php:1142
+#: languages/gutenberg-translations.php:1142 build/components/index.js:19
 msgid "Time"
 msgstr "Tid"
 
-#: languages/gutenberg-translations.php:1139
+#: languages/gutenberg-translations.php:1139 build/components/index.js:19
 msgid "Year"
 msgstr "År"
 
-#: languages/gutenberg-translations.php:1136
+#: languages/gutenberg-translations.php:1136 build/components/index.js:19
 msgid "Day"
 msgstr "Dag"
 
-#: languages/gutenberg-translations.php:1133
-msgid "December"
-msgstr "December"
-
-#: languages/gutenberg-translations.php:1130
-msgid "November"
-msgstr "November"
-
-#: languages/gutenberg-translations.php:1127
-msgid "October"
-msgstr "Oktober"
-
-#: languages/gutenberg-translations.php:1124
-msgid "September"
-msgstr "September"
-
-#: languages/gutenberg-translations.php:1121
-msgid "August"
-msgstr "Augusti"
-
-#: languages/gutenberg-translations.php:1118
-msgid "July"
-msgstr "Juli"
-
-#: languages/gutenberg-translations.php:1115
-msgid "June"
-msgstr "Juni"
-
-#: languages/gutenberg-translations.php:1112
-msgid "May"
-msgstr "Maj"
-
-#: languages/gutenberg-translations.php:1109
-msgid "April"
-msgstr "April"
-
-#: languages/gutenberg-translations.php:1106
-msgid "March"
-msgstr "Mars"
-
-#: languages/gutenberg-translations.php:1103
-msgid "February"
-msgstr "Februari"
-
-#: languages/gutenberg-translations.php:1100
-msgid "January"
-msgstr "Januari"
-
-#: languages/gutenberg-translations.php:1097
+#: languages/gutenberg-translations.php:1097 build/components/index.js:19
 msgid "Month"
 msgstr "Månad"
 
-#: languages/gutenberg-translations.php:1094
+#: languages/gutenberg-translations.php:1094 build/components/index.js:19
 msgid "Date"
 msgstr "Datum"
 
-#: languages/gutenberg-translations.php:1031
+#: languages/gutenberg-translations.php:1031 build/components/index.js:19
 msgid "Change color format"
 msgstr "Ändra färgformat"
 
-#: languages/gutenberg-translations.php:441
+#: languages/gutenberg-translations.php:443 build/block-library/index.js:12
+#: build/format-library/index.js:12
 msgid "Open in New Tab"
 msgstr "Öppna i ny flik"
 
-#: languages/gutenberg-translations.php:1025
+#: languages/gutenberg-translations.php:1025 build/components/index.js:19
 msgid "Color value in RGB"
 msgstr "Färgvärde i RGB"
 
-#: languages/gutenberg-translations.php:1043
+#: languages/gutenberg-translations.php:1040 build/components/index.js:19
 msgid "Click to Select"
 msgstr "Klicka för att välja"
 
-#: languages/gutenberg-translations.php:689
+#: languages/gutenberg-translations.php:689 build/block-library/index.js:12
 msgid "Media area"
 msgstr "Mediaområde"
 
-#: languages/gutenberg-translations.php:686
-msgid "Edit Media"
-msgstr "Redigera media"
-
-#: languages/gutenberg-translations.php:680
+#: languages/gutenberg-translations.php:683 build/block-library/index.js:12
 msgid "Media & Text"
 msgstr "Media och text"
 
-#: languages/gutenberg-translations.php:671
+#: languages/gutenberg-translations.php:674 build/block-library/index.js:12
 msgid "Show media on right"
 msgstr "Visa media till höger"
 
-#: languages/gutenberg-translations.php:668
+#: languages/gutenberg-translations.php:671 build/block-library/index.js:12
 msgid "Show media on left"
 msgstr "Visa media till vänster"
 
 #. translators: accessibility text
-#: languages/gutenberg-translations.php:1162
+#: languages/gutenberg-translations.php:1162 build/editor/index.js:50
+#: build/components/index.js:19
 msgid "(opens in a new tab)"
 msgstr "(öppnas i en ny flik)"
 
-#: languages/gutenberg-translations.php:1019
+#: languages/gutenberg-translations.php:1019 build/components/index.js:19
 msgid "RGB mode active"
 msgstr "RGB-läge aktiv"
 
-#: languages/gutenberg-translations.php:1052
+#: languages/gutenberg-translations.php:1049 build/components/index.js:19
 msgid "Navigating with a keyboard"
 msgstr "Navigera med ett tangentbord"
 
-#: languages/gutenberg-translations.php:1049
+#: languages/gutenberg-translations.php:1046 build/components/index.js:19
 msgid "Click the desired day to select it."
 msgstr "Klicka på önskad dag för att välja den."
 
-#: languages/gutenberg-translations.php:1028
+#: languages/gutenberg-translations.php:1028 build/components/index.js:19
 msgid "Color value in HSL"
 msgstr "Färgvärde i HSL"
 
-#: languages/gutenberg-translations.php:1022
+#: languages/gutenberg-translations.php:1022 build/components/index.js:19
 msgid "Color value in hexadecimal"
 msgstr "Färgvärde i hexadecimal"
 
-#: languages/gutenberg-translations.php:704
-msgid "Your site doesn't include support for this block."
+#: languages/gutenberg-translations.php:704 build/block-library/index.js:12
+msgid "Your site doesn’t include support for this block."
 msgstr "Din webbplats inkluderar inte stöd för detta block."
 
-#: languages/gutenberg-translations.php:1040
+#: languages/gutenberg-translations.php:1091 build/components/index.js:19
 msgid "Calendar Help"
 msgstr "Kalenderhjälp"
 
-#: languages/gutenberg-translations.php:1010
+#: languages/gutenberg-translations.php:1010 build/components/index.js:19
 msgid "Move the arrow left or right to change hue."
 msgstr "Flytta pilen åt vänster eller höger för att ändra nyans."
 
-#: languages/gutenberg-translations.php:1007
+#: languages/gutenberg-translations.php:1007 build/components/index.js:19
 msgid "Hue value in degrees, from 0 to 359."
 msgstr "Nyansvärde i grader, från 0 till 359."
 
-#: languages/gutenberg-translations.php:1004
+#: languages/gutenberg-translations.php:1004 build/components/index.js:19
 msgid "Alpha value, from 0 (transparent) to 1 (fully opaque)."
 msgstr "Alfa-värde, från 0 (transparent) till 1 (helt ogenomskinligt)."
 
-#: languages/gutenberg-translations.php:698
-msgid "Your site doesn't include support for the \"%s\" block. You can leave this block intact or remove it entirely."
+#: languages/gutenberg-translations.php:698 build/block-library/index.js:12
+msgid "Your site doesn’t include support for the \"%s\" block. You can leave this block intact or remove it entirely."
 msgstr "Din webbplats inkluderar inte stöd för block ”%s”. Du kan lämna detta block intakt eller ta bort det helt."
 
-#: languages/gutenberg-translations.php:692
-msgid "Your site doesn't include support for the \"%s\" block. You can leave this block intact, convert its content to a Custom HTML block, or remove it entirely."
-msgstr "Din webbplats inkludera inte stöd för block ”%s”. Du kan lämna detta block intakt, konvertera innehållet till ett anpassat HTML-block eller ta bort det helt."
-
-#: languages/gutenberg-translations.php:701
+#: languages/gutenberg-translations.php:701 build/block-library/index.js:12
 msgid "Unrecognized Block"
 msgstr "Okänd blocktyp"
 
-#: languages/gutenberg-translations.php:890
+#: languages/gutenberg-translations.php:890 build/block-library/index.js:12
 msgid "Stripes"
 msgstr "Ränder"
 
-#: languages/gutenberg-translations.php:1013
+#: languages/gutenberg-translations.php:1013 build/components/index.js:19
 msgid "Hue/saturation/lightness mode active"
 msgstr "Arbetsläget kulör/mättnadsgrad/ljushet är aktivt (hue/saturation/lightness)"
 
-#: languages/gutenberg-translations.php:1016
+#: languages/gutenberg-translations.php:1016 build/components/index.js:19
 msgid "Hex color mode active"
 msgstr "Hexadecimalt färgläget (RGB) är aktivt"
 
-#: languages/gutenberg-translations.php:1034
+#: languages/gutenberg-translations.php:1034 build/components/index.js:19
 msgid "Choose a shade"
 msgstr "Välj skugga"
 
-#: languages/gutenberg-translations.php:1037
+#: languages/gutenberg-translations.php:1037 build/components/index.js:19
 msgid "Use your arrow keys to change the base color. Move up to lighten the color, down to darken, left to increase saturation, and right to decrease saturation."
 msgstr "Använd piltangenterna för att ändra grundfärg. Flytta uppåt för ljusare färg, nedåt för mörkare, till vänster för ökad mättnadsgrad och till höger för att minska mättnaden."
 
-#: languages/gutenberg-translations.php:1055
+#: languages/gutenberg-translations.php:1052 build/components/index.js:19
 msgid "Select the date in focus."
 msgstr "Välj det datum som befinner sig i fokus."
 
-#: languages/gutenberg-translations.php:1058
+#: languages/gutenberg-translations.php:1055 build/components/index.js:19
 msgid "Left and Right Arrows"
 msgstr "Vänsterpil och och högerpil"
 
-#: languages/gutenberg-translations.php:1064
+#: languages/gutenberg-translations.php:1061 build/components/index.js:19
 msgid "Up and Down Arrows"
 msgstr "Uppåt- och nedåtpil"
 
-#: languages/gutenberg-translations.php:1073
+#: languages/gutenberg-translations.php:1070 build/components/index.js:19
 msgid "PgUp/PgDn"
 msgstr "PgUp/PgDn"
 
-#: languages/gutenberg-translations.php:1076
+#: languages/gutenberg-translations.php:1073 build/components/index.js:19
 msgid "Move backward (PgUp) or forward (PgDn) by one month."
 msgstr "Gå bakåt (PgUp) eller framåt (PgDn) en månad."
 
-#: languages/gutenberg-translations.php:1070
+#: languages/gutenberg-translations.php:1067 build/components/index.js:19
 msgid "Page Up and Page Down"
 msgstr "Page Up och Page Down"
 
-#: languages/gutenberg-translations.php:1079
+#: languages/gutenberg-translations.php:1076 build/components/index.js:19
 msgid "Home and End"
 msgstr "Home och End"
 
-#: lib/rest-api.php:333
+#: lib/rest-api.php:338
 msgid "Page updated."
 msgstr "Sidan har uppdaterats."
 
-#: lib/rest-api.php:329
+#: lib/rest-api.php:334
 msgid "Page published."
 msgstr "Sidan har publicerats."
 
@@ -978,261 +1024,317 @@ msgstr "Inläggsformat stöds."
 msgid "Whether the theme supports post thumbnails."
 msgstr "Om temat har stöd för miniatyrbilder eller inte."
 
-#: lib/rest-api.php:331
+#: lib/rest-api.php:336
 msgid "Page reverted to draft."
 msgstr "Sidan har återställts till utkastet."
 
-#: languages/gutenberg-translations.php:1067
+#: languages/gutenberg-translations.php:1064 build/components/index.js:19
 msgid "Move backward (up) or forward (down) by one week."
 msgstr "Gå bakåt (upp) eller framåt (ned) en vecka."
 
-#: languages/gutenberg-translations.php:1046
+#: languages/gutenberg-translations.php:1109 build/components/index.js:19
+msgid "April"
+msgstr "april"
+
+#: languages/gutenberg-translations.php:1121 build/components/index.js:19
+msgid "August"
+msgstr "augusti"
+
+#: languages/gutenberg-translations.php:1043 build/components/index.js:19
 msgid "Click the right or left arrows to select other months in the past or the future."
-msgstr "Klicka på höger- eller vänsterpilarna för att välja tidigare eller senare månader."
+msgstr "Klicka på höger- eller vänsterpilarna för att välja en annan månad i förfluten tid eller i framtiden."
 
-#: languages/gutenberg-translations.php:1061
+#: languages/gutenberg-translations.php:1133 build/components/index.js:19
+msgid "December"
+msgstr "december"
+
+#: languages/gutenberg-translations.php:1103 build/components/index.js:19
+msgid "February"
+msgstr "februari"
+
+#: languages/gutenberg-translations.php:1145 build/components/index.js:19
+msgid "Hours"
+msgstr "Öppettider"
+
+#: languages/gutenberg-translations.php:1100 build/components/index.js:19
+msgid "January"
+msgstr "januari"
+
+#: languages/gutenberg-translations.php:1118 build/components/index.js:19
+msgid "July"
+msgstr "juli"
+
+#: languages/gutenberg-translations.php:1115 build/components/index.js:19
+msgid "June"
+msgstr "juni"
+
+#: languages/gutenberg-translations.php:1106 build/components/index.js:19
+msgid "March"
+msgstr "mars"
+
+#: languages/gutenberg-translations.php:1112 build/components/index.js:19
+msgid "May"
+msgstr "maj"
+
+#: languages/gutenberg-translations.php:1058 build/components/index.js:19
 msgid "Move backward (left) or forward (right) by one day."
-msgstr "Gå tillbaka (vänster) eller framåt (höger) en dag."
+msgstr "Gå bakåt (vänster) eller framåt (höger) en dag."
 
-#: languages/gutenberg-translations.php:190
+#: languages/gutenberg-translations.php:1130 build/components/index.js:19
+msgid "November"
+msgstr "november"
+
+#: languages/gutenberg-translations.php:1127 build/components/index.js:19
+msgid "October"
+msgstr "oktober"
+
+#: languages/gutenberg-translations.php:2066 build/editor/index.js:50
+msgid "Save as Pending"
+msgstr "Spara som väntande"
+
+#: languages/gutenberg-translations.php:1124 build/components/index.js:19
+msgid "September"
+msgstr "september"
+
+#: languages/gutenberg-translations.php:692 build/block-library/index.js:12
+msgid "Your site doesn’t include support for the \"%s\" block. You can leave this block intact, convert its content to a Custom HTML block, or remove it entirely."
+msgstr "Din webbplats inkluderar inte stöd för blocket ”%s”. Du kan lämna detta block som det är, konvertera innehållet till ett block med anpassad HTML eller ta bort det helt."
+
+#: languages/gutenberg-translations.php:191 build/block-library/index.js:12
 msgid "Edit media"
 msgstr "Redigera media"
 
-#: languages/gutenberg-translations.php:208
+#: languages/gutenberg-translations.php:209 build/block-library/index.js:12
 msgid "Cover"
 msgstr "Omslag"
 
-#: languages/gutenberg-translations.php:193
+#: languages/gutenberg-translations.php:194 build/block-library/index.js:12
 msgid "Cover Settings"
 msgstr "Omslagsinställningar"
 
-#: languages/gutenberg-translations.php:1923
-msgid "All Posts"
-msgstr "Alla inlägg"
-
-#: languages/gutenberg-translations.php:1912
-msgid "View all posts"
-msgstr "Visa alla inlägg"
-
-#: languages/gutenberg-translations.php:1926
+#: languages/gutenberg-translations.php:1939 build/editor/index.js:50
 msgid "Take Over"
 msgstr "Ta över"
 
-#: languages/gutenberg-translations.php:2463
+#: languages/gutenberg-translations.php:2485 build/editor/index.js:50
 msgctxt "term"
 msgid "Search %s"
 msgstr "Sök %s"
 
-#: languages/gutenberg-translations.php:2210
+#: languages/gutenberg-translations.php:2232 build/editor/index.js:50
 msgid "Paste URL or type to search"
 msgstr "Klistra in URL eller skriv för att söka"
 
-#: languages/gutenberg-translations.php:2261 lib/client-assets.php:1354
+#: lib/client-assets.php:1003 languages/gutenberg-translations.php:2283
+#: build/editor/index.js:50
 msgid "Medium"
 msgstr "Medium"
 
-#: languages/gutenberg-translations.php:2035
+#: languages/gutenberg-translations.php:2045 build/editor/index.js:50
 msgid "Are you ready to schedule?"
 msgstr "Är du redo att schemalägga?"
 
-#: languages/gutenberg-translations.php:2466
+#: languages/gutenberg-translations.php:2488 build/editor/index.js:50
 msgctxt "term"
 msgid "Available %s"
 msgstr "Tillgänglig %s"
 
-#. translators: 'post' is generic and may be of any type (post, page, etc.).
-#: languages/gutenberg-translations.php:1916
+#. translators: %s: user's display name
+#: languages/gutenberg-translations.php:1933 build/editor/index.js:50
 msgid "%s is currently working on this post, which means you cannot make changes, unless you take over."
 msgstr "%s arbetar för närvarande med detta inlägg, vilket innebär att du inte kan göra ändringar, såvida du inte tar över."
 
-#. translators: 'post' is generic and may be of any type (post, page, etc.).
-#: languages/gutenberg-translations.php:1920
+#: languages/gutenberg-translations.php:1936 build/editor/index.js:50
 msgid "Another user is currently working on this post, which means you cannot make changes, unless you take over."
 msgstr "En annan användare arbetar för närvarande med detta inlägg, vilket innebär att du inte kan göra ändringar, såvida du inte tar över."
 
-#. translators: 'post' is generic and may be of any type (post, page, etc.).
-#: languages/gutenberg-translations.php:1909
-msgid "Another user now has editing control of this post. Don't worry, your changes up to this moment have been saved"
-msgstr "En annan användare har nu redigeringskontroll av detta inlägg. Oroa dig inte, dina ändringar fram till nu har sparats"
-
-#. translators: 'post' is generic and may be of any type (post, page, etc.).
-#: languages/gutenberg-translations.php:1905
-msgid "%s now has editing control of this post. Don't worry, your changes up to this moment have been saved"
-msgstr "%s har nu redigeringskontroll av detta inlägg. Oroa dig inte, dina ändringar fram till nu har sparats"
-
-#: languages/gutenberg-translations.php:1989
+#: languages/gutenberg-translations.php:1999 build/editor/index.js:50
 msgid "Always show pre-publish checks."
 msgstr "Visa alltid kontroller innan publicering sker."
 
-#: languages/gutenberg-translations.php:2108
+#: languages/gutenberg-translations.php:2118 build/editor/index.js:50
 msgid "Terms"
 msgstr "Termer"
 
-#: languages/gutenberg-translations.php:2038
+#: languages/gutenberg-translations.php:2048 build/editor/index.js:50
 msgid "Your work will be published at the specified date and time."
 msgstr "Ditt arbete kommer att publiceras på angivet datum och tid."
 
-#: languages/gutenberg-translations.php:1901
+#: languages/gutenberg-translations.php:1929 build/editor/index.js:50
+msgid "Another user now has editing control of this post. Don’t worry, your changes up to this moment have been saved."
+msgstr "En annan användare har nu redigeringskontroll av detta inlägg. Oroa dig inte, dina ändringar fram till nu har sparats."
+
+#. translators: %s: user's display name
+#: languages/gutenberg-translations.php:1926 build/editor/index.js:50
+msgid "%s now has editing control of this post. Don’t worry, your changes up to this moment have been saved."
+msgstr "%s har nu redigeringskontroll av detta inlägg. Oroa dig inte, dina ändringar fram till nu har sparats."
+
+#: languages/gutenberg-translations.php:1922 build/editor/index.js:50
 msgid "Avatar"
 msgstr "Profilbild"
 
-#: languages/gutenberg-translations.php:1594
+#: languages/gutenberg-translations.php:1589 build/editor/index.js:50
 msgid "Convert to HTML"
 msgstr "Konvertera till HTML"
 
-#: languages/gutenberg-translations.php:532
+#: languages/gutenberg-translations.php:535 build/block-library/index.js:12
 msgid "HTML"
 msgstr "HTML"
 
-#: languages/gutenberg-translations.php:781
+#: languages/gutenberg-translations.php:781 build/block-library/index.js:12
 msgid "Main Color"
 msgstr "Huvudfärg"
 
-#: languages/gutenberg-translations.php:155
+#: languages/gutenberg-translations.php:155 build/block-library/index.js:12
 msgid "Insert Media"
 msgstr "Infoga media"
 
-#: languages/gutenberg-translations.php:1541
+#: languages/gutenberg-translations.php:1536 build/edit-post/index.js:12
 msgid "This block can only be used once."
 msgstr "Detta block kan bara användas en gång."
 
-#: languages/gutenberg-translations.php:1620
+#: languages/gutenberg-translations.php:1612 build/editor/index.js:50
 msgid "This block contains unexpected or invalid content."
 msgstr "Detta block innehåller oväntat eller ogiltigt innehåll"
 
-#: languages/gutenberg-translations.php:1895
+#: languages/gutenberg-translations.php:1916 build/editor/index.js:50
 msgid "Someone else has taken over this post."
 msgstr "Någon annan har tagit över detta inlägg."
 
-#: languages/gutenberg-translations.php:1898
+#: languages/gutenberg-translations.php:1919 build/editor/index.js:50
 msgid "This post is already being edited."
 msgstr "Detta inlägg redigeras redan."
 
-#: languages/gutenberg-translations.php:529
+#: languages/gutenberg-translations.php:532 build/block-library/index.js:12
 msgid "Write HTML…"
 msgstr "Skriv HTML…"
 
-#: languages/gutenberg-translations.php:351
+#: languages/gutenberg-translations.php:352 build/block-library/index.js:12
 msgid "Media Settings"
 msgstr "Inställningar för media"
 
-#: languages/gutenberg-translations.php:1511
+#: languages/gutenberg-translations.php:1506 build/edit-post/index.js:12
 msgid "Exit Code Editor"
 msgstr "Avsluta kodredigerare"
 
-#: languages/gutenberg-translations.php:1165
+#: languages/gutenberg-translations.php:1165 build/components/index.js:19
 msgid "Reset font size"
 msgstr "Återställ typsnittstorlek"
 
-#: languages/gutenberg-translations.php:1174
+#: languages/gutenberg-translations.php:1174 build/components/index.js:19
 msgid "Custom font size"
 msgstr "Anpassa typsnittstorlek"
 
 #. translators: %s: post title
-#: gutenberg.php:287
+#: gutenberg.php:316
 msgid "Export &#8220;%s&#8221; as JSON"
 msgstr "Exportera ”%s” i JSON-format"
 
-#: languages/gutenberg-translations.php:199
+#: languages/gutenberg-translations.php:200 build/block-library/index.js:12
 msgid "Overlay"
 msgstr "Överlägg"
 
-#: languages/gutenberg-translations.php:202
+#: languages/gutenberg-translations.php:203 build/block-library/index.js:12
 msgid "Overlay Color"
 msgstr "Överläggsfärg"
 
-#: languages/gutenberg-translations.php:790
+#: languages/gutenberg-translations.php:790 build/block-library/index.js:12
 msgid "Solid Color"
 msgstr "Solid färg"
 
-#: languages/gutenberg-translations.php:1508
+#: languages/gutenberg-translations.php:1503 build/edit-post/index.js:12
 msgid "Editing Code"
 msgstr "Att redigera kod"
 
-#: languages/gutenberg-translations.php:1415
+#: languages/gutenberg-translations.php:1417 build/edit-post/index.js:12
 msgid "Enable Pre-publish Checks"
 msgstr "Aktivera kontroller före publicering"
 
 #. translators: Dialog title to fix block content
-#: languages/gutenberg-translations.php:1627
+#: languages/gutenberg-translations.php:1619 build/editor/index.js:50
 msgid "Resolve Block"
 msgstr "Lös upp blocket"
 
-#: languages/gutenberg-translations.php:2353
+#: languages/gutenberg-translations.php:2375
+#: build/list-reusable-blocks/index.js:1
 msgid "Import from JSON"
 msgstr "Importera från JSON"
 
-#: languages/gutenberg-translations.php:2356
+#: languages/gutenberg-translations.php:2378
+#: build/list-reusable-blocks/index.js:1
 msgid "Invalid JSON file"
 msgstr "Ogiltig JSON-fil"
 
-#: languages/gutenberg-translations.php:2365
+#: languages/gutenberg-translations.php:2387
+#: build/list-reusable-blocks/index.js:1
 msgid "Reusable block imported successfully!"
 msgstr "Återanvändbart block importerat utan problem."
 
-#: languages/gutenberg-translations.php:2347
+#: languages/gutenberg-translations.php:2369 build/keycodes/index.js:1
 msgid "Period"
 msgstr "Period"
 
-#: languages/gutenberg-translations.php:1590
+#: languages/gutenberg-translations.php:1585 build/editor/index.js:50
 msgid "Current"
 msgstr "Nuvarande"
 
 #. translators: The 'escape' key on a keyboard.
-#: languages/gutenberg-translations.php:1367
+#: languages/gutenberg-translations.php:1369 build/edit-post/index.js:12
 msgid "Escape"
 msgstr "Esc"
 
-#: languages/gutenberg-translations.php:1475
-msgid "%d Block"
-msgid_plural "%d Blocks"
+#. translators: %d: number of blocks
+#: languages/gutenberg-translations.php:1843 build/editor/index.js:50
+msgid "%d block"
+msgid_plural "%d blocks"
 msgstr[0] "%d block"
 msgstr[1] "%d block"
 
-#: languages/gutenberg-translations.php:899
+#: languages/gutenberg-translations.php:899 build/block-library/index.js:12
 msgid "Reusable Template"
 msgstr "Återanvändbar mall"
 
-#: languages/gutenberg-translations.php:902
+#: languages/gutenberg-translations.php:902 build/block-library/index.js:12
 msgid "Template block used as a container."
 msgstr "Mallblock som används som container."
 
-#: languages/gutenberg-translations.php:1566
+#: languages/gutenberg-translations.php:1561 build/editor/index.js:50
 msgid "Change Text Alignment"
 msgstr "Ändra textens justering"
 
-#: languages/gutenberg-translations.php:1584
+#: languages/gutenberg-translations.php:1579 build/editor/index.js:50
 msgid "Change Alignment"
 msgstr "Ändra justering"
 
-#: languages/gutenberg-translations.php:1587
+#: languages/gutenberg-translations.php:1582 build/editor/index.js:50
 msgid "After Conversion"
 msgstr "Efter konvertering"
 
-#: languages/gutenberg-translations.php:1726
+#: languages/gutenberg-translations.php:1721 build/editor/index.js:50
 msgid "Change type of %d block"
 msgid_plural "Change type of %d blocks"
 msgstr[0] "Ändra typ hos %d block"
 msgstr[1] "Ändra typ hos %d block"
 
-#: languages/gutenberg-translations.php:2344
+#: languages/gutenberg-translations.php:2366 build/keycodes/index.js:1
 msgid "Comma"
 msgstr "Komma"
 
-#: languages/gutenberg-translations.php:2350
+#: languages/gutenberg-translations.php:2372 build/keycodes/index.js:1
 msgid "Backtick"
 msgstr "Backtick (`)"
 
-#: languages/gutenberg-translations.php:2359
+#: languages/gutenberg-translations.php:2381
+#: build/list-reusable-blocks/index.js:1
 msgid "Invalid Reusable Block JSON file"
 msgstr "Ogiltig JSON-fil för återanvändbart block"
 
 #. translators: The forward-slash character. e.g. '/'.
-#: languages/gutenberg-translations.php:1389
+#: languages/gutenberg-translations.php:1391 build/edit-post/index.js:12
 msgid "Forward-slash"
 msgstr "Snedstreck"
 
-#: gutenberg.php:291
+#: gutenberg.php:320
 msgid "Export as JSON"
 msgstr "Exportera i JSON-format"
 
@@ -1244,175 +1346,160 @@ msgstr "Inga arkiv att visa."
 msgid "Search Blocks"
 msgstr "Sök block"
 
-#: languages/gutenberg-translations.php:2303
+#: languages/gutenberg-translations.php:2325 build/editor/index.js:50
 msgid "This file is empty."
 msgstr "Filen är tom."
 
-#: languages/gutenberg-translations.php:2297
+#: languages/gutenberg-translations.php:2319 build/editor/index.js:50
 msgid "Sorry, this file type is not supported here."
 msgstr "Denna filtyp stöds inte här."
 
-#: languages/gutenberg-translations.php:1548
+#: languages/gutenberg-translations.php:1543 build/edit-post/index.js:12
+#: build/editor/index.js:50
 msgid "Manage All Reusable Blocks"
 msgstr "Hantera alla återanvändbara block"
 
-#: languages/gutenberg-translations.php:1747
-msgid "Title"
-msgstr "Rubrik"
-
-#: languages/gutenberg-translations.php:1294
+#: languages/gutenberg-translations.php:1296 build/edit-post/index.js:12
 msgid "Fullscreen Mode"
 msgstr "Helskärmsläge"
 
-#: languages/gutenberg-translations.php:1236
+#: languages/gutenberg-translations.php:1236 build/edit-post/index.js:12
 msgid "View Posts"
 msgstr "Visa inlägg"
+
+#: languages/gutenberg-translations.php:1742 build/editor/index.js:50
+msgid "Title"
+msgstr "Titel"
 
 #: post-content.php:31
 msgid "Beautiful landscape"
 msgstr "Vackert landskap"
 
-#. Translators: If there are characters in your language that are not supported
-#. by Noto Serif, translate this to 'off'. Do not translate into your own
-#. language.
-#: lib/client-assets.php:768
-msgctxt "Noto Serif font: on or off"
-msgid "on"
-msgstr "on"
-
-#: languages/gutenberg-translations.php:1986
+#: languages/gutenberg-translations.php:1996 build/editor/index.js:50
 msgid "Close panel"
 msgstr "Stäng panel"
 
-#: languages/gutenberg-translations.php:878
+#: languages/gutenberg-translations.php:878 build/block-library/index.js:12
 msgid "Create"
 msgstr "Skapa"
 
-#: languages/gutenberg-translations.php:800
+#: languages/gutenberg-translations.php:800 build/block-library/index.js:12
 msgid "blockquote"
 msgstr "blockcitat"
 
-#: languages/gutenberg-translations.php:845
+#: languages/gutenberg-translations.php:845 build/block-library/index.js:12
 msgid "Subheading (deprecated)"
 msgstr "Underrubrik (taget ur bruk)"
 
-#: languages/gutenberg-translations.php:848
+#: languages/gutenberg-translations.php:848 build/block-library/index.js:12
 msgid "This block is deprecated. Please use the Paragraph block instead."
 msgstr "Detta block är taget ur bruk. Använd blocket ”Stycke” i stället."
 
-#: languages/gutenberg-translations.php:872
+#: languages/gutenberg-translations.php:872 build/block-library/index.js:12
 msgid "Column Count"
 msgstr "Kolumnantal"
 
-#: languages/gutenberg-translations.php:875
+#: languages/gutenberg-translations.php:875 build/block-library/index.js:12
 msgid "Row Count"
 msgstr "Radantal"
 
-#: languages/gutenberg-translations.php:908
+#: languages/gutenberg-translations.php:908 build/block-library/index.js:12
 msgid "Text Columns (deprecated)"
 msgstr "Textkolumner (taget ur bruk)"
 
-#: languages/gutenberg-translations.php:911
+#: languages/gutenberg-translations.php:911 build/block-library/index.js:12
 msgid "This block is deprecated. Please use the Columns block instead."
 msgstr "Detta block är taget ur bruk. Använd blocket ”Kolumner” i stället."
 
-#: languages/gutenberg-translations.php:938
-msgid "Poster Image"
-msgstr "Posterbild"
-
-#: languages/gutenberg-translations.php:941
-msgid "Select Poster Image"
-msgstr "Välj posterbild"
-
-#: languages/gutenberg-translations.php:948
+#: languages/gutenberg-translations.php:948 build/block-library/index.js:12
 msgid "Remove Poster Image"
 msgstr "Ta bort posterbild"
 
-#: languages/gutenberg-translations.php:1623
+#: languages/gutenberg-translations.php:1615 build/editor/index.js:50
 msgid "Convert to Classic Block"
 msgstr "Konvertera till Klassiskt block"
 
-#: languages/gutenberg-translations.php:96
-msgid "Create content, and save it to reuse across your site. Update the block, and the changes apply everywhere it’s used."
-msgstr "Skapa innehåll och spara det för återanvändning på olika platser på din webbplats. Om blocket uppdateras kommer ändringarna att genomföras överallt där det används."
+#: languages/gutenberg-translations.php:938 build/block-library/index.js:12
+msgid "Poster Image"
+msgstr "Bildposter"
 
-#: languages/gutenberg-translations.php:1282
-msgid "Unified Toolbar"
-msgstr "Gemensamt verktygsfält"
+#: languages/gutenberg-translations.php:941 build/block-library/index.js:12
+msgid "Select Poster Image"
+msgstr "Välj bildposter"
 
-#: languages/gutenberg-translations.php:1288
+#: languages/gutenberg-translations.php:1290 build/edit-post/index.js:12
 msgid "Spotlight Mode"
 msgstr "Spotlight-läge"
 
-#: languages/gutenberg-translations.php:1385
+#: languages/gutenberg-translations.php:1387 build/edit-post/index.js:12
 msgid "Change the block type after adding a new paragraph."
 msgstr "Ändra blocktypen när ett nytt stycke lagts till."
 
-#: languages/gutenberg-translations.php:1706
+#: languages/gutenberg-translations.php:1701 build/editor/index.js:50
 msgid "Insert After"
 msgstr "Infoga efter"
 
-#: languages/gutenberg-translations.php:1703
+#: languages/gutenberg-translations.php:1698 build/editor/index.js:50
 msgid "Insert Before"
 msgstr "Infoga före"
 
-#: languages/gutenberg-translations.php:959
+#: languages/gutenberg-translations.php:959 build/block-library/index.js:12
 msgid "movie"
 msgstr "film"
 
-#: languages/gutenberg-translations.php:1321
+#: languages/gutenberg-translations.php:1323 build/edit-post/index.js:12
 msgid "Display this help."
 msgstr "Visa denna hjälp."
 
-#: languages/gutenberg-translations.php:1309
+#: languages/gutenberg-translations.php:1311 build/edit-post/index.js:12
 msgid "Remove a link."
 msgstr "Ta bort en länk."
 
-#: languages/gutenberg-translations.php:1318
+#: languages/gutenberg-translations.php:1320 build/edit-post/index.js:12
 msgid "Global shortcuts"
 msgstr "Globala genvägar"
 
-#: languages/gutenberg-translations.php:1324
+#: languages/gutenberg-translations.php:1326 build/edit-post/index.js:12
 msgid "Save your changes."
 msgstr "Spara dina ändringar."
 
-#: languages/gutenberg-translations.php:1327
+#: languages/gutenberg-translations.php:1329 build/edit-post/index.js:12
 msgid "Undo your last changes."
 msgstr "Ångra dina senaste ändringar."
 
-#: languages/gutenberg-translations.php:1306
+#: languages/gutenberg-translations.php:1308 build/edit-post/index.js:12
 msgid "Convert the selected text into a link."
 msgstr "Konvertera den valda texten till en länk."
 
-#: languages/gutenberg-translations.php:2010
+#: languages/gutenberg-translations.php:2020 build/editor/index.js:50
 msgid "Tags help users and search engines navigate your site and find your content. Add a few keywords to describe your post."
 msgstr "Etiketter hjälper användare och sökmotorer att navigera runt på webbplatsen och hitta innehållet. Lägg till några nyckelord som beskriver inlägget."
 
-#: languages/gutenberg-translations.php:2007
+#: languages/gutenberg-translations.php:2017 build/editor/index.js:50
 msgid "Add tags"
 msgstr "Lägg till etiketter"
 
-#: languages/gutenberg-translations.php:2004
+#: languages/gutenberg-translations.php:2014 build/editor/index.js:50
 msgid "Apply the \"%1$s\" format."
 msgstr "Tillämpa formatet ”%1$s”."
 
-#: languages/gutenberg-translations.php:2001
+#: languages/gutenberg-translations.php:2011 build/editor/index.js:50
 msgid "Your theme uses post formats to highlight different kinds of content, like images or videos. Apply a post format to see this special styling."
 msgstr "Ditt tema använder inläggsformat för att markera olika typer av innehåll, t.ex. bilder eller video. Använd ett inläggsformat för att visa detta speciella utseende."
 
-#: languages/gutenberg-translations.php:1998
+#: languages/gutenberg-translations.php:2008 build/editor/index.js:50
 msgid "Use a post format"
 msgstr "Använd ett inläggsformat"
 
 #. translators: 1: Number of selected blocks, 2: Position of selected blocks
-#: languages/gutenberg-translations.php:1674
+#: languages/gutenberg-translations.php:1666 build/editor/index.js:50
 msgid "Move %1$d block from position %2$d down by one place"
 msgid_plural "Move %1$d blocks from position %2$d down by one place"
 msgstr[0] "Flytta %1$d block från position %2$d en plats nedåt"
 msgstr[1] "Flytta %1$d block från position %2$d en plats nedåt"
 
 #. translators: 1: Number of selected blocks, 2: Position of selected blocks
-#: languages/gutenberg-translations.php:1670
+#: languages/gutenberg-translations.php:1662 build/editor/index.js:50
 msgid "Move %1$d block from position %2$d up by one place"
 msgid_plural "Move %1$d blocks from position %2$d up by one place"
 msgstr[0] "Flytta %1$d block från position %2$d en plats uppåt"
@@ -1420,103 +1507,103 @@ msgstr[1] "Flytta %1$d block från position %2$d en plats uppåt"
 
 #. translators: 1: Type of block (i.e. Text, Image etc), 2: Position of
 #. selected block, 3: New position
-#: languages/gutenberg-translations.php:1656
+#: languages/gutenberg-translations.php:1648 build/editor/index.js:50
 msgid "Move %1$s block from position %2$d up to position %3$d"
 msgstr "Flytta blocket %1$s från position %2$d upp till position %3$d"
 
 #. translators: 1: Type of block (i.e. Text, Image etc), 2: Position of
 #. selected block, 3: New position
-#: languages/gutenberg-translations.php:1648
+#: languages/gutenberg-translations.php:1640 build/editor/index.js:50
 msgid "Move %1$s block from position %2$d down to position %3$d"
 msgstr "Flytta blocket %1$s från position %2$d ned till position %3$d"
 
-#: languages/gutenberg-translations.php:1379
+#: languages/gutenberg-translations.php:1381 build/edit-post/index.js:12
 msgid "Insert a new block before the selected block(s)."
 msgstr "Skjut in ett nytt block före det markerade bloket (blocken)."
 
-#: languages/gutenberg-translations.php:1376
+#: languages/gutenberg-translations.php:1378 build/edit-post/index.js:12
 msgid "Remove the selected block(s)."
 msgstr "Ta bort det markerade blocket (blocken)."
 
-#: languages/gutenberg-translations.php:1373
+#: languages/gutenberg-translations.php:1375 build/edit-post/index.js:12
 msgid "Duplicate the selected block(s)."
 msgstr "Duplicera markerat/markerade block."
 
-#: languages/gutenberg-translations.php:1370
+#: languages/gutenberg-translations.php:1372 build/edit-post/index.js:12
 msgid "Block shortcuts"
 msgstr "Kortkoder för block"
 
-#: languages/gutenberg-translations.php:1363
+#: languages/gutenberg-translations.php:1365 build/edit-post/index.js:12
 msgid "Clear selection."
 msgstr "Ta bort markeringen."
 
-#: languages/gutenberg-translations.php:1360
+#: languages/gutenberg-translations.php:1362 build/edit-post/index.js:12
 msgid "Select all text when typing. Press again to select all blocks."
 msgstr "Välj all text vid inmatning. Tryck en gång till för att välja alla block."
 
-#: languages/gutenberg-translations.php:1357
+#: languages/gutenberg-translations.php:1359 build/edit-post/index.js:12
 msgid "Selection shortcuts"
 msgstr "Genvägar för markering"
 
-#: languages/gutenberg-translations.php:1354
+#: languages/gutenberg-translations.php:1356 build/edit-post/index.js:12
 msgid "Switch between Visual Editor and Code Editor."
 msgstr "Växla mellan visuell redigerare och kodredigerare."
 
-#: languages/gutenberg-translations.php:1348
+#: languages/gutenberg-translations.php:1350 build/edit-post/index.js:12
 msgid "Navigate to the previous part of the editor (alternative)."
 msgstr "Gå till föregående del av redigeraren (alternativ)."
 
-#: languages/gutenberg-translations.php:1342
+#: languages/gutenberg-translations.php:1344 build/edit-post/index.js:12
 msgid "Navigate to the previous part of the editor."
 msgstr "Gå till föregående del av redigeraren."
 
-#: languages/gutenberg-translations.php:1333
+#: languages/gutenberg-translations.php:1335 build/edit-post/index.js:12
 msgid "Show or hide the settings sidebar."
 msgstr "Visa eller dölj sidopanelen för inställningar."
 
-#: languages/gutenberg-translations.php:1330
+#: languages/gutenberg-translations.php:1332 build/edit-post/index.js:12
 msgid "Redo your last undo."
 msgstr "Gör om den senast ångrade åtgärden."
 
-#: languages/gutenberg-translations.php:1315
+#: languages/gutenberg-translations.php:1317 build/edit-post/index.js:12
 msgid "Display the selected text in a monospaced font."
 msgstr "Visa den markerade texten i ett typsnitt med fast teckenbredd."
 
-#: languages/gutenberg-translations.php:1312
+#: languages/gutenberg-translations.php:1314 build/edit-post/index.js:12
 msgid "Add a strikethrough to the selected text."
 msgstr "Lägg till överstrykning för den markerade texten."
 
-#: languages/gutenberg-translations.php:1303
+#: languages/gutenberg-translations.php:1305 build/edit-post/index.js:12
 msgid "Underline the selected text."
 msgstr "Gör understrykning av den markerade texten."
 
-#: languages/gutenberg-translations.php:1300
+#: languages/gutenberg-translations.php:1302 build/edit-post/index.js:12
 msgid "Make the selected text italic."
 msgstr "Ändra den markerade texten till kursiv."
 
-#: languages/gutenberg-translations.php:1395
+#: languages/gutenberg-translations.php:1397 build/edit-post/index.js:12
 msgid "Make the selected text bold."
 msgstr "Ändra den markerade texten till fetstil."
 
-#: languages/gutenberg-translations.php:1392
+#: languages/gutenberg-translations.php:1394 build/edit-post/index.js:12
 msgid "Text formatting"
 msgstr "Textformatering"
 
-#: languages/gutenberg-translations.php:1382
+#: languages/gutenberg-translations.php:1384 build/edit-post/index.js:12
 msgid "Insert a new block after the selected block(s)."
 msgstr "Infoga ett nytt block efter markerat/markerade block."
 
-#: languages/gutenberg-translations.php:1399
-msgid "Keyboard Shortcuts"
-msgstr "Snabbkommandon"
-
-#: languages/gutenberg-translations.php:1345
+#: languages/gutenberg-translations.php:1347 build/edit-post/index.js:12
 msgid "Navigate to the next part of the editor (alternative)."
 msgstr "Navigera till nästa del av redigeraren (alternativ)."
 
-#: languages/gutenberg-translations.php:1339
+#: languages/gutenberg-translations.php:1341 build/edit-post/index.js:12
 msgid "Navigate to the next part of the editor."
 msgstr "Navigera till nästa del av redigeraren."
+
+#: languages/gutenberg-translations.php:1401 build/edit-post/index.js:12
+msgid "Keyboard Shortcuts"
+msgstr "Tangentbordsgenvägar"
 
 #: post-content.php:171
 msgid "Thanks for testing Gutenberg!"
@@ -1659,29 +1746,33 @@ msgstr "... och även detta, som är högerjusterat."
 msgid "What you are reading now is a <strong>text block</strong> the most basic block of all. The text block has its own controls to be moved freely around the post..."
 msgstr "Det du läser nu är ett <strong>textblock</strong>, det mest grundläggande blocket av alla. Textblocket har sina egna inställningar som gör att det fritt kan flyttas runt inom inlägget..."
 
-#: lib/client-assets.php:1483
+#: post-content.php:6
+msgid "The goal of this new editor is to make adding rich content to WordPress simple and enjoyable. This whole post is composed of <em>pieces of content</em>—somewhat similar to LEGO bricks—that you can move around and interact with. Move your cursor around and you&#8217;ll notice the different blocks light up with outlines and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the process of copying and pasting."
+msgstr "Målet för den nya redigeraren är att göra det enkelt och skojigt att lägga till rikt innehåll i WordPress. Hela inlägget består av <em>innehållsbitar</em>– ungefär som LEGO-bitar – som du kan flytta runt och interagera med. Om du flyttar din pekare märker du hur olika block markeras med ramar och pilar. Klicka på pilarna för att snabbt flytta blocken utan någon risk att förlora någonting medan du håller på att kopiera och klistra in."
+
+#: lib/client-assets.php:1134
 msgid "Welcome to the Gutenberg Editor"
 msgstr "Välkommen till Gutenberg-redigeraren"
 
-#: languages/gutenberg-translations.php:2412
+#: languages/gutenberg-translations.php:2434 build/block-library/index.js:12
 msgctxt "block name"
 msgid "More"
 msgstr "Mer"
 
-#: languages/gutenberg-translations.php:2394
+#: languages/gutenberg-translations.php:2416 build/block-library/index.js:12
 msgctxt "button to expand options"
 msgid "More"
 msgstr "Mer"
 
-#: languages/gutenberg-translations.php:2077
+#: languages/gutenberg-translations.php:2087 build/editor/index.js:50
 msgid "Are you sure you want to unschedule this post?"
 msgstr "Är du säker på att du vill ta bort schemaläggningen av detta inlägg?"
 
-#: languages/gutenberg-translations.php:545
+#: languages/gutenberg-translations.php:548 build/block-library/index.js:12
 msgid "Alt Text (Alternative Text)"
 msgstr "Alt-text (alternativ text)"
 
-#: languages/gutenberg-translations.php:93
+#: languages/gutenberg-translations.php:93 build/block-library/index.js:12
 msgid "Reusable Block"
 msgstr "Återanvändbart block"
 
@@ -1689,48 +1780,28 @@ msgstr "Återanvändbart block"
 msgid "Of Mountains &amp; Printing Presses"
 msgstr "Se vad du kan göra med Gutenberg"
 
-#: post-content.php:6
-msgid "The goal of this new editor is to make adding rich content to WordPress simple and enjoyable. This whole post is composed of <em>pieces of content</em>—somewhat similar to LEGO bricks—that you can move around and interact with. Move your cursor around and you&#8217;ll notice the different blocks light up with outlines and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the process of copying and pasting."
-msgstr "Målet för den nya redigeraren är att göra det enkelt och skojigt att lägga till rikt innehåll i WordPress. Hela inlägget består av <em>innehållsbitar</em>– ungefär som LEGO-bitar – som du kan flytta runt och interagera med. Om du flyttar din pekare märker du hur olika block markeras med ramar och pilar. Klicka på pilarna för att snabbt flytta blocken utan någon risk att förlora någonting medan du håller på att kopiera och klistra in."
-
-#: lib/compat.php:232
+#: lib/compat.php:214
 msgid "Edit in Gutenberg"
 msgstr "Redigera i Gutenberg"
 
-#: lib/class-wp-rest-search-controller.php:246
-msgid "URL to the object."
-msgstr "URL till objekt."
-
-#: lib/class-wp-rest-search-controller.php:240
-msgid "The title for the object."
-msgstr "Rubrik för objektet."
-
-#: lib/compat.php:233
+#: lib/compat.php:215
 msgid "Continue to Classic Editor"
 msgstr "Fortsätt till klassisk redigerare"
 
-#: lib/class-wp-rest-search-controller.php:149
-msgid "The page number requested is larger than the number of pages available."
-msgstr "Begärt sidnummer är högre än antalet tillgänliga sidor."
-
-#: lib/class-wp-rest-search-controller.php:234
-msgid "Unique identifier for the object."
-msgstr "Unik ID-sträng för objektet."
-
-#: lib/compat.php:213
+#: lib/compat.php:195
 msgid "This post was previously edited in Gutenberg. You can continue in the Classic Editor, but you may lose data and formatting."
 msgstr "Detta inlägg har tidigare redigerats i Gutenberg. Det går att fortsätta i den klassiska redigeraren, men du riskerar att förlora data och formatering."
 
-#: lib/compat.php:226
+#: lib/compat.php:208
 msgid "Because this post does not have revisions, you will not be able to revert any changes you make in the Classic Editor."
 msgstr "Eftersom detta inlägg inte har några sparade versioner kommer du inte att kunna rulla tillbaka några ändringar du gör i den klassiska redigeraren."
 
-#: languages/gutenberg-translations.php:2291
+#: languages/gutenberg-translations.php:2313 build/editor/index.js:50
 msgid "Untitled Reusable Block"
 msgstr "Block utan rubrik som kan återanvändas"
 
 #. translators: link to the post revisions page
-#: lib/compat.php:220
+#: lib/compat.php:202
 msgid "You can also <a href=\"%s\">browse previous revisions</a> and restore a version of the post before it was edited in Gutenberg."
 msgstr "Du kan också <a href=\"%s\">bläddra bland tidigare versioner</a> och återställa en version av inlägget innan den redigerades i Gutenberg."
 
@@ -1763,52 +1834,68 @@ msgstr "Begränsa resultatet till objekt av en eller flera undertyper för objek
 msgid "Invalid type parameter."
 msgstr "Ogiltig parametertyp."
 
-#: languages/gutenberg-translations.php:1799
+#: lib/class-wp-rest-search-controller.php:149
+msgid "The page number requested is larger than the number of pages available."
+msgstr "Antalet begärda sidor överskrider antalet tillgängliga sidor."
+
+#: lib/class-wp-rest-search-controller.php:240
+msgid "The title for the object."
+msgstr "Titeln för objektet."
+
+#: lib/class-wp-rest-search-controller.php:246
+msgid "URL to the object."
+msgstr "URL till objektet."
+
+#: lib/class-wp-rest-search-controller.php:234
+msgid "Unique identifier for the object."
+msgstr "Unik beteckning för objektet."
+
+#: languages/gutenberg-translations.php:1794 build/editor/index.js:50
 msgid "Reusable"
 msgstr "Återanvändbar"
 
-#: languages/gutenberg-translations.php:1738
+#: languages/gutenberg-translations.php:1733 build/editor/index.js:50
 msgid "(current %s: %s)"
 msgstr "(nuvarande %s: %s)"
 
-#: languages/gutenberg-translations.php:1709
+#: languages/gutenberg-translations.php:1704 build/editor/index.js:50
 msgid "Add to Reusable Blocks"
 msgstr "Lägg till i återanvändbara block"
 
-#: languages/gutenberg-translations.php:1844
+#: languages/gutenberg-translations.php:1862 build/editor/index.js:50
 msgid "(%s: %s)"
 msgstr "(%s: %s)"
 
-#: languages/gutenberg-translations.php:1715
+#: languages/gutenberg-translations.php:1710 build/editor/index.js:50
 msgid "Remove from Reusable Blocks"
 msgstr "Ta bort från återanvändbara block"
 
-#: languages/gutenberg-translations.php:695
+#: languages/gutenberg-translations.php:695 build/block-library/index.js:12
 msgid "Keep as HTML"
 msgstr "Behåll som HTML"
 
-#: languages/gutenberg-translations.php:106
+#: languages/gutenberg-translations.php:106 build/block-library/index.js:12
 msgid "Color Settings"
 msgstr "Färginställningar"
 
 #. translators: %s: title/name of the reusable block
-#: languages/gutenberg-translations.php:100
+#: languages/gutenberg-translations.php:100 build/block-library/index.js:12
 msgid "Reusable Block: %s"
 msgstr "Återanvändbart block: %s"
 
-#: languages/gutenberg-translations.php:348
+#: languages/gutenberg-translations.php:349 build/block-library/index.js:12
 msgid "Edit URL"
 msgstr "Ändra URL"
 
-#: languages/gutenberg-translations.php:601
+#: languages/gutenberg-translations.php:616 build/block-library/index.js:12
 msgid "Display Date"
 msgstr "Visa datum"
 
-#: languages/gutenberg-translations.php:589
+#: languages/gutenberg-translations.php:604 build/block-library/index.js:12
 msgid "Display Excerpt"
 msgstr "Visa utdrag"
 
-#: gutenberg.php:71
+#: gutenberg.php:92
 msgid "Support"
 msgstr "Support"
 
@@ -1836,81 +1923,78 @@ msgstr "Välj dag"
 msgid "Select Month"
 msgstr "Välj månad"
 
-#: gutenberg.php:73
+#: gutenberg.php:94
 msgid "https://wordpress.org/support/plugin/gutenberg"
 msgstr "https://wordpress.org/support/plugin/gutenberg"
 
-#: languages/gutenberg-translations.php:34
+#: languages/gutenberg-translations.php:34 build/block-library/index.js:12
 msgid "Audio Settings"
 msgstr "Ljudinställningar"
 
-#: languages/gutenberg-translations.php:929
+#: languages/gutenberg-translations.php:929 build/block-library/index.js:12
 msgid "Video Settings"
 msgstr "Videoinställningar"
 
-#: languages/gutenberg-translations.php:8
+#: languages/gutenberg-translations.php:8 build/api-fetch/index.js:1
 msgid "The response is not a valid JSON response."
 msgstr "Svaret är inget giltigt JSON-svar."
 
-#: lib/rest-api.php:265
+#: lib/rest-api.php:270
 msgid "The current user can post HTML markup and JavaScript."
 msgstr "Den aktuella användaren kan publicera HTML-kod och JavaScript."
 
 #: languages/gutenberg-translations.php:25
 #: packages/block-library/src/archives/index.php:35
+#: build/block-library/index.js:12
 msgid "Archives"
 msgstr "Arkiv"
 
-#: languages/gutenberg-translations.php:14
+#: languages/gutenberg-translations.php:14 build/block-library/index.js:12
 msgid "Archives Settings"
 msgstr "Arkivinställningar"
 
-#: languages/gutenberg-translations.php:22
+#: languages/gutenberg-translations.php:22 build/block-library/index.js:12
 msgid "Show Post Counts"
 msgstr "Visa antal inlägg"
 
-#: languages/gutenberg-translations.php:18
+#: languages/gutenberg-translations.php:18 build/block-library/index.js:12
 msgid "Display as Dropdown"
 msgstr "Visa som rullgardinsmeny"
 
-#: languages/gutenberg-translations.php:46
-msgid "Preload"
-msgstr "Ladda i förväg"
-
-#: languages/gutenberg-translations.php:50
+#: languages/gutenberg-translations.php:50 build/block-library/index.js:12
 msgid "Auto"
 msgstr "Auto"
 
-#: languages/gutenberg-translations.php:205
+#: languages/gutenberg-translations.php:206 build/block-library/index.js:12
 msgid "Background Opacity"
 msgstr "Bakgrundens opacitet"
 
-#: languages/gutenberg-translations.php:595
+#: languages/gutenberg-translations.php:610 build/block-library/index.js:12
 msgid "Latest Comments Settings"
 msgstr "Inställningar för senaste kommentarerna"
 
-#: languages/gutenberg-translations.php:598
+#: languages/gutenberg-translations.php:613 build/block-library/index.js:12
 msgid "Display Avatar"
 msgstr "Visa profilbild"
 
-#: languages/gutenberg-translations.php:604
+#: languages/gutenberg-translations.php:619 build/block-library/index.js:12
 msgid "Latest Comments"
 msgstr "Senaste kommentarerna"
 
-#: languages/gutenberg-translations.php:610
+#: languages/gutenberg-translations.php:625 build/block-library/index.js:12
 msgid "recent comments"
 msgstr "senaste kommentarerna"
 
-#: languages/gutenberg-translations.php:932
+#: languages/gutenberg-translations.php:932 build/block-library/index.js:12
 msgid "Muted"
 msgstr "Tystad"
 
 #. translators: accessibility text for the publish landmark region.
-#: languages/gutenberg-translations.php:1403
+#: languages/gutenberg-translations.php:1405 build/edit-post/index.js:12
 msgid "Editor publish"
 msgstr "Redigerarens publicera-område"
 
-#: languages/gutenberg-translations.php:592
+#: languages/gutenberg-translations.php:607 build/block-library/index.js:12
 msgid "Number of Comments"
 msgstr "Antal kommentarer"
 
@@ -1920,277 +2004,271 @@ msgstr "Antal kommentarer"
 msgid "%1$s on %2$s"
 msgstr "%1$s on %2$s"
 
-#: languages/gutenberg-translations.php:28
+#: languages/gutenberg-translations.php:28 build/block-library/index.js:12
 msgid "Display a monthly archive of your posts."
 msgstr "Visa ett månadsarkiv på dina inlägg."
 
-#: languages/gutenberg-translations.php:407
+#: languages/gutenberg-translations.php:46 build/block-library/index.js:12
+msgid "Preload"
+msgstr "Förhandsladda"
+
+#: languages/gutenberg-translations.php:408 build/block-library/index.js:12
 msgid "pdf"
 msgstr "pdf"
 
-#: languages/gutenberg-translations.php:404
+#: languages/gutenberg-translations.php:405 build/block-library/index.js:12
 msgid "document"
 msgstr "dokument"
 
-#: languages/gutenberg-translations.php:398
+#: languages/gutenberg-translations.php:399 build/block-library/index.js:12
 msgid "Copy URL"
 msgstr "Kopiera URL"
 
-#: languages/gutenberg-translations.php:1796
+#: languages/gutenberg-translations.php:1791 build/editor/index.js:50
 msgid "Available block types"
 msgstr "Tillgängliga blocktyper"
 
-#: languages/gutenberg-translations.php:2264 lib/client-assets.php:1355
+#: lib/client-assets.php:1004 languages/gutenberg-translations.php:2286
+#: build/editor/index.js:50
 msgid "Large"
 msgstr "Stor"
 
-#: languages/gutenberg-translations.php:535
+#: languages/gutenberg-translations.php:538 build/block-library/index.js:12
 msgid "Custom URL"
 msgstr "Anpassad URL"
 
-#: languages/gutenberg-translations.php:447
+#: languages/gutenberg-translations.php:449 build/block-library/index.js:12
 msgid "Show Download Button"
 msgstr "Visa nedladdningsknapp"
 
-#: languages/gutenberg-translations.php:381
+#: languages/gutenberg-translations.php:382 build/block-library/index.js:12
+#: build/list-reusable-blocks/index.js:1
 msgid "File"
 msgstr "Fil"
 
-#: languages/gutenberg-translations.php:387
+#: languages/gutenberg-translations.php:388 build/block-library/index.js:12
 msgid "Edit file"
 msgstr "Redigera fil"
 
-#: languages/gutenberg-translations.php:390
+#: languages/gutenberg-translations.php:391 build/block-library/index.js:12
 msgid "Write file name…"
 msgstr "Skriv filnamn…"
 
-#: languages/gutenberg-translations.php:175
+#: languages/gutenberg-translations.php:175 build/block-library/index.js:12
 msgid "Column"
 msgstr "Kolumn"
 
-#: languages/gutenberg-translations.php:1732
+#: languages/gutenberg-translations.php:1727 build/editor/index.js:50
 msgid "Transform To:"
 msgstr "Omvandla till:"
 
-#: languages/gutenberg-translations.php:1690
+#: languages/gutenberg-translations.php:1685 build/editor/index.js:50
 msgid "Remove Block"
 msgstr "Ta bort block"
 
-#: languages/gutenberg-translations.php:413
+#: languages/gutenberg-translations.php:414 build/block-library/index.js:12
 msgid "The download button is hidden."
 msgstr "Nedladdningsknappen är dold."
 
-#: languages/gutenberg-translations.php:1196
-msgid "Close dialog"
-msgstr "Stäng dialog"
-
-#: languages/gutenberg-translations.php:431
+#: languages/gutenberg-translations.php:433 build/block-library/index.js:12
 msgid "Text Link Settings"
 msgstr "Inställningar för länktext"
 
-#: languages/gutenberg-translations.php:444
+#: languages/gutenberg-translations.php:446 build/block-library/index.js:12
 msgid "Download Button Settings"
 msgstr "Inställningar för nedladdningsknapp"
 
-#: languages/gutenberg-translations.php:1409
+#: languages/gutenberg-translations.php:1411 build/edit-post/index.js:12
 msgid "Open publish panel"
 msgstr "Öppna publiceringspanel"
 
-#: languages/gutenberg-translations.php:815
+#: languages/gutenberg-translations.php:815 build/block-library/index.js:12
 msgid "Short Line"
 msgstr "Kort linje"
 
-#: languages/gutenberg-translations.php:818
+#: languages/gutenberg-translations.php:818 build/block-library/index.js:12
 msgid "Wide Line"
 msgstr "Bred linje"
 
-#: languages/gutenberg-translations.php:42
+#: languages/gutenberg-translations.php:42 build/block-library/index.js:12
 msgid "Loop"
 msgstr "Loop"
 
-#: languages/gutenberg-translations.php:38
+#: languages/gutenberg-translations.php:38 build/block-library/index.js:12
 msgid "Autoplay"
 msgstr "Spela upp automatiskt"
 
-#: languages/gutenberg-translations.php:935
+#: languages/gutenberg-translations.php:935 build/block-library/index.js:12
 msgid "Playback Controls"
 msgstr "Uppspelningsreglage"
 
-#: languages/gutenberg-translations.php:134
+#: languages/gutenberg-translations.php:134 build/block-library/index.js:12
 msgid "Outline"
 msgstr "Markera ytterkanter"
 
-#: languages/gutenberg-translations.php:178
+#: languages/gutenberg-translations.php:178 build/block-library/index.js:12
 msgid "A single column within a columns block."
 msgstr "En enstaka kolumn inom ett block med kolumner."
 
-#: languages/gutenberg-translations.php:436
+#: languages/gutenberg-translations.php:438 build/block-library/index.js:12
 msgid "Link To"
 msgstr "Länk till"
 
-#: languages/gutenberg-translations.php:573
-msgid "Link URL"
-msgstr "Länk-URL"
-
-#: languages/gutenberg-translations.php:821
+#: languages/gutenberg-translations.php:821 build/block-library/index.js:12
 msgid "Dots"
 msgstr "Punkter"
 
-#: languages/gutenberg-translations.php:2316
+#: languages/gutenberg-translations.php:2338 build/format-library/index.js:12
 msgid "Inline Image"
 msgstr "Bild inlagd i texten"
 
-#: languages/gutenberg-translations.php:1786
+#: languages/gutenberg-translations.php:1781 build/editor/index.js:50
 msgid "Inline Elements"
 msgstr "Element inlagda i texten"
 
-#: languages/gutenberg-translations.php:2237
+#: languages/gutenberg-translations.php:2259 build/editor/index.js:50
 msgid "Light green cyan"
 msgstr "Ljusgrön cyan"
 
-#: languages/gutenberg-translations.php:2225
+#: languages/gutenberg-translations.php:2247 build/editor/index.js:50
 msgid "Pale pink"
 msgstr "Blek rosa"
 
-#: languages/gutenberg-translations.php:2231
+#: languages/gutenberg-translations.php:2253 build/editor/index.js:50
 msgid "Luminous vivid orange"
 msgstr "Lysande intensivt orange"
 
-#: languages/gutenberg-translations.php:2240
+#: languages/gutenberg-translations.php:2262 build/editor/index.js:50
 msgid "Vivid green cyan"
 msgstr "Intensivt cyangrönt"
 
-#: languages/gutenberg-translations.php:2252
+#: languages/gutenberg-translations.php:2274 build/editor/index.js:50
 msgid "Cyan bluish gray"
 msgstr "Cyan blågrå"
 
-#: languages/gutenberg-translations.php:2255
+#: languages/gutenberg-translations.php:2277 build/editor/index.js:50
 msgid "Very dark gray"
 msgstr "Mycket mörkgrå"
 
-#: languages/gutenberg-translations.php:2249
+#: languages/gutenberg-translations.php:2271 build/editor/index.js:50
 msgid "Very light gray"
 msgstr "Mycket ljusgrå"
 
-#: languages/gutenberg-translations.php:2228
+#: languages/gutenberg-translations.php:2250 build/editor/index.js:50
 msgid "Vivid red"
 msgstr "Intensivt röd"
 
-#: languages/gutenberg-translations.php:2234
+#: languages/gutenberg-translations.php:2256 build/editor/index.js:50
 msgid "Luminous vivid amber"
 msgstr "Lysande intensivt gult"
 
-#: languages/gutenberg-translations.php:2243
+#: languages/gutenberg-translations.php:2265 build/editor/index.js:50
 msgid "Pale cyan blue"
 msgstr "Blek cyanblå"
 
-#: languages/gutenberg-translations.php:2246
+#: languages/gutenberg-translations.php:2268 build/editor/index.js:50
 msgid "Vivid cyan blue"
 msgstr "Intensivt cyanblå"
 
-#: languages/gutenberg-translations.php:1245
+#: languages/gutenberg-translations.php:1247 build/edit-post/index.js:12
 msgid "Welcome to the wonderful world of blocks! Click the “+” (“Add block”) button to add a new block. There are blocks available for all kinds of content: you can insert text, headings, images, lists, and lots more!"
 msgstr "Välkommen till den underbara världen av block! Klicka på knappen ”+” (”Lägg till block”) för att lägga till ett nytt block. Det finns block tillgängliga för alla typer av innehåll: du kan infoga text, rubriker, bilder, listor och mycket mer!"
 
-#: languages/gutenberg-translations.php:410
+#: languages/gutenberg-translations.php:411 build/block-library/index.js:12
 msgid "The download button is visible."
 msgstr "Nedladdningsknappen är synlig."
 
-#: languages/gutenberg-translations.php:2377
+#: languages/gutenberg-translations.php:1196 build/components/index.js:19
+msgid "Close dialog"
+msgstr "Stäng dialogruta"
+
+#: languages/gutenberg-translations.php:576 build/block-library/index.js:12
+msgid "Link URL"
+msgstr "Länkadress"
+
+#: languages/gutenberg-translations.php:2399 build/nux/index.js:1
 msgid "Disable tips"
 msgstr "Inaktivera tips"
 
-#: languages/gutenberg-translations.php:2374
+#: languages/gutenberg-translations.php:2396 build/nux/index.js:1
 msgid "Got it"
 msgstr "Jag förstår"
 
-#: languages/gutenberg-translations.php:2371
+#: languages/gutenberg-translations.php:2393 build/nux/index.js:1
 msgid "See next tip"
 msgstr "Se nästa tips"
 
-#: languages/gutenberg-translations.php:2368
+#: languages/gutenberg-translations.php:2390 build/nux/index.js:1
 msgid "Gutenberg tips"
 msgstr "Gutenberg-tips"
 
-#: languages/gutenberg-translations.php:945
+#: languages/gutenberg-translations.php:945 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Replace image"
 msgstr "Ersätt bild"
 
-#: languages/gutenberg-translations.php:1862
+#: languages/gutenberg-translations.php:1880 build/editor/index.js:50
 msgid "Remove image"
 msgstr "Ta bort bild"
 
-#: languages/gutenberg-translations.php:1693
+#: languages/gutenberg-translations.php:1688 build/editor/index.js:50
 msgid "Hide options"
 msgstr "Dölj alternativ"
 
-#: languages/gutenberg-translations.php:2029
+#: languages/gutenberg-translations.php:2039 build/editor/index.js:50
 msgid "Are you ready to submit for review?"
 msgstr "Är du redo att skicka in en recension?"
 
-#: languages/gutenberg-translations.php:2294
-msgid "Sorry, this file type is not permitted for security reasons."
-msgstr "Den här filtypen är inte tillåten av säkerhetsskäl."
-
-#: languages/gutenberg-translations.php:2032
+#: languages/gutenberg-translations.php:2042 build/editor/index.js:50
 msgid "When you’re ready, submit your work for review, and an Editor will be able to approve it for you."
 msgstr "När du är klar, skicka in ditt arbete för granskning, och en redaktör kommer att kunna godkänna det åt dig."
 
-#: languages/gutenberg-translations.php:1965
+#: languages/gutenberg-translations.php:1975 build/editor/index.js:50
 msgid "Finished writing? That’s great, let’s get this published right now. Just click “Publish” and you’re good to go."
 msgstr "Skrivit klart? Det är bra, låt oss nu genast få det publicerat. Klicka bara på ”Publicera” och allt är klart."
 
-#: languages/gutenberg-translations.php:1254
+#: languages/gutenberg-translations.php:1256 build/edit-post/index.js:12
 msgid "You’ll find more settings for your page and blocks in the sidebar. Click “Settings” to open it."
 msgstr "Du hittar fler inställningar för din sida och block i sidopanelen. Klicka på ”Inställningar” för att öppna den."
 
-#: languages/gutenberg-translations.php:1950
+#: languages/gutenberg-translations.php:1963 build/editor/index.js:50
 msgid "Click “Preview” to load a preview of this page, so you can make sure you’re happy with your blocks."
 msgstr "Klicka på ”Förhandsgranska” för att ladda en förhandsvisning av denna sida, så att du kan vara säker på att du är nöjd med dina block."
 
-#: lib/class-wp-rest-autosaves-controller.php:160
-msgid "Invalid item ID."
-msgstr "Ogiltigt ID för objektet."
-
-#: lib/class-wp-rest-autosaves-controller.php:86
-#: lib/class-wp-rest-autosaves-controller.php:112
-msgid "The ID for the parent of the object."
-msgstr "ID för det överordnade objektet."
+#: languages/gutenberg-translations.php:2316 build/editor/index.js:50
+msgid "Sorry, this file type is not permitted for security reasons."
+msgstr "Denna filtyp är inte tillåten av säkerhetsskäl."
 
 #. translators: %s: file name
-#: languages/gutenberg-translations.php:2307
+#: languages/gutenberg-translations.php:2329 build/editor/index.js:50
 msgid "Error while uploading file %s to the media library."
 msgstr "Ett fel inträffade när filen %s laddades upp till mediebiblioteket."
 
-#: languages/gutenberg-translations.php:2156
+#: languages/gutenberg-translations.php:2166 build/editor/index.js:50
 msgid "View the autosave"
 msgstr "Visa autosparad version"
 
-#: languages/gutenberg-translations.php:2153
+#: languages/gutenberg-translations.php:2163 build/editor/index.js:50
 msgid "There is an autosave of this post that is more recent than the version below."
 msgstr "Det finns en autosparad version av detta inlägg som är nyare än nedanstående version."
 
-#: languages/gutenberg-translations.php:2062
+#: languages/gutenberg-translations.php:2072 build/editor/index.js:50
 msgid "Autosaving"
 msgstr "Autosparar"
 
-#: languages/gutenberg-translations.php:2300
-msgid "This file exceeds the maximum upload size for this site."
-msgstr "Detta överstiger den maximala uppladdningsstorleken för denna webbplats."
-
-#: lib/class-wp-rest-autosaves-controller.php:224
+#: lib/class-wp-rest-autosaves-controller.php:246
 msgid "Invalid parent post ID."
 msgstr "Ogiltigt inläggs-ID för overordnat objekt."
 
-#: lib/class-wp-rest-autosaves-controller.php:230
+#: lib/class-wp-rest-autosaves-controller.php:252
 msgid "There is no autosave revision for this post."
 msgstr "Detta inlägg har ingen autosparad version."
 
-#: lib/class-wp-rest-autosaves-controller.php:279
+#: lib/class-wp-rest-autosaves-controller.php:301
 msgid "Preview link for the post."
 msgstr "Förhandsvisa inläggets länk."
 
-#: lib/class-wp-rest-autosaves-controller.php:330
+#: lib/class-wp-rest-autosaves-controller.php:352
 msgid "There is nothing to save. The autosave and the post content are the same."
 msgstr "Det finns inget att spara. Autospara och inlägget har samma innehåll."
 
@@ -2198,93 +2276,107 @@ msgstr "Det finns inget att spara. Autospara och inlägget har samma innehåll."
 msgid "The ID for the object."
 msgstr "Objektets ID."
 
-#: languages/gutenberg-translations.php:1814
+#: languages/gutenberg-translations.php:1812 build/editor/index.js:50
 msgid "Drag a video, upload a new one or select a file from your library."
 msgstr "Dra in en video, ladda upp en ny eller välj en fil från ditt mediabibliotek."
 
-#: languages/gutenberg-translations.php:2362
+#: lib/class-wp-rest-autosaves-controller.php:182
+msgid "Invalid item ID."
+msgstr "Ogiltigt objekts-ID"
+
+#: lib/class-wp-rest-autosaves-controller.php:86
+#: lib/class-wp-rest-autosaves-controller.php:112
+msgid "The ID for the parent of the object."
+msgstr "ID för överordnad till objektet."
+
+#: languages/gutenberg-translations.php:2322 build/editor/index.js:50
+msgid "This file exceeds the maximum upload size for this site."
+msgstr "Filen överskrider den maximala storleken för filuppladdningar på denna webbplats."
+
+#: languages/gutenberg-translations.php:2384
+#: build/list-reusable-blocks/index.js:1
 msgid "Unknown error"
 msgstr "Okänt fel"
 
-#: languages/gutenberg-translations.php:1233
-msgid "No results found."
-msgstr "Inga resultat hittade."
-
-#: languages/gutenberg-translations.php:632
+#: languages/gutenberg-translations.php:647 build/block-library/index.js:12
 msgid "Display a list of your most recent posts."
 msgstr "Visa en lista över dina senaste inlägg."
 
-#: languages/gutenberg-translations.php:884
+#: languages/gutenberg-translations.php:884 build/block-library/index.js:12
 msgid "Table Settings"
 msgstr "Tabellinställningar"
 
-#: languages/gutenberg-translations.php:1456
+#: languages/gutenberg-translations.php:1458 build/edit-post/index.js:12
 msgid "Pin to toolbar"
 msgstr "Fäst i verktygsfältet"
 
-#: languages/gutenberg-translations.php:1453
+#: languages/gutenberg-translations.php:1455 build/edit-post/index.js:12
 msgid "Unpin from toolbar"
 msgstr "Lossa från verktygsfältet"
 
-#: languages/gutenberg-translations.php:887
+#: languages/gutenberg-translations.php:887 build/block-library/index.js:12
 msgid "Fixed width table cells"
 msgstr "Tabellceller med fast bredd"
 
-#: languages/gutenberg-translations.php:765
+#: languages/gutenberg-translations.php:765 build/block-library/index.js:12
 msgid "Add text that respects your spacing and tabs, and also allows styling."
 msgstr "Lägg in text som respekterar dina mellanrum och tabbtecken, och samtidigt kan formateras."
 
 #. translators: %s: Name of service (e.g. VideoPress, YouTube)
-#: languages/gutenberg-translations.php:376
+#: languages/gutenberg-translations.php:377 build/block-library/index.js:12
 msgid "Add a block that displays content pulled from other sites, like Twitter, Instagram or YouTube."
 msgstr "Lägg till ett block med innehåll som hämtas från andra webbplatser, såsom Twitter, Instagram eller YouTube."
 
-#: languages/gutenberg-translations.php:181
+#: languages/gutenberg-translations.php:181 build/block-library/index.js:12
 msgid "Add a block that displays content in multiple columns, then add whatever content blocks you’d like."
 msgstr "Lägg till ett block som visar innehåll i flera kolumner där du sedan lägger till de innehållsblock du behöver."
 
 #. translators: %s: error message describing the problem
-#: languages/gutenberg-translations.php:1230
+#: languages/gutenberg-translations.php:1230 build/components/index.js:19
 msgid "Error loading block: %s"
 msgstr "Ett fel inträffade vid laddning av block: %s"
 
-#: languages/gutenberg-translations.php:896
+#: languages/gutenberg-translations.php:896 build/block-library/index.js:12
 msgid "Insert a table — perfect for sharing charts and data."
 msgstr "Lägg en tabell – utmärkt för att publicera tabeller och data."
 
-#: languages/gutenberg-translations.php:1944
+#: languages/gutenberg-translations.php:1233 build/components/index.js:19
+msgid "No results found."
+msgstr "Inga resultat funna."
+
+#: languages/gutenberg-translations.php:1951 build/editor/index.js:50
 msgid "Copy the permalink"
 msgstr "Kopiera permalänken"
 
-#: languages/gutenberg-translations.php:1941
+#: languages/gutenberg-translations.php:1948 build/editor/index.js:50
 msgid "Permalink copied"
 msgstr "Permalänken kopierad"
 
-#: languages/gutenberg-translations.php:78
+#: languages/gutenberg-translations.php:78 build/block-library/index.js:12
 msgid "Name:"
 msgstr "Namn:"
 
 #. translators: %s: color hex code e.g: "#f00".
-#: languages/gutenberg-translations.php:1001
+#: languages/gutenberg-translations.php:1001 build/components/index.js:19
 msgid "Color code: %s"
 msgstr "Färgkod: %s"
 
 #. translators: 1: term name, 2: term position in a set of terms, 3: total term
 #. set count.
-#: languages/gutenberg-translations.php:1193
+#: languages/gutenberg-translations.php:1193 build/components/index.js:19
 msgid "%1$s (%2$s of %3$s)"
 msgstr "%1$s (%2$s av %3$s)"
 
-#: languages/gutenberg-translations.php:842
+#: languages/gutenberg-translations.php:842 build/block-library/index.js:12
 msgid "Height in pixels"
 msgstr "Höjd i pixlar"
 
-#: languages/gutenberg-translations.php:2460
+#: languages/gutenberg-translations.php:2482 build/editor/index.js:50
 msgctxt "term"
 msgid "Remove %s"
 msgstr "Ta bort %s"
 
-#: lib/class-wp-rest-block-renderer-controller.php:141
+#: lib/class-wp-rest-block-renderer-controller.php:142
 msgid "Invalid block."
 msgstr "Ogiltigt block."
 
@@ -2301,123 +2393,112 @@ msgstr "Attribut för blocket %s"
 msgid "Embed Handler"
 msgstr "Inbäddningshanterare"
 
-#: lib/class-wp-rest-block-renderer-controller.php:169
+#: lib/class-wp-rest-block-renderer-controller.php:170
 msgid "The rendered block."
 msgstr "Det färdiga blockets utseende."
 
-#: lib/class-wp-rest-block-renderer-controller.php:94
-msgid "Sorry, you are not allowed to read Gutenberg blocks of this post"
-msgstr "Du saknar behörighet att läsa Gutenberg-block i detta inlägg"
-
-#: lib/class-wp-rest-block-renderer-controller.php:64
+#: lib/class-wp-rest-block-renderer-controller.php:65
 msgid "ID of the post context."
 msgstr "ID för inläggets kontext."
 
-#: languages/gutenberg-translations.php:839
+#: languages/gutenberg-translations.php:839 build/block-library/index.js:12
 msgid "Spacer Settings"
 msgstr "Inställnignar för distanselement"
 
-#: languages/gutenberg-translations.php:833
+#: languages/gutenberg-translations.php:833 build/block-library/index.js:12
 msgid "Spacer"
 msgstr "Distanselement"
 
-#: languages/gutenberg-translations.php:750
+#: languages/gutenberg-translations.php:750 build/block-library/index.js:12
 msgid "Toggle to show a large initial letter."
 msgstr "Slå på/av visning av anfang (förstorad första bokstav)."
 
-#: languages/gutenberg-translations.php:747
+#: languages/gutenberg-translations.php:747 build/block-library/index.js:12
 msgid "Showing large initial letter."
 msgstr "Visar anfang (förstorad första bokstav)."
 
-#: languages/gutenberg-translations.php:1189
+#: languages/gutenberg-translations.php:1189 build/components/index.js:19
 msgid "Remove item"
 msgstr "Ta bort objektet"
 
-#: languages/gutenberg-translations.php:570
+#: lib/class-wp-rest-block-renderer-controller.php:95
+msgid "Sorry, you are not allowed to read Gutenberg blocks of this post."
+msgstr "Tyvärr, du saknar behörighet att läsa Gutenberg-block av detta inlägg."
+
+#: languages/gutenberg-translations.php:573 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Link Settings"
 msgstr "Länkinställningar"
 
-#: languages/gutenberg-translations.php:1938
+#: languages/gutenberg-translations.php:1957 build/editor/index.js:50
 msgid "Change Permalinks"
 msgstr "Ändra permalänkar"
 
-#: languages/gutenberg-translations.php:725
+#: languages/gutenberg-translations.php:725 build/block-library/index.js:12
 msgid "next page"
 msgstr "nästa sida"
 
-#: languages/gutenberg-translations.php:558
+#: languages/gutenberg-translations.php:561 build/block-library/index.js:12
 msgid "Height"
 msgstr "Höjd"
 
-#: languages/gutenberg-translations.php:555
+#: languages/gutenberg-translations.php:558 build/block-library/index.js:12
 msgid "Width"
 msgstr "Bredd"
 
-#: languages/gutenberg-translations.php:552
+#: languages/gutenberg-translations.php:555 build/block-library/index.js:12
 msgid "Image Dimensions"
 msgstr "Bilddimensioner"
 
-#: languages/gutenberg-translations.php:2159
+#: languages/gutenberg-translations.php:2181 build/editor/index.js:50
 msgid "Skip to the selected block"
 msgstr "Hoppa över till det valda blocket"
 
-#: languages/gutenberg-translations.php:1523
+#: languages/gutenberg-translations.php:1518 build/edit-post/index.js:12
 msgid "Show Block Settings"
 msgstr "Visa blockinställningar"
 
-#: languages/gutenberg-translations.php:1520
+#: languages/gutenberg-translations.php:1515 build/edit-post/index.js:12
 msgid "Hide Block Settings"
 msgstr "Dölj blockinställningar"
 
-#: languages/gutenberg-translations.php:561
+#: languages/gutenberg-translations.php:564 build/block-library/index.js:12
 msgid "Image Size"
 msgstr "Bildstorlek"
 
-#: languages/gutenberg-translations.php:453
+#: languages/gutenberg-translations.php:455 build/block-library/index.js:12
 msgid "Thumbnails are not cropped."
 msgstr "Miniatyrerna är inte beskurna."
 
-#: languages/gutenberg-translations.php:1823
-msgid "Media Library"
-msgstr "Mediebibliotek"
-
-#: languages/gutenberg-translations.php:2322
-msgid "Unlink"
-msgstr "Ta bort länk"
-
-#: languages/gutenberg-translations.php:450
+#: languages/gutenberg-translations.php:452 build/block-library/index.js:12
 msgid "Thumbnails are cropped to align."
 msgstr "Miniatyrbilder kantklipps så att de passar in."
 
-#: languages/gutenberg-translations.php:728
+#: languages/gutenberg-translations.php:728 build/block-library/index.js:12
 msgid "pagination"
 msgstr "sidindelning"
 
-#: languages/gutenberg-translations.php:716
-msgid "Page break"
-msgstr "Sidbyte"
-
-#: languages/gutenberg-translations.php:1500
+#: languages/gutenberg-translations.php:1495 build/edit-post/index.js:12
 msgid "Editor settings"
 msgstr "Inställningar för redigeraren"
 
-#: languages/gutenberg-translations.php:1450
+#: languages/gutenberg-translations.php:1452 build/edit-post/index.js:12
 msgid "Close plugin"
 msgstr "Stäng tillägget"
 
-#: languages/gutenberg-translations.php:1514
+#: languages/gutenberg-translations.php:1509 build/edit-post/index.js:12
 msgid "Block settings closed"
 msgstr "Blockets inställningar är stängda"
 
-#: languages/gutenberg-translations.php:1932
+#: languages/gutenberg-translations.php:1945 build/editor/index.js:50
 msgid "Edit post permalink"
 msgstr "Redigera inläggets permalänk"
 
-#: languages/gutenberg-translations.php:1957
+#: languages/gutenberg-translations.php:1969 build/editor/index.js:50
 msgid "Schedule…"
 msgstr "Schemalägg..."
 
-#: languages/gutenberg-translations.php:1961
+#: languages/gutenberg-translations.php:1972 build/editor/index.js:50
 msgid "Publish…"
 msgstr "Publicera..."
 
@@ -2449,1149 +2530,1083 @@ msgstr "Om taxonomin ska visas i panelen för snabbredigering/massändringar."
 msgid "The visibility settings for the taxonomy."
 msgstr "Taxonomins synlighetsinställningar."
 
-#: languages/gutenberg-translations.php:1606
-msgid "Advanced"
-msgstr "Avancerad"
+#: languages/gutenberg-translations.php:1833 build/editor/index.js:50
+msgid "Media Library"
+msgstr "Mediabibliotek"
 
-#: languages/gutenberg-translations.php:1177
+#: languages/gutenberg-translations.php:716 build/block-library/index.js:12
+msgid "Page break"
+msgstr "Sidbrytning"
+
+#: languages/gutenberg-translations.php:2344 build/format-library/index.js:12
+msgid "Unlink"
+msgstr "Ta bort länkning"
+
+#: languages/gutenberg-translations.php:1177 build/components/index.js:19
 msgid "Add item"
 msgstr "Lägg till objekt"
 
-#: languages/gutenberg-translations.php:2192
+#: languages/gutenberg-translations.php:1598 build/editor/index.js:50
+msgid "Advanced"
+msgstr "Avancerat"
+
+#: languages/gutenberg-translations.php:2214 build/editor/index.js:50
 msgid "Reset the template"
 msgstr "Återställ mallen"
 
-#: languages/gutenberg-translations.php:2189
+#: languages/gutenberg-translations.php:2211 build/editor/index.js:50
 msgid "Keep it as is"
 msgstr "Behåll det som det är"
 
-#: languages/gutenberg-translations.php:1276
+#: languages/gutenberg-translations.php:1278 build/edit-post/index.js:12
 msgid "Plugins"
 msgstr "Tillägg"
 
-#: languages/gutenberg-translations.php:1168
+#: languages/gutenberg-translations.php:1168 build/components/index.js:19
 msgid "Custom Size"
 msgstr "Anpassad storlek"
 
-#: languages/gutenberg-translations.php:473
+#: languages/gutenberg-translations.php:475 build/block-library/index.js:12
 msgid "Upload an image"
 msgstr "Ladda upp en bild"
 
-#: languages/gutenberg-translations.php:2165
+#: languages/gutenberg-translations.php:2187 build/editor/index.js:50
 msgid "Document Statistics"
 msgstr "Dokumentstatistik"
 
-#: languages/gutenberg-translations.php:2183
+#: languages/gutenberg-translations.php:2205 build/editor/index.js:50
 msgid "Resetting the template may result in loss of content, do you want to continue?"
 msgstr "Återställning av mallen kan det leda till förlust av innehåll, vill du fortsätta?"
 
-#: languages/gutenberg-translations.php:1554
+#: languages/gutenberg-translations.php:1549 build/edit-post/index.js:12
 msgid "Code editor selected"
 msgstr "Kodredigerare vald"
 
-#: languages/gutenberg-translations.php:1551
+#: languages/gutenberg-translations.php:1546 build/edit-post/index.js:12
 msgid "Visual editor selected"
 msgstr "Visuell redigerare vald"
 
-#: languages/gutenberg-translations.php:1992
+#: languages/gutenberg-translations.php:2002 build/editor/index.js:50
 msgid "Scheduled"
 msgstr "Schemalagd"
 
-#: languages/gutenberg-translations.php:1974
+#: languages/gutenberg-translations.php:1984 build/editor/index.js:50
 msgid "Scheduling…"
 msgstr "Schemalägger..."
 
-#: languages/gutenberg-translations.php:2020
+#: languages/gutenberg-translations.php:2030 build/editor/index.js:50
 msgid "is now scheduled. It will go live on"
 msgstr "är tidsinställt och publiceras"
 
-#: languages/gutenberg-translations.php:2186
+#: languages/gutenberg-translations.php:2208 build/editor/index.js:50
 msgid "The content of your post doesn’t match the template assigned to your post type."
 msgstr "Innehållet i ditt inlägg matchar inte mallen som tilldelats till din inläggstyp."
 
-#: languages/gutenberg-translations.php:968 lib/client-assets.php:1309
+#: lib/client-assets.php:958 languages/gutenberg-translations.php:968
+#: build/blocks/index.js:2
 msgid "Layout Elements"
 msgstr "Layoutelement"
 
-#: languages/gutenberg-translations.php:2457
+#: languages/gutenberg-translations.php:2479 build/editor/index.js:50
 msgctxt "term"
 msgid "%s removed"
 msgstr "%s togs bort"
 
-#: languages/gutenberg-translations.php:2454
+#: languages/gutenberg-translations.php:2476 build/editor/index.js:50
 msgctxt "term"
 msgid "%s added"
 msgstr "%s har lagts till"
 
-#: languages/gutenberg-translations.php:2447
+#: languages/gutenberg-translations.php:2469 build/editor/index.js:50
 msgctxt "imperative verb"
 msgid "Preview"
 msgstr "Förhandsgranska"
 
-#: languages/gutenberg-translations.php:2288
+#: languages/gutenberg-translations.php:2310 build/editor/index.js:50
 msgid "Block deleted."
 msgstr "Block borttaget."
 
-#: languages/gutenberg-translations.php:2285 lib/register.php:467
+#: lib/register.php:467 languages/gutenberg-translations.php:2307
+#: build/editor/index.js:50
 msgid "Block updated."
 msgstr "Block uppdaterad."
 
-#: languages/gutenberg-translations.php:2282
+#: languages/gutenberg-translations.php:2304 build/editor/index.js:50
 msgid "Block created."
 msgstr "Block skapad."
 
-#: languages/gutenberg-translations.php:2279
+#: languages/gutenberg-translations.php:2301 build/editor/index.js:50
 msgid "Trashing failed"
 msgstr "Borttagning misslyckades"
 
-#: languages/gutenberg-translations.php:2276
+#: languages/gutenberg-translations.php:2298 build/editor/index.js:50
 msgid "Updating failed"
 msgstr "Uppdatering misslyckades"
 
-#: languages/gutenberg-translations.php:2273
+#: languages/gutenberg-translations.php:2295 build/editor/index.js:50
 msgid "Scheduling failed"
 msgstr "Schemaläggning misslyckades"
 
-#: languages/gutenberg-translations.php:2270
+#: languages/gutenberg-translations.php:2292 build/editor/index.js:50
 msgid "Publishing failed"
 msgstr "Publicering misslyckades"
 
-#: languages/gutenberg-translations.php:2195
+#: languages/gutenberg-translations.php:2217 build/editor/index.js:50
 msgid "You have unsaved changes. If you proceed, they will be lost."
 msgstr "Du har osparade ändringar. Om du fortsätter kommer de att gå förlorade."
 
-#: languages/gutenberg-translations.php:2180
+#: languages/gutenberg-translations.php:2202 build/editor/index.js:50
 msgid "Document Outline"
 msgstr "Dokumentöversikt"
 
-#: languages/gutenberg-translations.php:2171
+#: languages/gutenberg-translations.php:2193 build/editor/index.js:50
 msgid "Headings"
 msgstr "Rubriker"
 
-#: languages/gutenberg-translations.php:2168
+#: languages/gutenberg-translations.php:2190 build/editor/index.js:50
 msgid "Words"
 msgstr "Ord"
 
-#: languages/gutenberg-translations.php:2162
+#: languages/gutenberg-translations.php:2184 build/editor/index.js:50
 msgid "Content structure"
 msgstr "Innehållsstruktur"
 
-#: languages/gutenberg-translations.php:2147
+#: languages/gutenberg-translations.php:2157 build/editor/index.js:50
 msgid "Public"
 msgstr "Offentlig"
 
-#: languages/gutenberg-translations.php:2144
+#: languages/gutenberg-translations.php:2154 build/editor/index.js:50
 msgid "Protected with a password you choose. Only those with the password can view this post."
 msgstr "Skyddad med ett lösenord du väljer. Endast de som har lösenordet kan se det här inlägget."
 
-#: languages/gutenberg-translations.php:2141
-msgid "Password Protected"
-msgstr "Lösenordsskyddad"
-
-#: languages/gutenberg-translations.php:2138
+#: languages/gutenberg-translations.php:2148 build/editor/index.js:50
 msgid "Only visible to site admins and editors."
 msgstr "Endast synlig för webbplatsadministratörer och redigerare."
 
-#: languages/gutenberg-translations.php:2135
+#: languages/gutenberg-translations.php:2145 build/editor/index.js:50
 msgid "Private"
 msgstr "Privat"
 
-#: languages/gutenberg-translations.php:2150
+#: languages/gutenberg-translations.php:2160 build/editor/index.js:50
 msgid "Visible to everyone."
 msgstr "Synlig för alla."
 
-#: languages/gutenberg-translations.php:2123
+#: languages/gutenberg-translations.php:2133 build/editor/index.js:50
 msgid "Post Visibility"
 msgstr "Inläggets synlighet"
 
-#: languages/gutenberg-translations.php:2132
+#: languages/gutenberg-translations.php:2142 build/editor/index.js:50
 msgid "Would you like to privately publish this post now?"
 msgstr "Vill du publicera detta inlägg privat nu?"
 
-#: languages/gutenberg-translations.php:2129
+#: languages/gutenberg-translations.php:2139 build/editor/index.js:50
 msgid "Use a secure password"
 msgstr "Använd ett säkert lösenord"
 
-#: languages/gutenberg-translations.php:2126
+#: languages/gutenberg-translations.php:2136 build/editor/index.js:50
 msgid "Create password"
 msgstr "Skapa lösenord"
 
-#: languages/gutenberg-translations.php:2120
+#: languages/gutenberg-translations.php:2130 build/editor/index.js:50
 msgid "Move to trash"
 msgstr "Flytta till papperskorg"
 
-#: languages/gutenberg-translations.php:2105
+#: languages/gutenberg-translations.php:2115 build/editor/index.js:50
 msgid "Parent Term"
 msgstr "Överordnad term"
 
-#: languages/gutenberg-translations.php:2102
+#: languages/gutenberg-translations.php:2112 build/editor/index.js:50
 msgid "Parent Category"
 msgstr "Överordnad kategori"
 
-#: languages/gutenberg-translations.php:2099
+#: languages/gutenberg-translations.php:2109 build/editor/index.js:50
 msgid "Add new term"
 msgstr "Lägg till ny term"
 
-#: languages/gutenberg-translations.php:2096
+#: languages/gutenberg-translations.php:2106 build/editor/index.js:50
 msgid "Add new category"
 msgstr "Lägg till ny kategori"
 
-#: languages/gutenberg-translations.php:2093
+#: languages/gutenberg-translations.php:2103 build/editor/index.js:50
 msgid "Term"
 msgstr "Term"
 
-#: languages/gutenberg-translations.php:2089
+#: languages/gutenberg-translations.php:2099 build/editor/index.js:50
 msgid "Tag"
 msgstr "Etikett"
 
-#: languages/gutenberg-translations.php:2086
+#: languages/gutenberg-translations.php:2096 build/editor/index.js:50
 msgid "Add New Term"
 msgstr "Lägg till ny term"
 
-#: languages/gutenberg-translations.php:2083
-msgid "Add New Tag"
-msgstr "Lägg till ny etikett"
-
-#: languages/gutenberg-translations.php:2080
+#: languages/gutenberg-translations.php:2090 build/editor/index.js:50
 msgid "Switch to Draft"
 msgstr "Byt till utkast"
 
-#: languages/gutenberg-translations.php:2074
+#: languages/gutenberg-translations.php:2084 build/editor/index.js:50
 msgid "Are you sure you want to unpublish this post?"
 msgstr "Är du säker på att du vill avpublicera detta inlägg?"
 
-#: languages/gutenberg-translations.php:2071
+#: languages/gutenberg-translations.php:2081 build/editor/index.js:50
 msgid "Stick to the Front Page"
 msgstr "Klistra på förstasidan"
 
-#: languages/gutenberg-translations.php:2068
+#: languages/gutenberg-translations.php:2078 build/editor/index.js:50
 msgid "Immediately"
 msgstr "Genast"
 
-#: languages/gutenberg-translations.php:2059
+#: languages/gutenberg-translations.php:2069 build/editor/index.js:50
 msgid "Save Draft"
 msgstr "Spara utkast"
 
-#: languages/gutenberg-translations.php:2065
+#: languages/gutenberg-translations.php:2075 build/editor/index.js:50
 msgid "Saving"
 msgstr "Sparar"
 
-#: languages/gutenberg-translations.php:2050
+#: languages/gutenberg-translations.php:2060 build/editor/index.js:50
 msgid "Publish:"
 msgstr "Publicera:"
 
-#: languages/gutenberg-translations.php:2041
+#: languages/gutenberg-translations.php:2051 build/editor/index.js:50
 msgid "Are you ready to publish?"
 msgstr "Är du redo att publicera?"
 
-#: languages/gutenberg-translations.php:2017
+#: languages/gutenberg-translations.php:2027 build/editor/index.js:50
 msgid "Copy Link"
 msgstr "Kopiera länk"
 
-#: languages/gutenberg-translations.php:1995
-msgid "Published"
-msgstr "Publicerad"
-
-#: languages/gutenberg-translations.php:1983
-msgid "Schedule"
-msgstr "Schema"
-
-#: languages/gutenberg-translations.php:1980
+#: languages/gutenberg-translations.php:1990 build/editor/index.js:50
 msgid "Update"
 msgstr "Uppdatera"
 
-#: languages/gutenberg-translations.php:1977
+#: languages/gutenberg-translations.php:1987 build/editor/index.js:50
 msgid "Submit for Review"
 msgstr "Skicka in för recension"
 
-#: languages/gutenberg-translations.php:1971
+#: languages/gutenberg-translations.php:1981 build/editor/index.js:50
 msgid "Updating…"
 msgstr "Uppdaterar…"
 
-#: languages/gutenberg-translations.php:1968
+#: languages/gutenberg-translations.php:1978 build/editor/index.js:50
 msgid "Publishing…"
 msgstr "Publicerar…"
 
-#: languages/gutenberg-translations.php:1947
+#: languages/gutenberg-translations.php:1960 build/editor/index.js:50
 msgid "Allow Pingbacks & Trackbacks"
 msgstr "Tillåt pingbacks och trackbacks"
 
-#: languages/gutenberg-translations.php:1935
+#: languages/gutenberg-translations.php:1954 build/editor/index.js:50
 msgid "Permalink:"
 msgstr "Permalänk:"
 
-#: languages/gutenberg-translations.php:1929
-msgid "Pending Review"
-msgstr "Inväntar granskning"
-
-#: languages/gutenberg-translations.php:1892
+#: languages/gutenberg-translations.php:1913 build/editor/index.js:50
 msgid "%d Revision"
 msgid_plural "%d Revisions"
 msgstr[0] "%d version"
 msgstr[1] "%d versioner"
 
-#: languages/gutenberg-translations.php:1889
+#: languages/gutenberg-translations.php:1910 build/editor/index.js:50
 msgid "Suggestion:"
 msgstr "Förslag:"
 
-#: languages/gutenberg-translations.php:1884
+#: languages/gutenberg-translations.php:1905 build/editor/index.js:50
 msgid "Post Format"
 msgstr "Inläggsformat"
 
-#: languages/gutenberg-translations.php:1881
+#: languages/gutenberg-translations.php:1902 build/editor/index.js:50
 msgid "Chat"
 msgstr "Chatt"
 
-#: languages/gutenberg-translations.php:1878
+#: languages/gutenberg-translations.php:1899 build/editor/index.js:50
 msgid "Status"
 msgstr "Status"
 
-#: languages/gutenberg-translations.php:1875
+#: languages/gutenberg-translations.php:1896 build/editor/index.js:50
 msgid "Standard"
 msgstr "Standard"
 
-#: languages/gutenberg-translations.php:1868
+#: languages/gutenberg-translations.php:1889 build/editor/index.js:50
 msgid "Aside"
 msgstr "Notering"
 
-#: languages/gutenberg-translations.php:1859
+#: languages/gutenberg-translations.php:1877 build/editor/index.js:50
 msgid "Set featured image"
 msgstr "Ange utvald bild"
 
-#: languages/gutenberg-translations.php:1856
+#: languages/gutenberg-translations.php:1874 build/editor/index.js:50
 msgid "Learn more about manual excerpts"
 msgstr "Lär dig mer om manuella utdrag"
 
-#: languages/gutenberg-translations.php:1853
+#: languages/gutenberg-translations.php:1871 build/editor/index.js:50
 msgid "Write an excerpt (optional)"
 msgstr "Skriv ett utdrag (valfritt)"
 
-#: languages/gutenberg-translations.php:1850
+#: languages/gutenberg-translations.php:1868 build/editor/index.js:50
 msgid "Allow Comments"
 msgstr "Tillåt kommentarer"
 
-#: lib/client-assets.php:1542
+#: lib/client-assets.php:1193
 msgid "Default template"
 msgstr "Standardmall"
 
-#: languages/gutenberg-translations.php:1841
+#: languages/gutenberg-translations.php:1859 build/editor/index.js:50
 msgid "Template:"
 msgstr "Mall:"
 
-#: languages/gutenberg-translations.php:1838
+#: languages/gutenberg-translations.php:1856 build/editor/index.js:50
 msgid "no parent"
 msgstr "ingen överordnad"
 
-#: languages/gutenberg-translations.php:1835
+#: languages/gutenberg-translations.php:1853 build/editor/index.js:50
 msgid "no title"
 msgstr "ingen rubrik"
 
-#: languages/gutenberg-translations.php:1802 lib/register.php:458
+#: lib/register.php:458 languages/gutenberg-translations.php:1797
+#: build/editor/index.js:50
 msgid "No blocks found."
 msgstr "Inga block hittades."
 
-#: languages/gutenberg-translations.php:2053
-msgid "Saved"
-msgstr "Sparad"
-
-#: languages/gutenberg-translations.php:974 lib/client-assets.php:1319
+#: lib/client-assets.php:968 languages/gutenberg-translations.php:974
+#: build/blocks/index.js:2
 msgid "Embeds"
 msgstr "Inbäddningar"
 
-#: languages/gutenberg-translations.php:2177
+#: languages/gutenberg-translations.php:2199 build/editor/index.js:50
 msgid "Blocks"
 msgstr "Block"
 
-#: languages/gutenberg-translations.php:1793
+#: languages/gutenberg-translations.php:1788 build/editor/index.js:50
 msgid "Search for a block"
 msgstr "Sök efter ett block"
 
-#: languages/gutenberg-translations.php:1611
+#: languages/gutenberg-translations.php:1603 build/editor/index.js:50
 msgid "Add block"
 msgstr "Lägg till block"
 
-#: languages/gutenberg-translations.php:1783
+#: languages/gutenberg-translations.php:1778 build/editor/index.js:50
 msgid "Add %s"
 msgstr "Lägg till %s"
 
-#: languages/gutenberg-translations.php:1777
+#: languages/gutenberg-translations.php:1772 build/editor/index.js:50
 msgid "Copy Error"
 msgstr "Kopieringsfel"
 
-#: languages/gutenberg-translations.php:1774
+#: languages/gutenberg-translations.php:1769 build/editor/index.js:50
 msgid "Copy Post Text"
 msgstr "Kopiera inläggstext"
 
-#: languages/gutenberg-translations.php:1771
+#: languages/gutenberg-translations.php:1766 build/editor/index.js:50
 msgid "Attempt Recovery"
 msgstr "Försök återställning"
 
-#: languages/gutenberg-translations.php:1780
+#: languages/gutenberg-translations.php:1775 build/editor/index.js:50
 msgid "The editor has encountered an unexpected error."
 msgstr "Redigeraren har stött på ett oväntat fel."
 
-#: languages/gutenberg-translations.php:1768
+#: languages/gutenberg-translations.php:1763 build/editor/index.js:50
 msgid "Undo"
 msgstr "Ångra"
 
-#: languages/gutenberg-translations.php:1765
+#: languages/gutenberg-translations.php:1760 build/editor/index.js:50
 msgid "Redo"
 msgstr "Gör om"
 
-#: languages/gutenberg-translations.php:1762
+#: languages/gutenberg-translations.php:1757 build/editor/index.js:50
 msgid "(Click to focus this heading)"
 msgstr "(Klicka för att fokusera på denna rubrik)"
 
-#: languages/gutenberg-translations.php:1759
+#: languages/gutenberg-translations.php:1754 build/editor/index.js:50
 msgid "(Multiple H1 headings are not recommended)"
 msgstr "(Flera H1-rubriker rekommenderas inte)"
 
-#: languages/gutenberg-translations.php:1756
+#: languages/gutenberg-translations.php:1751 build/editor/index.js:50
 msgid "(Your theme may already use a H1 for the post title)"
 msgstr "(Ditt tema kan redan använda en H1 för inläggsrubriken)"
 
-#: languages/gutenberg-translations.php:1753
+#: languages/gutenberg-translations.php:1748 build/editor/index.js:50
 msgid "(Incorrect heading level)"
 msgstr "(Felaktig rubriknivå)"
 
-#: languages/gutenberg-translations.php:1750
+#: languages/gutenberg-translations.php:1745 build/editor/index.js:50
 msgid "(Empty heading)"
 msgstr "(Tom rubrik)"
 
-#: languages/gutenberg-translations.php:1723
+#: languages/gutenberg-translations.php:1718 build/editor/index.js:50
 msgid "Change block type"
 msgstr "Ändra blocktyp"
 
-#: languages/gutenberg-translations.php:1697
+#: languages/gutenberg-translations.php:1692 build/editor/index.js:50
 msgid "More options"
 msgstr "Fler alternativ"
 
-#: languages/gutenberg-translations.php:1687
+#: languages/gutenberg-translations.php:1682 build/editor/index.js:50
 msgid "Edit visually"
 msgstr "Redigera visuellt"
 
-#: languages/gutenberg-translations.php:1700
+#: languages/gutenberg-translations.php:1695 build/editor/index.js:50
 msgid "Duplicate"
 msgstr "Duplicera"
 
-#: languages/gutenberg-translations.php:1666
+#: languages/gutenberg-translations.php:1658 build/editor/index.js:50
 msgid "Blocks cannot be moved down as they are already at the bottom"
 msgstr "Block kan inte flyttas ner eftersom de redan är längst ner"
 
-#: languages/gutenberg-translations.php:1663
+#: languages/gutenberg-translations.php:1655 build/editor/index.js:50
 msgid "Blocks cannot be moved up as they are already at the top"
 msgstr "Block kan inte flyttas upp eftersom de redan är högst upp"
 
-#: languages/gutenberg-translations.php:1684
+#: languages/gutenberg-translations.php:1679 build/editor/index.js:50
 msgid "Edit as HTML"
 msgstr "Redigera som HTML"
 
-#: languages/gutenberg-translations.php:1631
+#: languages/gutenberg-translations.php:1623 build/editor/index.js:50
 msgid "Convert to Blocks"
 msgstr "Konvertera till block"
 
-#: languages/gutenberg-translations.php:1634
+#: languages/gutenberg-translations.php:1626 build/editor/index.js:50
 msgid "Block: %s"
 msgstr "Block: %s"
 
-#: languages/gutenberg-translations.php:1617
+#: languages/gutenberg-translations.php:1609 build/editor/index.js:50
 msgid "This block has encountered an error and cannot be previewed."
 msgstr "Detta block har stött på ett fel och kan inte förhandsgranskas."
 
-#: languages/gutenberg-translations.php:1614
-msgid "Block Toolbar"
-msgstr "Block-verktygsfält"
-
-#: languages/gutenberg-translations.php:1600
+#: languages/gutenberg-translations.php:1592 build/editor/index.js:50
 msgid "No block selected."
 msgstr "Inga block valda."
 
-#: languages/gutenberg-translations.php:1597
-msgid "Coming Soon"
-msgstr "Kommer snart"
-
-#: languages/gutenberg-translations.php:1538
+#: languages/gutenberg-translations.php:1533 build/edit-post/index.js:12
 msgid "Transform into:"
 msgstr "Omvandla till:"
 
-#: languages/gutenberg-translations.php:1535
+#: languages/gutenberg-translations.php:1530 build/edit-post/index.js:12
 msgid "Remove"
 msgstr "Ta bort"
 
-#: languages/gutenberg-translations.php:1532
+#: languages/gutenberg-translations.php:1527 build/edit-post/index.js:12
 msgid "Find original"
 msgstr "Hitta original"
 
-#: languages/gutenberg-translations.php:1544
+#: languages/gutenberg-translations.php:1539 build/edit-post/index.js:12
 msgid "Copy All Content"
 msgstr "Kopiera allt innehåll"
 
-#: languages/gutenberg-translations.php:395
+#: languages/gutenberg-translations.php:396 build/edit-post/index.js:12
+#: build/block-library/index.js:12 build/editor/index.js:50
 msgid "Copied!"
 msgstr "kopierad!"
 
-#: languages/gutenberg-translations.php:1469
+#: languages/gutenberg-translations.php:1474 build/edit-post/index.js:12
 msgid "Visibility"
 msgstr "Synlighet"
 
-#: languages/gutenberg-translations.php:1466
+#: languages/gutenberg-translations.php:1471 build/edit-post/index.js:12
 msgid "Status & Visibility"
 msgstr "Status och synlighet"
 
-#: languages/gutenberg-translations.php:1438
-msgid "Page Attributes"
-msgstr "Sidattribut"
-
-#: languages/gutenberg-translations.php:1472
-msgid "Block"
-msgstr "Block"
-
-#. translators: ARIA label for the Block Settings sidebar tab, not selected.
-#: languages/gutenberg-translations.php:1491
-msgid "Block settings"
-msgstr "Blockinställningar"
-
-#: languages/gutenberg-translations.php:1497
+#: languages/gutenberg-translations.php:1492 build/edit-post/index.js:12
 msgid "Document"
 msgstr "Dokument"
 
-#. translators: ARIA label for the Document Settings sidebar tab, not selected.
-#: languages/gutenberg-translations.php:1483
-msgid "Document settings"
-msgstr "Dokumentinställningar"
-
-#: languages/gutenberg-translations.php:1426
+#: languages/gutenberg-translations.php:1428 build/edit-post/index.js:12
+#: build/editor/index.js:50
 msgid "Featured Image"
 msgstr "Utvald bild"
 
-#: languages/gutenberg-translations.php:1494
+#: languages/gutenberg-translations.php:1489 build/edit-post/index.js:12
 msgid "Close settings"
 msgstr "Stäng inställningar"
 
-#: languages/gutenberg-translations.php:1279
+#: languages/gutenberg-translations.php:1281 build/edit-post/index.js:12
 msgid "Tools"
 msgstr "Verktyg"
 
-#: languages/gutenberg-translations.php:1263
+#: languages/gutenberg-translations.php:1265 build/edit-post/index.js:12
 msgid "Editor"
 msgstr "Redigerare"
 
-#: languages/gutenberg-translations.php:1260
+#: languages/gutenberg-translations.php:1262 build/edit-post/index.js:12
 msgid "Code Editor"
 msgstr "Kodredigerare"
 
-#: languages/gutenberg-translations.php:1257
+#: languages/gutenberg-translations.php:1259 build/edit-post/index.js:12
 msgid "Visual Editor"
 msgstr "Visuell redigerare"
 
-#: languages/gutenberg-translations.php:1251
+#: languages/gutenberg-translations.php:1253 build/edit-post/index.js:12
 msgid "Settings"
 msgstr "Inställningar"
 
-#: languages/gutenberg-translations.php:566
+#: languages/gutenberg-translations.php:569 build/block-library/index.js:12
+#: build/components/index.js:19
 msgid "Reset"
 msgstr "Återställ"
 
-#: languages/gutenberg-translations.php:1199
+#: languages/gutenberg-translations.php:1199 build/components/index.js:19
 msgid "Dismiss this notice"
 msgstr "Avfärda denna notis"
 
-#: languages/gutenberg-translations.php:1186
+#: languages/gutenberg-translations.php:1186 build/components/index.js:19
 msgid "Item removed."
 msgstr "Objekt borttaget."
 
-#: languages/gutenberg-translations.php:1183
+#: languages/gutenberg-translations.php:1183 build/components/index.js:19
 msgid "Item added."
 msgstr "Objekt tillagt."
 
-#: languages/gutenberg-translations.php:1180
+#: languages/gutenberg-translations.php:1180 build/components/index.js:19
 msgid "Separate with commas"
 msgstr "Separera med kommatecken"
 
-#: languages/gutenberg-translations.php:1157
+#: languages/gutenberg-translations.php:1157 build/components/index.js:19
 msgid "Drop files to upload"
 msgstr "Släpp filer för att ladda upp"
 
-#: languages/gutenberg-translations.php:1154
-msgid "PM"
-msgstr "PM"
-
-#: languages/gutenberg-translations.php:1151
-msgid "AM"
-msgstr "AM"
-
-#: languages/gutenberg-translations.php:11
+#: languages/gutenberg-translations.php:11 build/api-fetch/index.js:1
 msgid "An unknown error occurred."
 msgstr "Ett okänt fel uppstod."
 
-#: languages/gutenberg-translations.php:987
+#: languages/gutenberg-translations.php:987 build/editor/index.js:50
+#: build/components/index.js:19
 msgid "No results."
 msgstr "Inga resultat."
 
-#: languages/gutenberg-translations.php:982
+#: languages/gutenberg-translations.php:982 build/editor/index.js:50
+#: build/components/index.js:19
 msgid "%d result found, use up and down arrow keys to navigate."
 msgid_plural "%d results found, use up and down arrow keys to navigate."
 msgstr[0] "%d resultat hittades, använd upp och nedpilarna för att navigera."
 msgstr[1] "%d resultat hittades, använd upp och nedpilarna för att navigera."
 
-#: languages/gutenberg-translations.php:1505
-#: packages/block-library/src/latest-comments/index.php:32
-msgid "(no title)"
-msgstr "(ingen rubrik)"
-
-#: languages/gutenberg-translations.php:418
+#: languages/gutenberg-translations.php:420 build/edit-post/index.js:12
+#: build/block-library/index.js:12 build/editor/index.js:50
 msgid "URL"
 msgstr "URL"
 
-#: languages/gutenberg-translations.php:2204
+#: languages/gutenberg-translations.php:2226 build/editor/index.js:50
 msgid "Submit"
 msgstr "Skicka"
 
-#: languages/gutenberg-translations.php:1091
+#: languages/gutenberg-translations.php:1088 build/edit-post/index.js:12
+#: build/editor/index.js:50 build/components/index.js:19
 msgid "Close"
 msgstr "Stäng"
 
-#: languages/gutenberg-translations.php:2201
+#: languages/gutenberg-translations.php:2223 build/editor/index.js:50
 msgid "Insert Link"
 msgstr "Infoga länk"
 
-#: languages/gutenberg-translations.php:2198
-msgid "Edit Link"
-msgstr "Redigera länk"
-
-#: languages/gutenberg-translations.php:1872
+#: languages/gutenberg-translations.php:1893 build/editor/index.js:50
+#: build/format-library/index.js:12
 msgid "Link"
 msgstr "Länk"
 
-#: languages/gutenberg-translations.php:2341
+#: languages/gutenberg-translations.php:2363 build/format-library/index.js:12
 msgid "Strikethrough"
 msgstr "Genomstruken"
 
-#: languages/gutenberg-translations.php:2319
+#: languages/gutenberg-translations.php:2341 build/format-library/index.js:12
 msgid "Italic"
 msgstr "Kursiv"
 
-#: languages/gutenberg-translations.php:2310
+#: languages/gutenberg-translations.php:2332 build/format-library/index.js:12
 msgid "Bold"
 msgstr "Fet"
 
-#: languages/gutenberg-translations.php:1226
+#: languages/gutenberg-translations.php:1226 build/components/index.js:19
 msgid "Number of items"
 msgstr "Antal objekt"
 
-#: languages/gutenberg-translations.php:1223
-msgid "All"
-msgstr "Allt"
-
-#: languages/gutenberg-translations.php:1220
+#: languages/gutenberg-translations.php:1220 build/editor/index.js:50
+#: build/components/index.js:19
 msgid "Category"
 msgstr "Kategori"
 
 #. translators: label for ordering posts by title in descending order
-#: languages/gutenberg-translations.php:1216
+#: languages/gutenberg-translations.php:1216 build/components/index.js:19
 msgid "Z → A"
 msgstr "Z \t A"
 
 #. translators: label for ordering posts by title in ascending order
-#: languages/gutenberg-translations.php:1212
+#: languages/gutenberg-translations.php:1212 build/components/index.js:19
 msgid "A → Z"
 msgstr "A \t Z"
 
-#: languages/gutenberg-translations.php:1208
+#: languages/gutenberg-translations.php:1208 build/components/index.js:19
 msgid "Oldest to Newest"
 msgstr "Äldsta till nyaste"
 
-#: languages/gutenberg-translations.php:1205
+#: languages/gutenberg-translations.php:1205 build/components/index.js:19
 msgid "Newest to Oldest"
 msgstr "Nyaste till äldsta"
 
-#: languages/gutenberg-translations.php:1202
+#: languages/gutenberg-translations.php:1202 build/components/index.js:19
 msgid "Order by"
 msgstr "Sortera efter"
 
-#: languages/gutenberg-translations.php:1526
+#: languages/gutenberg-translations.php:1521 build/edit-post/index.js:12
 msgid "Select"
 msgstr "Välj"
 
-#: languages/gutenberg-translations.php:1529
+#: languages/gutenberg-translations.php:1524 build/edit-post/index.js:12
 msgid "Select or Upload Media"
 msgstr "Välj eller ladda upp media"
 
-#: languages/gutenberg-translations.php:953
+#: languages/gutenberg-translations.php:953 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Video"
 msgstr "Video"
 
-#: languages/gutenberg-translations.php:926
+#: languages/gutenberg-translations.php:926 build/block-library/index.js:12
 msgid "Edit video"
 msgstr "Redigera video"
 
-#: languages/gutenberg-translations.php:923
+#: languages/gutenberg-translations.php:923 build/block-library/index.js:12
 msgid "Write…"
 msgstr "Skriv…"
 
-#: languages/gutenberg-translations.php:920
+#: languages/gutenberg-translations.php:920 build/block-library/index.js:12
 msgid "poetry"
 msgstr "poesi"
 
-#: languages/gutenberg-translations.php:914
+#: languages/gutenberg-translations.php:914 build/block-library/index.js:12
 msgid "Verse"
 msgstr "Vers"
 
-#: languages/gutenberg-translations.php:905
+#: languages/gutenberg-translations.php:905 build/block-library/index.js:12
 msgid "New Column"
 msgstr "Ny kolumn"
 
-#: languages/gutenberg-translations.php:869
+#: languages/gutenberg-translations.php:869 build/block-library/index.js:12
 msgid "Delete Column"
 msgstr "Ta bort kolumn"
 
-#: languages/gutenberg-translations.php:866
+#: languages/gutenberg-translations.php:866 build/block-library/index.js:12
 msgid "Add Column After"
 msgstr "Lägg till kolumn efter"
 
-#: languages/gutenberg-translations.php:863
+#: languages/gutenberg-translations.php:863 build/block-library/index.js:12
 msgid "Add Column Before"
 msgstr "Lägg till kolumn före"
 
-#: languages/gutenberg-translations.php:860
+#: languages/gutenberg-translations.php:860 build/block-library/index.js:12
 msgid "Delete Row"
 msgstr "Ta bort rad"
 
-#: languages/gutenberg-translations.php:854
+#: languages/gutenberg-translations.php:854 build/block-library/index.js:12
 msgid "Add Row Before"
 msgstr "Lägg till rad före"
 
-#: languages/gutenberg-translations.php:881
+#: languages/gutenberg-translations.php:881 build/block-library/index.js:12
 msgid "Edit Table"
 msgstr "Redigera tabell"
 
-#: languages/gutenberg-translations.php:893
+#: languages/gutenberg-translations.php:893 build/block-library/index.js:12
 msgid "Table"
 msgstr "Tabell"
 
-#: languages/gutenberg-translations.php:830
+#: languages/gutenberg-translations.php:830 build/block-library/index.js:12
 msgid "Write shortcode here…"
 msgstr "Skriv kortkod här…"
 
-#: languages/gutenberg-translations.php:827
+#: languages/gutenberg-translations.php:827 build/block-library/index.js:12
 msgid "Shortcode"
 msgstr "Kortkod"
 
-#: languages/gutenberg-translations.php:812
+#: languages/gutenberg-translations.php:812 build/block-library/index.js:12
 msgid "divider"
 msgstr "avdelare"
 
-#: languages/gutenberg-translations.php:809
+#: languages/gutenberg-translations.php:809 build/block-library/index.js:12
 msgid "horizontal-line"
 msgstr "horisontell-linje"
 
-#: languages/gutenberg-translations.php:803
+#: languages/gutenberg-translations.php:803 build/block-library/index.js:12
 msgid "Separator"
 msgstr "Avgränsare"
 
-#: languages/gutenberg-translations.php:794
+#: languages/gutenberg-translations.php:794 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Quote"
 msgstr "Citat"
 
-#: languages/gutenberg-translations.php:768
+#: languages/gutenberg-translations.php:768 build/block-library/index.js:12
 msgid "Write preformatted text…"
 msgstr "Skriv förformaterad text…"
 
-#: languages/gutenberg-translations.php:762
+#: languages/gutenberg-translations.php:762 build/block-library/index.js:12
 msgid "Preformatted"
 msgstr "Förformaterad"
 
-#: languages/gutenberg-translations.php:759
+#: languages/gutenberg-translations.php:759 build/block-library/index.js:12
 msgid "text"
 msgstr "text"
 
-#: languages/gutenberg-translations.php:1171
+#: languages/gutenberg-translations.php:1171 build/components/index.js:19
 msgid "Font Size"
 msgstr "Textstorlek"
 
-#: languages/gutenberg-translations.php:731
+#: languages/gutenberg-translations.php:731 build/block-library/index.js:12
 msgid "Text Settings"
 msgstr "Textinställningar"
 
-#: languages/gutenberg-translations.php:707
-msgid "Read more"
-msgstr "Läs mer"
-
-#: languages/gutenberg-translations.php:665
+#: languages/gutenberg-translations.php:668 build/block-library/index.js:12
 msgid "numbered list"
 msgstr "numrerad lista"
 
-#: languages/gutenberg-translations.php:659
+#: languages/gutenberg-translations.php:662 build/block-library/index.js:12
 msgid "bullet list"
 msgstr "punktlista"
 
-#: languages/gutenberg-translations.php:653
+#: languages/gutenberg-translations.php:656 build/block-library/index.js:12
 msgid "List"
 msgstr "Lista"
 
-#: languages/gutenberg-translations.php:635
+#: languages/gutenberg-translations.php:650 build/block-library/index.js:12
 msgid "recent posts"
 msgstr "senaste inlägget"
 
-#: languages/gutenberg-translations.php:623
-msgid "No posts found."
-msgstr "Inga inlägg hittad."
-
-#: languages/gutenberg-translations.php:620
+#: languages/gutenberg-translations.php:635 build/block-library/index.js:12
 msgid "Latest Posts"
 msgstr "Senaste inläggen"
 
-#: languages/gutenberg-translations.php:616
+#: languages/gutenberg-translations.php:631 build/block-library/index.js:12
 msgid "Display post date"
 msgstr "Visa inläggsdatum"
 
-#: languages/gutenberg-translations.php:629
+#: languages/gutenberg-translations.php:644 build/block-library/index.js:12
 msgid "Grid View"
 msgstr "Rutnätsvy"
 
-#: languages/gutenberg-translations.php:626
+#: languages/gutenberg-translations.php:641 build/block-library/index.js:12
 msgid "List View"
 msgstr "Listvy"
 
-#: languages/gutenberg-translations.php:577
+#: languages/gutenberg-translations.php:601 build/block-library/index.js:12
+#: build/format-library/index.js:12
 msgid "photo"
 msgstr "foto"
 
-#: languages/gutenberg-translations.php:541
+#: languages/gutenberg-translations.php:544 build/block-library/index.js:12
 msgid "Image Settings"
 msgstr "Bildinställningar"
 
-#: languages/gutenberg-translations.php:583
+#: languages/gutenberg-translations.php:594 build/block-library/index.js:12
+#: build/editor/index.js:50 build/format-library/index.js:12
 msgid "Image"
 msgstr "Bild"
 
-#: languages/gutenberg-translations.php:526
+#: languages/gutenberg-translations.php:529 build/edit-post/index.js:12
+#: build/block-library/index.js:12 build/editor/index.js:50
 msgid "Preview"
 msgstr "Förhandsgranska"
 
-#: languages/gutenberg-translations.php:522
+#: languages/gutenberg-translations.php:524 build/block-library/index.js:12
 msgid "embed"
 msgstr "bädda in"
 
-#: languages/gutenberg-translations.php:516
+#: languages/gutenberg-translations.php:518 build/block-library/index.js:12
 msgid "Custom HTML"
 msgstr "Anpassad HTML"
 
-#: languages/gutenberg-translations.php:513
+#: languages/gutenberg-translations.php:515 build/block-library/index.js:12
 msgid "subtitle"
 msgstr "underrubrik"
 
-#: languages/gutenberg-translations.php:510
+#: languages/gutenberg-translations.php:512 build/block-library/index.js:12
 msgid "title"
 msgstr "rubrik"
 
-#: languages/gutenberg-translations.php:504
+#: languages/gutenberg-translations.php:506 build/block-library/index.js:12
 msgid "Heading"
 msgstr "Rubrik"
 
-#: languages/gutenberg-translations.php:497
+#: languages/gutenberg-translations.php:499 build/block-library/index.js:12
 msgid "Write heading…"
 msgstr "Skriv rubrik…"
 
-#: languages/gutenberg-translations.php:491
+#: languages/gutenberg-translations.php:493 build/block-library/index.js:12
 msgid "Level"
 msgstr "Nivå"
 
-#: languages/gutenberg-translations.php:488
+#: languages/gutenberg-translations.php:490 build/block-library/index.js:12
 msgid "Heading Settings"
 msgstr "Rubrikinställningar"
 
-#: languages/gutenberg-translations.php:485
+#: languages/gutenberg-translations.php:484 build/block-library/index.js:12
 msgid "photos"
 msgstr "foton"
 
-#: languages/gutenberg-translations.php:482
+#: languages/gutenberg-translations.php:481 build/block-library/index.js:12
 msgid "images"
 msgstr "bilder"
 
-#: languages/gutenberg-translations.php:476
+#: languages/gutenberg-translations.php:478 build/block-library/index.js:12
 msgid "Remove Image"
 msgstr "Ta bort bild"
 
-#: languages/gutenberg-translations.php:60
-msgid "None"
-msgstr "Ingen"
-
-#: languages/gutenberg-translations.php:423
-msgid "Media File"
-msgstr "Mediefil"
-
-#: languages/gutenberg-translations.php:470
+#: languages/gutenberg-translations.php:472 build/block-library/index.js:12
 msgid "Crop Images"
 msgstr "Beskär bilder"
 
-#: languages/gutenberg-translations.php:467
+#: languages/gutenberg-translations.php:469 build/block-library/index.js:12
 msgid "Gallery Settings"
 msgstr "Inställningar för galleri"
 
-#: languages/gutenberg-translations.php:461
+#: languages/gutenberg-translations.php:463 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Gallery"
 msgstr "Galleri"
 
-#: languages/gutenberg-translations.php:456
+#: languages/gutenberg-translations.php:458 build/block-library/index.js:12
 msgid "Edit Gallery"
 msgstr "Redigera galleri"
 
-#: languages/gutenberg-translations.php:158
+#: languages/gutenberg-translations.php:158 build/block-library/index.js:12
 msgid "Classic"
 msgstr "Klassisk"
 
-#: languages/gutenberg-translations.php:296
+#: languages/gutenberg-translations.php:297 build/block-library/index.js:12
 msgid "video"
 msgstr "video"
 
-#: languages/gutenberg-translations.php:253
+#: languages/gutenberg-translations.php:254 build/block-library/index.js:12
 msgid "audio"
 msgstr "ljud"
 
-#: languages/gutenberg-translations.php:250
+#: languages/gutenberg-translations.php:251 build/block-library/index.js:12
 msgid "music"
 msgstr "musik"
 
-#: languages/gutenberg-translations.php:327
+#: languages/gutenberg-translations.php:328 build/block-library/index.js:12
 msgid "image"
 msgstr "bild"
 
-#: languages/gutenberg-translations.php:314
+#: languages/gutenberg-translations.php:315 build/block-library/index.js:12
 msgid "blog"
 msgstr "blogg"
 
-#: languages/gutenberg-translations.php:311
+#: languages/gutenberg-translations.php:312 build/block-library/index.js:12
 msgid "post"
 msgstr "inlägg"
 
-#: languages/gutenberg-translations.php:369
+#: languages/gutenberg-translations.php:370 build/block-library/index.js:12
 msgid "Previews for this are unavailable in the editor, sorry!"
 msgstr "Förhandsgranskningar för detta är otillgängliga i redigeraren!"
 
-#: languages/gutenberg-translations.php:366
+#: languages/gutenberg-translations.php:367 build/block-library/index.js:12
 msgid "Embedded content from %s"
 msgstr "Inbäddat innehåll från %s"
 
-#: languages/gutenberg-translations.php:363
+#: languages/gutenberg-translations.php:364 build/block-library/index.js:12
 msgid "Sorry, we could not embed that content."
 msgstr "Tyvärr, vi kunde inte bädda in det innehållet."
 
-#: languages/gutenberg-translations.php:360
+#: languages/gutenberg-translations.php:361 build/block-library/index.js:12
 msgid "Enter URL to embed here…"
 msgstr "Ange URL att bädda in här…"
 
-#: languages/gutenberg-translations.php:345
+#: languages/gutenberg-translations.php:346 build/block-library/index.js:12
 msgid "%s URL"
 msgstr "%s URL"
 
-#: languages/gutenberg-translations.php:357
+#: languages/gutenberg-translations.php:358 build/block-library/index.js:12
 msgid "Embedding…"
 msgstr "Bäddar in…"
 
-#: languages/gutenberg-translations.php:214
+#: languages/gutenberg-translations.php:215 build/block-library/index.js:12
 msgid "Write title…"
 msgstr "Skriv rubrik…"
 
-#: languages/gutenberg-translations.php:494
+#: languages/gutenberg-translations.php:496 build/block-library/index.js:12
 msgid "Text Alignment"
 msgstr "Textjustering"
 
-#: languages/gutenberg-translations.php:196
+#: languages/gutenberg-translations.php:197 build/block-library/index.js:12
 msgid "Fixed Background"
 msgstr "Fixerad bakgrund"
 
-#: languages/gutenberg-translations.php:538
+#: languages/gutenberg-translations.php:541 build/block-library/index.js:12
 msgid "Edit image"
 msgstr "Redigera bild"
 
-#: languages/gutenberg-translations.php:187
+#: languages/gutenberg-translations.php:187 build/block-library/index.js:12
 msgid "Columns"
 msgstr "Kolumner"
 
-#: languages/gutenberg-translations.php:169
+#: languages/gutenberg-translations.php:169 build/block-library/index.js:12
+#: build/format-library/index.js:12
 msgid "Code"
 msgstr "Kod"
 
-#: languages/gutenberg-translations.php:164
+#: languages/gutenberg-translations.php:164 build/block-library/index.js:12
 msgid "Write code…"
 msgstr "Skriv kod…"
 
-#: languages/gutenberg-translations.php:149
+#: languages/gutenberg-translations.php:149 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Categories"
 msgstr "Kategorier"
 
-#: languages/gutenberg-translations.php:144
+#: languages/gutenberg-translations.php:144 build/block-library/index.js:12
 msgid "Show Hierarchy"
 msgstr "Visa hierarki"
 
-#: languages/gutenberg-translations.php:141
+#: languages/gutenberg-translations.php:141 build/block-library/index.js:12
 msgid "Categories Settings"
 msgstr "Kategoriinställningar"
 
-#: languages/gutenberg-translations.php:125
+#: languages/gutenberg-translations.php:125 build/block-library/index.js:12
 msgid "Add text…"
 msgstr "Lägg till text…"
 
-#: languages/gutenberg-translations.php:128
+#: languages/gutenberg-translations.php:128 build/block-library/index.js:12
 msgid "Button"
 msgstr "Knapp"
 
-#: languages/gutenberg-translations.php:121
-msgid "Apply"
-msgstr "Tillämpa"
-
-#: languages/gutenberg-translations.php:116
+#: languages/gutenberg-translations.php:116 build/block-library/index.js:12
 msgid "Text Color"
 msgstr "Textfärg"
 
-#: languages/gutenberg-translations.php:111
-msgid "Background Color"
-msgstr "Bakgrundsfärg"
-
-#: languages/gutenberg-translations.php:90
+#: languages/gutenberg-translations.php:90 build/block-library/index.js:12
 msgid "Block has been deleted or is unavailable."
 msgstr "Block har tagits bort eller är inte tillgängligt."
 
-#: languages/gutenberg-translations.php:87
-msgid "Edit"
-msgstr "REdigera"
-
-#: languages/gutenberg-translations.php:31
+#: languages/gutenberg-translations.php:31 build/block-library/index.js:12
 msgid "Edit audio"
 msgstr "Redigera ljud"
 
-#: languages/gutenberg-translations.php:67
+#: languages/gutenberg-translations.php:67 build/block-library/index.js:12
 msgid "Write caption…"
 msgstr "Skriv bildtext…"
 
-#: languages/gutenberg-translations.php:428
+#: languages/gutenberg-translations.php:430 build/block-library/index.js:12
 msgid "Attachment Page"
 msgstr "Sida för bilaga"
 
-#: languages/gutenberg-translations.php:613
+#: languages/gutenberg-translations.php:628 build/block-library/index.js:12
 msgid "Latest Posts Settings"
 msgstr "Inställningar för senaste inlägg"
 
-#: languages/gutenberg-translations.php:734
+#: languages/gutenberg-translations.php:734 build/block-library/index.js:12
 msgid "Drop Cap"
 msgstr "Anfang"
 
-#: languages/gutenberg-translations.php:1640
+#: languages/gutenberg-translations.php:1632 build/editor/index.js:50
 msgid "Move down"
 msgstr "Flytta ner"
 
-#: languages/gutenberg-translations.php:1637
+#: languages/gutenberg-translations.php:1629 build/editor/index.js:50
 msgid "Move up"
 msgstr "Flytta upp"
 
 #. translators: %s: Type of block (i.e. Text, Image etc)
-#: languages/gutenberg-translations.php:1660
+#: languages/gutenberg-translations.php:1652 build/editor/index.js:50
 msgid "Block %s is at the beginning of the content and can’t be moved up"
 msgstr "Block %s är i början av innehållet och kan inte flyttas upp"
 
 #. translators: %s: Type of block (i.e. Text, Image etc)
-#: languages/gutenberg-translations.php:1652
+#: languages/gutenberg-translations.php:1644 build/editor/index.js:50
 msgid "Block %s is at the end of the content and can’t be moved down"
 msgstr "Block %s är i slutet av innehållet och kan inte flyttas ner"
 
 #. translators: %s: Type of block (i.e. Text, Image etc)
-#: languages/gutenberg-translations.php:1644
+#: languages/gutenberg-translations.php:1636 build/editor/index.js:50
 msgid "Block %s is the only block, and cannot be moved"
 msgstr "Block %s är det enda blocket och kan inte flyttas"
 
-#: languages/gutenberg-translations.php:2023
+#: languages/gutenberg-translations.php:2033 build/editor/index.js:50
 msgid "is now live."
 msgstr "är nu live."
 
-#: languages/gutenberg-translations.php:1712
+#: languages/gutenberg-translations.php:1707 build/editor/index.js:50
 msgid "Convert to Regular Block"
 msgstr "Konvertera till vanlig block"
 
-#: languages/gutenberg-translations.php:650
+#: languages/gutenberg-translations.php:653 build/block-library/index.js:12
 msgid "Write list…"
 msgstr "Skriv lista…"
 
-#: languages/gutenberg-translations.php:641
+#: languages/gutenberg-translations.php:2175 build/editor/index.js:50
 msgid "Convert to ordered list"
 msgstr "Konvertera till numrerad lista"
 
-#: languages/gutenberg-translations.php:638
+#: languages/gutenberg-translations.php:2172 build/editor/index.js:50
 msgid "Convert to unordered list"
 msgstr "Konvertera till punktlista"
 
-#: languages/gutenberg-translations.php:644
+#: languages/gutenberg-translations.php:2178 build/editor/index.js:50
 msgid "Outdent list item"
 msgstr "Lyft listobjektet en nivå"
 
-#: languages/gutenberg-translations.php:647
+#: languages/gutenberg-translations.php:2169 build/editor/index.js:50
 msgid "Indent list item"
 msgstr "Sänk listobjektet en nivå"
 
-#: languages/gutenberg-translations.php:662
+#: languages/gutenberg-translations.php:665 build/block-library/index.js:12
 msgid "ordered list"
 msgstr "numrerad lista"
 
-#: languages/gutenberg-translations.php:710
+#: languages/gutenberg-translations.php:710 build/block-library/index.js:12
 msgid "Hide the teaser before the \"More\" tag"
 msgstr "Dölj smakprovet för taggen ”Mer”"
 
-#: languages/gutenberg-translations.php:784
+#: languages/gutenberg-translations.php:784 build/block-library/index.js:12
 msgid "Pullquote"
 msgstr "Markerat citat"
 
 #. translators: placeholder text used for the quote
-#: languages/gutenberg-translations.php:773
+#: languages/gutenberg-translations.php:773 build/block-library/index.js:12
 msgid "Write quote…"
 msgstr "Skriv in citat..."
 
 #. translators: placeholder text used for the citation
-#: languages/gutenberg-translations.php:778
+#: languages/gutenberg-translations.php:778 build/block-library/index.js:12
 msgid "Write citation…"
 msgstr "Skriv citat..."
 
-#: languages/gutenberg-translations.php:1406
+#: languages/gutenberg-translations.php:1408 build/edit-post/index.js:12
 msgid "Editor content"
 msgstr "Innehållsredigerare"
 
-#: languages/gutenberg-translations.php:1447
+#: languages/gutenberg-translations.php:1449 build/edit-post/index.js:12
 msgid "Editor plugins"
 msgstr "Tilläggsredigerare"
 
-#: languages/gutenberg-translations.php:1832
+#: languages/gutenberg-translations.php:1850 build/editor/index.js:50
 msgid "Order"
 msgstr "Ordning"
 
-#: languages/gutenberg-translations.php:1517
+#: languages/gutenberg-translations.php:1512 build/edit-post/index.js:12
 msgid "Additional settings are now available in the Editor block settings sidebar"
 msgstr "Ytterligare inställningar finns nu tillgängliga i Redigerarens sidopanelen med blockinställningar"
 
-#: languages/gutenberg-translations.php:851
+#: languages/gutenberg-translations.php:851 build/block-library/index.js:12
 msgid "Write subheading…"
 msgstr "Skriv underrubrik ..."
 
-#: languages/gutenberg-translations.php:1729
+#: languages/gutenberg-translations.php:1724 build/editor/index.js:50
 msgid "Block Styles"
 msgstr "Blockstilar"
 
 #. translators: %s: heading level e.g: "1", "2", "3"
-#: languages/gutenberg-translations.php:501
+#: languages/gutenberg-translations.php:503 build/block-library/index.js:12
 msgid "Heading %d"
 msgstr "Rubriknivå %d"
 
-#: languages/gutenberg-translations.php:1248
+#: languages/gutenberg-translations.php:1250 build/edit-post/index.js:12
 msgid "Editor top bar"
 msgstr "Redigerarens toppband"
 
-#: languages/gutenberg-translations.php:2047
+#: languages/gutenberg-translations.php:2057 build/editor/index.js:50
 msgid "Visibility:"
 msgstr "Synlighet:"
 
-#: languages/gutenberg-translations.php:2026
+#: languages/gutenberg-translations.php:2036 build/editor/index.js:50
 msgid "What’s next?"
 msgstr "Vad kommer härnäst?"
 
-#: languages/gutenberg-translations.php:1718
+#: languages/gutenberg-translations.php:1713 build/editor/index.js:50
 msgid ""
 "Are you sure you want to delete this Reusable Block?\n"
 "\n"
@@ -3601,134 +3616,226 @@ msgstr ""
 "\n"
 "Det kommer att tas bort permanent från alla inlägg och sidor som använder det."
 
-#: languages/gutenberg-translations.php:977 lib/client-assets.php:1324
+#: lib/client-assets.php:973 languages/gutenberg-translations.php:977
+#: build/blocks/index.js:2
 msgid "Reusable Blocks"
 msgstr "Återanvändbara block"
 
-#: languages/gutenberg-translations.php:753
+#: languages/gutenberg-translations.php:753 build/block-library/index.js:12
 msgid "Paragraph"
 msgstr "Stycke"
 
-#: languages/gutenberg-translations.php:2174
+#: languages/gutenberg-translations.php:2196 build/editor/index.js:50
 msgid "Paragraphs"
 msgstr "Stycken"
 
-#: languages/gutenberg-translations.php:1790
+#: languages/gutenberg-translations.php:1785 build/editor/index.js:50
 msgid "%d result found."
 msgid_plural "%d results found."
 msgstr[0] "%d resultat hittades."
 msgstr[1] "%d resultat hittades."
 
-#: lib/rest-api.php:337
+#: lib/rest-api.php:342
 msgid "Post published."
 msgstr "Inlägget har publicerats."
 
-#: lib/rest-api.php:341
+#: lib/rest-api.php:346
 msgid "Post updated."
 msgstr "Inlägget har uppdaterats."
 
-#: lib/rest-api.php:340
+#: lib/rest-api.php:345
 msgid "Post scheduled."
 msgstr "Inlägget har schemalagts."
 
-#: lib/rest-api.php:338
+#: lib/rest-api.php:343
 msgid "Post published privately."
 msgstr "Inlägget har publicerats privat."
 
-#: languages/gutenberg-translations.php:857
+#: languages/gutenberg-translations.php:857 build/block-library/index.js:12
 msgid "Add Row After"
 msgstr "Lägg till rad efter"
 
-#: lib/rest-api.php:339
+#: lib/rest-api.php:344
 msgid "Post reverted to draft."
 msgstr "Inlägget har återställts till utkastet."
 
-#: languages/gutenberg-translations.php:72
+#: languages/gutenberg-translations.php:1500
+#: packages/block-library/src/latest-comments/index.php:32
+#: build/edit-post/index.js:12 build/editor/index.js:50
+msgid "(no title)"
+msgstr "(utan rubrik)"
+
+#: languages/gutenberg-translations.php:1151 build/components/index.js:19
+msgid "AM"
+msgstr "f m"
+
+#: languages/gutenberg-translations.php:2093 build/editor/index.js:50
+msgid "Add New Tag"
+msgstr "Lägg till en ny tagg"
+
+#: languages/gutenberg-translations.php:1223 build/components/index.js:19
+msgid "All"
+msgstr "Alla"
+
+#: languages/gutenberg-translations.php:121 build/block-library/index.js:12
+#: build/editor/index.js:50 build/format-library/index.js:12
+msgid "Apply"
+msgstr "Verkställ"
+
+#: languages/gutenberg-translations.php:111 build/block-library/index.js:12
+msgid "Background Color"
+msgstr "Färg för bakgrund"
+
+#. translators: ARIA label for the Block sidebar tab, not selected.
+#: languages/gutenberg-translations.php:1486 build/edit-post/index.js:12
+msgid "Block"
+msgstr "Block"
+
+#: languages/gutenberg-translations.php:87 build/block-library/index.js:12
+#: build/editor/index.js:50 build/format-library/index.js:12
+msgid "Edit"
+msgstr "Redigera"
+
+#: languages/gutenberg-translations.php:2220 build/editor/index.js:50
+msgid "Edit Link"
+msgstr "Redigera länken"
+
+#: languages/gutenberg-translations.php:425 build/block-library/index.js:12
+msgid "Media File"
+msgstr "Mediafil"
+
+#: languages/gutenberg-translations.php:638 build/block-library/index.js:12
+msgid "No posts found."
+msgstr "Hittade inga inlägg."
+
+#: languages/gutenberg-translations.php:60 build/block-library/index.js:12
+msgid "None"
+msgstr "Inget"
+
+#: languages/gutenberg-translations.php:1154 build/components/index.js:19
+msgid "PM"
+msgstr "e m"
+
+#: languages/gutenberg-translations.php:1440 build/edit-post/index.js:12
+msgid "Page Attributes"
+msgstr "Sidoattribut"
+
+#: languages/gutenberg-translations.php:2151 build/editor/index.js:50
+msgid "Password Protected"
+msgstr "Lösenordsskyddat"
+
+#: languages/gutenberg-translations.php:1942 build/editor/index.js:50
+msgid "Pending Review"
+msgstr "Väntar på granskning"
+
+#: languages/gutenberg-translations.php:2005 build/editor/index.js:50
+msgid "Published"
+msgstr "Publicerat"
+
+#: languages/gutenberg-translations.php:707 build/block-library/index.js:12
+msgid "Read more"
+msgstr "L&auml;s mer"
+
+#: languages/gutenberg-translations.php:2063 build/editor/index.js:50
+msgid "Saved"
+msgstr "Sparat"
+
+#: languages/gutenberg-translations.php:1993 build/editor/index.js:50
+msgid "Schedule"
+msgstr "Tidsinställ"
+
+#: languages/gutenberg-translations.php:72 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Audio"
 msgstr "Ljud"
 
-#: languages/gutenberg-translations.php:1820
+#: languages/gutenberg-translations.php:1830 build/editor/index.js:50
 msgid "Upload"
 msgstr "Ladda upp"
 
-#: languages/gutenberg-translations.php:2219
+#: languages/gutenberg-translations.php:2241 build/editor/index.js:50
 msgid "Additional CSS Class"
 msgstr "Ytterligare CSS-klass"
 
-#: languages/gutenberg-translations.php:2216
+#: languages/gutenberg-translations.php:2238 build/editor/index.js:50
 msgid "Anchors lets you link directly to a section on a page."
 msgstr "Ankare låter dig länka direkt till en sektion på en sida."
 
-#: languages/gutenberg-translations.php:2213
+#: languages/gutenberg-translations.php:2235 build/editor/index.js:50
 msgid "HTML Anchor"
 msgstr "HTML-ankare"
 
-#: languages/gutenberg-translations.php:1744
+#: languages/gutenberg-translations.php:1739 build/editor/index.js:50
 msgid "This color combination may be hard for people to read. Try using a brighter background color and/or a darker text color."
 msgstr "Denna färgkombination kan vara svår för människor att läsa. Försök använda en ljusare bakgrundsfärg och/eller en mörkare textfärg."
 
-#: languages/gutenberg-translations.php:1741
+#: languages/gutenberg-translations.php:1736 build/editor/index.js:50
 msgid "This color combination may be hard for people to read. Try using a darker background color and/or a brighter text color."
 msgstr "Denna färgkombination kan vara svår för människor att läsa. Försök använda en mörkare bakgrundsfärg och/eller en ljusare textfärg."
 
-#: languages/gutenberg-translations.php:990
+#: languages/gutenberg-translations.php:990 build/components/index.js:19
 msgid "Clear"
 msgstr "Rensa"
 
-#: languages/gutenberg-translations.php:993
+#: languages/gutenberg-translations.php:993 build/components/index.js:19
 msgid "Custom color picker"
 msgstr "Anpassad färgväljare"
 
 #. translators: %s: The name of the color e.g: "vivid red".
-#: languages/gutenberg-translations.php:997
+#: languages/gutenberg-translations.php:997 build/components/index.js:19
 msgid "Color: %s"
 msgstr "Färg: %s"
 
-#: languages/gutenberg-translations.php:1581
+#: languages/gutenberg-translations.php:1576 build/editor/index.js:50
 msgid "Full width"
 msgstr "Full bredd"
 
-#: languages/gutenberg-translations.php:1578
+#: languages/gutenberg-translations.php:1573 build/editor/index.js:50
 msgid "Wide width"
 msgstr "Bred bredd"
 
-#: languages/gutenberg-translations.php:971 lib/client-assets.php:1314
+#: lib/client-assets.php:963 languages/gutenberg-translations.php:971
+#: build/blocks/index.js:2
 msgid "Widgets"
 msgstr "Widgetar"
 
-#: languages/gutenberg-translations.php:965 lib/client-assets.php:1304
+#: lib/client-assets.php:953 languages/gutenberg-translations.php:965
+#: build/blocks/index.js:2
 msgid "Formatting"
 msgstr "Formatering"
 
-#: languages/gutenberg-translations.php:962 lib/client-assets.php:1299
+#: lib/client-assets.php:948 languages/gutenberg-translations.php:962
+#: build/blocks/index.js:2
 msgid "Common Blocks"
 msgstr "Vanliga block"
 
-#: languages/gutenberg-translations.php:1575
-msgid "Align right"
-msgstr "Justera höger"
-
-#: languages/gutenberg-translations.php:1572
+#: languages/gutenberg-translations.php:1567 build/editor/index.js:50
 msgid "Align center"
-msgstr "Justera i mitten"
+msgstr "Centrera"
 
-#: languages/gutenberg-translations.php:1569
+#: languages/gutenberg-translations.php:1564 build/editor/index.js:50
 msgid "Align left"
-msgstr "Justera vänster"
+msgstr "Vänsterställ"
 
-#. Description of the plugin/theme
+#: languages/gutenberg-translations.php:1570 build/editor/index.js:50
+msgid "Align right"
+msgstr "Högerställ"
+
+#. Description of the plugin
 msgid "Printing since 1440. This is the development plugin for the new block editor in core."
 msgstr "Trycker sedan 1440. Detta är utvecklingstillägget för den nya blockredigeraren i kärnan."
 
-#: languages/gutenberg-translations.php:2117 lib/client-assets.php:1631
+#: lib/client-assets.php:1291 languages/gutenberg-translations.php:2127
+#: build/editor/index.js:50
 msgid "Add title"
 msgstr "Lägg till rubrik"
 
-#: gutenberg.php:140
+#: gutenberg.php:169
 msgid "Gutenberg development mode requires files to be built. Run <code>npm install</code> to install dependencies, <code>npm run build</code> to build the files or <code>npm run dev</code> to build the files and watch for changes. Read the <a href=\"https://github.com/WordPress/gutenberg/blob/master/CONTRIBUTING.md\">contributing</a> file for more information."
 msgstr "Gutenbergs utvecklingsläge kräver att filer byggs. Kör <code>npm install</code> för att installera beroende, kör <code>npm run build</code> för att bygga filerna och kör  <code>npm run dev</code> för att bygga och granska filerna. Läs filen <a href=\"https://github.com/WordPress/gutenberg/blob/master/CONTRIBUTING.md\">contributing</a> för mer information."
 
-#: languages/gutenberg-translations.php:1847 lib/register.php:168
+#: lib/register.php:168 languages/gutenberg-translations.php:1865
+#: build/editor/index.js:50
 msgid "Author"
 msgstr "Författare"
 
@@ -3736,31 +3843,36 @@ msgstr "Författare"
 msgid "Comments"
 msgstr "Kommentarer"
 
-#: languages/gutenberg-translations.php:1434 lib/register.php:146
+#: lib/register.php:146 languages/gutenberg-translations.php:1436
+#: build/edit-post/index.js:12
 msgid "Discussion"
 msgstr "Diskussion"
 
-#: languages/gutenberg-translations.php:1444 lib/register.php:130
+#: lib/register.php:130 languages/gutenberg-translations.php:1446
+#: build/edit-post/index.js:12
 msgid "Custom Fields"
 msgstr "Anpassade fält"
 
-#: languages/gutenberg-translations.php:1430 lib/register.php:122
+#: lib/register.php:122 languages/gutenberg-translations.php:1432
+#: build/edit-post/index.js:12
 msgid "Excerpt"
 msgstr "Utdrag"
 
-#: languages/gutenberg-translations.php:1460 lib/register.php:88
+#: lib/register.php:88 languages/gutenberg-translations.php:1465
+#: build/edit-post/index.js:12 build/editor/index.js:50
 msgid "Publish"
 msgstr "Publicera"
 
-#: languages/gutenberg-translations.php:82 lib/register.php:81
+#: lib/register.php:81 languages/gutenberg-translations.php:82
+#: build/block-library/index.js:12 build/editor/index.js:50
 msgid "Save"
 msgstr "Spara"
 
-#: gutenberg.php:83
+#: gutenberg.php:104
 msgid "Documentation"
 msgstr "Dokumentation"
 
-#: gutenberg.php:77
+#: gutenberg.php:98
 msgid "Feedback"
 msgstr "Feedback"
 
@@ -3768,39 +3880,32 @@ msgstr "Feedback"
 msgid "Select Category"
 msgstr "Välj kategori"
 
-#: gutenberg.php:63 gutenberg.php:64
+#: gutenberg.php:84 gutenberg.php:85
 msgid "Demo"
 msgstr "Demo"
 
-#. Plugin Name of the plugin/theme
+#. Plugin Name of the plugin
 msgid "Gutenberg"
 msgstr "Gutenberg"
 
-#. Plugin URI of the plugin/theme
+#. Plugin URI of the plugin
 msgid "https://github.com/WordPress/gutenberg"
 msgstr "https://github.com/WordPress/gutenberg"
 
-#: lib/client-assets.php:397
+#: lib/client-assets.php:241 lib/client-assets.php:270
 msgid "g:i a"
 msgstr "H:i"
 
-#: lib/client-assets.php:398
+#: lib/client-assets.php:242 lib/client-assets.php:273
 msgid "F j, Y"
 msgstr "j F, Y"
 
-#: lib/client-assets.php:399
-msgid "F j, Y g:i a"
-msgstr "j F, Y H:i"
-
-#. Author of the plugin/theme
+#. Author of the plugin
 msgid "Gutenberg Team"
 msgstr "Gutenberg teamet"
 
-#: lib/register.php:74
-msgid "Revisions"
-msgstr "Versioner"
-
-#: languages/gutenberg-translations.php:54 lib/register.php:85
+#: lib/register.php:85 languages/gutenberg-translations.php:54
+#: build/block-library/index.js:12
 msgid "Metadata"
 msgstr "Metadata"
 
@@ -3809,26 +3914,21 @@ msgctxt "post format"
 msgid "Format"
 msgstr "Format"
 
-#: languages/gutenberg-translations.php:138
-#: packages/block-library/src/latest-posts/index.php:33
-msgid "(Untitled)"
-msgstr "(Utan namn)"
-
 #. translators: %s is the name of the plugin that generated this meta box.
 #: lib/meta-box-partial-page.php:273
 msgid "Gutenberg incompatible meta box, from the \"%s\" plugin."
 msgstr "Metabox från tillägget ”%s” som är inkompatibel med Gutenberg."
 
-#: gutenberg.php:462
+#: gutenberg.php:491
 msgid "Toggle editor selection menu"
 msgstr "Slå på/av redigerarens alternativmeny"
 
 #. translators: %s: post title
-#: gutenberg.php:310
+#: gutenberg.php:339
 msgid "Edit &#8220;%s&#8221; in the classic editor"
 msgstr "Redigera ”%s” i den klassiska redigeraren"
 
-#: gutenberg.php:314 gutenberg.php:464
+#: gutenberg.php:343 gutenberg.php:493
 msgid "Classic Editor"
 msgstr "Klassisk redigerare"
 
@@ -3842,20 +3942,15 @@ msgstr "Blocktypen ”%s” är inte registrerad."
 msgid "Block type \"%s\" is already registered."
 msgstr "Blocktypen ”%s” är redan registrerad."
 
-#. translators: %s: duration
-#: lib/client-assets.php:393
-msgid "%s ago"
-msgstr "för %s sedan"
-
 #: lib/register.php:164
 msgid "Slug"
 msgstr "Permalänk"
 
-#: lib/class-wp-rest-block-renderer-controller.php:104
+#: lib/class-wp-rest-block-renderer-controller.php:105
 msgid "Sorry, you are not allowed to read Gutenberg blocks as this user."
 msgstr "Tyvärr, du saknar behörighet att läsa Gutenberg-blocken som denna användare."
 
-#: gutenberg.php:127
+#: gutenberg.php:156
 msgid "Gutenberg requires WordPress 4.9.8 or later to function properly. Please upgrade WordPress before activating Gutenberg."
 msgstr "Gutenberg kräver WordPress 4.9.8 eller senare för att fungera korrekt. Uppdatera WordPress innan du aktiverar Gutenberg."
 
@@ -3864,7 +3959,7 @@ msgid "Send Trackbacks"
 msgstr "Skicka trackbacks"
 
 #. translators: %s: duration
-#: lib/client-assets.php:391
+#: lib/client-assets.php:235
 msgid "%s from now"
 msgstr "Om %s"
 
@@ -3879,3 +3974,22 @@ msgstr "Namn på blocktyper får inte innehålla versaler."
 #: lib/class-wp-block-type-registry.php:73
 msgid "Block type names must contain a namespace prefix. Example: my-plugin/my-custom-block-type"
 msgstr "Namn på blocktyper måste innehålla namnrymdsprefix. Till exempel: my-plugin/my-custom-block-type"
+
+#. translators: %s: duration
+#: lib/client-assets.php:237
+msgid "%s ago"
+msgstr "%s sedan"
+
+#: languages/gutenberg-translations.php:138
+#: packages/block-library/src/latest-posts/index.php:36
+#: build/block-library/index.js:12
+msgid "(Untitled)"
+msgstr "(Utan titel)"
+
+#: lib/client-assets.php:243 lib/client-assets.php:274
+msgid "F j, Y g:i a"
+msgstr "Y-m-d H:i"
+
+#: lib/register.php:74
+msgid "Revisions"
+msgstr "Version"

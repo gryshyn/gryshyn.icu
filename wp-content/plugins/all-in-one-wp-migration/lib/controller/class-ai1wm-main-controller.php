@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2018 ServMask Inc.
+ * Copyright (C) 2014-2019 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,6 +22,10 @@
  * ███████║███████╗██║  ██║ ╚████╔╝ ██║ ╚═╝ ██║██║  ██║███████║██║  ██╗
  * ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Kangaroos cannot jump here' );
+}
 
 class Ai1wm_Main_Controller {
 
@@ -53,6 +57,9 @@ class Ai1wm_Main_Controller {
 		if ( extension_loaded( 'litespeed' ) ) {
 			$this->create_litespeed_htaccess( AI1WM_WORDPRESS_HTACCESS );
 		}
+
+		$this->setup_folders();
+		$this->create_secret_key();
 	}
 
 	/**
@@ -78,6 +85,9 @@ class Ai1wm_Main_Controller {
 
 		// Setup folders
 		add_action( 'admin_init', array( $this, 'setup_folders' ) );
+
+		// Create secret key
+		add_action( 'admin_init', array( $this, 'create_secret_key' ) );
 
 		// Schedule crons
 		add_action( 'admin_init', array( $this, 'schedule_crons' ) );
@@ -270,6 +280,18 @@ class Ai1wm_Main_Controller {
 		// Check if web.config is created in backups folder
 		if ( ! is_file( AI1WM_BACKUPS_WEBCONFIG ) ) {
 			$this->create_backups_webconfig( AI1WM_BACKUPS_WEBCONFIG );
+		}
+	}
+
+	/**
+	 * Create secret key if they don't exist yet
+	 *
+	 * @return void
+	 */
+	public function create_secret_key() {
+		// Set secret key
+		if ( ! get_option( AI1WM_SECRET_KEY ) ) {
+			update_option( AI1WM_SECRET_KEY, wp_generate_password( 12, false ) );
 		}
 	}
 
@@ -555,16 +577,17 @@ class Ai1wm_Main_Controller {
 		);
 
 		wp_register_script(
-			'ai1wm_feedback',
-			Ai1wm_Template::asset_link( 'javascript/feedback.min.js' ),
+			'ai1wm_settings',
+			Ai1wm_Template::asset_link( 'javascript/settings.min.js' ),
 			array( 'ai1wm_util' )
 		);
 
-		wp_register_script(
-			'ai1wm_report',
-			Ai1wm_Template::asset_link( 'javascript/report.min.js' ),
-			array( 'ai1wm_util' )
-		);
+		wp_localize_script( 'ai1wm_settings', 'ai1wm_locale', array(
+			'leave_feedback'                      => __( 'Leave plugin developers any feedback here', AI1WM_PLUGIN_NAME ),
+			'how_may_we_help_you'                 => __( 'How may we help you?', AI1WM_PLUGIN_NAME ),
+			'thanks_for_submitting_your_feedback' => __( 'Thanks for submitting your feedback!', AI1WM_PLUGIN_NAME ),
+			'thanks_for_submitting_your_request'  => __( 'Thanks for submitting your request!', AI1WM_PLUGIN_NAME ),
+		) );
 	}
 
 	/**
@@ -711,6 +734,10 @@ class Ai1wm_Main_Controller {
 			'secret_key' => get_option( AI1WM_SECRET_KEY ),
 		) );
 
+		wp_localize_script( 'ai1wm_import', 'ai1wm_compatibility', array(
+			'messages' => Ai1wm_Compatibility::get( array() ),
+		) );
+
 		wp_localize_script( 'ai1wm_import', 'ai1wm_locale', array(
 			'stop_importing_your_website'         => __( 'You are about to stop importing your website, are you sure?', AI1WM_PLUGIN_NAME ),
 			'preparing_to_import'                 => __( 'Preparing to import...', AI1WM_PLUGIN_NAME ),
@@ -719,7 +746,7 @@ class Ai1wm_Main_Controller {
 			'unable_to_confirm_the_import'        => __( 'Unable to confirm the import. Refresh the page and try again', AI1WM_PLUGIN_NAME ),
 			'unable_to_prepare_blogs_on_import'   => __( 'Unable to prepare blogs on import. Refresh the page and try again', AI1WM_PLUGIN_NAME ),
 			'unable_to_stop_the_import'           => __( 'Unable to stop the import. Refresh the page and try again', AI1WM_PLUGIN_NAME ),
-			'please_wait_stopping_the_export'     => __( 'Please wait, stopping the import...', AI1WM_PLUGIN_NAME ),
+			'please_wait_stopping_the_import'     => __( 'Please wait, stopping the import...', AI1WM_PLUGIN_NAME ),
 			'close_import'                        => __( 'Close', AI1WM_PLUGIN_NAME ),
 			'stop_import'                         => __( 'Stop import', AI1WM_PLUGIN_NAME ),
 			'confirm_import'                      => __( 'Proceed', AI1WM_PLUGIN_NAME ),
@@ -823,7 +850,8 @@ class Ai1wm_Main_Controller {
 
 		wp_localize_script( 'ai1wm_backups', 'ai1wm_backups', array(
 			'ajax'       => array(
-				'url' => wp_make_link_relative( admin_url( 'admin-ajax.php?action=ai1wm_backups' ) ),
+				'url'              => wp_make_link_relative( admin_url( 'admin-ajax.php?action=ai1wm_backups' ) ),
+				'add_backup_label' => wp_make_link_relative( admin_url( 'admin-ajax.php?action=ai1wm_add_backup_label' ) ),
 			),
 			'secret_key' => get_option( AI1WM_SECRET_KEY ),
 		) );
@@ -836,7 +864,7 @@ class Ai1wm_Main_Controller {
 			'unable_to_confirm_the_import'        => __( 'Unable to confirm the import. Refresh the page and try again', AI1WM_PLUGIN_NAME ),
 			'unable_to_prepare_blogs_on_import'   => __( 'Unable to prepare blogs on import. Refresh the page and try again', AI1WM_PLUGIN_NAME ),
 			'unable_to_stop_the_import'           => __( 'Unable to stop the import. Refresh the page and try again', AI1WM_PLUGIN_NAME ),
-			'please_wait_stopping_the_export'     => __( 'Please wait, stopping the import...', AI1WM_PLUGIN_NAME ),
+			'please_wait_stopping_the_import'     => __( 'Please wait, stopping the import...', AI1WM_PLUGIN_NAME ),
 			'close_import'                        => __( 'Close', AI1WM_PLUGIN_NAME ),
 			'stop_import'                         => __( 'Stop import', AI1WM_PLUGIN_NAME ),
 			'confirm_import'                      => __( 'Proceed', AI1WM_PLUGIN_NAME ),
@@ -849,6 +877,8 @@ class Ai1wm_Main_Controller {
 			'want_to_delete_this_file'            => __( 'Are you sure you want to delete this file?', AI1WM_PLUGIN_NAME ),
 			'unlimited'                           => __( 'Restoring a backup is available via Unlimited extension. <a href="https://servmask.com/products/unlimited-extension" target="_blank">Get it here</a>', AI1WM_PLUGIN_NAME ),
 			'restore_from_file'                   => __( '"Restore" functionality has been moved to a paid extension. <a href="https://servmask.com/products/unlimited-extension" target="_blank">Get it here</a> or download the backup and then use "Import from file".', AI1WM_PLUGIN_NAME ),
+			'unable_to_add_backup_label'          => __( 'Unable to add label for backup because: ', AI1WM_PLUGIN_NAME ),
+			'click_to_set_backup_label'           => __( 'Click to set a label for this backup', AI1WM_PLUGIN_NAME ),
 		) );
 	}
 
@@ -912,11 +942,6 @@ class Ai1wm_Main_Controller {
 	 */
 	public function init() {
 
-		// Set secret key
-		if ( ! get_option( AI1WM_SECRET_KEY ) ) {
-			update_option( AI1WM_SECRET_KEY, wp_generate_password( 12, false ) );
-		}
-
 		// Set username
 		if ( isset( $_SERVER['PHP_AUTH_USER'] ) ) {
 			update_option( AI1WM_AUTH_USER, $_SERVER['PHP_AUTH_USER'] );
@@ -958,6 +983,7 @@ class Ai1wm_Main_Controller {
 		add_action( 'wp_ajax_ai1wm_backups', 'Ai1wm_Backups_Controller::delete' );
 		add_action( 'wp_ajax_ai1wm_feedback', 'Ai1wm_Feedback_Controller::feedback' );
 		add_action( 'wp_ajax_ai1wm_report', 'Ai1wm_Report_Controller::report' );
+		add_action( 'wp_ajax_ai1wm_add_backup_label', 'Ai1wm_Backups_Controller::add_label' );
 
 		// Update actions
 		if ( current_user_can( 'update_plugins' ) ) {

@@ -27,8 +27,8 @@
                                                                     
                     $this->module_settings[]                  =   array(
                                                                     'id'            =>  'block_upload_url',
-                                                                    'label'         =>  __('Block uploads URL',    'wp-hide-security-enhancer'),
-                                                                    'description'   =>  __('Block upload files from being accesible through default urls.',    'wp-hide-security-enhancer') . ' <br />'.__('If set to Yes, all new images inserted into posts will use the new Upload Url, as old url become blocked. Using the No, new images inserted will use old url, which however are being updated on front side. This may be helpful on plugin disable, so image urls can be accessible as before.',    'wp-hide-security-enhancer').'<br />'. __('Apply only if',    'wp-hide-security-enhancer') .' <b>New Upload Path</b> '.__('is not empty.',    'wp-hide-security-enhancer'),
+                                                                    'label'         =>  __('Block default uploads URL',    'wp-hide-security-enhancer'),
+                                                                    'description'   =>  __('Block default wp-content/uploads/ media folder from being accesible through default urls.',    'wp-hide-security-enhancer') . ' <br />'.__('If set to Yes, all new images inserted into posts will use the new Upload Url, as old url become blocked. Using the No, new images inserted will use old url, which however are being updated on front side. This may be helpful on plugin disable, so image urls can be accessible as before.',    'wp-hide-security-enhancer').'<br />'. __('Apply only if',    'wp-hide-security-enhancer') .' <b>New Upload Path</b> '.__('is not empty.',    'wp-hide-security-enhancer'),
                                                                     
                                                                     'input_type'    =>  'radio',
                                                                     'options'       =>  array(
@@ -51,35 +51,7 @@
                 {
                     if(empty($saved_field_data))
                         return FALSE;
-                    
-                    //Preserver uploads urls
-                    $preserve_upload_url    =   TRUE;
-                    //only within admin
-                    if( ! is_admin() )
-                        $preserve_upload_url    =   FALSE;
-                    //only if block_upload_url is set to no
-                    if($preserve_upload_url &&  $this->wph->functions->get_module_item_setting('block_upload_url')   !=  'no')
-                        $preserve_upload_url    =   FALSE;
-                    if($preserve_upload_url &&  defined('DOING_AJAX')   &&  constant('DOING_AJAX')  === TRUE)
-                        {
-                            if(isset($_POST['action'])   &&  !in_array(sanitize_text_field($_POST['action']), array('query-attachments', 'upload-attachment', 'send-attachment-to-editor', 'set-post-thumbnail')))
-                                $preserve_upload_url    =   FALSE;
-                        }
-                    
-                    if( $preserve_upload_url    === TRUE )
-                        {
-                            //preserve the links
-                            $this->wph->functions->add_replacement( $this->wph->default_variables['upload_url'], 'WPH-preserved-upload-url', 'high');
-                            
-                            //restore the original url
-                            $this->wph->functions->add_replacement( 'WPH-preserved-upload-url', $this->wph->default_variables['upload_url'], 'low');
-                            
-                            return;
-                        }
-
-
-                    add_filter('upload_dir',            array( $this, 'upload_dir' ), 999);
-                    
+          
                     //add default plugin path replacement
                     $new_upload_path        =   $this->wph->functions->untrailingslashit_all(    $this->wph->functions->get_module_item_setting('new_upload_path')  );
                     $new_url                =   trailingslashit(    home_url()  )   . $new_upload_path;
@@ -94,10 +66,8 @@
                     //check if the field is noe empty
                     if(empty($saved_field_data))
                         return  $processing_response; 
-                    
-                    $wp_upload_dir  =   wp_upload_dir(); 
-                                        
-                    $uploads_path =   $this->wph->functions->get_url_path(   $wp_upload_dir['baseurl']   );
+                                                            
+                    $uploads_path =   $this->wph->functions->get_url_path(   $this->wph->default_variables['upload_url']   );
                     
                     $rewrite_base   =   trailingslashit( $saved_field_data );
                     $rewrite_to     =   $this->wph->functions->get_rewrite_to_base( $uploads_path );                    
@@ -115,31 +85,7 @@
                                 
                     return  $processing_response;   
                 }
-                
             
-            function upload_dir($data)
-                {
-              
-                    $new_upload_path        =   $this->wph->functions->untrailingslashit_all(    $this->wph->functions->get_module_item_setting('new_upload_path')  );
-                    
-                    $new_url                =   trailingslashit(    site_url()  )   . $new_upload_path;
-                    
-                    $data['url']            =   str_replace($data['baseurl'], $new_url, $data['url']);
-                    $data['baseurl']        =   $new_url;
-                    
-                    //add replacement
-                    if(! ($this->wph->functions->replacement_exists( $this->wph->default_variables['upload_url'] )))
-                        {
-                            //prevent media images from being replaced on admin, as when plugin disable the links will not work anymore
-                            $block_upload_url   =   $this->wph->functions->get_module_item_setting('block_upload_url');
-                            if(!is_admin() ||  (is_admin() && !empty($block_upload_url) &&  $block_upload_url   !=  'no'))
-                                {
-                                    $this->wph->functions->add_replacement($this->wph->default_variables['upload_url'], $new_url);
-                                }
-                        }
-                       
-                    return $data;   
-                }
                             
             function _callback_saved_block_upload_url($saved_field_data)
                 {
@@ -153,9 +99,7 @@
                     if (empty(  $new_upload_path ))
                         return FALSE;
                     
-                    $wp_upload_dir  =   wp_upload_dir();
-                    
-                    $default_upload_url    =   untrailingslashit   (  $wp_upload_dir['baseurl']  );
+                    $default_upload_url    =   untrailingslashit   (  $this->wph->default_variables['upload_url']  );
                     $default_upload_url    =   str_replace(    site_url(), "", $default_upload_url);
                     $default_upload_url    =   ltrim(rtrim($default_upload_url, "/"),  "/");
                                 

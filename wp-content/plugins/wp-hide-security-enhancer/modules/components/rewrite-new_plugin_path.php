@@ -110,8 +110,8 @@
                                 
                             //add replacement
                             $new_plugin_path        =   $this->wph->functions->untrailingslashit_all(    $this->wph->functions->get_module_item_setting('new_plugin_path')  );
-                            $replace_url            =   trailingslashit(    WP_PLUGIN_URL  )   . $active_plugin_directory;
-                            $replacement_url        =   trailingslashit(    home_url()  ) .  $plugin_custom_path;
+                            $replace_url            =   trailingslashit(    trailingslashit(    WP_PLUGIN_URL  )   . $active_plugin_directory );
+                            $replacement_url        =   trailingslashit(    trailingslashit(    home_url()  ) .  $plugin_custom_path );
                             $this->wph->functions->add_replacement( $replace_url, $replacement_url);
  
                         }

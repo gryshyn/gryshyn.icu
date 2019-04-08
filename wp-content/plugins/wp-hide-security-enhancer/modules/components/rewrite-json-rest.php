@@ -56,7 +56,9 @@
                     $this->module_settings[]                  =   array(
                                                                     'id'            =>  'block_json_rest',
                                                                     'label'         =>  __('Block any JSON REST calls',    'wp-hide-security-enhancer'),
-                                                                    'description'   =>  __('Any call for JSON REST API service will be blocked.',    'wp-hide-security-enhancer'),
+                                                                    'description'   =>  __('Any call for JSON REST API service will be blocked.',    'wp-hide-security-enhancer')
+                                                                                        . '<br />' . __('<span class="info"> This might be required by specific plugins, including new WordPress editor <b>Gutenberg</b>.</span>'),
+
                                                                     
                                                                     'input_type'    =>  'radio',
                                                                     'options'       =>  array(

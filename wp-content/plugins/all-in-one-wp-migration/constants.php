@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2018 ServMask Inc.
+ * Copyright (C) 2014-2019 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,6 +23,10 @@
  * ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Kangaroos cannot jump here' );
+}
+
 // ================
 // = Plugin Debug =
 // ================
@@ -31,7 +35,7 @@ define( 'AI1WM_DEBUG', false );
 // ==================
 // = Plugin Version =
 // ==================
-define( 'AI1WM_VERSION', '6.79' );
+define( 'AI1WM_VERSION', '6.87' );
 
 // ===============
 // = Plugin Name =
@@ -164,6 +168,11 @@ define( 'AI1WM_FILEMAP_NAME', 'filemap.list' );
 define( 'AI1WM_MUPLUGINS_NAME', 'mu-plugins' );
 
 // =============================
+// = Less Cache Extension Name =
+// =============================
+define( 'AI1WM_LESS_CACHE_NAME', '.less.cache' );
+
+// =============================
 // = Endurance Page Cache Name =
 // =============================
 define( 'AI1WM_ENDURANCE_PAGE_CACHE_NAME', 'endurance-page-cache.php' );
@@ -182,6 +191,11 @@ define( 'AI1WM_ENDURANCE_BROWSER_CACHE_NAME', 'endurance-browser-cache.php' );
 // = GD System Plugin Name =
 // =========================
 define( 'AI1WM_GD_SYSTEM_PLUGIN_NAME', 'gd-system-plugin.php' );
+
+// =======================
+// = Wp Stack Cache Name =
+// =======================
+define( 'AI1WM_WP_STACK_CACHE_NAME', 'wp-stack-cache.php' );
 
 // ===================
 // = Export Log Name =
@@ -253,6 +267,11 @@ define( 'AI1WM_ACTIVE_TEMPLATE', 'template' );
 // =====================
 define( 'AI1WM_ACTIVE_STYLESHEET', 'stylesheet' );
 
+// ===================
+// = Backups Labels  =
+// ===================
+define( 'AI1WM_BACKUPS_LABELS', 'ai1wm_backups_labels' );
+
 // ============
 // = Cron Key =
 // ============
@@ -292,6 +311,16 @@ define( 'AI1WM_MAX_CHUNK_SIZE', 5 * 1024 * 1024 );
 // = Max Chunk Retries =
 // =====================
 define( 'AI1WM_MAX_CHUNK_RETRIES', 10 );
+
+// ===========================
+// = Max Transaction Queries =
+// ===========================
+define( 'AI1WM_MAX_TRANSACTION_QUERIES', 1000 );
+
+// ======================
+// = Max Select Records =
+// ======================
+define( 'AI1WM_MAX_SELECT_RECORDS', 1000 );
 
 // ===========================
 // = WP_CONTENT_DIR Constant =
@@ -724,43 +753,6 @@ if ( ! defined( 'AI1WMRE_PLUGIN_SHORT' ) ) {
 	define( 'AI1WMRE_PLUGIN_SHORT', 'glacier' );
 }
 
-// =====================================
-// = WebDAV Extension Base Dir =
-// =====================================
-if ( defined( 'AI1WMWE_PLUGIN_BASENAME' ) ) {
-	define( 'AI1WMWE_PLUGIN_BASEDIR', dirname( AI1WMWE_PLUGIN_BASENAME ) );
-} else {
-	define( 'AI1WMWE_PLUGIN_BASEDIR', 'all-in-one-wp-migration-webdav-extension' );
-}
-
-// ==================================
-// = WebDAV Extension Title =
-// ==================================
-if ( ! defined( 'AI1WMWE_PLUGIN_TITLE' ) ) {
-	define( 'AI1WMWE_PLUGIN_TITLE', 'WebDAV Extension' );
-}
-
-// ==================================
-// = WebDAV Extension About =
-// ==================================
-if ( ! defined( 'AI1WMWE_PLUGIN_ABOUT' ) ) {
-	define( 'AI1WMWE_PLUGIN_ABOUT', 'https://servmask.com/products/webdav-extension/about' );
-}
-
-// ================================
-// = WebDAV Extension Key =
-// ================================
-if ( ! defined( 'AI1WMWE_PLUGIN_KEY' ) ) {
-	define( 'AI1WMWE_PLUGIN_KEY', 'ai1wmwe_plugin_key' );
-}
-
-// ==================================
-// = WebDAV Extension Short =
-// ==================================
-if ( ! defined( 'AI1WMWE_PLUGIN_SHORT' ) ) {
-	define( 'AI1WMWE_PLUGIN_SHORT', 'webdav' );
-}
-
 // ===========================
 // = Mega Extension Base Dir =
 // ===========================
@@ -910,6 +902,43 @@ if ( ! defined( 'AI1WMPE_PLUGIN_SHORT' ) ) {
 }
 
 // ================================
+// = S3 Client Extension Base Dir =
+// ================================
+if ( defined( 'AI1WMNE_PLUGIN_BASENAME' ) ) {
+	define( 'AI1WMNE_PLUGIN_BASEDIR', dirname( AI1WMNE_PLUGIN_BASENAME ) );
+} else {
+	define( 'AI1WMNE_PLUGIN_BASEDIR', 'all-in-one-wp-migration-s3-client-extension' );
+}
+
+// =============================
+// = S3 Client Extension Title =
+// =============================
+if ( ! defined( 'AI1WMNE_PLUGIN_TITLE' ) ) {
+	define( 'AI1WMNE_PLUGIN_TITLE', 'S3 Client Extension' );
+}
+
+// =============================
+// = S3 Client Extension About =
+// =============================
+if ( ! defined( 'AI1WMNE_PLUGIN_ABOUT' ) ) {
+	define( 'AI1WMNE_PLUGIN_ABOUT', 'https://servmask.com/products/s3-client-extension/about' );
+}
+
+// ===========================
+// = S3 Client Extension Key =
+// ===========================
+if ( ! defined( 'AI1WMNE_PLUGIN_KEY' ) ) {
+	define( 'AI1WMNE_PLUGIN_KEY', 'ai1wmne_plugin_key' );
+}
+
+// =============================
+// = S3 Client Extension Short =
+// =============================
+if ( ! defined( 'AI1WMNE_PLUGIN_SHORT' ) ) {
+	define( 'AI1WMNE_PLUGIN_SHORT', 's3-client' );
+}
+
+// ================================
 // = Amazon S3 Extension Base Dir =
 // ================================
 if ( defined( 'AI1WMSE_PLUGIN_BASENAME' ) ) {
@@ -1018,4 +1047,41 @@ if ( ! defined( 'AI1WMLE_PLUGIN_KEY' ) ) {
 // =======================
 if ( ! defined( 'AI1WMLE_PLUGIN_SHORT' ) ) {
 	define( 'AI1WMLE_PLUGIN_SHORT', 'url' );
+}
+
+// =============================
+// = WebDAV Extension Base Dir =
+// =============================
+if ( defined( 'AI1WMWE_PLUGIN_BASENAME' ) ) {
+	define( 'AI1WMWE_PLUGIN_BASEDIR', dirname( AI1WMWE_PLUGIN_BASENAME ) );
+} else {
+	define( 'AI1WMWE_PLUGIN_BASEDIR', 'all-in-one-wp-migration-webdav-extension' );
+}
+
+// ==========================
+// = WebDAV Extension Title =
+// ==========================
+if ( ! defined( 'AI1WMWE_PLUGIN_TITLE' ) ) {
+	define( 'AI1WMWE_PLUGIN_TITLE', 'WebDAV Extension' );
+}
+
+// ==========================
+// = WebDAV Extension About =
+// ==========================
+if ( ! defined( 'AI1WMWE_PLUGIN_ABOUT' ) ) {
+	define( 'AI1WMWE_PLUGIN_ABOUT', 'https://servmask.com/products/webdav-extension/about' );
+}
+
+// ========================
+// = WebDAV Extension Key =
+// ========================
+if ( ! defined( 'AI1WMWE_PLUGIN_KEY' ) ) {
+	define( 'AI1WMWE_PLUGIN_KEY', 'ai1wmwe_plugin_key' );
+}
+
+// ==========================
+// = WebDAV Extension Short =
+// ==========================
+if ( ! defined( 'AI1WMWE_PLUGIN_SHORT' ) ) {
+	define( 'AI1WMWE_PLUGIN_SHORT', 'webdav' );
 }

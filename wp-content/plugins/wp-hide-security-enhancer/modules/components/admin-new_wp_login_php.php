@@ -17,8 +17,8 @@
                                                                     'description'   =>  array(
                                                                                                 __('Map a new wp-login.php instead default. This also need to include <i>.php</i> extension.',  'wp-hide-security-enhancer') . '<br />'
                                                                                                 . __('More details can be found at',    'wp-hide-security-enhancer') .' <a href="http://www.wp-hide.com/documentation/admin-change-wp-login-php/" target="_blank">Link</a>',
-                                                                                                '<div class="notice-error"><div class="dashicons dashicons-warning important" alt="f534">'. __('warning',    'wp-hide-security-enhancer') .'</div> <span class="important">' . __('Make sure your log-in url is not already modified by another plugin or theme. In such case, you should disable other code and take advantage of these features. More details at ',  'wp-hide-security-enhancer') . '<a target="_blank" href="http://www.wp-hide.com/login-conflicts/">'. __('Login Conflicts',    'wp-hide-security-enhancer') .'</a></span></div>',
-                                                                                                '<div class="notice-error"><div class="dashicons dashicons-warning important" alt="f534">'. __('warning',    'wp-hide-security-enhancer') .'</div> <span class="important">' . __('If unable to access the login / admin section anymore, use the Recovery Link which reset links to default: ',  'wp-hide-security-enhancer') . '<br /><b class="pointer">' . site_url() . '?wph-recovery='.  $this->wph->functions->get_recovery_code()  .'</b></div>' 
+                                                                                                '<div class="notice-error"><div class="dashicons dashicons-warning important" alt="f534">'. __('warning',    'wp-hide-security-enhancer') .'</div> <span class="important">' . __('Make sure your log-in url is not already modified by another plugin or theme. In such case, you should disable other code and take advantage of these features. More details at ',  'wp-hide-security-enhancer') . '<a target="_blank" href="http://www.wp-hide.com/login-conflicts/">'. __('Login Conflicts',    'wp-hide-security-enhancer') .'</a></span></div>'
+                                                                                                
                                                                                                 ),
                                                                     'input_type'    =>  'text',
                                                                     
@@ -52,24 +52,44 @@
                 
             function _init_new_wp_login_php($saved_field_data)
                 {
+                    //check if the value has changed, e-mail the new url to site administrator
+                    $previous_url   =   get_option('wph-previous-login-url');
+                    if($saved_field_data    !=  $previous_url)
+                        {
+                            $this->new_login_email_notice($saved_field_data); 
+                            update_option('wph-previous-login-url', $saved_field_data);  
+                        }
+                    
                     if(empty($saved_field_data) ||  $saved_field_data   ==  'no')
                         return FALSE;
-                    
                             
                     //conflict handle with other plugins
-                    include_once(WPH_PATH . 'conflicts/wp-simple-firewall.php');
+                    include_once(WPH_PATH . 'compatibility/wp-simple-firewall.php');
                     WPH_conflict_handle_wp_simple_firewall::custom_login_check();
                     
   
                     add_filter('login_url',             array($this,'login_url'), 999, 3 ); 
   
                     //add replacement
-                    $url    =   trailingslashit(    site_url()  ) .  'wp-login.php';
-                    $this->wph->functions->add_replacement( $url,  trailingslashit(    home_url()  ) .  $saved_field_data );
-
-                    //add relative too
-                    $this->wph->functions->add_replacement( '/wp-login.php', '/' . $saved_field_data );
+                    $this->wph->functions->add_replacement( trailingslashit(    site_url()  ) .  'wp-login.php',  trailingslashit(    home_url()  ) .  $saved_field_data );
                      
+                }
+                
+                
+            function new_login_email_notice( $new_login_url )
+                {
+                    if(empty( $new_login_url ))
+                        $new_login_url    =   'wp-admin';
+                    
+                    $to         =   get_option('admin_email');
+                    $subject    =   get_option('blogname') . ' - WP Hide New Login Url for your WordPress';
+                    $message    =   __('Hello',  'wp-hide-security-enhancer') . ", \n\n" 
+                                    . __('This is an automated message to inform that your login url has been changed at site ',  'wp-hide-security-enhancer') . " " .  trailingslashit(site_url()) . "\n"
+                                    . __('The new login url is',  'wp-hide-security-enhancer') .  ": " . trailingslashit( trailingslashit(site_url()) .  $new_login_url ) . "\n\n"
+                                    . __('Additionality you can use the following link to reset all options ',  'wp-hide-security-enhancer') .  ": " . site_url() . '?wph-recovery='.  $this->wph->functions->get_recovery_code() . "\n\n"
+                                    . __('Please keep this url to a safe place.',  'wp-hide-security-enhancer');
+                    $headers = 'From: '.  get_option('blogname') .' <'.  get_option('admin_email')  .'>' . "\r\n";
+                    $this->wph->functions->wp_mail( $to, $subject, $message, $headers );   
                 }
             
             

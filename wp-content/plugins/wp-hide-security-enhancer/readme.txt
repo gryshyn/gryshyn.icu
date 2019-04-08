@@ -3,8 +3,8 @@ Contributors: nsp-code, tdgu
 Donate link: https://www.nsp-code.com/
 Tags: wordpress hide, hide, security, improve security, hacking, wp hide, custom login, wp-loging.php, wp-admin, admin hide, login change, 
 Requires at least: 2.8
-Tested up to: 4.9.8
-Stable tag: 1.5.2
+Tested up to: 5.1.1
+Stable tag: 1.5.5.9
 License: GPLv2 or later
 
 Hide and increase Security for your WordPress site instance using smart techniques. No files are changed on your server.
@@ -117,6 +117,16 @@ Since version 1.2 Change individual plugin urls which make them unrecognizable, 
 * New wp-comments-post.php Path
 * Block wp-comments-post.php
 
+**Rewrite > Author**
+
+* New Author Path
+* Block default path
+
+**Rewrite > Search**
+
+* New Search Path
+* Block default path
+
 **Rewrite > XML-RPC**
 
 * New XML-RPC Path - Change default XML-RPC path / url
@@ -161,6 +171,10 @@ Since version 1.2 Change individual plugin urls which make them unrecognizable, 
 * Remove adjacent_posts_rel Meta
 * Remove profile link
 * Remove canonical link
+
+**General / Html > Admin Bar**
+
+* Remove WordPress Admin Bar for specified urser roles
 
 **General / Feed**
 
@@ -219,7 +233,7 @@ Since version 1.2 Change individual plugin urls which make them unrecognizable, 
 
 <br />Something is wrong with this plugin on your site? Just use the forum or get in touch with us at <a target="_blank" href="http://www.wp-hide.com">Contact</a> and we'll check it out.
 
-<br />A website example can be found at <a target="_blank" href="http://nsp-code.com/demo/wp-hide/">http://nsp-code.com/demo/wp-hide/</a> or our website <a target="_blank" href="http://www.wp-hide.com/">Hide and Security Enhancer</a>
+<br />A website example can be found at <a target="_blank" href="http://nsp-code.com/demo/wp-hide/">http://nsp-code.com/demo/wp-hide/</a> or our website <a target="_blank" href="http://www.wp-hide.com/">WP Hide and Security Enhancer</a>
 
 <br />Plugin homepage at <a target="_blank" href="http://www.wp-hide.com/">WordPress Hide and Security Enhancer</a>
 
@@ -270,6 +284,68 @@ Please get in touch with us and we'll do our best to include it for a next versi
 2. Sample front html code.
 
 == Changelog ==
+
+= 1.5.5.9 =
+* Compatibility module for ShortPixel Adaptive Image plugin
+* Add support for texarea fields within plugin options interface
+* Fixed urls for minified files when using WP Rocket cache plugin
+
+= 1.5.5.7 =
+* Filter remove fix
+
+= 1.5.5.6 =
+* Fix log-in page when using Wp Rocket cache
+
+= 1.5.5.5 =
+* Fix admin dashboard replacements when using Wp Rocket cache
+
+= 1.5.5.4 =
+* Fix Wp Rocket cache when using Minify and Concatenation
+* New functionality - Remove Admin Bar for specified roles
+* Module block structure extend to support 'callback_arguments' to passThrough additional data to processing function
+* Redirect the default non-pretty-url search url to customized one
+
+= 1.5.5 =
+* New component: Rewrite Author
+* New component: Rewrite Search
+* Show recovery link on top of page to ensure everyone can save the link to use if something goe wrong.
+* Send recovery code to site admin e-mail
+* Minor Code adjustments 
+* Send new login url to site admin e-mail, to ensure user can recover access to dashboard if forget new slug
+* Removed unused methods within WPH_module_rewrite_new_include_path component
+
+= 1.5.4.2 =
+* Fix: Undefined method for WooCommerce compatibility module
+
+= 1.5.4.1 =
+* Allow rewrite for images within admin, as being reversed to default when saving the post
+
+= 1.5.4 =
+* Compatibility re-structure, use a general module
+* Compatibility fix for Shield Security wp-simple-firewall
+* Removed the upload_dir filtering as produce some issues on specific environment, possible incompatibilities will be post-processed within General compatibility module
+* Filter the post content on save_post action, to reverse any custom slugs like media urls, to preserve backward compatibility, in case plugin disable
+* Ensure wp-simple-firewall run once when called from multiple components
+* Update for Rewrite Slash component, use a rewrite conditional to ensure the code is not trigger for POST method
+
+= 1.5.3.1 =
+* Fix JSON encoded urls when using SSL
+
+= 1.5.3 =
+* Remove _relative_domain_url_replacements_ssl_sq and _relative_domain_url_replacements_ssl_dq replacements for buffer as being integrated to other variables
+* Relocated upload_dir() to general functions.php to catch new content and uploads slugs.
+* Use full domain url for new wp-admin slug, instead relative to avoid wrong replacements for 3rd urls
+* Use full domain url for new wp-login.php,  instead relative to avoid wrong replacements for 3rd urls
+* Typos fix for CDN texts
+* Additional description for "Block any JSON REST calls" option to prevent Gutenberg block
+* Updated rewrite for URL Slash to include a second conditional, to not trigger on POST calls
+
+= 1.5.2.2 =
+* Add trailingslashit to plugins slug to be used for replacements to avoid wrong (partial) slug changes
+
+= 1.5.2.1 =
+* Fixed upload rewrite by using default_variables['upload_url']
+* WordPrss 5.0 compatibility check
 
 = 1.5.2 =
 * Updated po language file

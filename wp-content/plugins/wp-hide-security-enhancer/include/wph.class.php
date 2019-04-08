@@ -28,8 +28,6 @@
             var $uninstall                  =   FALSE;
             
             var $is_initialised             =   FALSE;
-            
-            var $conflicts                  =   array();
                
             function __construct()
                 {
@@ -64,24 +62,13 @@
                     if($this->server_htaccess_config    === FALSE && $this->server_web_config   === FALSE)
                         $this->functions->force_server_rewrite_type_detect();
                     
-                    //check for recovery link run
-                    if(isset($_GET['wph-recovery']))
-                        $this->functions->do_recovery();
-                    
                     //check for interface submit
                     if(is_admin()   && isset($_POST['wph-interface-nonce']))
                         {
                             $this->doing_interface_save =   TRUE;
-                            $this->disable_filters      =   TRUE;
                         }
                         
-                    //check for reset setings
-                    if(is_admin()   && isset($_POST['reset-settings']))
-                        {
-                            $this->doing_reset_settings =   TRUE;
-                            $this->disable_filters      =   TRUE;
-                        }
-                        
+                                            
                     //check if WPEngine
                     if (    getenv('IS_WPE')    ==  "1"   ||  getenv('IS_WPE_SNAPSHOT')    == "1" ) 
                         $this->disable_filters  =   TRUE;
@@ -91,15 +78,33 @@
                     
                     $this->get_default_variables();
                     
+                    $this->_load_modules();
+                    
+                    $this->is_initialised       =   TRUE;
+                    do_action('wp-hide/is_initialised');
+
+                    
+                    //check for recovery link run
+                    if(isset($_GET['wph-recovery']))
+                        $this->functions->do_recovery();                    
+                    
+                    //check for reset setings
+                    if(is_admin()   && isset($_POST['reset-settings']))
+                        {
+                            $this->doing_reset_settings =   TRUE;
+                            $this->disable_filters      =   TRUE;
+                        }
+                    
+                    $this->_modules_components_run();
+                    
+                    //handle the compatibility
+                    $this->plugins_themes_compatibility();
+                    
+                    $this->add_default_replacements();
+                    
                     //check for plugin update
                     $this->update();
                     
-                    //handle the conflicts
-                    $this->plugin_conflicts();
-                    
-                    $this->_load_modules();
-                    
-                    $this->add_default_replacements();
                     
                     /**
                     * Filters
@@ -151,10 +156,12 @@
                     add_action( 'admin_notices',                array(&$this,   'admin_notices'));
                     add_action( 'network_admin_notices',        array(&$this,   'admin_notices'));
                     
+                    //ensure the media urls are being saved using default WordPress urls
+                    add_action( 'save_post', array($this,    'save_post'), 999 );
+                    
                     //restart the buffering if already outputed. This is usefull for plugin / theme update iframe
                     add_action('admin_print_footer_scripts',    array($this, 'admin_print_footer_scripts'), -1);
                                         
-                    $this->is_initialised       =   TRUE;
                 }
             
             
@@ -204,8 +211,6 @@
                     //sort the modules array
                     ksort($this->modules);
                     
-                    $this->_modules_components_run();
-                    
                     //filter available for mu-plugins 
                     $this->modules  =   apply_filters('wp-hide/loaded_modules', $this->modules);
 
@@ -241,12 +246,13 @@
                                     //ignore callbacks if permalink is turned OFF
                                     if($this->functions->is_permalink_enabled())
                                         {
-                                            $_callback          =   isset($module_setting['callback'])  ?   $module_setting['callback'] :   '';
+                                            $_callback              =   isset($module_setting['callback'])  ?   $module_setting['callback'] :   '';
+                                            $_callback_arguments    =   isset($module_setting['callback_arguments'])  ?   $module_setting['callback_arguments'] :   '';
                                             if(empty($_callback))
                                                 $_callback      =   '_init_'    .   $field_id;
                                             
                                             if (method_exists($_class_instance, $_callback)   && is_callable(array($_class_instance, $_callback)))
-                                                $processing_data[]  =   call_user_func(array($_class_instance, $_callback), $saved_field_value);
+                                                $processing_data[]  =   $this->_run_component_callback( $_callback, $_callback_arguments, $_class_instance, $saved_field_value );
                                         }
                                     
                                     //action available for mu-plugins    
@@ -254,6 +260,24 @@
                                 }   
                         
                         }
+                    
+                }
+                
+            
+            
+            /**
+            * Retrieve the rewrite results from component
+            * 
+            */
+            private function _run_component_callback( $_callback, $_callback_arguments, $_class_instance, $saved_field_value)
+                {
+                    
+                    if ( ! empty($_callback_arguments)  &&  is_array($_callback_arguments) &&   count($_callback_arguments) >   0 )
+                        $module_processing_data   =   call_user_func_array( array($_class_instance, $_callback), array_merge( array( 'field_value'    =>  $saved_field_value), $_callback_arguments));
+                        else
+                        $module_processing_data   =   call_user_func(array($_class_instance, $_callback), $saved_field_value);
+                                            
+                    return $module_processing_data;
                     
                 }
             
@@ -281,7 +305,7 @@
                     //check for settings reset
                     if($this->doing_reset_settings  === TRUE)
                         {
-                            $this->functions->reset_settings();
+                            $this->functions->do_reset_settings();
                         }
                     
                     //check for interface submit
@@ -485,6 +509,10 @@
                     if($this->disable_ob_start_callback === TRUE)
                         return $buffer;
                         
+                    //provide a filter to disable the replacements
+                    if  ( apply_filters('wp-hide/ignore_ob_start_callback', FALSE, $buffer)     === TRUE   )
+                        return $buffer;
+                        
                     //check headers fir content-encoding
                     if(function_exists('apache_response_headers'))
                         {
@@ -498,7 +526,7 @@
                     if(isset($response_headers['Content-Encoding']) &&  $response_headers['Content-Encoding']   ==  "gzip")
                         {
                             //Decodes the gzip compressed buffer
-                            $decoded    =   gzdecode($buffer);
+                            $decoded    =   @gzdecode($buffer);
                             if($decoded === FALSE   ||  $decoded    ==  '')
                                 return $buffer;
                                 
@@ -687,9 +715,15 @@
                     
                 }
                      
-            function get_setting_value($setting_name, $default_value    =   '')
+            function get_setting_value($setting_name, $module_setting )
                 {
-                    $setting_value  =   isset($this->settings['module_settings'][$setting_name])    ?   $this->settings['module_settings'][$setting_name]   :   $default_value;
+                    $setting_value  =   isset($this->settings['module_settings'][$setting_name])    ?   $this->settings['module_settings'][$setting_name]   :   $module_setting['default_value'];
+                    
+                    //if radio input and value is empty, use default
+                    if  ( empty ( $setting_value ) &&   $module_setting['input_type']   ==  'radio' )
+                        {
+                            $setting_value  =   $module_setting['default_value'];
+                        }
                     
                     return $setting_value;
                 }
@@ -699,6 +733,41 @@
                 {
                     //allow rewrite
                     flush_rewrite_rules(); 
+                    
+                    /**
+                    * Clear any cache plugins
+                    */
+                    if (function_exists('wp_cache_clear_cache'))
+                        wp_cache_clear_cache();
+                    
+                    if (function_exists('w3tc_flush_all'))
+                        w3tc_flush_all();
+                        
+                    if (function_exists('opcache_reset'))
+                        opcache_reset();
+                    
+                    if ( function_exists( 'rocket_clean_domain' ) )
+                        rocket_clean_domain();
+                
+                    global $wp_fastest_cache;
+                    if ( method_exists( 'WpFastestCache', 'deleteCache' ) && !empty( $wp_fastest_cache ) )
+                        $wp_fastest_cache->deleteCache();
+                
+                    //If your host has installed APC cache this plugin allows you to clear the cache from within WordPress
+                    if (function_exists('apc_clear_cache'))
+                        apc_clear_cache();
+
+                    //WPEngine
+                    if ( class_exists( 'WpeCommon' ) ) 
+                        {
+                            if ( method_exists( 'WpeCommon', 'purge_memcached' ) )
+                                WpeCommon::purge_memcached();
+                            if ( method_exists( 'WpeCommon', 'clear_maxcdn_cache' ) )
+                                WpeCommon::clear_maxcdn_cache();
+                            if ( method_exists( 'WpeCommon', 'purge_varnish_cache' ) )
+                                WpeCommon::purge_varnish_cache();
+                        }
+                    
                 }
                 
             
@@ -813,7 +882,7 @@
                     if($this->uninstall === TRUE)
                         return $rules;
                         
-                    $write_check_string =   $this->settings['write_check_string'];
+                    $write_check_string =   isset($this->settings['write_check_string']) ? $this->settings['write_check_string']    :   '';
                     
                     if ( empty ( $write_check_string ) )
                         return $rules;
@@ -1270,44 +1339,50 @@
             
             
             /**
-            * General Plugins Conflicts Handle
+            * General Plugins and Themes compatibility Handle
             *     
             */
-            function plugin_conflicts()
+            function plugins_themes_compatibility()
                 {
                     
-                    //w3-cache conflicts handle
-                    include_once(WPH_PATH . 'conflicts/w3-cache.php');
-                    WPH_conflict_handle_w3_cache::init();
+                    include_once( WPH_PATH . '/include/class.compatibility.php' );
+                    $compatibility_handler    =   new WPH_Compatibility();
                     
-                    //super-cache conflicts handle
-                    include_once(WPH_PATH . 'conflicts/super-cache.php');
-                    WPH_conflict_handle_super_cache::init(); 
+                }
+                
+                
+                
+            /**
+            * Revert back the files urls to default WordPress
+            * 
+            * @param mixed $post_id
+            */
+            function save_post( $post_id )
+                {
+                    if ( wp_is_post_revision( $post_id ) )
+                        return;
+                        
+                    global $wpdb;
                     
-                    //BuddyPress handle
-                    include_once(WPH_PATH . 'conflicts/buddypress.php');
-                    WPH_conflict_handle_BuddyPress::init();                    
+                    //raw retrieve the post data
+                    $mysql_query    =   $wpdb->prepare( "SELECT * FROM " .   $wpdb->posts  .  "   WHERE ID    =   %d", $post_id );
+                    $post_data      =   $wpdb->get_row( $mysql_query );
                     
+                    $replacement_list   =   $this->functions->get_replacement_list();
+                    //reverse the list
+                    $replacement_list   =   array_flip($replacement_list);
                     
-                    //WP Fastest Cache handle
-                    include_once(WPH_PATH . 'conflicts/wp-fastest-cache.php');
-                    WPH_conflict_handle_wp_fastest_cache::init();
+                    //replace the urls
+                    $post_content =   $this->functions->content_urls_replacement($post_data->post_content,  $replacement_list );
                     
-                    //WP Rocket
-                    include_once(WPH_PATH . 'conflicts/wp-rocket.php');
-                    WPH_conflict_handle_wp_rocket::init();
-                    
-                    //Theme Avada
-                    include_once(WPH_PATH . 'conflicts/theme-avada.php');
-                    WPH_conflict_theme_avada::init();
-                    
-                    //WooCommerce
-                    include_once(WPH_PATH . 'conflicts/woocommerce.php');
-                    WPH_conflict_handle_woocommerce::init();
-                    
-                    //WPML
-                    include_once(WPH_PATH . 'conflicts/wpml.php');
-                    WPH_conflict_handle_wpml::init();
+                    //if there's a difference, update
+                    if (  $post_content != $post_data->post_content )
+                        {
+                            $mysql_query    =   $wpdb->prepare( "   UPDATE " .   $wpdb->posts  .  "
+                                                        SET post_content    =   %s   
+                                                        WHERE ID    =   %d",  $post_content, $post_id);
+                            $result         =   $wpdb->get_results( $mysql_query );
+                        }
                     
                 }
                 

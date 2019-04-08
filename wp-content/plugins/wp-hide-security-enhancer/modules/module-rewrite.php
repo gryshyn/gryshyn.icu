@@ -30,6 +30,12 @@
                     include(WPH_PATH . "/modules/components/rewrite-comments.php");
                     $this->components[]  =   new WPH_module_rewrite_comments();
                     
+                    include(WPH_PATH . "/modules/components/rewrite-author.php");
+                    $this->components[]  =   new WPH_module_rewrite_author();
+                    
+                    include(WPH_PATH . "/modules/components/rewrite-search.php");
+                    $this->components[]  =   new WPH_module_rewrite_search();
+                     
                     include(WPH_PATH . "/modules/components/rewrite-new_xml-rpc-path.php");
                     $this->components[]  =   new WPH_module_rewrite_new_xml_rpc_path();
                     

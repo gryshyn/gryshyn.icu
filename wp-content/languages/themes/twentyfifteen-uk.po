@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Fifteen package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-05-02 21:13:07+0000\n"
+"PO-Revision-Date: 2018-12-07 09:04:15+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,13 +11,53 @@ msgstr ""
 "Language: uk_UA\n"
 "Project-Id-Version: Themes - Twenty Fifteen\n"
 
-#. Description of the plugin/theme
+#. Description of the theme
 msgid "Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer."
 msgstr "Наша стандартна яскрава тема 2015 року створена для чіткості та націлена на блоги. Її просте оформлення дозволяє легко читати вміст на ріноманітних розширеннях екранів, також вона сумісна з багатьма мовами. Ми створювали її орієнтуючись на мобільні пристрої, це означає що ваш вміст буде на першому місці незалежно від того, який пристрій використовується: смартфон, планшет, чи комп’ютер."
 
-#. Theme Name of the plugin/theme
+#. Theme Name of the theme
 msgid "Twenty Fifteen"
 msgstr "Twenty Fifteen"
+
+#: functions.php:243
+msgid "Light Blue"
+msgstr "Світло-синя"
+
+#: functions.php:238
+msgid "Bright Blue"
+msgstr "Яскраво-синя"
+
+#: functions.php:193
+msgid "Light Gray"
+msgstr "Світло-сіра"
+
+#: functions.php:188
+msgid "Dark Gray"
+msgstr "Темно-сіра"
+
+#: functions.php:208
+msgid "Dark Brown"
+msgstr "Темно-коричнева"
+
+#: functions.php:198
+msgid "White"
+msgstr "Біла"
+
+#: functions.php:218
+msgid "Light Pink"
+msgstr "Світло-рожева"
+
+#: functions.php:213
+msgid "Medium Pink"
+msgstr "Середньо-рожева"
+
+#: functions.php:233
+msgid "Blue Gray"
+msgstr "Блакитно-сіра"
+
+#: functions.php:223
+msgid "Dark Purple"
+msgstr "Темно-фіолетова"
 
 #. translators: %s: post title
 #: comments.php:31
@@ -101,47 +141,47 @@ msgstr "Старіші коментарі"
 msgid "Comment navigation"
 msgstr "Навігація по коментарях"
 
-#: inc/customizer.php:226
+#: inc/customizer.php:237
 msgid "Blue"
 msgstr "Блакитний"
 
-#: inc/customizer.php:215
+#: functions.php:228 inc/customizer.php:226
 msgid "Purple"
 msgstr "Пурпуровий"
 
-#: inc/customizer.php:204
+#: inc/customizer.php:215
 msgid "Pink"
 msgstr "Рожевий"
 
-#: inc/customizer.php:193
+#: functions.php:203 inc/customizer.php:204
 msgid "Yellow"
 msgstr "Жовтий"
 
-#: inc/customizer.php:182
+#: inc/customizer.php:193
 msgid "Dark"
 msgstr "Темний"
 
-#: inc/customizer.php:171
+#: inc/customizer.php:182
 msgid "Default"
 msgstr "Без обумовлення"
 
-#: inc/customizer.php:93
+#: inc/customizer.php:103
 msgid "Header and Sidebar Background Color"
 msgstr "Колір фону заголовка та бічної колонки"
 
-#: inc/customizer.php:72 inc/customizer.php:94 inc/customizer.php:101
+#: inc/customizer.php:79 inc/customizer.php:104 inc/customizer.php:111
 msgid "Applied to the header on small screens and the sidebar on wide screens."
 msgstr "Застосовується до заголовка на маленьких екранах і до бічної колонки на широких."
 
-#: inc/customizer.php:71
+#: inc/customizer.php:78
 msgid "Header and Sidebar Text Color"
 msgstr "Колір тексту заголовка та бічної колонки"
 
-#: inc/customizer.php:51
+#: inc/customizer.php:55
 msgid "Base Color Scheme"
 msgstr "Основна кольорова схема"
 
-#: inc/back-compat.php:37 inc/back-compat.php:48 inc/back-compat.php:62
+#: inc/back-compat.php:37 inc/back-compat.php:48 inc/back-compat.php:64
 msgid "Twenty Fifteen requires at least WordPress version 4.1. You are running version %s. Please upgrade and try again."
 msgstr "Тема Twenty Fifteen вимагає WordPress 4.1 або вище. У вас версія %s. Будь ласка, оновіть WordPress і спробуйте ще раз."
 
@@ -166,51 +206,39 @@ msgstr "Меню та віджети"
 msgid "Skip to content"
 msgstr "Перейти до контенту"
 
-#: functions.php:312
+#: functions.php:399
 msgid "collapse child menu"
 msgstr "згорнути підменю"
 
-#: functions.php:311
+#: functions.php:398
 msgid "expand child menu"
 msgstr "розгорнути підменю"
 
-#. Translators: To add an additional character subset specific to your
-#. language, translate this to 'greek', 'cyrillic', 'devanagari' or
-#. 'vietnamese'. Do not translate into your own language.
-#: functions.php:238
+#: functions.php:319
 msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
 msgid "no-subset"
 msgstr "немає"
 
-#. Translators: If there are characters in your language that are not supported
-#. by Inconsolata, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:230
+#: functions.php:311
 msgctxt "Inconsolata font: on or off"
 msgid "on"
 msgstr "увімкнено"
 
-#. Translators: If there are characters in your language that are not supported
-#. by Noto Serif, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:222
+#: functions.php:303
 msgctxt "Noto Serif font: on or off"
 msgid "on"
 msgstr "увімкнено"
 
-#. Translators: If there are characters in your language that are not supported
-#. by Noto Sans, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:214
+#: functions.php:295
 msgctxt "Noto Sans font: on or off"
 msgid "on"
 msgstr "увімкнено"
 
-#: functions.php:187
+#: functions.php:268
 msgid "Add widgets here to appear in your sidebar."
 msgstr "Додайте сюди віджети для показу в бічній колонці."
 
-#: functions.php:185
+#: functions.php:266
 msgid "Widget Area"
 msgstr "Область для віджетів"
 
@@ -225,12 +253,6 @@ msgstr "Головне меню"
 #: footer.php:31
 msgid "Proudly powered by %s"
 msgstr "Сайт працює на %s"
-
-#. #-#-#-#-#  twentyfifteen.pot (Twenty Fifteen 2.0)  #-#-#-#-#
-#. Author URI of the plugin/theme
-#: footer.php:30
-msgid "https://wordpress.org/"
-msgstr "https://uk.wordpress.org/"
 
 #: content-none.php:31
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
@@ -248,17 +270,17 @@ msgstr "Готові опублікувати свій перший запис? 
 msgid "Nothing Found"
 msgstr "Нічого не знайдено"
 
-#: content-link.php:60 content-page.php:37 content-search.php:28
-#: content-search.php:33 content.php:61 image.php:74
+#: content-page.php:37 content.php:61 content-search.php:28
+#: content-search.php:33 image.php:74 content-link.php:60
 msgid "Edit"
 msgstr "Редагувати"
 
-#: content-link.php:39 content-page.php:26 content.php:41 image.php:61
+#: content-page.php:26 content.php:41 image.php:61 content-link.php:39
 msgid "Pages:"
 msgstr "Сторінки:"
 
 #. translators: %s: Name of current post
-#: content-link.php:32 content.php:34 inc/template-tags.php:249
+#: content.php:34 inc/template-tags.php:249 content-link.php:32
 msgid "Continue reading %s"
 msgstr "Продовжувати читання %s"
 
@@ -283,16 +305,16 @@ msgstr "Подивитися всі записи автора %s"
 msgid "Published by"
 msgstr "Автор"
 
-#: archive.php:53 content-link.php:43 content-page.php:30 content.php:45
-#: image.php:65 index.php:50 search.php:43
+#: content-page.php:30 content.php:45 image.php:65 search.php:43 archive.php:53
+#: index.php:50 content-link.php:43
 msgid "Page"
 msgstr "Сторінка"
 
-#: archive.php:52 index.php:49 search.php:42
+#: search.php:42 archive.php:52 index.php:49
 msgid "Next page"
 msgstr "Наступна сторінка"
 
-#: archive.php:51 index.php:48 search.php:41
+#: search.php:41 archive.php:51 index.php:48
 msgid "Previous page"
 msgstr "Попередня сторінка"
 
@@ -304,10 +326,15 @@ msgstr "За даною адресою нічого не знайдено. Сп�
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Ой! Сторінка не знайдена."
 
-#. Author of the plugin/theme
+#. Author of the theme
 msgid "the WordPress team"
 msgstr "Команда WordPress"
 
-#. Theme URI of the plugin/theme
+#. Theme URI of the theme
 msgid "https://wordpress.org/themes/twentyfifteen/"
 msgstr "https://uk.wordpress.org/themes/twentyfifteen/"
+
+#. Author URI of the theme
+#: footer.php:30
+msgid "https://wordpress.org/"
+msgstr "https://uk.wordpress.org/"

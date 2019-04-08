@@ -24,7 +24,13 @@
                                             'default_value'     =>  '',
                                             'sanitize_type'     =>  array('sanitize_title'),
                                             
-                                            'callback'          =>  '',
+                                            //callback function when components run. Default being set for _init_{$field_id}
+                                            'callback'                  =>  '',
+                                            //callback function to return the rewrite code, Default being set for _callback_saved_{$field_id}
+                                            'callback_saved'            =>  '',
+                                            //PassThrough any additional arguments                                            
+                                            'callback_arguments'         =>  array(),
+                                            
                                             'processing_order'  =>  10,
                                         );   
                     
@@ -73,7 +79,7 @@
                 }
                                
             
-            function reset_settings()
+            function do_reset_settings()
                 {
                     
                     $nonce  =   $_POST['_wpnonce'];
@@ -84,33 +90,15 @@
                     If ( !  current_user_can ( 'manage_options' ) )
                         return FALSE;
                     
-                    $this->wph->settings['module_settings'] =   array();
-                                       
-                    foreach($this->wph->modules   as  $module)
-                        {
-                            //proces the fields
-                            $module_settings    =   $this->filter_settings(   $module->get_module_settings(), TRUE    );
-                            
-                            foreach($module_settings as $module_setting)
-                                {
-                                    if(isset($module_setting['type'])   &&  $module_setting['type'] ==  'split')
-                                        continue;
-                                    
-                                    $field_name =   $module_setting['id'];
-                                    
-                                    $value      =   isset($module_setting['default_value'])  ?   $module_setting['default_value'] :   '';
-                         
-                                    //save the value
-                                    $this->wph->settings['module_settings'][ $field_name ]  =   $value;
-                                }   
-                            
-                        }
+                    $settings   =   $this->get_settings();
                     
+                    $settings['module_settings']   =   $this->reset_settings();
+
                     //eset the write string
-                    $this->wph->settings['write_check_string']   =   '';
+                    $settings['write_check_string']   =   '';
                              
                     //update the settings
-                    $this->update_settings($this->wph->settings);
+                    $this->update_settings( $settings );
                     
                     //trigger the settings changed action
                     do_action('wph/settings_changed', null, null);
@@ -124,7 +112,7 @@
                          
                     $new_location   .=  '&reset_settings=true';
                         
-                    wp_redirect($new_location);
+                    wp_redirect( $new_location );
                     die();
                     
                 }
@@ -735,12 +723,7 @@
                             if(empty($_write_check_string)  ||  $_write_check_string    !=  $this->wph->settings['write_check_string'])
                                 $status   =   FALSE;
                         }
-                        else
-                        {
-                            //disable, as settings never being saved or came from old version  
-                            $status   =   FALSE;
-                        }
-                        
+                                   
                     return $status;
                 }
             
@@ -1341,8 +1324,8 @@
                     //single quote ; double quote / domain url / domain ssl
                     $_relative_domain_url_replacements_sq  =   array();
                     $_relative_domain_url_replacements_dq  =   array();
-                    $_relative_domain_url_replacements_ssl_sq  =   array();
-                    $_relative_domain_url_replacements_ssl_dq  =   array();
+                    //$_relative_domain_url_replacements_ssl_sq  =   array();
+                    //$_relative_domain_url_replacements_ssl_dq  =   array();
                     
                     $home_url           =   home_url();
                     $home_url_parsed    =   parse_url($home_url);
@@ -1373,17 +1356,16 @@
                     //urlencode
                     $text   =   str_ireplace( trim(urlencode(ABSPATH), '"'), '%WPH-PLACEHOLDER-PRESERVE-URLENCODE-ABSPATH%', $text);
                     
-                    
                     foreach($replacements   as $old_url =>  $new_url)
                         {
                             //add quote to make sure it's actualy a link value and is right at the start of text
                             $_relative_url_replacements_dq[ '"' . str_ireplace(   $home_url,   "", $old_url)   ] =   '"' . str_ireplace(   $home_url,   "", $new_url);
                             $_relative_url_replacements_sq[ "'" . str_ireplace(   $home_url,   "", $old_url)   ] =   "'" . str_ireplace(   $home_url,   "", $new_url);
                             
-                            $_relative_domain_url_replacements_dq[ '"' . str_ireplace(   $domain_url,   "", $old_url)   ] =   '"' . str_ireplace(   $domain_url,   "", $new_url);
-                            $_relative_domain_url_replacements_sq[ "'" . str_ireplace(   $domain_url,   "", $old_url)   ] =   "'" . str_ireplace(   $domain_url,   "", $new_url);
-                            $_relative_domain_url_replacements_ssl_dq[ '"' . str_ireplace(   $domain_url_ssl,   "", $old_url)   ] =   '"' . str_ireplace(   $domain_url_ssl,   "", $new_url);
-                            $_relative_domain_url_replacements_ssl_sq[ "'" . str_ireplace(   $domain_url_ssl,   "", $old_url)   ] =   "'" . str_ireplace(   $domain_url_ssl,   "", $new_url);
+                            $_relative_domain_url_replacements_dq[ '"' . str_ireplace(   array( $domain_url, $domain_url_ssl ),   "", $old_url)   ] =   '"' . str_ireplace(   array( $domain_url, $domain_url_ssl ),   "", $new_url);
+                            $_relative_domain_url_replacements_sq[ "'" . str_ireplace(   array( $domain_url, $domain_url_ssl ),   "", $old_url)   ] =   "'" . str_ireplace(   array( $domain_url, $domain_url_ssl ),   "", $new_url);
+                            //$_relative_domain_url_replacements_ssl_dq[ '"' . str_ireplace(   $domain_url_ssl,   "", $old_url)   ] =   '"' . str_ireplace(   $domain_url_ssl,   "", $new_url);
+                            //$_relative_domain_url_replacements_ssl_sq[ "'" . str_ireplace(   $domain_url_ssl,   "", $old_url)   ] =   "'" . str_ireplace(   $domain_url_ssl,   "", $new_url);
                             
                             //match urls without protocol
                             $_old_url    =   str_ireplace(   array('http:', 'https:'),   "", $old_url);
@@ -1414,8 +1396,8 @@
                     */
                     $text =   str_ireplace(    array_keys($_relative_domain_url_replacements_sq), array_values($_relative_domain_url_replacements_sq)  ,$text   );
                     $text =   str_ireplace(    array_keys($_relative_domain_url_replacements_dq), array_values($_relative_domain_url_replacements_dq)  ,$text   );
-                    $text =   str_ireplace(    array_keys($_relative_domain_url_replacements_ssl_sq), array_values($_relative_domain_url_replacements_ssl_sq)  ,$text   );
-                    $text =   str_ireplace(    array_keys($_relative_domain_url_replacements_ssl_dq), array_values($_relative_domain_url_replacements_ssl_dq)  ,$text   );
+                    //$text =   str_ireplace(    array_keys($_relative_domain_url_replacements_ssl_sq), array_values($_relative_domain_url_replacements_ssl_sq)  ,$text   );
+                    //$text =   str_ireplace(    array_keys($_relative_domain_url_replacements_ssl_dq), array_values($_relative_domain_url_replacements_ssl_dq)  ,$text   );
                     
                     
                     /**
@@ -1434,17 +1416,13 @@
                             $new_url    =   trim(json_encode($new_url), '"'); 
                             
                             $text =   str_ireplace(    $old_url, $new_url  ,$text   );
-                        }
-                        
-                    //check for url encoded urls
-                    foreach($_replacements_np   as $old_url =>  $new_url)
-                        {
+                            
                             $old_url    =   trim(urlencode($old_url), '"');   
                             $new_url    =   trim(urlencode($new_url), '"'); 
                             
                             $text =   str_ireplace(    $old_url, $new_url  ,$text   );
                         }
-                    
+                       
                     //check for json encoded urls
                     foreach($_replacements   as $old_url =>  $new_url)
                         {
@@ -1452,18 +1430,20 @@
                             $new_url    =   trim(json_encode($new_url), '"'); 
                             
                             $text =   str_ireplace(    $old_url, $new_url  ,$text   );
-                        }
-                        
-                    //check for url encoded urls
-                    foreach($_replacements   as $old_url =>  $new_url)
-                        {
+                            
                             $old_url    =   trim(urlencode($old_url), '"');   
                             $new_url    =   trim(urlencode($new_url), '"'); 
                             
                             $text =   str_ireplace(    $old_url, $new_url  ,$text   );
                         }
                         
-                        
+                    //check for url encoded urls
+                    foreach($_relative_domain_url_replacements_dq   as $old_url =>  $new_url)
+                        {
+                            $text   =   str_ireplace(    trim( json_encode( trim( $old_url, '"')), '"' ) , trim( json_encode( trim ( $new_url, '"')), '"' )  ,$text   );
+                            $text   =   str_ireplace(    trim( urlencode(trim( $old_url, '"')), '"' ) ,  trim( urlencode(trim ( $new_url, '"')), '"' )  ,$text   );
+                        }
+                             
                     /**
                     * Restore absolute paths
                     */                      
@@ -1556,13 +1536,29 @@
                     
                     $settings   =   $this->get_settings();   
                     
-                    $recovery_code  =   md5(rand(1,9999) . microtime());
+                    $recovery_code  =   substr( md5(rand(1,9999) . microtime()), 0, 10 );
                     
                     $settings['recovery_code']  =   $recovery_code;
                     
                     $this->update_settings($settings);
                     
+                    //send the link to admin
+                    $this->send_recovery_email();
+                    
                     return $recovery_code;
+                }
+                
+                
+            function send_recovery_email( )
+                {
+                    
+                    $to         =   get_option('admin_email');
+                    $subject    =   get_option('blogname') . ' - WP Hide Recovery Link';
+                    $message    =   __('Hello',  'wp-hide-security-enhancer') . ", \n\n" 
+                                    . __('This is an automated message to inform that you can always use a recovery link if something go wrong',  'wp-hide-security-enhancer') . ": " . site_url() . '?wph-recovery='.  $this->wph->functions->get_recovery_code() . "\n\n"
+                                    . __('Please keep this url to a safe place.',  'wp-hide-security-enhancer') . ".";
+                    $headers = 'From: '.  get_option('blogname') .' <'.  get_option('admin_email')  .'>' . "\r\n";
+                    $this->wph->functions->wp_mail( $to, $subject, $message, $headers );   
                 }
                 
                 
@@ -1572,26 +1568,57 @@
             */
             function do_recovery()
                 {
+                    //prevent hammering
+                    sleep(5);
+                    
                     //feetch a new set of settings
-                    $settings = $this->get_settings();
+                    $settings   =   $this->get_settings();
                     
                     $wph_recovery   =   isset($_GET['wph-recovery']) ?  sanitize_text_field($_GET['wph-recovery'])   :   '';
                     if(empty($wph_recovery) ||  $wph_recovery   !=  $this->wph->settings['recovery_code'])
                         return;
-                        
-                    //change certain settings to default
-                    $this->wph->settings['module_settings']['new_wp_login_php']  =   '';
-                    $this->wph->settings['module_settings']['admin_url']         =   '';
+                    
+                    $settings['module_settings']   =   $this->reset_settings();
                     
                     //update the settings
-                    $this->update_settings($this->wph->settings);
+                    $this->update_settings( $settings );
                     
                     //available for mu-plugins
                     do_action('wph/do_recovery');                    
                     
-                    
                     //add filter for rewriting the rules
                     add_action('wp_loaded',  array($this,    'wp_loaded_trigger_do_recovery'));
+                    
+                }
+                
+                
+            
+            function reset_settings()
+                {
+                    
+                    $settings   =   array();
+                        
+                    foreach($this->wph->modules   as  $module)
+                        {
+                            //proces the fields
+                            $module_settings    =   $this->filter_settings(   $module->get_module_settings(), TRUE    );
+                            
+                            foreach($module_settings as $module_setting)
+                                {
+                                    if(isset($module_setting['type'])   &&  $module_setting['type'] ==  'split')
+                                        continue;
+                                    
+                                    $field_name =   $module_setting['id'];
+                                    
+                                    $value      =   isset($module_setting['default_value'])  ?   $module_setting['default_value'] :   '';
+                         
+                                    //save the value
+                                    $settings[ $field_name ]  =   $value;
+                                }   
+                            
+                        }
+                    
+                    return $settings;
                     
                 }
             
@@ -2393,7 +2420,6 @@
                 }
             
             
-            
             /**
             * Init the cache directory where static files will be saved
             * 
@@ -2485,7 +2511,7 @@
                             </div>
             
                         </div>
-                        <p><?php    _e('Help us to improve this plugin by sending any improvement suggestions and reporting any issues at ', 'wp-hide-security-enhancer')  ?><a target="_blank" href="https://www.wp-hide.com/">www.wp-hide.com</a></p>
+                        <p><?php    _e('Help us to upgrade this plugin by sending improvement suggestions and reporting any issues at ', 'wp-hide-security-enhancer')  ?><a target="_blank" href="https://www.wp-hide.com/">www.wp-hide.com</a></p>
                         <h4><?php   _e('Did you know there is a', 'wp-hide-security-enhancer')  ?> <span class="wph-pro">PRO</span> <?php   _e('version of this plug-in?', 'wp-hide-security-enhancer')  ?> <a target="_blank" href="https://www.wp-hide.com/wp-hide-pro-now-available/">Read more</a></h4>
                         <p><?php    _e('Did you find this plugin useful? Please support our work by spread the word about the code, or write an article about the plugin in your blog with a link to development site', 'wp-hide-security-enhancer') ?> <a href="https://www.wp-hide.com/" target="_blank"><strong>https://www.wp-hide.com/</strong></a></p>
                         

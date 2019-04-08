@@ -16,9 +16,7 @@
                                                                         'label'         =>  __('New Admin Url',    'wp-hide-security-enhancer'),
                                                                         'description'   =>  array(
                                                                                                     __('Create a new admin url instead default /wp-admin and /login.',  'wp-hide-security-enhancer') . '<br />'
-                                                                                                    . __('More details can be found at',    'wp-hide-security-enhancer') .' <a href="http://www.wp-hide.com/documentation/admin-change-wp-admin/" target="_blank">Link</a>',
-                                                                                                    '<div class="notice-error"><div class="dashicons dashicons-warning important" alt="f534">'. __('warning',    'wp-hide-security-enhancer') .'</div> <span class="important">' . __('Write down your new admin url, or if lost, will not be able to log-in.',  'wp-hide-security-enhancer') . " " . __('An e-mail will be sent to',  'wp-hide-security-enhancer') . " " . get_option('admin_email') . " " . __('with the new Login URL',  'wp-hide-security-enhancer') . '</span></div>',
-                                                                                                    '<div class="notice-error"><div class="dashicons dashicons-warning important" alt="f534">'. __('warning',    'wp-hide-security-enhancer') .'</div> <span class="important">' . __('If unable to access the login / admin section anymore, use the Recovery Link which reset links to default: ',  'wp-hide-security-enhancer') . '<br /><b class="pointer">' . site_url() . '?wph-recovery='.  $this->wph->functions->get_recovery_code()  .'</b></div>' 
+                                                                                                    . __('More details can be found at',    'wp-hide-security-enhancer') .' <a href="http://www.wp-hide.com/documentation/admin-change-wp-admin/" target="_blank">Link</a>'
                                                                                                     ),                                                                        
                                                                         'input_type'    =>  'text',
                                                                         
@@ -52,29 +50,17 @@
                 
             function _init_admin_url($saved_field_data)
                 {
-                    //check if the value has changed, e-mail the new url to site administrator
-                    $previous_url   =   get_option('wph-previous-admin-url');
-                    if($saved_field_data    !=  $previous_url)
-                        {
-                            $this->new_url_email_nottice($saved_field_data); 
-                            update_option('wph-previous-admin-url', $saved_field_data);  
-                        }
-                    
+
                     if(empty($saved_field_data))
                         return FALSE;
                         
                     remove_action( 'template_redirect', 'wp_redirect_admin_locations', 1000 );
                     
                     //conflict handle with other plugins
-                    include_once(WPH_PATH . 'conflicts/wp-simple-firewall.php');
+                    include_once(WPH_PATH . 'compatibility/wp-simple-firewall.php');
                     WPH_conflict_handle_wp_simple_firewall::custom_login_check();
                     
-                    $default_url    =   $this->wph->functions->get_url_path( trailingslashit(    site_url()  ) .  'wp-admin'   );
-                    $new_url        =   $this->wph->functions->get_url_path( trailingslashit(    home_url()  ) .  $saved_field_data   );
-                    
-                                        
-                    //add replacement
-                    $this->wph->functions->add_replacement( $default_url, $new_url);
+                    $this->wph->functions->add_replacement( trailingslashit(    site_url()  ) .  'wp-admin' , trailingslashit(    home_url()  ) .  $saved_field_data );
 
                     add_action('set_auth_cookie',       array($this,'set_auth_cookie'), 999, 5);
                     
@@ -179,23 +165,6 @@
                    
                 }
 
-            
-            function new_url_email_nottice($new_url)
-                {
-                    if(empty($new_url))
-                        $new_url    =   'wp-admin';
-                    
-                    $to         =   get_option('admin_email');
-                    $subject    =   'New Login Url for your WordPress - ' .get_option('blogname');
-                    $message    =   __('Hello',  'wp-hide-security-enhancer') . ", \n\n" 
-                                    . __('This is an automated message to inform that your login url has been changed at',  'wp-hide-security-enhancer') . " " .  trailingslashit(site_url()) . "\n"
-                                    . __('The new login url is',  'wp-hide-security-enhancer') .  ": " . trailingslashit( trailingslashit(site_url()) .  $new_url) . "\n\n"
-                                    . __('Additionality you can use this to recover the old login / admin links ',  'wp-hide-security-enhancer') .  ": " . site_url() . '?wph-recovery='.  $this->wph->functions->get_recovery_code() . "\n\n"
-                                    . __('Please keep this url safe for recover, if forgot',  'wp-hide-security-enhancer') . ".";
-                    $headers = 'From: '.  get_option('blogname') .' <'.  get_option('admin_email')  .'>' . "\r\n";
-                    $this->wph->functions->wp_mail( $to, $subject, $message, $headers );   
-                }
-            
             
             function _init_block_default_admin_url($saved_field_data)
                 {

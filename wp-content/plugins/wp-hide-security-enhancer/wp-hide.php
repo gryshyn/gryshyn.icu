@@ -5,7 +5,7 @@ Plugin URI: https://www.wp-hide.com/
 Description: Hide and increase Security for your WordPress website instance using smart techniques. No files are changed on your server.
 Author: Nsp Code
 Author URI: http://www.nsp-code.com 
-Version: 1.5.2
+Version: 1.5.5.9
 Text Domain: wp-hide-security-enhancer
 Domain Path: /languages/
 */
@@ -80,7 +80,7 @@ Domain Path: /languages/
         }
         
         
-    define('WPH_URL',    plugins_url('', __FILE__));
+    define('WPH_URL',    plugins_url('', __FILE__));   
     
         
 ?>

@@ -1,0 +1,528 @@
+# Translation of Plugins - SyntaxHighlighter Evolved - Development (trunk) in Chinese (Taiwan)
+# This file is distributed under the same license as the Plugins - SyntaxHighlighter Evolved - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-01-21 05:10:43+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: zh_TW\n"
+"Project-Id-Version: Plugins - SyntaxHighlighter Evolved - Development (trunk)\n"
+
+#: dist/blocks.build.js:1
+msgid "Tip: To the right, choose a code language from the block settings."
+msgstr "提示：為了正確顯示內容，請記得於區塊設定當中選擇使用語言。"
+
+#: dist/blocks.build.js:1
+msgid "Make URLs Clickable"
+msgstr "將網址設定為超連結"
+
+#: dist/blocks.build.js:1
+msgid "Wrap Long Lines"
+msgstr "強制段行"
+
+#: dist/blocks.build.js:1
+msgid "A comma-separated list of line numbers to highlight. Can also be a range. Example: 1,5,10-20"
+msgstr "以逗號區隔要反白顯示的行號數字，也可以為一個範圍的數字。例如：1,5,10-20"
+
+#: dist/blocks.build.js:1
+msgid "Highlight Lines"
+msgstr "反白的行數"
+
+#: dist/blocks.build.js:1
+msgid "First Line Number"
+msgstr "第一行的行號"
+
+#: dist/blocks.build.js:1
+msgid "Show Line Numbers"
+msgstr "顯示行號"
+
+#: dist/blocks.build.js:1
+msgid "Code Language"
+msgstr "程式碼語言"
+
+#: dist/blocks.build.js:1
+msgid "Adds syntax highlighting to source code (front end only)."
+msgstr "替程式碼添加醒目顯示（只在前台有效）。"
+
+#: dist/blocks.build.js:1
+msgid "SyntaxHighlighter Code"
+msgstr "SyntaxHighlighter Code"
+
+#: syntaxhighlighter.php:260
+msgid "HTML / XHTML / XML / XSLT"
+msgstr "HTML / XHTML / XML / XSLT"
+
+#: syntaxhighlighter.php:259
+msgid "Visual Basic"
+msgstr "Visual Basic"
+
+#: syntaxhighlighter.php:258
+msgid "SQL"
+msgstr "SQL"
+
+#: syntaxhighlighter.php:257
+msgid "Scala"
+msgstr "Scala"
+
+#: syntaxhighlighter.php:256
+msgid "Ruby / Ruby on Rails"
+msgstr "Ruby / Ruby on Rails"
+
+#: syntaxhighlighter.php:255
+msgid "R"
+msgstr "R"
+
+#: syntaxhighlighter.php:254
+msgid "Python"
+msgstr "Python"
+
+#: syntaxhighlighter.php:253
+msgid "PowerShell"
+msgstr "PowerShell"
+
+#: syntaxhighlighter.php:252
+msgid "Plain Text"
+msgstr "Plain Text"
+
+#: syntaxhighlighter.php:251
+msgid "PHP"
+msgstr "PHP"
+
+#: syntaxhighlighter.php:250
+msgid "Perl"
+msgstr "Perl"
+
+#: syntaxhighlighter.php:249
+msgid "Objective-C"
+msgstr "Objective-C"
+
+#: syntaxhighlighter.php:248
+msgid "MATLAB"
+msgstr "MATLAB"
+
+#: syntaxhighlighter.php:247
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: syntaxhighlighter.php:246
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: syntaxhighlighter.php:245
+msgid "JavaFX"
+msgstr "JavaFX"
+
+#: syntaxhighlighter.php:244
+msgid "Java"
+msgstr "Java"
+
+#: syntaxhighlighter.php:243
+msgid "Groovy"
+msgstr "Groovy"
+
+#: syntaxhighlighter.php:242
+msgid "F#"
+msgstr "F#"
+
+#: syntaxhighlighter.php:241
+msgid "Erlang"
+msgstr "Erlang"
+
+#: syntaxhighlighter.php:240
+msgid "diff / patch"
+msgstr "diff / patch"
+
+#: syntaxhighlighter.php:239
+msgid "Delphi / Pascal"
+msgstr "Delphi / Pascal"
+
+#: syntaxhighlighter.php:238
+msgid "CSS"
+msgstr "CSS"
+
+#: syntaxhighlighter.php:237
+msgid "C#"
+msgstr "C#"
+
+#: syntaxhighlighter.php:236
+msgid "C / C++"
+msgstr "C / C++"
+
+#: syntaxhighlighter.php:235
+msgid "Clojure"
+msgstr "Clojure"
+
+#: syntaxhighlighter.php:234
+msgid "ColdFusion"
+msgstr "ColdFusion"
+
+#: syntaxhighlighter.php:233
+msgid "BASH / Shell"
+msgstr "BASH / Shell"
+
+#: syntaxhighlighter.php:232
+msgid "ActionScript"
+msgstr "ActionScript"
+
+#. Author URI of the plugin
+msgid "https://alex.blog/"
+msgstr "https://alex.blog/"
+
+#. Plugin URI of the plugin
+msgid "https://alex.blog/wordpress-plugins/syntaxhighlighter/"
+msgstr "https://alex.blog/wordpress-plugins/syntaxhighlighter/"
+
+#: dist/blocks.build.js:1
+msgid "Develop"
+msgstr "Develop"
+
+#: dist/blocks.build.js:1
+msgid "Program"
+msgstr "Program"
+
+#: dist/blocks.build.js:1
+msgid "Source"
+msgstr "Source"
+
+#. Description of the plugin
+msgid "Easily post syntax-highlighted code to your site without having to modify the code at all. Uses Alex Gorbatchev's <a href=\"http://alexgorbatchev.com/SyntaxHighlighter/\">SyntaxHighlighter</a>. Includes a new editor block."
+msgstr "輕鬆地在網站上發布包含醒目提示的程式碼，且不用針對程式碼內容進行調整。使用 Alex Gorbatchev 提供的 <a href=\"http://alexgorbatchev.com/SyntaxHighlighter/\">SyntaxHighlighter</a>。支援區塊編輯器。"
+
+#: syntaxhighlighter.php:554 dist/blocks.build.js:1
+msgid "Settings"
+msgstr "設定"
+
+#: syntaxhighlighter.php:292
+msgid "Default"
+msgstr "預設"
+
+#: syntaxhighlighter.php:1460
+msgid "Save Changes"
+msgstr "儲存變更"
+
+#. Author of the plugin
+msgid "Alex Mills (Viper007Bond)"
+msgstr "Alex Mills (Viper007Bond)"
+
+#. Plugin Name of the plugin
+msgid "SyntaxHighlighter Evolved"
+msgstr "SyntaxHighlighter Evolved"
+
+#: syntaxhighlighter.php:1536
+msgid "example-filename.php"
+msgstr "example-filename.php"
+
+#: syntaxhighlighter.php:1535 syntaxhighlighter.php:1536
+#: syntaxhighlighter.php:1537 syntaxhighlighter.php:1538
+msgid "your code here"
+msgstr "將原始碼填寫於此"
+
+#: syntaxhighlighter.php:1532
+msgid "Some example shortcodes:"
+msgstr "短代碼範例："
+
+#: syntaxhighlighter.php:1529
+msgctxt "wraplines parameter"
+msgid "%s (v2 only) &#8212; Toggle line wrapping."
+msgstr "%s （版本 2 專屬） &#8212; 切換強制換行。"
+
+#: syntaxhighlighter.php:1528
+msgctxt "toolbar parameter"
+msgid "%s &#8212; Toggle the toolbar (buttons in v2, the about question mark in v3)"
+msgstr "%s &#8212; 切換顯示工具箱（版本 2 為按鈕，版本 3 為資訊顯示記號）"
+
+#: syntaxhighlighter.php:1527
+msgctxt "title parameter"
+msgid "%1$s (v3 only) &#8212; Sets some text to show up before the code. Very useful when combined with the %2$s parameter."
+msgstr "%1$s （版本 3 專屬） &#8212; 設定在程式碼之前顯示的文字。在啟用 %2$s 的狀態下非常有用。"
+
+#: syntaxhighlighter.php:1526
+msgctxt "padlinenumbers parameter"
+msgid "%s &#8212; Controls line number padding. Valid values are <code>false</code> (no padding), <code>true</code> (automatic padding), or an integer (forced padding)."
+msgstr "%s &#8212; 控制行號前補零。<code>false</code> 為關閉，<code>true</code> 為自動偵測，或是一個指定的數字。"
+
+#: syntaxhighlighter.php:1525
+msgctxt "light parameter"
+msgid "%s &#8212; Toggle light mode which disables the gutter and toolbar all at once."
+msgstr "%s &#8212; 切換行內顯示模式。將同時停用工具框與行號。"
+
+#: syntaxhighlighter.php:1524
+msgctxt "htmlscript parameter"
+msgid "%s &#8212; Toggle highlighting any extra HTML/XML. Good for when you're mixing HTML/XML with another language, such as having PHP inside an HTML web page. The above preview has it enabled for example. This only works with certain languages."
+msgstr "%s &#8212; 切換顯目顯示額外的 HTML/XML。適合在 HTML/XML 混和在其他語言的情況，例如 PHP 當中包含有 HTML 的程式碼。例如上方的預覽就是啟用的狀態。這只可以在部分的語言中運作。"
+
+#: syntaxhighlighter.php:1523
+msgctxt "highlight parameter"
+msgid "%1$s &#8212; A comma-separated list of line numbers to highlight. You can also specify a range. Example: %2$s"
+msgstr "%1$s &#8212; 以逗號區隔要反白顯示的行號數字，也可以為一個範圍的數字。例如：%2$s"
+
+#: syntaxhighlighter.php:1522
+msgctxt "gutter parameter"
+msgid "%s &#8212; Toggle the left-side line numbering."
+msgstr "%s &#8212; 切換左側顯示行號。"
+
+#: syntaxhighlighter.php:1521
+msgctxt "firstline parameter"
+msgid "%s &#8212; An interger specifying what number the first line should be (for the line numbering)."
+msgstr "%s &#8212; 第一行的行號，必須為整數。"
+
+#: syntaxhighlighter.php:1520
+msgctxt "collapse parameter"
+msgid "%s &#8212; Toggle collapsing the code box by default, requiring a click to expand it. Good for large code posts."
+msgstr "%s &#8212; 切換摺疊程式碼區域，需要額外的典籍顯示內容。適合使用於大量的程式碼情況。"
+
+#: syntaxhighlighter.php:1519
+msgctxt "classname parameter"
+msgid "%s &#8212; Add an additional CSS class to the code box."
+msgstr "%s &#8212; 附加到程式碼區塊的 CSS 類別。"
+
+#: syntaxhighlighter.php:1518
+msgctxt "autolinks parameter"
+msgid "%s &#8212; Toggle automatic URL linking."
+msgstr "%s &#8212; 切換網址轉換為超連結。"
+
+#: syntaxhighlighter.php:1517
+msgctxt "language parameter"
+msgid "%1$s or %2$s &#8212; The language syntax to highlight with. You can alternately just use that as the tag, such as <code>[php]code[/php]</code>. <a href=\"%3$s\">Click here</a> for a list of valid tags (under &quot;aliases&quot;)."
+msgstr "%1$s 或 %2$s &#8212; 醒目顯示所使用的語言。 也可以直接使用他當作短代碼標籤，如<code>[php]程式碼[/php]</code>。<a href=\"%3$s\">支援的語言標籤列表</a>。"
+
+#: syntaxhighlighter.php:1514
+msgid "These are the parameters you can pass to the shortcode and what they do. For the booleans (i.e. on/off), pass %1$s/%2$s or %3$s/%4$s."
+msgstr "以下是短代碼支援的參數與用途說明。如為布林值（例如：啟用／停用）請輸入 %1$s/%2$s 或 %3$s/%4$s。"
+
+#: syntaxhighlighter.php:1512
+msgid "Shortcode Parameters"
+msgstr "短代碼參數"
+
+#: syntaxhighlighter.php:1501
+msgid "WordPress"
+msgstr "WordPress"
+
+#: syntaxhighlighter.php:1496
+msgid ""
+"\t\tThis\tis\tan\n"
+"\t\texample\tof\tsmart\n"
+"\t\ttabs."
+msgstr ""
+"\t\tThis\tis\tan\n"
+"\t\texample\tof\tsmart\n"
+"\t\ttabs."
+
+#: syntaxhighlighter.php:1493
+msgid "This line is highlighted."
+msgstr "這行是反白顯示。"
+
+#: syntaxhighlighter.php:1491
+msgid "Hello World!"
+msgstr "哈囉！"
+
+#: syntaxhighlighter.php:1489
+msgid "PHP Code Example"
+msgstr "PHP 程式碼範例"
+
+#: syntaxhighlighter.php:1470
+msgid "Click &quot;Save Changes&quot; to update this preview."
+msgstr "點擊 &quot;儲存設定&quot; 以更新預覽的內容。"
+
+#: syntaxhighlighter.php:1468
+msgid "Preview"
+msgstr "預覽"
+
+#: syntaxhighlighter.php:1458 syntaxhighlighter.php:1461
+msgid "Reset to Defaults"
+msgstr "回復預設值"
+
+#: syntaxhighlighter.php:1448
+msgid "Some optional default text to display above each code block or as the clickable text for collapsed code blocks."
+msgstr "顯示在程式碼區塊之上的文字，或是當摺疊程式碼區塊時顯示的點擊文字。"
+
+#: syntaxhighlighter.php:1445
+msgid "Title"
+msgstr "標題"
+
+#: syntaxhighlighter.php:1441
+msgid "Tab Size"
+msgstr "Tab 縮排大小"
+
+#: syntaxhighlighter.php:1425
+msgid "Automatic"
+msgstr "自動偵測"
+
+#: syntaxhighlighter.php:1424
+msgid "Off"
+msgstr "關閉"
+
+#: syntaxhighlighter.php:1419
+msgid "Line Number Padding"
+msgstr "行號前補零"
+
+#: syntaxhighlighter.php:1415
+msgid "Starting Line Number"
+msgstr "第一行的行號"
+
+#: syntaxhighlighter.php:1411
+msgid "Additional CSS Class(es)"
+msgstr "附加的 CSS 類別"
+
+#: syntaxhighlighter.php:1405
+msgid "Wrap long lines (v2.x only, disabling this will make a scrollbar show instead)"
+msgstr "強制換行（版本 2.x 專屬，停用的時候將使用捲軸的方式呈現）"
+
+#: syntaxhighlighter.php:1404
+msgid "Use smart tabs allowing tabs being used for alignment"
+msgstr "使用智慧型縮排，可以利用 tab 縮排對齊內容"
+
+#: syntaxhighlighter.php:1403
+msgid "Use the light display mode, best for single lines of code"
+msgstr "使用行內顯示模式，建議於單行程式碼使用"
+
+#: syntaxhighlighter.php:1402
+msgid "Collapse code boxes"
+msgstr "摺疊程式碼區域"
+
+#: syntaxhighlighter.php:1401
+msgid "Automatically make URLs clickable"
+msgstr "將網址設定為超連結"
+
+#: syntaxhighlighter.php:1400
+msgid "Display the toolbar"
+msgstr "顯示工具框"
+
+#: syntaxhighlighter.php:1399
+msgid "Display line numbers"
+msgstr "顯示行號"
+
+#: syntaxhighlighter.php:1394 syntaxhighlighter.php:1397
+msgid "Miscellaneous"
+msgstr "細節設定"
+
+#: syntaxhighlighter.php:1390
+msgid "All of the settings below can be configured on a per-code block basis, but you can control the defaults of all code blocks here."
+msgstr "可以於此控制所有區塊的預設顯示設定，也可以在每一個區塊針對每一項設定進行調整。"
+
+#: syntaxhighlighter.php:1388
+msgid "Defaults"
+msgstr "預設值"
+
+#: syntaxhighlighter.php:1382
+msgid "Always load all language files (for directly using <code>&lt;pre&gt;</code> tags rather than shortcodes)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If left unchecked (default), then language files will only be loaded when needed<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If unsure, leave this box unchecked"
+msgstr "載入所有的語言模組（當直接使用 <code>&lt;pre&gt;</code> 標籤而不是使用短代碼的時候請勾選）<br />未勾選（預設）時只會載入必要的語言模組檔案<br />如果無法確定，請保持未勾選的狀態"
+
+#: syntaxhighlighter.php:1378 syntaxhighlighter.php:1381
+msgid "Load All Brushes"
+msgstr "載入所有的模組"
+
+#: syntaxhighlighter.php:1366
+msgid "Color Theme"
+msgstr "色彩佈景主題"
+
+#: syntaxhighlighter.php:1362
+msgid "Version 2 allows for line wrapping, something that version 3 does not do at this time."
+msgstr "版本 2 支援強制換行，目前版本 3 不支援的項目。"
+
+#: syntaxhighlighter.php:1361
+msgid "Version 3 allows visitors to easily highlight portions of your code with their mouse (either by dragging or double-clicking) and copy it to their clipboard. No toolbar containing a Flash-based button is required."
+msgstr "版本 3 讓使用者可以簡易的透過滑鼠（拖曳或是點兩下）選取部分的程式碼複製到剪貼簿。不需要透過工具框中基於 Flash 提供的按鈕完成。"
+
+#: syntaxhighlighter.php:1353
+msgid "Version 2.x"
+msgstr "版本 2.x"
+
+#: syntaxhighlighter.php:1352
+msgid "Version 3.x"
+msgstr "版本 3.x"
+
+#: syntaxhighlighter.php:1347
+msgid "Highlighter Version"
+msgstr "套件版本"
+
+#: syntaxhighlighter.php:1330
+msgid "Settings reset to defaults."
+msgstr "設定已回復預設值。"
+
+#: syntaxhighlighter.php:1326
+msgid "Are you sure you want to reset your settings to the defaults?"
+msgstr "確定要將所有的設定值回復為預設值嗎？"
+
+#: syntaxhighlighter.php:994
+msgid "+ expand source"
+msgstr "+ 展開程式碼"
+
+#: syntaxhighlighter.php:991 syntaxhighlighter.php:998
+msgid "Brush wasn't configured for html-script option: "
+msgstr "模組不支援顯示額外的 HTML/XML："
+
+#: syntaxhighlighter.php:990 syntaxhighlighter.php:997
+msgid "Can't find brush for: "
+msgstr "無法載入需要的模組："
+
+#: syntaxhighlighter.php:989 syntaxhighlighter.php:996
+msgid "SyntaxHighlighter\\n\\n"
+msgstr "SyntaxHighlighter 錯誤資訊\\n\\n"
+
+#: syntaxhighlighter.php:988 syntaxhighlighter.php:995
+msgid "?"
+msgstr "？"
+
+#: syntaxhighlighter.php:987
+msgid "print"
+msgstr "列印"
+
+#: syntaxhighlighter.php:986
+msgid "The code is in your clipboard now"
+msgstr "程式碼已經複製到剪貼簿"
+
+#: syntaxhighlighter.php:985
+msgid "copy to clipboard"
+msgstr "複製到剪貼簿"
+
+#: syntaxhighlighter.php:984
+msgid "view source"
+msgstr "顯示原始碼"
+
+#: syntaxhighlighter.php:983
+msgid "show source"
+msgstr "顯示完整內容"
+
+#: syntaxhighlighter.php:311
+msgid "SyntaxHighlighter"
+msgstr "SyntaxHighlighter"
+
+#: syntaxhighlighter.php:311 syntaxhighlighter.php:1338
+msgid "SyntaxHighlighter Settings"
+msgstr "SyntaxHighlighter 設定"
+
+#: syntaxhighlighter.php:299
+msgid "[None]"
+msgstr "[無]"
+
+#: syntaxhighlighter.php:298
+msgid "RDark"
+msgstr "RDark"
+
+#: syntaxhighlighter.php:297
+msgid "Midnight"
+msgstr "Midnight"
+
+#: syntaxhighlighter.php:296
+msgid "Fade to Grey"
+msgstr "Fade to Grey"
+
+#: syntaxhighlighter.php:295
+msgid "Emacs"
+msgstr "Emacs"
+
+#: syntaxhighlighter.php:294
+msgid "Eclipse"
+msgstr "Eclipse"
+
+#: syntaxhighlighter.php:293
+msgid "Django"
+msgstr "Django"
+
+#: syntaxhighlighter.php:1406
+msgid "Enable &quot;HTML script&quot; mode by default (see the bottom of this page for details). Checking this box is not recommended as this mode only works with certain languages."
+msgstr "Enable &quot;HTML script&quot; mode by default (see the bottom of this page for details). Checking this box is not recommended as this mode only w��W    ��W                 

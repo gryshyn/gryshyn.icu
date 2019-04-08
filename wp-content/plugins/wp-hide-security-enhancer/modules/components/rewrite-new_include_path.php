@@ -88,61 +88,7 @@
                                 
                     return  $processing_response;   
                 }
-                
-                
-                
-            function includes_url($url, $path)
-                {
-                    if  (   $this->wph->disable_filters )   
-                        return  $url;
-                    
-                    $new_include_path       =   $this->wph->functions->get_module_item_setting('new_include_path');
-                    
-                    $new_url        =   str_replace('/wp-includes/',    '/' .   $new_include_path   .   '/',    $url);
-                    
-                    return $new_url;
-                    
-                }
-            
-            function script_loader_src($src, $handle)
-                {
-                    if  (   $this->wph->disable_filters )   
-                        return  $src;
-                    
-                    $new_include_path     =   ltrim(rtrim($this->wph->functions->get_module_item_setting('new_include_path'), "/"),  "/");
-                    
-                    $current_include_url    =   trailingslashit(    $this->wph->default_variables['include_url']  );
-                    $new_include_url        =   trailingslashit(    trailingslashit(  site_url()  ) .   $new_include_path   );
-                    $src                    =   str_replace( $current_include_url , $new_include_url , $src);
-                        
-                    return $src;    
-                }
-            
-                
-            function style_loader_src($src, $handle)
-                {
-                    if  (   $this->wph->disable_filters )   
-                        return  $src;
-                    
-                    $new_include_path     =   ltrim(rtrim($this->wph->functions->get_module_item_setting('new_include_path'), "/"),  "/");
-                    
-                    $current_include_url    =   trailingslashit(    $this->wph->default_variables['include_url']  );
-                    $new_include_url        =   trailingslashit(    trailingslashit(  site_url()  ) .   $new_include_path   );
-                    $src                    =   str_replace( $current_include_url , $new_include_url , $src);
-                        
-                    return $src;     
-                }
-                
-            function wp_default_scripts($scripts)
-                {
-                    //check if custom admin url is set
-                    $include_path     =   $this->wph->functions->get_module_item_setting('new_include_path');
-                    if (empty(  $include_path ))
-                        return;
-                    
-                    $scripts    =   $this->wph->functions->default_scripts_styles_replace($scripts, array('wp-includes'  =>  $include_path));
-                }
-                
+
                 
             function _callback_saved_block_wpinclude_url($saved_field_data)
                 {

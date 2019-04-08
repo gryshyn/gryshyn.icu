@@ -12,6 +12,9 @@
                     include(WPH_PATH . "/modules/components/general-meta.php");
                     $this->components[]  =   new WPH_module_general_meta();                    
                     
+                    include(WPH_PATH . "/modules/components/general-admin-bar.php");
+                    $this->components[]  =   new WPH_module_general_admin_bar();
+                    
                     include(WPH_PATH . "/modules/components/general-feed.php");
                     $this->components[]  =   new WPH_module_general_feed();
                     

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Gutenberg - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-09-21 16:51:17+0000\n"
+"PO-Revision-Date: 2018-12-06 22:28:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,129 +11,1363 @@ msgstr ""
 "Language: tr\n"
 "Project-Id-Version: Plugins - Gutenberg - Stable (latest release)\n"
 
-#: languages/gutenberg-translations.php:1924
+#. translators: ARIA label for the Block sidebar tab, selected.
+#: languages/gutenberg-translations.php:1482 build/edit-post/index.js:12
+msgid "Block (selected)"
+msgstr "Blok (seçili)"
+
+#. translators: ARIA label for the Document sidebar tab, selected.
+#: languages/gutenberg-translations.php:1478 build/edit-post/index.js:12
+msgid "Document (selected)"
+msgstr "Belge (seçili)"
+
+#. Translators: Use this to specify the CSS font family for the default font
+#: lib/client-assets.php:1215
+msgctxt "CSS Font Family for Editor Font"
+msgid "Noto Serif"
+msgstr "Noto Serif"
+
+#: lib/client-assets.php:403
+msgctxt "Google Font Name and Variants"
+msgid "Noto Serif:400,400i,700,700i"
+msgstr "Noto Serif:400,400i,700,700i"
+
+#. translators: %d: number of words
+#: languages/gutenberg-translations.php:1847 build/editor/index.js:50
+msgid "%d word"
+msgid_plural "%d words"
+msgstr[0] "%d kelime"
+msgstr[1] "%d kelime"
+
+#: languages/gutenberg-translations.php:1284 build/edit-post/index.js:12
+msgid "Top Toolbar"
+msgstr "Üst araç çubuğu"
+
+#: languages/gutenberg-translations.php:713 build/block-library/index.js:12
+msgid "Mark the excerpt of this content. Content before this block will be shown in the excerpt on your archives page."
+msgstr "Bu içeriğin özetini işaretle. Bu bloktan önceki içerik arşiv sayfalarınızda özet olarak gösterilecektir."
+
+#: languages/gutenberg-translations.php:582 build/block-library/index.js:12
+msgid "Link Rel"
+msgstr "Bağlantı için Rel"
+
+#: languages/gutenberg-translations.php:579 build/block-library/index.js:12
+msgid "Link CSS Class"
+msgstr "CSS sınıfına bağlantı ver"
+
+#: languages/gutenberg-translations.php:96 build/block-library/index.js:12
+msgid "Create content, and save it for you and other contributors to reuse across your site. Update the block, and the changes apply everywhere it’s used."
+msgstr "Kendiniz ve bu sitenin diğer katılımcıları için içerik oluşturup kaydedin ve daha sonra tekrar tekrar kullanın. Bir yerde güncelleyin, kullanılan her yerde güncellensin."
+
+#: gutenberg.php:47
+msgid "https://wordpress.org/plugins/classic-editor/"
+msgstr "https://wordpress.org/plugins/classic-editor/"
+
+#: lib/class-wp-rest-autosaves-controller.php:162
+msgid "Sorry, you are not allowed to view revisions of this post."
+msgstr "Üzgünüm, bu yazının sürümlerini görüntülemenize izin verilmiyor."
+
+#: languages/gutenberg-translations.php:1883 build/editor/index.js:50
+msgid "To edit the featured image, you need permission to upload media."
+msgstr "Öne çıkan resmi düzenlemek için, ortam yükleme iznine ihtiyacınız var."
+
+#: languages/gutenberg-translations.php:1824 build/editor/index.js:50
+msgid "Given your current role, you can only link a video, you cannot upload."
+msgstr "Şu an ki kullanıcı yetkiniz gereği sadece bir videoya bağlantı verebilirsiniz, video yükleyemezsiniz."
+
+#: languages/gutenberg-translations.php:1821 build/editor/index.js:50
+msgid "Given your current role, you can only link an image, you cannot upload."
+msgstr "Şu an ki kullanıcı yetkiniz gereği sadece bir görsele bağlantı verebilirsiniz, görsel yükleyemezsiniz."
+
+#: languages/gutenberg-translations.php:1818 build/editor/index.js:50
+msgid "Given your current role, you can only link an audio, you cannot upload."
+msgstr "Şu an ki kullanıcı yetkiniz gereği sadece bir ses dosyasına bağlantı verebilirsiniz, ses dosyası yükleyemezsiniz."
+
+#: languages/gutenberg-translations.php:1815 build/editor/index.js:50
+msgid "Given your current role, you can only link a media file, you cannot upload."
+msgstr "Şu an ki kullanıcı yetkiniz gereği sadece bir ortam dosyasına bağlantı verebilirsiniz, ortam dosyası yükleyemezsiniz."
+
+#: languages/gutenberg-translations.php:1800 build/editor/index.js:50
+msgid "To edit this block, you need permission to upload media."
+msgstr "Bu bloğu düzenlemek için, ortam dosyası yükleme iznine ihtiyacınız var."
+
+#: languages/gutenberg-translations.php:1673 build/editor/index.js:50
+msgid "(selected block)"
+msgstr "(seçilen blok)"
+
+#: languages/gutenberg-translations.php:1606 build/editor/index.js:50
+msgid "Block tools"
+msgstr "Blok araçları"
+
+#: languages/gutenberg-translations.php:1461 build/edit-post/index.js:12
+msgid "Permalink"
+msgstr "Kalıcı bağlantı"
+
+#: languages/gutenberg-translations.php:588 build/block-library/index.js:12
+msgid "This image has an empty alt attribute"
+msgstr "Bu görselin boş bir alt özelliği var"
+
+#: languages/gutenberg-translations.php:585 build/block-library/index.js:12
+msgid "This image has an empty alt attribute; its file name is %s"
+msgstr "Bu görselin boş bir alt özelliği var; dosya ismi: %s"
+
+#. translators: %s: https://wordpress.org/plugins/classic-editor
+#: gutenberg.php:46
+msgid "The Block Editor requires JavaScript. Please try the <a href=\"%s\">Classic Editor plugin</a>."
+msgstr "Blok düzenleyici JavaScript gerektirir. Lütfen <a href=\"%s\">Klasik Düzenleyici eklentisini</a> deneyin."
+
+#. Translators: link is to current page specify classic editor.
+#: gutenberg.php:40
+msgid "The Block Editor requires JavaScript. You can use the <a href=\"%s\">Classic Editor</a>."
+msgstr "Blok düzenleyici JavaScript gerektirir. <a href=\"%s\">Klasik Düzenleyici</a>yi kullanabilirsiniz."
+
+#. translators: Number of blocks untrashed.
+#: lib/register.php:558
+msgid "%s block restored from the Trash."
+msgid_plural "%s blocks restored from the Trash."
+msgstr[0] "%s blok çöpten geri döndürüldü."
+msgstr[1] "%s blok çöpten geri döndürüldü."
+
+#. translators: Number of blocks trashed.
+#: lib/register.php:556
+msgid "%s block moved to the Trash."
+msgid_plural "%s blocks moved to the Trash."
+msgstr[0] "%s blok çöpe taşındı."
+msgstr[1] "%s blok çöpe taşındı."
+
+#. translators: Number of blocks deleted.
+#: lib/register.php:554
+msgid "%s block permanently deleted."
+msgid_plural "%s blocks permanently deleted."
+msgstr[0] "%s blok kalıcı olarak silindi."
+msgstr[1] "%s blok kalıcı olarak silindi."
+
+#. translators: Blocks not updated because they're locked.
+#: lib/register.php:552
+msgid "%s block not updated, somebody is editing it."
+msgid_plural "%s blocks not updated, somebody is editing them."
+msgstr[0] "%s blok güncellenemedi, şu an bir başkası düzenliyor."
+msgstr[1] "%s blok güncellenemedi, şu an bir başkası düzenliyor."
+
+#. translators: Blocks not updated because they're locked.
+#: lib/register.php:552
+msgid "1 block not updated, somebody is editing it."
+msgstr "1 blok güncellenmedi, başka birisi düzenliyor."
+
+#. translators: Number of blocks updated.
+#: lib/register.php:550
+msgid "%s block updated."
+msgid_plural "%s blocks updated."
+msgstr[0] "%s blok güncellendi."
+msgstr[1] "%s blok güncellendi."
+
+#: lib/register.php:466
+msgid "Block scheduled."
+msgstr "Blok zamanlandı."
+
+#: lib/register.php:465
+msgid "Block reverted to draft."
+msgstr "Blok taslak durumuna geri döndürüldü."
+
+#: lib/register.php:464
+msgid "Block published privately."
+msgstr "Blok özel olarak yayımlandı."
+
+#: lib/register.php:463
+msgid "Block published."
+msgstr "Blok yayımlandı."
+
+#: lib/register.php:462
+msgid "Blocks list"
+msgstr "Blok listesi"
+
+#: lib/register.php:461
+msgid "Blocks list navigation"
+msgstr "Blok listesi dolaşımı"
+
+#: lib/register.php:460
+msgid "Filter blocks list"
+msgstr "Blok listesini filtrele"
+
+#: lib/register.php:459
+msgid "No blocks found in Trash."
+msgstr "Çöpte blok bulunamadı."
+
+#: lib/register.php:456
+msgid "All Blocks"
+msgstr "Tüm bloklar"
+
+#: lib/register.php:455
+msgid "View Block"
+msgstr "Bloğu görüntüle"
+
+#: lib/register.php:454
+msgid "Edit Block"
+msgstr "Bloğu düzenle"
+
+#: lib/register.php:453
+msgid "New Block"
+msgstr "Yeni blok"
+
+#: lib/register.php:452
+msgid "Add New Block"
+msgstr "Yeni blok ekle"
+
+#: lib/register.php:451
+msgctxt "Block"
+msgid "Add New"
+msgstr "Yeni ekle"
+
+#: lib/register.php:450
+msgctxt "add new on admin bar"
+msgid "Block"
+msgstr "Blok"
+
+#: lib/register.php:449
+msgctxt "admin menu"
+msgid "Blocks"
+msgstr "Bloklar"
+
+#: lib/register.php:448
+msgctxt "post type singular name"
+msgid "Block"
+msgstr "Blok"
+
+#: lib/register.php:447
+msgctxt "post type general name"
+msgid "Blocks"
+msgstr "Bloklar"
+
+#: languages/gutenberg-translations.php:2356 build/format-library/index.js:12
+msgid "Link inserted"
+msgstr "Bağlantı eklendi"
+
+#: languages/gutenberg-translations.php:2350 build/format-library/index.js:12
+msgid "Warning: the link has been inserted but may have errors. Please test it."
+msgstr "Uyarı: bağlantı eklendi fakat hatalara sahip olabilir. Lütfen test edin."
+
+#: languages/gutenberg-translations.php:2289 build/editor/index.js:50
+msgid "%s block selected."
+msgid_plural "%s blocks selected."
+msgstr[0] "%s blok seçildi."
+msgstr[1] "%s blok seçildi."
+
+#: lib/client-assets.php:1002 languages/gutenberg-translations.php:2280
+#: build/editor/index.js:50
+msgid "Thumbnail"
+msgstr "Thumbnail"
+
+#: lib/client-assets.php:1005 languages/gutenberg-translations.php:2244
+#: build/editor/index.js:50
+msgid "Full Size"
+msgstr "Tam boyut"
+
+#: languages/gutenberg-translations.php:2229 build/editor/index.js:50
+msgid "Link selected"
+msgstr "Bağlantı seçildi"
+
+#: languages/gutenberg-translations.php:2124 build/editor/index.js:50
+msgid "Start writing with text or HTML"
+msgstr "Metin ya da HTML ile yazmaya başlayın"
+
+#: languages/gutenberg-translations.php:2121 build/editor/index.js:50
+msgid "Type text or HTML"
+msgstr "Metin ya da HTML yazın"
+
+#: languages/gutenberg-translations.php:1809 build/editor/index.js:50
+msgid "Drag an image, upload a new one or select a file from your library."
+msgstr "Bir görseli sürükleyin, yeni bir tane yükleyin ya da kitaplığınızdan bir dosya seçin."
+
+#: languages/gutenberg-translations.php:1806 build/editor/index.js:50
+msgid "Drag an audio, upload a new one or select a file from your library."
+msgstr "Bir ses sürükleyin, yeni bir tane yükleyin veya kütüphanenizden bir dosya seçin."
+
+#: languages/gutenberg-translations.php:1803 build/editor/index.js:50
+msgid "Drag a media file, upload a new one or select a file from your library."
+msgstr "Bir ortam dosyası sürükleyin, yeni bir tane yükleyin ya da kitaplığınızdan bir dosya seçin."
+
+#: languages/gutenberg-translations.php:1730 build/editor/index.js:50
+msgid "Block icon"
+msgstr "Blok simgesi"
+
+#: languages/gutenberg-translations.php:1558 build/editor/index.js:50
+msgid "Align text right"
+msgstr "Metni sağa hizala"
+
+#: languages/gutenberg-translations.php:1555 build/editor/index.js:50
+msgid "Align text center"
+msgstr "Metin ortaya hizala"
+
+#: languages/gutenberg-translations.php:1552 build/editor/index.js:50
+msgid "Align text left"
+msgstr "Metni sola hizala"
+
+#: lib/client-assets.php:1292 languages/gutenberg-translations.php:744
+#: build/block-library/index.js:12 build/editor/index.js:50
+msgid "Start writing or type / to choose a block"
+msgstr "Yazmaya başlayın ya da / yazarak bir blok seçin"
+
+#: languages/gutenberg-translations.php:740 build/block-library/index.js:12
+msgid "Empty block; start writing or type forward slash to choose a block"
+msgstr "Boş blok; yazmaya başlayın ya da / yazarak bir blok seçin"
+
+#: languages/gutenberg-translations.php:737 build/block-library/index.js:12
+msgid "Paragraph block"
+msgstr "Paragraf bloğu"
+
+#: languages/gutenberg-translations.php:719 build/block-library/index.js:12
+msgid "Page Break"
+msgstr "Sayfa sonu"
+
+#: languages/gutenberg-translations.php:680 build/block-library/index.js:12
+msgid "Stack on mobile"
+msgstr "Mobilde yığınla"
+
+#: languages/gutenberg-translations.php:466 build/block-library/index.js:12
+msgid "Drag images, upload new ones or select files from your library."
+msgstr "Görselleri sürükleyin, yenilerini yükleyin veya kütüphanenizden dosyaları seçin."
+
+#: languages/gutenberg-translations.php:385 build/block-library/index.js:12
+msgid "Drag a file, upload a new one or select a file from your library."
+msgstr "Bir dosyayı sürükleyin, yeni bir tane yükleyin veya kütüphanenizden bir dosyayı seçin."
+
+#: languages/gutenberg-translations.php:5 build/annotations/index.js:1
+msgid "Annotation"
+msgstr "Ek açıklama"
+
+#: languages/gutenberg-translations.php:2472 build/editor/index.js:50
+msgctxt "blocks"
+msgid "Most Used"
+msgstr "En çok kullanılan"
+
+#. translators: Button to fix block content
+#: languages/gutenberg-translations.php:2466 build/editor/index.js:50
+msgctxt "imperative verb"
+msgid "Resolve"
+msgstr "Çözümle"
+
+#: languages/gutenberg-translations.php:2459 build/editor/index.js:50
+msgctxt "font size name"
+msgid "Huge"
+msgstr "Devasa"
+
+#: languages/gutenberg-translations.php:2456 build/editor/index.js:50
+msgctxt "font size name"
+msgid "Large"
+msgstr "Büyük"
+
+#: languages/gutenberg-translations.php:2453 build/editor/index.js:50
+msgctxt "font size name"
+msgid "Medium"
+msgstr "Orta"
+
+#: languages/gutenberg-translations.php:2450 build/editor/index.js:50
+msgctxt "font size name"
+msgid "Small"
+msgstr "Küçük"
+
+#: languages/gutenberg-translations.php:2444 build/editor/index.js:50
+#: build/components/index.js:19
+msgctxt "font size name"
+msgid "Normal"
+msgstr "Normal"
+
+#: languages/gutenberg-translations.php:2440 build/components/index.js:19
+msgctxt "keyboard button"
+msgid "Enter"
+msgstr "Giriş"
+
+#: languages/gutenberg-translations.php:2431
+#: build/list-reusable-blocks/index.js:1
+msgctxt "button label"
+msgid "Import"
+msgstr "İçeri aktar"
+
+#: languages/gutenberg-translations.php:2428 build/block-library/index.js:12
+msgctxt "button label"
+msgid "Download"
+msgstr "İndir"
+
+#: languages/gutenberg-translations.php:2425 build/block-library/index.js:12
+msgctxt "button label"
+msgid "Embed"
+msgstr "Göm"
+
+#: languages/gutenberg-translations.php:2422 build/block-library/index.js:12
+msgctxt "block title"
+msgid "Embed"
+msgstr "Göm"
+
+#: languages/gutenberg-translations.php:2419 build/block-library/index.js:12
+msgctxt "block title"
+msgid "Classic"
+msgstr "Klasik"
+
+#: languages/gutenberg-translations.php:2413 build/block-library/index.js:12
+msgctxt "block style"
+msgid "Large"
+msgstr "Büyük"
+
+#: languages/gutenberg-translations.php:2410 build/block-library/index.js:12
+msgctxt "block style"
+msgid "Regular"
+msgstr "Normal"
+
+#: languages/gutenberg-translations.php:2405 build/block-library/index.js:12
+msgctxt "block style"
+msgid "Squared"
+msgstr "Köşeli"
+
+#: languages/gutenberg-translations.php:2402 build/block-library/index.js:12
+msgctxt "block style"
+msgid "Rounded"
+msgstr "Yuvarlatılmış"
+
+#. translators: accessibility label for external links, where the argument is
+#. the link text
+#: languages/gutenberg-translations.php:2360 build/format-library/index.js:12
+msgid "%s (opens in a new tab)"
+msgstr "%s (yeni sekmede açılır)"
+
+#: languages/gutenberg-translations.php:2353 build/format-library/index.js:12
+msgid "Link edited."
+msgstr "Bağlantı düzenlendi."
+
+#: languages/gutenberg-translations.php:2347 build/format-library/index.js:12
+msgid "Link removed."
+msgstr "Bağlantı kaldırıldı."
+
+#: languages/gutenberg-translations.php:2335 build/format-library/index.js:12
+msgid "media"
+msgstr "ortam"
+
+#: languages/gutenberg-translations.php:2054 build/editor/index.js:50
+msgid "Double-check your settings before publishing."
+msgstr "Yayımlamadan önce ayarları iki kere kontrol et."
+
+#: languages/gutenberg-translations.php:1966 build/editor/index.js:50
+msgid "Generating preview…"
+msgstr "Ön izleme oluşturuluyor…"
+
+#: languages/gutenberg-translations.php:1886 build/editor/index.js:50
+msgid "Edit or update the image"
+msgstr "Görseli düzenleyin ya da güncelleyin"
+
+#: languages/gutenberg-translations.php:1827 build/editor/index.js:50
+msgid "Media"
+msgstr "Ortam dosyası"
+
+#: languages/gutenberg-translations.php:1353 build/edit-post/index.js:12
+msgid "Navigate to the nearest toolbar."
+msgstr "En yakın araç çubuğuna ilerle."
+
+#: languages/gutenberg-translations.php:1271 build/edit-post/index.js:12
+msgid "Hide more tools & options"
+msgstr "Daha fazla araç ve seçenekleri gizle"
+
+#: languages/gutenberg-translations.php:1268 build/edit-post/index.js:12
+msgid "Show more tools & options"
+msgstr "Daha fazla araç ve seçenekleri göster"
+
+#. translators: accessibility text for the editor toolbar when Top Toolbar is
+#. off
+#: languages/gutenberg-translations.php:1244 build/edit-post/index.js:12
+msgid "Document tools"
+msgstr "Belge araçları"
+
+#. translators: accessibility text for the editor toolbar when Top Toolbar is
+#. on
+#: languages/gutenberg-translations.php:1240 build/edit-post/index.js:12
+msgid "Document and block tools"
+msgstr "Belge ve blok araçları"
+
+#: languages/gutenberg-translations.php:956 build/block-library/index.js:12
+msgid "Embed a video from your media library or upload a new one."
+msgstr "Ortam kütüphanenizden bir video gömün ya da yeni bir tane yükleyin."
+
+#: languages/gutenberg-translations.php:917 build/block-library/index.js:12
+msgid "Insert poetry. Use special spacing formats. Or quote song lyrics."
+msgstr "Şiir ekleyin. Özel boşluk biçimleri kullanın. Ya da şarkı sözleri alıntılayın."
+
+#: languages/gutenberg-translations.php:836 build/block-library/index.js:12
+msgid "Add white space between blocks and customize its height."
+msgstr "Bloklar arasına boş alan ekleyin ve yüksekliğini özelleştirin."
+
+#: languages/gutenberg-translations.php:824 build/block-library/index.js:12
+msgid "Insert additional custom elements with a WordPress shortcode."
+msgstr "Bir WordPress kısa kodu ile fazladan özel elemanlar ekleyin."
+
+#: languages/gutenberg-translations.php:806 build/block-library/index.js:12
+msgid "Create a break between ideas or sections with a horizontal separator."
+msgstr "Fikirler ya da bölümler arasında yatay bir ayraç ile bir aralık oluşturun."
+
+#: languages/gutenberg-translations.php:797 build/block-library/index.js:12
+msgid "Give quoted text visual emphasis. \"In quoting others, we cite ourselves.\" — Julio Cortázar"
+msgstr "Alıntılanmış metne görsel vurgu verin. \"Başkalarından alıntı yaparken, kendimize atıfta bulunuruz.\" — Julio Cortázar"
+
+#: languages/gutenberg-translations.php:787 build/block-library/index.js:12
+msgid "Give special visual emphasis to a quote from your text."
+msgstr "Metninizdeki alıntılanmış metne görsel vurgu verin."
+
+#: languages/gutenberg-translations.php:756 build/block-library/index.js:12
+msgid "Start with the building block of all narrative."
+msgstr "Tüm öykünün yapı taşı ile işe başlayın."
+
+#: languages/gutenberg-translations.php:722 build/block-library/index.js:12
+msgid "Separate your content into a multi-page experience."
+msgstr "İçeriğinizi çok sayfalı bir deneyime dönüştün."
+
+#: languages/gutenberg-translations.php:686 build/block-library/index.js:12
+msgid "Set media and words side-by-side for a richer layout."
+msgstr "Ortam ve kelimeleri yan yana yerleştirip zengin bir düzen oluşturun."
+
+#: languages/gutenberg-translations.php:677 build/block-library/index.js:12
+msgid "Media & Text Settings"
+msgstr "Ortam ve metin ayarları"
+
+#: languages/gutenberg-translations.php:659 build/block-library/index.js:12
+msgid "Create a bulleted or numbered list."
+msgstr "İmli ya da numaralı liste oluşturun."
+
+#: languages/gutenberg-translations.php:622 build/block-library/index.js:12
+msgid "Display a list of your most recent comments."
+msgstr "En güncel yorumlarınızın bir listesini görüntüleyin."
+
+#: languages/gutenberg-translations.php:597 build/block-library/index.js:12
+msgid "Insert an image to make a visual statement."
+msgstr "Görsel bir mesaj iletmek için bir görsel ekleyin."
+
+#: languages/gutenberg-translations.php:552 build/block-library/index.js:12
+msgid "Alternative text describes your image to people who can’t see it. Add a short description with its key details."
+msgstr "Alternatif metin, görselleri göremeyen kişiler için açıklayıcı metindir. Anahtar detayları içerek kısa bir açıklama ekleyin."
+
+#: languages/gutenberg-translations.php:521 build/block-library/index.js:12
+msgid "Add custom HTML code and preview it as you edit."
+msgstr "Özel HTML kodu ekleyin ve düzenlerken bir taraftan da ön izleme yapın."
+
+#: languages/gutenberg-translations.php:509 build/block-library/index.js:12
+msgid "Introduce new sections and organize content to help visitors (and search engines) understand the structure of your content."
+msgstr "Yeni bölümler ile tanıştırarak ve içeriği organize ederek ziyaretçilerinize (ve arama motorlarına) içeriğinizin yapısını anlamaları için yardımcı olun."
+
+#: languages/gutenberg-translations.php:487 build/block-library/index.js:12
+msgid "Display multiple images in a rich gallery."
+msgstr "Bir çok görseli zengin bir galeri olarak görüntüleyin."
+
+#: languages/gutenberg-translations.php:402 build/block-library/index.js:12
+msgid "Add a link to a downloadable file."
+msgstr "İndirilebilir dosya için bağlantı ekleyin."
+
+#: languages/gutenberg-translations.php:373 build/block-library/index.js:12
+msgid "Embed videos, images, tweets, audio, and other content from external sources."
+msgstr "Videolar, görseller, tweetler, ses ve diğer içerikleri dış kaynaklardan gömün."
+
+#: languages/gutenberg-translations.php:355 build/block-library/index.js:12
+msgid "Resize for smaller devices"
+msgstr "Küçük cihazlar için boyutlandırma"
+
+#: languages/gutenberg-translations.php:343 build/block-library/index.js:12
+msgid "This embed may not preserve its aspect ratio when the browser is resized."
+msgstr "Bu gömü tarayıcı yeniden boyutlandırıldığında en/boy oranını korumayabilir."
+
+#: languages/gutenberg-translations.php:340 build/block-library/index.js:12
+msgid "This embed will preserve its aspect ratio when the browser is resized."
+msgstr "Bu gömü tarayıcı yeniden boyutlandırıldığında en/boy oranını koruyacaktır."
+
+#: languages/gutenberg-translations.php:337 build/block-library/index.js:12
+msgid "Embed an Animoto video."
+msgstr "Bir Animoto videosu gömün."
+
+#: languages/gutenberg-translations.php:334 build/block-library/index.js:12
+msgid "Embed a Vimeo video."
+msgstr "Vimeo videosu gömün."
+
+#: languages/gutenberg-translations.php:331 build/block-library/index.js:12
+msgid "Embed Flickr content."
+msgstr "Flickr içeriği gömün."
+
+#: languages/gutenberg-translations.php:324 build/block-library/index.js:12
+msgid "Embed Spotify content."
+msgstr "Spotify içeriği gömün."
+
+#: languages/gutenberg-translations.php:321 build/block-library/index.js:12
+msgid "Embed SoundCloud content."
+msgstr "SoundCloud içeriği gömün."
+
+#: languages/gutenberg-translations.php:318 build/block-library/index.js:12
+msgid "Embed a WordPress post."
+msgstr "Bir WordPress yazısı göm."
+
+#: languages/gutenberg-translations.php:309 build/block-library/index.js:12
+msgid "Embed an Instagram post."
+msgstr "Instagram gönderisi gömün."
+
+#: languages/gutenberg-translations.php:306 build/block-library/index.js:12
+msgid "Embed a Facebook post."
+msgstr "Facebook gönderisi gömün."
+
+#: languages/gutenberg-translations.php:303 build/block-library/index.js:12
+msgid "Embed a WordPress.tv video."
+msgstr "WordPress.tv videosu gömün."
+
+#: languages/gutenberg-translations.php:300 build/block-library/index.js:12
+msgid "Embed a VideoPress video."
+msgstr "VideoPress videosu gömün."
+
+#: languages/gutenberg-translations.php:293 build/block-library/index.js:12
+msgid "Embed a Tumblr post."
+msgstr "Tumblr gönderisi gömün."
+
+#: languages/gutenberg-translations.php:290 build/block-library/index.js:12
+msgid "Embed a TED video."
+msgstr "TED videosu gömün."
+
+#: languages/gutenberg-translations.php:287 build/block-library/index.js:12
+msgid "Embed Speaker Deck content."
+msgstr "Speaker Deck içeriği gömün."
+
+#: languages/gutenberg-translations.php:284 build/block-library/index.js:12
+msgid "Embed a YouTube video."
+msgstr "YouTube videosu gömün."
+
+#: languages/gutenberg-translations.php:281 build/block-library/index.js:12
+msgid "Embed SmugMug content."
+msgstr "SmugMug içeriği gömün."
+
+#: languages/gutenberg-translations.php:278 build/block-library/index.js:12
+msgid "Embed Slideshare content."
+msgstr "Slideshare içeriği gömün."
+
+#: languages/gutenberg-translations.php:275 build/block-library/index.js:12
+msgid "Embed Scribd content."
+msgstr "Scribd içeriği gömün."
+
+#: languages/gutenberg-translations.php:272 build/block-library/index.js:12
+msgid "Embed Screencast content."
+msgstr "Screencast içeriği gömün."
+
+#: languages/gutenberg-translations.php:269 build/block-library/index.js:12
+msgid "Embed ReverbNation content."
+msgstr "ReverbNation içeriği gömün."
+
+#: languages/gutenberg-translations.php:266 build/block-library/index.js:12
+msgid "Embed a Reddit thread."
+msgstr "Reddit başlığı gömün."
+
+#: languages/gutenberg-translations.php:263 build/block-library/index.js:12
+msgid "Embed Polldaddy content."
+msgstr "Polldaddy içeriği gömün."
+
+#: languages/gutenberg-translations.php:260 build/block-library/index.js:12
+msgid "Embed a Photobucket image."
+msgstr "Bir Photobucket görseli gömün."
+
+#: languages/gutenberg-translations.php:257 build/block-library/index.js:12
+msgid "Embed Mixcloud content."
+msgstr "Mixcloud içeriği gömün."
+
+#: languages/gutenberg-translations.php:248 build/block-library/index.js:12
+msgid "Embed a tweet."
+msgstr "Tweet gömün."
+
+#: languages/gutenberg-translations.php:245 build/block-library/index.js:12
+msgid "Embed Meetup.com content."
+msgstr "Meetup.com içeriği gömün."
+
+#: languages/gutenberg-translations.php:242 build/block-library/index.js:12
+msgid "Embed Kickstarter content."
+msgstr "Kickstarter içeriği gömün."
+
+#: languages/gutenberg-translations.php:239 build/block-library/index.js:12
+msgid "Embed Issuu content."
+msgstr "Issuu içeriği gömün."
+
+#: languages/gutenberg-translations.php:236 build/block-library/index.js:12
+msgid "Embed Imgur content."
+msgstr "Imgur içeriği gömün."
+
+#: languages/gutenberg-translations.php:233 build/block-library/index.js:12
+msgid "Embed Hulu content."
+msgstr "Hulu içeriği gömün."
+
+#: languages/gutenberg-translations.php:230 build/block-library/index.js:12
+msgid "Embed Funny or Die content."
+msgstr "Funny or Die içeriği gömün."
+
+#: languages/gutenberg-translations.php:227 build/block-library/index.js:12
+msgid "Embed a Dailymotion video."
+msgstr "Bir Dailymotion videosu gömün."
+
+#: languages/gutenberg-translations.php:224 build/block-library/index.js:12
+msgid "Embed CollegeHumor content."
+msgstr "CollegeHumor içeriği gömün."
+
+#: languages/gutenberg-translations.php:221 build/block-library/index.js:12
+msgid "Embed Cloudup content."
+msgstr "Cloudup içeriği gömün."
+
+#: languages/gutenberg-translations.php:218 build/block-library/index.js:12
+msgid "Add an image or video with a text overlay — great for headers."
+msgstr "Üzerine metin eklenmiş bir görsel ya da video — üst kısımlar için harikadır."
+
+#: languages/gutenberg-translations.php:212 build/block-library/index.js:12
+msgid "Drag an image or a video, upload a new one or select a file from your library."
+msgstr "Bir görseli veya videoyu sürükleyin, yeni bir tane yükleyin veya kütüphanenizden bir dosyayı seçin."
+
+#: languages/gutenberg-translations.php:172 build/block-library/index.js:12
+msgid "Display code snippets that respect your spacing and tabs."
+msgstr "Boşluk ve sekmelerinize saygı gösteren kod parçaçıkları görüntüleyin."
+
+#: languages/gutenberg-translations.php:161 build/block-library/index.js:12
+msgid "Use the classic WordPress editor."
+msgstr "Klasik WordPress düzenleyicisini kullanın."
+
+#: languages/gutenberg-translations.php:152 build/block-library/index.js:12
+msgid "Display a list of all categories."
+msgstr "Tüm kategorilerin bir listesini görüntüleyin."
+
+#: languages/gutenberg-translations.php:131 build/block-library/index.js:12
+msgid "Prompt visitors to take action with a custom button."
+msgstr "Ziyaretçilerinizin özel bir tuş ile eyleme geçmeleri konusunda uyarın."
+
+#: languages/gutenberg-translations.php:75 build/block-library/index.js:12
+msgid "Embed a simple audio player."
+msgstr "Basit bir ses oynatıcısı gömün."
+
+#: lib/rest-api.php:335
+msgid "Page published privately."
+msgstr "Sayfa özel olarak yayımlandı."
+
+#: lib/rest-api.php:338
+msgid "Page updated."
+msgstr "Sayfa güncellendi."
+
+#: lib/rest-api.php:337
+msgid "Page scheduled."
+msgstr "Sayfa güncellendi."
+
+#: lib/rest-api.php:336
+msgid "Page reverted to draft."
+msgstr "Sayfa taslağa dönüştürüldü."
+
+#: lib/rest-api.php:334
+msgid "Page published."
+msgstr "Sayfa yayımlandı."
+
+#: lib/client-assets.php:244
+msgid "M j, Y g:i a"
+msgstr "j M Y H:i"
+
+#: lib/class-wp-rest-themes-controller.php:194
+msgid "Limit result set to themes assigned one or more statuses."
+msgstr "Sonuç kümesini bir ya da daha çok durum atanmış temalar ile sınırla."
+
+#: lib/class-wp-rest-themes-controller.php:171
+msgid "Whether the theme supports responsive embedded content."
+msgstr "Temanın duyarlı gömülü içerik destekleyip desteklemediği."
+
+#: lib/class-wp-rest-themes-controller.php:166
+msgid "Whether the theme supports post thumbnails."
+msgstr "Temanın yazılar için öne çıkan görsel destekleyip desteklemediği."
+
+#: lib/class-wp-rest-themes-controller.php:161
+msgid "Post formats supported."
+msgstr "Yazı biçimleri destekleniyor."
+
+#: lib/class-wp-rest-themes-controller.php:156
+msgid "Features supported by this theme."
+msgstr "Bu tema tarafından desteklenen özellikler."
+
+#: lib/class-wp-rest-themes-controller.php:62
+msgid "Sorry, you are not allowed to view themes."
+msgstr "Üzgünüm, temaları görüntülemenize izin verilmiyor."
+
+#: languages/gutenberg-translations.php:2462 build/edit-post/index.js:12
+msgctxt "noun"
+msgid "View"
+msgstr "Görüntülenme"
+
+#: languages/gutenberg-translations.php:2447 build/components/index.js:19
+msgctxt "font size name"
+msgid "Custom"
+msgstr "Özel"
+
+#: languages/gutenberg-translations.php:2437 build/block-library/index.js:12
+msgctxt "editor button"
+msgid "Left to right"
+msgstr "Soldan sağa"
+
+#: languages/gutenberg-translations.php:2066 build/editor/index.js:50
+msgid "Save as Pending"
+msgstr "Bekliyor olarak kaydet"
+
+#. translators: %s: post type singular name
+#: languages/gutenberg-translations.php:2024 build/editor/index.js:50
+msgid "%s address"
+msgstr "%s adres"
+
+#: languages/gutenberg-translations.php:1839 build/editor/index.js:50
+msgid "Paste or type URL"
+msgstr "Bir adres girin ya da yapıştırın"
+
+#: languages/gutenberg-translations.php:1836 build/editor/index.js:50
+msgid "Insert from URL"
+msgstr "URL&#8217;den ekle"
+
+#: languages/gutenberg-translations.php:1676 build/editor/index.js:50
+msgid "No blocks created yet."
+msgstr "Henüz blok oluşturulmamış."
+
+#: languages/gutenberg-translations.php:1670 build/editor/index.js:50
+msgid "Block Navigation"
+msgstr "Blok dolaşımı"
+
+#: languages/gutenberg-translations.php:1595 build/editor/index.js:50
+msgid "Styles"
+msgstr "Stiller"
+
+#: languages/gutenberg-translations.php:1468 build/edit-post/index.js:12
+msgid "Click to change"
+msgstr "Değiştirmek için tıklayın"
+
+#: languages/gutenberg-translations.php:1443 build/edit-post/index.js:12
+msgid "Advanced Panels"
+msgstr "Gelişmiş paneller"
+
+#: languages/gutenberg-translations.php:1423 build/edit-post/index.js:12
+msgid "Document Panels"
+msgstr "Belge panelleri"
+
+#: languages/gutenberg-translations.php:1420 build/edit-post/index.js:12
+msgid "Enable Tips"
+msgstr "İpuçlarını etkinleştir"
+
+#: languages/gutenberg-translations.php:1414 build/edit-post/index.js:12
+msgid "General"
+msgstr "Genel"
+
+#: languages/gutenberg-translations.php:1338 build/edit-post/index.js:12
+msgid "Open the block navigation menu."
+msgstr "Blok dolaşım menüsünü aç."
+
+#: languages/gutenberg-translations.php:1299 build/edit-post/index.js:12
+msgid "Work without distraction"
+msgstr "Dikkatiniz dağılmadan çalışın"
+
+#: languages/gutenberg-translations.php:1293 build/edit-post/index.js:12
+msgid "Focus on one block at a time"
+msgstr "Bir seferde sadece bir bloğa odaklanın"
+
+#: languages/gutenberg-translations.php:1287 build/edit-post/index.js:12
+msgid "Access all block and document tools in a single place"
+msgstr "Tüm blok ve belge araçlarına tek bir yerden ulaşın"
+
+#: languages/gutenberg-translations.php:1275 build/edit-post/index.js:12
+msgid "Options"
+msgstr "Ayarlar"
+
+#. translators: accessibility text
+#: languages/gutenberg-translations.php:1162 build/editor/index.js:50
+#: build/components/index.js:19
+msgid "(opens in a new tab)"
+msgstr "(yeni sekmede açılır)"
+
+#: languages/gutenberg-translations.php:1148 build/components/index.js:19
+msgid "Minutes"
+msgstr "Dakika"
+
+#: languages/gutenberg-translations.php:1145 build/components/index.js:19
+msgid "Hours"
+msgstr "Saatler"
+
+#: languages/gutenberg-translations.php:1142 build/components/index.js:19
+msgid "Time"
+msgstr "Zaman"
+
+#: languages/gutenberg-translations.php:1139 build/components/index.js:19
+msgid "Year"
+msgstr "Yıl"
+
+#: languages/gutenberg-translations.php:1136 build/components/index.js:19
+msgid "Day"
+msgstr "Gün"
+
+#: languages/gutenberg-translations.php:1133 build/components/index.js:19
+msgid "December"
+msgstr "Aralık"
+
+#: languages/gutenberg-translations.php:1130 build/components/index.js:19
+msgid "November"
+msgstr "Kasım"
+
+#: languages/gutenberg-translations.php:1127 build/components/index.js:19
+msgid "October"
+msgstr "Ekim"
+
+#: languages/gutenberg-translations.php:1124 build/components/index.js:19
+msgid "September"
+msgstr "Eylül"
+
+#: languages/gutenberg-translations.php:1121 build/components/index.js:19
+msgid "August"
+msgstr "Ağustos"
+
+#: languages/gutenberg-translations.php:1118 build/components/index.js:19
+msgid "July"
+msgstr "Temmuz"
+
+#: languages/gutenberg-translations.php:1115 build/components/index.js:19
+msgid "June"
+msgstr "Haziran"
+
+#: languages/gutenberg-translations.php:1112 build/components/index.js:19
+msgid "May"
+msgstr "Mayıs"
+
+#: languages/gutenberg-translations.php:1109 build/components/index.js:19
+msgid "April"
+msgstr "Nisan"
+
+#: languages/gutenberg-translations.php:1106 build/components/index.js:19
+msgid "March"
+msgstr "Mart"
+
+#: languages/gutenberg-translations.php:1103 build/components/index.js:19
+msgid "February"
+msgstr "Şubat"
+
+#: languages/gutenberg-translations.php:1100 build/components/index.js:19
+msgid "January"
+msgstr "Ocak"
+
+#: languages/gutenberg-translations.php:1097 build/components/index.js:19
+msgid "Month"
+msgstr "Ay"
+
+#: languages/gutenberg-translations.php:1094 build/components/index.js:19
+msgid "Date"
+msgstr "Tarih"
+
+#: languages/gutenberg-translations.php:1082 build/components/index.js:19
+msgid "Go to the first (home) or last (end) day of a week."
+msgstr "Haftanın ilk (home) ya da son (end) gününe gidin."
+
+#: languages/gutenberg-translations.php:1079 build/components/index.js:19
+msgid "Home/End"
+msgstr "Başlangıç/Son"
+
+#: languages/gutenberg-translations.php:1076 build/components/index.js:19
+msgid "Home and End"
+msgstr "Başlangıç ve son"
+
+#: languages/gutenberg-translations.php:1073 build/components/index.js:19
+msgid "Move backward (PgUp) or forward (PgDn) by one month."
+msgstr "Bir ay geri (PgUp) ya da ileri (PgDn) hareket edin."
+
+#: languages/gutenberg-translations.php:1070 build/components/index.js:19
+msgid "PgUp/PgDn"
+msgstr "SyfYuk/SyfAş"
+
+#: languages/gutenberg-translations.php:1067 build/components/index.js:19
+msgid "Page Up and Page Down"
+msgstr "Sayfa yukarı ve sayfa aşağı"
+
+#: languages/gutenberg-translations.php:1064 build/components/index.js:19
+msgid "Move backward (up) or forward (down) by one week."
+msgstr "Bir hafta geri (yukarı ok) ya da ileri (aşağı ok) hareket edin."
+
+#: languages/gutenberg-translations.php:1061 build/components/index.js:19
+msgid "Up and Down Arrows"
+msgstr "Yukarı ve aşağı oklar"
+
+#: languages/gutenberg-translations.php:1058 build/components/index.js:19
+msgid "Move backward (left) or forward (right) by one day."
+msgstr "Bir gün geri (sol ok) ya da ileri (sağ ok) hareket edin."
+
+#: languages/gutenberg-translations.php:1055 build/components/index.js:19
+msgid "Left and Right Arrows"
+msgstr "Sol ve sağ oklar"
+
+#: languages/gutenberg-translations.php:1052 build/components/index.js:19
+msgid "Select the date in focus."
+msgstr "Odaktaki tarihi seçin."
+
+#: languages/gutenberg-translations.php:1049 build/components/index.js:19
+msgid "Navigating with a keyboard"
+msgstr "Tuş takımı ile dolaşım"
+
+#: languages/gutenberg-translations.php:1046 build/components/index.js:19
+msgid "Click the desired day to select it."
+msgstr "İstenen güne tıklayarak seçin."
+
+#: languages/gutenberg-translations.php:1043 build/components/index.js:19
+msgid "Click the right or left arrows to select other months in the past or the future."
+msgstr "Sağ ya da sol tuşlara tıklayıp geçmişteki ya da gelecekteki diğer ayları seçin."
+
+#: languages/gutenberg-translations.php:1040 build/components/index.js:19
+msgid "Click to Select"
+msgstr "Seçmek için tıklayın"
+
+#: languages/gutenberg-translations.php:1091 build/components/index.js:19
+msgid "Calendar Help"
+msgstr "Takvim yardımı"
+
+#: languages/gutenberg-translations.php:1037 build/components/index.js:19
+msgid "Use your arrow keys to change the base color. Move up to lighten the color, down to darken, left to increase saturation, and right to decrease saturation."
+msgstr "Ok tuşlarını kullanarak temel rengi değiştirin. Rengi açmak için yukarı ilerleyin, koyulaştırmak için aşağı, doygunluğu artırmak için sola, azaltmak için sağa ilerleyin."
+
+#: languages/gutenberg-translations.php:1034 build/components/index.js:19
+msgid "Choose a shade"
+msgstr "Bir gölge seçin"
+
+#: languages/gutenberg-translations.php:1031 build/components/index.js:19
+msgid "Change color format"
+msgstr "Renk biçimini değiştir"
+
+#: languages/gutenberg-translations.php:1028 build/components/index.js:19
+msgid "Color value in HSL"
+msgstr "HSL olarak renk değeri"
+
+#: languages/gutenberg-translations.php:1025 build/components/index.js:19
+msgid "Color value in RGB"
+msgstr "RGB olarak denk değeri"
+
+#: languages/gutenberg-translations.php:1022 build/components/index.js:19
+msgid "Color value in hexadecimal"
+msgstr "Onaltılık düzende renk değeri"
+
+#: languages/gutenberg-translations.php:1019 build/components/index.js:19
+msgid "RGB mode active"
+msgstr "RGB düzeni etkin"
+
+#: languages/gutenberg-translations.php:1016 build/components/index.js:19
+msgid "Hex color mode active"
+msgstr "Hex renk düzeni etkin"
+
+#: languages/gutenberg-translations.php:1013 build/components/index.js:19
+msgid "Hue/saturation/lightness mode active"
+msgstr "Ton/doygunluk/parlaklık modu etkin"
+
+#: languages/gutenberg-translations.php:1010 build/components/index.js:19
+msgid "Move the arrow left or right to change hue."
+msgstr "Tonu değiştirmek için sol ya da sağ oku hareket ettirin."
+
+#: languages/gutenberg-translations.php:1007 build/components/index.js:19
+msgid "Hue value in degrees, from 0 to 359."
+msgstr "Derece cinsinden ton değeri, 0 ile 359 arasında."
+
+#: languages/gutenberg-translations.php:1004 build/components/index.js:19
+msgid "Alpha value, from 0 (transparent) to 1 (fully opaque)."
+msgstr "Alfa değeri, 0 (saydam) 1 (tam opak)."
+
+#: languages/gutenberg-translations.php:890 build/block-library/index.js:12
+msgid "Stripes"
+msgstr "Şeritler"
+
+#: languages/gutenberg-translations.php:704 build/block-library/index.js:12
+msgid "Your site doesn’t include support for this block."
+msgstr "Siteniz bu blok için destek içermiyor."
+
+#: languages/gutenberg-translations.php:701 build/block-library/index.js:12
+msgid "Unrecognized Block"
+msgstr "Tanımlanamayan blok"
+
+#: languages/gutenberg-translations.php:698 build/block-library/index.js:12
+msgid "Your site doesn’t include support for the \"%s\" block. You can leave this block intact or remove it entirely."
+msgstr "Siteniz \"%s\" bloğu için destek içermiyor. Bu bloğa dokunmadan bırakabilir ya da tamamen kaldırabilirsiniz."
+
+#: languages/gutenberg-translations.php:692 build/block-library/index.js:12
+msgid "Your site doesn’t include support for the \"%s\" block. You can leave this block intact, convert its content to a Custom HTML block, or remove it entirely."
+msgstr "Siteniz \"%s\" bloğu için destek içermiyor. Bu bloğa dokunmadan bırakabilir, Özel HTML bloğuna çevirebilir ya da tamamen kaldırabilirsiniz."
+
+#: languages/gutenberg-translations.php:689 build/block-library/index.js:12
+msgid "Media area"
+msgstr "Ortam alanı"
+
+#: languages/gutenberg-translations.php:683 build/block-library/index.js:12
+msgid "Media & Text"
+msgstr "Ortam ve metin"
+
+#: languages/gutenberg-translations.php:674 build/block-library/index.js:12
+msgid "Show media on right"
+msgstr "Ortamı sağda görüntüle"
+
+#: languages/gutenberg-translations.php:671 build/block-library/index.js:12
+msgid "Show media on left"
+msgstr "Ortamı solda görüntüle"
+
+#: languages/gutenberg-translations.php:443 build/block-library/index.js:12
+#: build/format-library/index.js:12
+msgid "Open in New Tab"
+msgstr "Yeni sekmede aç"
+
+#: languages/gutenberg-translations.php:209 build/block-library/index.js:12
+msgid "Cover"
+msgstr "Kakaj"
+
+#: languages/gutenberg-translations.php:194 build/block-library/index.js:12
+msgid "Cover Settings"
+msgstr "Kapak ayarları"
+
+#: languages/gutenberg-translations.php:191 build/block-library/index.js:12
+msgid "Edit media"
+msgstr "Ortamı düzenle"
+
+#: languages/gutenberg-translations.php:2488 build/editor/index.js:50
+msgctxt "term"
+msgid "Available %s"
+msgstr "Mevcut %s"
+
+#: languages/gutenberg-translations.php:2485 build/editor/index.js:50
+msgctxt "term"
+msgid "Search %s"
+msgstr "%s ara"
+
+#: lib/client-assets.php:1003 languages/gutenberg-translations.php:2283
+#: build/editor/index.js:50
+msgid "Medium"
+msgstr "Orta"
+
+#: languages/gutenberg-translations.php:2232 build/editor/index.js:50
+msgid "Paste URL or type to search"
+msgstr "İnternet adresini yapıştırın ya da arama yapın"
+
+#: languages/gutenberg-translations.php:2118 build/editor/index.js:50
+msgid "Terms"
+msgstr "Kurallar"
+
+#: languages/gutenberg-translations.php:2048 build/editor/index.js:50
+msgid "Your work will be published at the specified date and time."
+msgstr "Çalışmanız belirlenen tarih ve zamanda yayımlanacaktır."
+
+#: languages/gutenberg-translations.php:2045 build/editor/index.js:50
+msgid "Are you ready to schedule?"
+msgstr "Zamanlamaya hazır mısınız?"
+
+#: languages/gutenberg-translations.php:1999 build/editor/index.js:50
+msgid "Always show pre-publish checks."
+msgstr "Her zaman yayım öncesi kontrolleri göster."
+
+#: languages/gutenberg-translations.php:1939 build/editor/index.js:50
+msgid "Take Over"
+msgstr "Devral"
+
+#: languages/gutenberg-translations.php:1936 build/editor/index.js:50
+msgid "Another user is currently working on this post, which means you cannot make changes, unless you take over."
+msgstr "Başka bir kullanıcı bu yazı üzerinde şu an çalışıyor, bu demektir ki yazıyı devralmadığınız sürece değişiklik yapamazsınız."
+
+#. translators: %s: user's display name
+#: languages/gutenberg-translations.php:1933 build/editor/index.js:50
+msgid "%s is currently working on this post, which means you cannot make changes, unless you take over."
+msgstr "%s bu yazı üzerinde şu an çalışıyor, bu demektir ki yazıyı devralmadığınız sürece değişiklik yapamazsınız."
+
+#: languages/gutenberg-translations.php:1929 build/editor/index.js:50
+msgid "Another user now has editing control of this post. Don’t worry, your changes up to this moment have been saved."
+msgstr "Başka bir kullanıcı şu an bu yazının düzenleme kontrolünü almış durumda. Merak etmeyin, şu ana kadar yaptığınız değişiklikler kaydedildi."
+
+#. translators: %s: user's display name
+#: languages/gutenberg-translations.php:1926 build/editor/index.js:50
+msgid "%s now has editing control of this post. Don’t worry, your changes up to this moment have been saved."
+msgstr "%s şu an bu yazının düzenleme kontrolünü almış durumda. Merak etmeyin, şu ana kadar yaptığınız değişiklikler kaydedildi."
+
+#: languages/gutenberg-translations.php:1922 build/editor/index.js:50
+msgid "Avatar"
+msgstr "Avatar"
+
+#: languages/gutenberg-translations.php:1919 build/editor/index.js:50
+msgid "This post is already being edited."
+msgstr "Yazı zaten şu an düzenleniyor."
+
+#: languages/gutenberg-translations.php:1916 build/editor/index.js:50
+msgid "Someone else has taken over this post."
+msgstr "Bir başkası bu yazıyı üzerine aldı."
+
+#: languages/gutenberg-translations.php:1612 build/editor/index.js:50
+msgid "This block contains unexpected or invalid content."
+msgstr "Bu blok beklenmeyen ya da geçersiz içerik içeriyor."
+
+#. translators: Dialog title to fix block content
+#: languages/gutenberg-translations.php:1619 build/editor/index.js:50
+msgid "Resolve Block"
+msgstr "Bloğu çözümle"
+
+#: languages/gutenberg-translations.php:1589 build/editor/index.js:50
+msgid "Convert to HTML"
+msgstr "HTML’e dönüştür"
+
+#: languages/gutenberg-translations.php:1417 build/edit-post/index.js:12
+msgid "Enable Pre-publish Checks"
+msgstr "Ön yayımlama kontrollerini etkinleştirin"
+
+#: languages/gutenberg-translations.php:1536 build/edit-post/index.js:12
+msgid "This block can only be used once."
+msgstr "Bu blok sadece bir kez kullanılabilir."
+
+#: languages/gutenberg-translations.php:1506 build/edit-post/index.js:12
+msgid "Exit Code Editor"
+msgstr "Kod düzenleyiciden çık"
+
+#: languages/gutenberg-translations.php:1503 build/edit-post/index.js:12
+msgid "Editing Code"
+msgstr "Kodu düzenle"
+
+#: languages/gutenberg-translations.php:1165 build/components/index.js:19
+msgid "Reset font size"
+msgstr "Yazı tipi boyutunu sıfırla"
+
+#: languages/gutenberg-translations.php:1174 build/components/index.js:19
+msgid "Custom font size"
+msgstr "Özel yazı tipi boyutu"
+
+#: languages/gutenberg-translations.php:790 build/block-library/index.js:12
+msgid "Solid Color"
+msgstr "Tek renk"
+
+#: languages/gutenberg-translations.php:781 build/block-library/index.js:12
+msgid "Main Color"
+msgstr "Ana renk"
+
+#: languages/gutenberg-translations.php:535 build/block-library/index.js:12
+msgid "HTML"
+msgstr "HTML"
+
+#: languages/gutenberg-translations.php:532 build/block-library/index.js:12
+msgid "Write HTML…"
+msgstr "HTML yaz…"
+
+#: languages/gutenberg-translations.php:352 build/block-library/index.js:12
+msgid "Media Settings"
+msgstr "Ortam Ayarları"
+
+#: languages/gutenberg-translations.php:203 build/block-library/index.js:12
+msgid "Overlay Color"
+msgstr "Örtü rengi"
+
+#: languages/gutenberg-translations.php:200 build/block-library/index.js:12
+msgid "Overlay"
+msgstr "Kaplama"
+
+#: languages/gutenberg-translations.php:155 build/block-library/index.js:12
+msgid "Insert Media"
+msgstr "Ortam ekle"
+
+#. translators: %s: post title
+#: gutenberg.php:316
+msgid "Export &#8220;%s&#8221; as JSON"
+msgstr "&#8220;%s&#8221; yazısını JSON olarak dışarı aktar"
+
+#: languages/gutenberg-translations.php:2387
+#: build/list-reusable-blocks/index.js:1
 msgid "Reusable block imported successfully!"
 msgstr "Tekrar kullanabilir blok başarıyla içe aktarıldı!"
 
-#: languages/gutenberg-translations.php:1918
+#: languages/gutenberg-translations.php:2381
+#: build/list-reusable-blocks/index.js:1
 msgid "Invalid Reusable Block JSON file"
 msgstr "Geçersiz tekrar kullanabilir blok JSON dosyası"
 
-#: languages/gutenberg-translations.php:1915
+#: languages/gutenberg-translations.php:2378
+#: build/list-reusable-blocks/index.js:1
 msgid "Invalid JSON file"
 msgstr "Geçersiz JSON dosyası"
 
-#: languages/gutenberg-translations.php:1912
-msgid "Import"
-msgstr "İçe aktar"
-
-#: languages/gutenberg-translations.php:1909
+#: languages/gutenberg-translations.php:2375
+#: build/list-reusable-blocks/index.js:1
 msgid "Import from JSON"
 msgstr "JSON'dan içe aktar"
 
-#: languages/gutenberg-translations.php:1906
+#: languages/gutenberg-translations.php:2372 build/keycodes/index.js:1
 msgid "Backtick"
 msgstr "Ters tırnak"
 
-#: languages/gutenberg-translations.php:1903
+#: languages/gutenberg-translations.php:2369 build/keycodes/index.js:1
 msgid "Period"
 msgstr "Nokta"
 
-#: languages/gutenberg-translations.php:1900
+#: languages/gutenberg-translations.php:2366 build/keycodes/index.js:1
 msgid "Comma"
 msgstr "Virgül"
 
-#: languages/gutenberg-translations.php:1340
+#: languages/gutenberg-translations.php:1721 build/editor/index.js:50
 msgid "Change type of %d block"
 msgid_plural "Change type of %d blocks"
 msgstr[0] "%d bloğun türünü değiştir"
 msgstr[1] "%d bloğun türünü değiştir"
 
-#: languages/gutenberg-translations.php:1242
-msgid "Compare Block Conversion"
-msgstr "Blok dönüşümünü kıyasla"
-
-#: languages/gutenberg-translations.php:1239
-msgid "Compare Conversion"
-msgstr "Dönüşümü kıyasla"
-
-#: languages/gutenberg-translations.php:1211
+#: languages/gutenberg-translations.php:1585 build/editor/index.js:50
 msgid "Current"
 msgstr "Mevcut"
 
-#: languages/gutenberg-translations.php:1208
+#: languages/gutenberg-translations.php:1582 build/editor/index.js:50
 msgid "After Conversion"
 msgstr "Dönüşümden sonra"
 
-#: languages/gutenberg-translations.php:1205
+#: languages/gutenberg-translations.php:1579 build/editor/index.js:50
 msgid "Change Alignment"
 msgstr "Hizalamayı değiştir"
 
-#: languages/gutenberg-translations.php:1196
+#: languages/gutenberg-translations.php:1561 build/editor/index.js:50
 msgid "Change Text Alignment"
 msgstr "Metin hizalamayı değiştir"
 
-#: languages/gutenberg-translations.php:997
+#: languages/gutenberg-translations.php:902 build/block-library/index.js:12
 msgid "Template block used as a container."
 msgstr "Kapsayıcı olarak kullanılan şablon bloğu."
 
-#: languages/gutenberg-translations.php:994
+#: languages/gutenberg-translations.php:899 build/block-library/index.js:12
 msgid "Reusable Template"
 msgstr "Tekrar kullanabilir şablon"
 
-#: languages/gutenberg-translations.php:234
-msgid "%d Block"
-msgid_plural "%d Blocks"
-msgstr[0] "%d block"
-msgstr[1] "%d block"
+#. translators: %d: number of blocks
+#: languages/gutenberg-translations.php:1843 build/editor/index.js:50
+msgid "%d block"
+msgid_plural "%d blocks"
+msgstr[0] "%d blok"
+msgstr[1] "%d blok"
 
 #. translators: The 'escape' key on a keyboard.
-#: languages/gutenberg-translations.php:166
+#: languages/gutenberg-translations.php:1369 build/edit-post/index.js:12
 msgid "Escape"
 msgstr "Esc tuşu"
 
 #. translators: The forward-slash character. e.g. '/'.
-#: languages/gutenberg-translations.php:96
+#: languages/gutenberg-translations.php:1391 build/edit-post/index.js:12
 msgid "Forward-slash"
 msgstr "Bölme işareti"
 
-#: gutenberg.php:267 gutenberg.php:268
+#: gutenberg.php:320
 msgid "Export as JSON"
 msgstr "JSON olarak dışa aktar"
 
-#: packages/block-library/src/archives/index.php:100
+#: packages/block-library/src/archives/index.php:104
 msgid "No archives to show."
 msgstr "Gösterilecek arşiv yok."
 
-#: lib/register.php:467
+#: lib/register.php:457
 msgid "Search Blocks"
 msgstr "Arama blokları"
 
-#: lib/compat.php:358
-msgid "Cloudflare is blocking REST API requests"
-msgstr "Cloudflare, REST API isteklerini engelliyor"
-
-#: languages/gutenberg-translations.php:1893
+#: languages/gutenberg-translations.php:2325 build/editor/index.js:50
 msgid "This file is empty."
 msgstr "Bu dosya boş."
 
-#: languages/gutenberg-translations.php:1887
+#: languages/gutenberg-translations.php:2319 build/editor/index.js:50
 msgid "Sorry, this file type is not supported here."
 msgstr "Üzgünüm, bu dosya tipi burada desteklenmiyor."
 
-#: languages/gutenberg-translations.php:65
+#: languages/gutenberg-translations.php:1543 build/edit-post/index.js:12
+#: build/editor/index.js:50
 msgid "Manage All Reusable Blocks"
 msgstr "Tüm tekrar kullanılabilir blokları yönet"
 
-#: languages/gutenberg-translations.php:1366
+#: languages/gutenberg-translations.php:1742 build/editor/index.js:50
 msgid "Title"
 msgstr "Başlık"
 
-#: languages/gutenberg-translations.php:83
+#: languages/gutenberg-translations.php:1296 build/edit-post/index.js:12
 msgid "Fullscreen Mode"
 msgstr "Tam ekran modu"
 
-#: languages/gutenberg-translations.php:29
+#: languages/gutenberg-translations.php:1236 build/edit-post/index.js:12
 msgid "View Posts"
 msgstr "Yazıları görüntüle"
 
@@ -141,127 +1375,103 @@ msgstr "Yazıları görüntüle"
 msgid "Beautiful landscape"
 msgstr "Güzel manzara"
 
-#. Translators: If there are characters in your language that are not supported
-#. by Noto Serif, translate this to 'off'. Do not translate into your own
-#. language.
-#: lib/client-assets.php:661
-msgctxt "Noto Serif font: on or off"
-msgid "on"
-msgstr "on"
-
-#: languages/gutenberg-translations.php:1550
+#: languages/gutenberg-translations.php:1996 build/editor/index.js:50
 msgid "Close panel"
 msgstr "Paneli kapat"
 
-#: languages/gutenberg-translations.php:1236
+#: languages/gutenberg-translations.php:1615 build/editor/index.js:50
 msgid "Convert to Classic Block"
 msgstr "Klasik bloğa dönüştür"
 
-#: languages/gutenberg-translations.php:1051
+#: languages/gutenberg-translations.php:948 build/block-library/index.js:12
 msgid "Remove Poster Image"
 msgstr "Poster görselini kaldır"
 
-#: languages/gutenberg-translations.php:1044
+#: languages/gutenberg-translations.php:941 build/block-library/index.js:12
 msgid "Select Poster Image"
 msgstr "Poster görseli seç"
 
-#: languages/gutenberg-translations.php:1041
+#: languages/gutenberg-translations.php:938 build/block-library/index.js:12
 msgid "Poster Image"
 msgstr "Poster görseli"
 
-#: languages/gutenberg-translations.php:1006
+#: languages/gutenberg-translations.php:911 build/block-library/index.js:12
 msgid "This block is deprecated. Please use the Columns block instead."
 msgstr "Bu blok kullanım dışı. Lütfen bunun yerine Sütunlar bloğunu kullanın."
 
-#: languages/gutenberg-translations.php:1003
+#: languages/gutenberg-translations.php:908 build/block-library/index.js:12
 msgid "Text Columns (deprecated)"
 msgstr "Metin sütunları (kullanım dışı)"
 
-#: languages/gutenberg-translations.php:976
+#: languages/gutenberg-translations.php:878 build/block-library/index.js:12
 msgid "Create"
 msgstr "Oluştur"
 
-#: languages/gutenberg-translations.php:973
+#: languages/gutenberg-translations.php:875 build/block-library/index.js:12
 msgid "Row Count"
 msgstr "Satır sayısı"
 
-#: languages/gutenberg-translations.php:970
+#: languages/gutenberg-translations.php:872 build/block-library/index.js:12
 msgid "Column Count"
 msgstr "Sütun sayısı"
 
-#: languages/gutenberg-translations.php:946
+#: languages/gutenberg-translations.php:848 build/block-library/index.js:12
 msgid "This block is deprecated. Please use the Paragraph block instead."
 msgstr "Bu blok kullanım dışı. Lütfen bunun yerine Paragraf bloğunu kullanın."
 
-#: languages/gutenberg-translations.php:943
+#: languages/gutenberg-translations.php:845 build/block-library/index.js:12
 msgid "Subheading (deprecated)"
 msgstr "Alt başlık (kullanım dışı)"
 
-#: languages/gutenberg-translations.php:890
+#: languages/gutenberg-translations.php:800 build/block-library/index.js:12
 msgid "blockquote"
 msgstr "alıntı"
 
-#: languages/gutenberg-translations.php:678
-msgid "Introduce topics and help visitors (and search engines!) understand how your content is organized."
-msgstr "Konuları tanıtın ve ziyaretçilerin (ve arama motorlarının!) içeriğinizin nasıl organize edildiğini anlamasına yardımcı olun."
-
-#: languages/gutenberg-translations.php:388
-msgid "Create content, and save it to reuse across your site. Update the block, and the changes apply everywhere it’s used."
-msgstr "İçerik oluşturun ve sitenizde yeniden kullanmak için kaydedin. Bloğu güncelleyin ve değişiklikler kullanılan her yerde uygulanır."
-
-#: languages/gutenberg-translations.php:92
+#: languages/gutenberg-translations.php:1387 build/edit-post/index.js:12
 msgid "Change the block type after adding a new paragraph."
 msgstr "Yeni paragraf ekledikten sonra blok türünü değiştirin."
 
-#: languages/gutenberg-translations.php:80
+#: languages/gutenberg-translations.php:1290 build/edit-post/index.js:12
 msgid "Spotlight Mode"
 msgstr "Sahne ışığı modu"
 
-#: languages/gutenberg-translations.php:77
-msgid "Unified Toolbar"
-msgstr "Birleşik araç çubuğu"
-
-#: languages/gutenberg-translations.php:74
-msgid "Writing"
-msgstr "Yazım"
-
-#: languages/gutenberg-translations.php:1565
+#: languages/gutenberg-translations.php:2020 build/editor/index.js:50
 msgid "Tags help users and search engines navigate your site and find your content. Add a few keywords to describe your post."
 msgstr "Etiketler, kullanıcılar ve arama motorlarının sitenizde gezinmesine ve içeriğinizi bulmasına yardım eder. Yazınızı tanımlamak için birkaç anahtar kelime ekleyin."
 
-#: languages/gutenberg-translations.php:1562
+#: languages/gutenberg-translations.php:2017 build/editor/index.js:50
 msgid "Add tags"
 msgstr "Etiket ekle"
 
-#: languages/gutenberg-translations.php:1559
+#: languages/gutenberg-translations.php:2014 build/editor/index.js:50
 msgid "Apply the \"%1$s\" format."
 msgstr "\"%1$s\" biçimini uygula."
 
-#: languages/gutenberg-translations.php:1556
+#: languages/gutenberg-translations.php:2011 build/editor/index.js:50
 msgid "Your theme uses post formats to highlight different kinds of content, like images or videos. Apply a post format to see this special styling."
 msgstr "Temanız, görseller veya videolar gibi farklı içerik türlerini vurgulamak için yazı biçimlerini kullanıyor. Bu özel biçimlendirmeyi görmek için bir yazı biçimi uygulayın."
 
-#: languages/gutenberg-translations.php:1553
+#: languages/gutenberg-translations.php:2008 build/editor/index.js:50
 msgid "Use a post format"
-msgstr "Bir yazı biçimi kullan."
+msgstr "Bir yazı biçimi kullan"
 
-#: languages/gutenberg-translations.php:1317
+#: languages/gutenberg-translations.php:1701 build/editor/index.js:50
 msgid "Insert After"
 msgstr "Sonrasına ekle"
 
-#: languages/gutenberg-translations.php:1314
+#: languages/gutenberg-translations.php:1698 build/editor/index.js:50
 msgid "Insert Before"
 msgstr "Öncesine ekle"
 
 #. translators: 1: Number of selected blocks, 2: Position of selected blocks
-#: languages/gutenberg-translations.php:1292
+#: languages/gutenberg-translations.php:1666 build/editor/index.js:50
 msgid "Move %1$d block from position %2$d down by one place"
 msgid_plural "Move %1$d blocks from position %2$d down by one place"
 msgstr[0] "%1$d bloğunu %2$d konumundan bir aşağı taşı"
 msgstr[1] "%1$d bloğunu %2$d konumundan bir aşağı taşı"
 
 #. translators: 1: Number of selected blocks, 2: Position of selected blocks
-#: languages/gutenberg-translations.php:1288
+#: languages/gutenberg-translations.php:1662 build/editor/index.js:50
 msgid "Move %1$d block from position %2$d up by one place"
 msgid_plural "Move %1$d blocks from position %2$d up by one place"
 msgstr[0] "%1$d bloğunu %2$d konumundan bir yukarı taşı"
@@ -269,129 +1479,129 @@ msgstr[1] "%1$d bloğunu %2$d konumundan bir yukarı taşı"
 
 #. translators: 1: Type of block (i.e. Text, Image etc), 2: Position of
 #. selected block, 3: New position
-#: languages/gutenberg-translations.php:1274
+#: languages/gutenberg-translations.php:1648 build/editor/index.js:50
 msgid "Move %1$s block from position %2$d up to position %3$d"
 msgstr "%1$s bloğunu %2$d konumundan %3$d konumuna yukarı taşı"
 
 #. translators: 1: Type of block (i.e. Text, Image etc), 2: Position of
 #. selected block, 3: New position
-#: languages/gutenberg-translations.php:1266
+#: languages/gutenberg-translations.php:1640 build/editor/index.js:50
 msgid "Move %1$s block from position %2$d down to position %3$d"
 msgstr "%1$s bloğunu %2$d konumundan %3$d konumuna aşağı taşı"
 
-#: languages/gutenberg-translations.php:1057
+#: languages/gutenberg-translations.php:959 build/block-library/index.js:12
 msgid "movie"
 msgstr "film"
 
-#: languages/gutenberg-translations.php:86
+#: languages/gutenberg-translations.php:1381 build/edit-post/index.js:12
 msgid "Insert a new block before the selected block(s)."
 msgstr "Seçilen bloklardan önce yeni bir blok ekleyin."
 
-#: languages/gutenberg-translations.php:175
+#: languages/gutenberg-translations.php:1378 build/edit-post/index.js:12
 msgid "Remove the selected block(s)."
 msgstr "Seçilen blokları kaldırın."
 
-#: languages/gutenberg-translations.php:172
+#: languages/gutenberg-translations.php:1375 build/edit-post/index.js:12
 msgid "Duplicate the selected block(s)."
 msgstr "Seçilen blokları kopyalayın."
 
-#: languages/gutenberg-translations.php:169
+#: languages/gutenberg-translations.php:1372 build/edit-post/index.js:12
 msgid "Block shortcuts"
 msgstr "Blok kısayolları"
 
-#: languages/gutenberg-translations.php:162
+#: languages/gutenberg-translations.php:1365 build/edit-post/index.js:12
 msgid "Clear selection."
 msgstr "Seçimi temizle."
 
-#: languages/gutenberg-translations.php:159
+#: languages/gutenberg-translations.php:1362 build/edit-post/index.js:12
 msgid "Select all text when typing. Press again to select all blocks."
 msgstr "Yazarken tüm metni seçin. Tüm blokları seçmek için tekrar basın."
 
-#: languages/gutenberg-translations.php:156
+#: languages/gutenberg-translations.php:1359 build/edit-post/index.js:12
 msgid "Selection shortcuts"
 msgstr "Seçim kısayolları"
 
-#: languages/gutenberg-translations.php:153
+#: languages/gutenberg-translations.php:1356 build/edit-post/index.js:12
 msgid "Switch between Visual Editor and Code Editor."
 msgstr "Görsel düzenleyici ve kod düzenleyici arasında geçiş yapın."
 
-#: languages/gutenberg-translations.php:150
+#: languages/gutenberg-translations.php:1350 build/edit-post/index.js:12
 msgid "Navigate to the previous part of the editor (alternative)."
 msgstr "Düzenleyicinin bir önceki bölümüne gidin (alternatif)."
 
-#: languages/gutenberg-translations.php:147
+#: languages/gutenberg-translations.php:1347 build/edit-post/index.js:12
 msgid "Navigate to the next part of the editor (alternative)."
 msgstr "Düzenleyicinin bir sonraki bölümüne gidin (alternatif)."
 
-#: languages/gutenberg-translations.php:144
+#: languages/gutenberg-translations.php:1344 build/edit-post/index.js:12
 msgid "Navigate to the previous part of the editor."
 msgstr "Düzenleyicinin bir önceki bölümüne gidin."
 
-#: languages/gutenberg-translations.php:141
+#: languages/gutenberg-translations.php:1341 build/edit-post/index.js:12
 msgid "Navigate to the next part of the editor."
 msgstr "Düzenleyicinin bir sonraki bölümüne gidin."
 
-#: languages/gutenberg-translations.php:138
+#: languages/gutenberg-translations.php:1335 build/edit-post/index.js:12
 msgid "Show or hide the settings sidebar."
 msgstr "Ayarlar kenar çubuğunu göster veya gizle."
 
-#: languages/gutenberg-translations.php:135
+#: languages/gutenberg-translations.php:1332 build/edit-post/index.js:12
 msgid "Redo your last undo."
 msgstr "Son geri aldığınız şeyi yeniden yapın."
 
-#: languages/gutenberg-translations.php:132
+#: languages/gutenberg-translations.php:1329 build/edit-post/index.js:12
 msgid "Undo your last changes."
 msgstr "Son değişikliklerinizi geri alın."
 
-#: languages/gutenberg-translations.php:129
+#: languages/gutenberg-translations.php:1326 build/edit-post/index.js:12
 msgid "Save your changes."
 msgstr "Değişikliklerinizi kaydedin."
 
-#: languages/gutenberg-translations.php:126
+#: languages/gutenberg-translations.php:1323 build/edit-post/index.js:12
 msgid "Display this help."
 msgstr "Bu yardımı görüntüle."
 
-#: languages/gutenberg-translations.php:123
+#: languages/gutenberg-translations.php:1320 build/edit-post/index.js:12
 msgid "Global shortcuts"
 msgstr "Genel kısayollar"
 
-#: languages/gutenberg-translations.php:120
+#: languages/gutenberg-translations.php:1317 build/edit-post/index.js:12
 msgid "Display the selected text in a monospaced font."
 msgstr "Seçili metni monospaced yazı tipiyle göster."
 
-#: languages/gutenberg-translations.php:117
+#: languages/gutenberg-translations.php:1314 build/edit-post/index.js:12
 msgid "Add a strikethrough to the selected text."
 msgstr "Seçilen metne bir üst çizgi ekleyin."
 
-#: languages/gutenberg-translations.php:114
+#: languages/gutenberg-translations.php:1311 build/edit-post/index.js:12
 msgid "Remove a link."
 msgstr "Bir bağlantıyı kaldırın."
 
-#: languages/gutenberg-translations.php:111
+#: languages/gutenberg-translations.php:1308 build/edit-post/index.js:12
 msgid "Convert the selected text into a link."
 msgstr "Seçili metni bağlantıya dönüştür."
 
-#: languages/gutenberg-translations.php:108
+#: languages/gutenberg-translations.php:1305 build/edit-post/index.js:12
 msgid "Underline the selected text."
 msgstr "Seçilen metnin altını çiz."
 
-#: languages/gutenberg-translations.php:105
+#: languages/gutenberg-translations.php:1302 build/edit-post/index.js:12
 msgid "Make the selected text italic."
 msgstr "Seçilen metni eğik yap."
 
-#: languages/gutenberg-translations.php:102
+#: languages/gutenberg-translations.php:1397 build/edit-post/index.js:12
 msgid "Make the selected text bold."
 msgstr "Seçilen metni kalın yap."
 
-#: languages/gutenberg-translations.php:99
+#: languages/gutenberg-translations.php:1394 build/edit-post/index.js:12
 msgid "Text formatting"
 msgstr "Metin biçimlendirme"
 
-#: languages/gutenberg-translations.php:89
+#: languages/gutenberg-translations.php:1384 build/edit-post/index.js:12
 msgid "Insert a new block after the selected block(s)."
 msgstr "Seçili blok(lar)dan sonra yeni bir blok ekle."
 
-#: languages/gutenberg-translations.php:49
+#: languages/gutenberg-translations.php:1401 build/edit-post/index.js:12
 msgid "Keyboard Shortcuts"
 msgstr "Klavye kısayolları"
 
@@ -460,6 +1670,10 @@ msgstr "Alıntı kaynağına karşılık gelen bilgiler, görsellerin altındaki
 msgid "Matt Mullenweg, 2017"
 msgstr "Matt Mullenweg, 2017"
 
+#: post-content.php:78
+msgid "The editor will endeavor to create a new page and post building experience that makes writing rich posts effortless, and has “blocks” to make it easy what today might take shortcodes, custom HTML, or “mystery meat” embed discovery."
+msgstr "Düzenleyici daha önce kısa kodlar, özel HTML ya da \"gizemli et\" gömülerinin keşfi gibi yöntemler yerine \"bloklar\" kullanarak daha kolay, daha zengin bir yazı ve sayfa oluşturma deneyimi sunmaya çabalıyor."
+
 #: post-content.php:73
 msgid "A huge benefit of blocks is that you can edit them in place and manipulate your content directly. Instead of having fields for editing things like the source of a quote, or the text of a button, you can directly change the content. Try editing the following quote:"
 msgstr "Blokların büyük bir faydası, bunları yerinde düzenleyip içeriğinizi doğrudan yönlendirebilmenizdir. Bir alıntının kaynağı veya bir düğmenin metni gibi şeyleri düzenlemek için alanlara sahip olmak yerine, içeriği doğrudan değiştirebilirsiniz. Aşağıdaki alıntıyı düzenlemeyi deneyin:"
@@ -476,6 +1690,10 @@ msgstr "Ve bunun gibi <em>listeler</em>, tabii ki :)"
 msgid "Layout blocks, like Buttons, Hero Images, Separators, etc."
 msgstr "Düzen blokları, beğeni düğmeleri, manşet görselleri, ayırıcılar, vs."
 
+#: post-content.php:58
+msgid "Embeds, like YouTube, Tweets, or other WordPress posts."
+msgstr "Gömüler, YouTube, Tweetler ya da diğer WordPress yazıları gibi."
+
 #: post-content.php:57
 msgid "Galleries"
 msgstr "Galeriler"
@@ -488,95 +1706,98 @@ msgstr "Görseller ve videolar"
 msgid "Text &amp; Headings"
 msgstr "Metin ve başlıklar"
 
+#: post-content.php:50
+msgid "Go give it a try, you may discover things WordPress can already add into your posts that you didn&#8217;t know about. Here&#8217;s a short list of what you can currently find there:"
+msgstr "Bir tur deneyin, hiç haberiniz olmayan fakat WordPress'in hali hazırda yazılarınıza ekleyebileceği bir çok şey keşfedebilirsiniz. Şu an burada bulabileceklerinizin kısa bir listesi:"
+
+#: post-content.php:46
+msgid "Imagine everything that WordPress can do is available to you quickly and in the same place on the interface. No need to figure out HTML tags, classes, or remember complicated shortcode syntax. That&#8217;s the spirit behind the inserter—the <code>(+)</code> button you&#8217;ll see around the editor—which allows you to browse all available content blocks and add them into your post. Plugins and themes are able to register their own, opening up all sort of possibilities for rich editing and publishing."
+msgstr "WordPress'in yapabileceği her şeyin hızlı bir şekilde ve aynı yerde, arabirim üzerinde size sunulduğunu düşünün. HTML etiketler, sınıflar ya da karışık kısa kod sentakslarının ne olduğunu anlamaya gerek yok. Ekleyicinin —Düzenleyici çevresinde gördüğünüz <code>(+)</code> tuşu— arkasındaki temel mantık bu, ki bu tüm uygun bloklara bakabilmenize ve yazınıza eklemenize olanak sağlıyor. Eklentiler ve temalar kendi bloklarını kayıt edebilirler. Bu da zengin bir düzenleme ve yayınlama deneyiminde yepyeni kapılar açıyor."
+
 #: post-content.php:42
 msgid "The <em>Inserter</em> Tool"
 msgstr "<em>Ekleme</em> aracı"
+
+#: post-content.php:38
+msgid "Try selecting and removing or editing the caption, now you don&#8217;t have to be careful about selecting the image or other text by mistake and ruining the presentation."
+msgstr "Başlığı seçmeyi ve kaldırmayı ya da düzenlemeyi deneyin. Artık bir görseli ya da metni genel sunumu bozmamak adına pür dikkat seçmeniz gerek yok."
 
 #: post-content.php:32
 msgid "If your theme supports it, you&#8217;ll see the \"wide\" button on the image toolbar. Give it a try."
 msgstr "Eğer temanız bunu destekliyorsa, görsel araç çubuğunda \"geniş\" butonunu göreceksiniz. Bir deneyin."
 
+#: post-content.php:26
+msgid "Handling images and media with the utmost care is a primary focus of the new editor. Hopefully, you&#8217;ll find aspects of adding captions or going full-width with your pictures much easier and robust than before."
+msgstr "Görsellerin ve diğer ortamların ele alınması yeni düzenleyicinin en önemli ve birincil işi. Umuyoruz ki görsellere metin ekleme ya da tam genişlik vb. işlemleri eskisinden çok daha kolay yapabileceksiniz."
+
 #: post-content.php:22
 msgid "A Picture is Worth a Thousand Words"
 msgstr "Bir resim, bin kelimeye bedeldir"
+
+#: post-content.php:18
+msgid "Headings are separate blocks as well, which helps with the outline and organization of your content."
+msgstr "Başlıklar da artık ayrı ayrı bloklar, ki bu da içeriğinizin genel organizasyonunun yapısını çıkartmanıza yardımcı oluyor."
 
 #: post-content.php:14
 msgid "... like this one, which is right aligned."
 msgstr "... bunun gibi, sağa hizalı olanlar."
 
-#. translators: %s link to an issue in the Gutenberg repository
-#: lib/compat.php:377
-msgid "If neither of these options are possible for you, please <a href=\"%s\">follow this issue for updates</a>. We hope to have this issue rectified soon!"
-msgstr "Eğer bu seçeneklerden herhangi biri sizin için uygun değilse, lütfen <a href=\"%s\">bu sorun ile ilgili güncellemeleri takip edin.</a> Bu sorunun yakın zamanda düzelmesini umuyoruz!"
+#: post-content.php:10
+msgid "What you are reading now is a <strong>text block</strong> the most basic block of all. The text block has its own controls to be moved freely around the post..."
+msgstr "Şu an okuduğunuz en basit blok, <strong>metin bloğu</strong>. Metin bloğunun da yazı içinde rahatça hareket edebilmesi için kendi kontrolleri var..."
 
-#: lib/compat.php:362
-msgid "If you have a Cloudflare Pro account, log in to Cloudflare, visit the Firewall settings page, open the \"Cloudflare Rule Set\" details, open the \"Cloudflare WordPress\" ruleset, then set the rules \"WP0025A\" and \"WP0025B\" to \"Disable\"."
-msgstr "Eğer Cloudflare Pro hesabınız varsa Cloudflare'a giriş yapın; güvenlik duvarı ayarları sayfasına gidin; \"Cloudflare kural seti\" ayrıntılarını açın; \"Cloudflare WordPress\" kural setini açın; daha sonra \"WP0025A\" ve \"WP0025B\" kurallarını \"Pasif\" olarak tanımlayın."
+#: post-content.php:6
+msgid "The goal of this new editor is to make adding rich content to WordPress simple and enjoyable. This whole post is composed of <em>pieces of content</em>—somewhat similar to LEGO bricks—that you can move around and interact with. Move your cursor around and you&#8217;ll notice the different blocks light up with outlines and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the process of copying and pasting."
+msgstr "Yeni düzenleyicinin hedefi WordPress'e zengin içeriğin kolay ve tatminkar bir şekilde eklenebilmesi. Tüm yazı sağa sola taşıyabileceğiniz ve etkileşime girebileceğiniz <em>içerik parçalarından</em> —LEGO parçalarına benzer bir yapı— oluşuyor. İmleci sağa sola hareket ettirdiğinizda farklı blokların öne çıktığını ve okları fark edeceksiniz. Okları kullanarak blokları yeniden konumlandırabilirsiniz. Hem de kopyala yapıştır işlemi yaparken bir şeyleri kaybetme korkusu olmadan."
 
-#: lib/compat.php:360
-msgid "We're working closely with Cloudflare to fix this issue, but in the mean time, you can work around it in one of two ways:"
-msgstr "Bu sorunu düzeltmek için Cloudflare ile yakından çalışıyoruz ama bu arada, geçici olarak şu iki yoldan birini deneyebilirsiniz:"
+#: post-content.php:2
+msgid "Of Mountains &amp; Printing Presses"
+msgstr "Dağlar ve çıktı basımlar"
 
-#: lib/compat.php:359
-msgid "Your site uses Cloudflare, which provides a Web Application Firewall (WAF) to secure your site against attacks. Unfortunately, some of these WAF rules are incorrectly blocking legitimate access to your site, preventing Gutenberg from functioning correctly."
-msgstr "Siteniz, saldırılara karşı korumak için web uygulaması güvenlik duvarı (WAF) sağlayan Cloudflare'ı kullanıyor. Ne yazık ki, bu WAF kurallarından bazıları, yanlışlıkla sitenize sakıncası olmayan erişimleri de yasaklıyor, bu da Gutenberg'in doğru şekilde çalışmasını engelliyor."
-
-#: lib/client-assets.php:1331
+#: lib/client-assets.php:1134
 msgid "Welcome to the Gutenberg Editor"
-msgstr "Gutenberg düzenleyicisine hoş geldiniz."
+msgstr "Gutenberg düzenleyicisine hoş geldiniz"
 
-#: languages/gutenberg-translations.php:1943
+#: languages/gutenberg-translations.php:2434 build/block-library/index.js:12
 msgctxt "block name"
 msgid "More"
 msgstr "Daha fazla"
 
-#: languages/gutenberg-translations.php:1940
+#: languages/gutenberg-translations.php:2416 build/block-library/index.js:12
 msgctxt "button to expand options"
 msgid "More"
 msgstr "Daha fazla"
 
-#: languages/gutenberg-translations.php:1866
-msgid "Learn More"
-msgstr "Daha fazlasını öğren"
-
-#: languages/gutenberg-translations.php:1863
-msgid "Cloudflare is blocking REST API requests."
-msgstr "Cloudflare, REST API isteklerini engelliyor."
-
-#: languages/gutenberg-translations.php:1631
+#: languages/gutenberg-translations.php:2087 build/editor/index.js:50
 msgid "Are you sure you want to unschedule this post?"
-msgstr "Bu yazının zamanlamasını kaldırmak istediğinize emin misiniz?\t"
+msgstr "Bu yazının zamanlamasını kaldırmak istediğinize emin misiniz?"
 
-#: languages/gutenberg-translations.php:1589
-msgid "Double-check your settings, then use the button to publish your post."
-msgstr "Ayarlarınızı iki kere kontrol edin, ardından yazınızı yayımlamak için düğmeyi kullanın."
-
-#: languages/gutenberg-translations.php:698
+#: languages/gutenberg-translations.php:548 build/block-library/index.js:12
 msgid "Alt Text (Alternative Text)"
 msgstr "Alt metin (Alternatif metin)"
 
-#: languages/gutenberg-translations.php:385
+#: languages/gutenberg-translations.php:93 build/block-library/index.js:12
 msgid "Reusable Block"
 msgstr "Tekrar kullanılabilir blok"
 
-#: lib/compat.php:237 lib/compat.php:384
+#: lib/compat.php:215
 msgid "Continue to Classic Editor"
 msgstr "Klasik editörle devam et"
 
-#: lib/compat.php:236
+#: lib/compat.php:214
 msgid "Edit in Gutenberg"
 msgstr "Gutenbergte düzenle"
 
-#: lib/compat.php:230
+#: lib/compat.php:208
 msgid "Because this post does not have revisions, you will not be able to revert any changes you make in the Classic Editor."
 msgstr "Bu yazının önceki sürümü olmadığından Klasik editörde yaptığınız değişiklikleri geri alamayacaksınız."
 
 #. translators: link to the post revisions page
-#: lib/compat.php:224
+#: lib/compat.php:202
 msgid "You can also <a href=\"%s\">browse previous revisions</a> and restore a version of the post before it was edited in Gutenberg."
 msgstr "Ayrıca, yazının Gutenbergde düzenlenmeden <a href=\"%s\">önceki sürümlerine göz atabilir</a> ve bir sürümünü geri yükleyebilirsiniz."
 
-#: lib/compat.php:217
+#: lib/compat.php:195
 msgid "This post was previously edited in Gutenberg. You can continue in the Classic Editor, but you may lose data and formatting."
 msgstr "Bu yazı daha önce Gutenbergte düzenlenmiş. Klasik editörde düzenlemeye devam edebilirsiniz, fakat veri ve biçimlendirmeleri kaybedebilirsiniz."
 
@@ -594,7 +1815,7 @@ msgstr "Sonucu, bir nesne türünün öğeleriyle sınırlandır."
 
 #: lib/class-wp-rest-search-controller.php:260
 msgid "Object subtype."
-msgstr "Nesne alt türü"
+msgstr "Nesne alt türü."
 
 #: lib/class-wp-rest-search-controller.php:253
 msgid "Object type."
@@ -614,7 +1835,7 @@ msgstr "Nesne için benzersiz tanımlayıcı."
 
 #: lib/class-wp-rest-search-controller.php:149
 msgid "The page number requested is larger than the number of pages available."
-msgstr "Sayfa numarası, görüntülenebilir sayfa sayısından daha büyük"
+msgstr "Sayfa numarası, görüntülenebilir sayfa sayısından daha büyük."
 
 #: lib/class-wp-rest-search-controller.php:132
 msgid "Internal search handler error."
@@ -625,667 +1846,517 @@ msgstr "Dahili arama işleyici hatası."
 msgid "REST search handlers must extend the %s class."
 msgstr "REST arama işleyicileri %s sınıfını genişletmelidir."
 
-#: languages/gutenberg-translations.php:1881
+#: languages/gutenberg-translations.php:2313 build/editor/index.js:50
 msgid "Untitled Reusable Block"
 msgstr "Başlıksız tekrar kullanılabilir blok"
 
-#: languages/gutenberg-translations.php:1827
-msgid "XL"
-msgstr "XL"
-
-#: languages/gutenberg-translations.php:1824
-msgid "Larger"
-msgstr "Daha büyük"
-
-#: languages/gutenberg-translations.php:1821
-msgid "L"
-msgstr "L"
-
-#: languages/gutenberg-translations.php:1818
-msgid "M"
-msgstr "M"
-
-#: languages/gutenberg-translations.php:1815
-msgid "S"
-msgstr "S"
-
-#: languages/gutenberg-translations.php:1812
-msgid "Small"
-msgstr "Küçük"
-
-#: languages/gutenberg-translations.php:1447
+#: languages/gutenberg-translations.php:1862 build/editor/index.js:50
 msgid "(%s: %s)"
 msgstr "(%s: %s)"
 
-#: languages/gutenberg-translations.php:1414
+#: languages/gutenberg-translations.php:1794 build/editor/index.js:50
 msgid "Reusable"
 msgstr "Tekrar kullanılabilir"
 
-#: languages/gutenberg-translations.php:1349
+#: languages/gutenberg-translations.php:1733 build/editor/index.js:50
 msgid "(current %s: %s)"
 msgstr "(mevcut %s: %s)"
 
-#: languages/gutenberg-translations.php:1326
+#: languages/gutenberg-translations.php:1710 build/editor/index.js:50
 msgid "Remove from Reusable Blocks"
 msgstr "Tekrar kullanılabilir bloklardan kaldır"
 
-#: languages/gutenberg-translations.php:1320
+#: languages/gutenberg-translations.php:1704 build/editor/index.js:50
 msgid "Add to Reusable Blocks"
 msgstr "Tekrar kullanılabilir bloklara ekle"
 
-#: languages/gutenberg-translations.php:1233
-msgid "This block has been modified externally."
-msgstr "Bu blok harici olarak değiştirildi."
-
-#: languages/gutenberg-translations.php:1215
+#: languages/gutenberg-translations.php:695 build/block-library/index.js:12
 msgid "Keep as HTML"
 msgstr "HTML olarak sakla"
 
-#: languages/gutenberg-translations.php:505
+#: languages/gutenberg-translations.php:349 build/block-library/index.js:12
 msgid "Edit URL"
 msgstr "Bağlantıyı düzenle"
 
-#: languages/gutenberg-translations.php:396
+#: languages/gutenberg-translations.php:106 build/block-library/index.js:12
 msgid "Color Settings"
 msgstr "Renk ayarları"
 
 #. translators: %s: title/name of the reusable block
-#: languages/gutenberg-translations.php:392
+#: languages/gutenberg-translations.php:100 build/block-library/index.js:12
 msgid "Reusable Block: %s"
 msgstr "Tekrar kullanılabilir blok: %s"
 
-#: lib/rest-api.php:248
+#: lib/rest-api.php:270
 msgid "The current user can post HTML markup and JavaScript."
 msgstr "Mevcut kullanıcı, HTML kodu ve JavaScript gönderebilir."
 
-#: languages/gutenberg-translations.php:298
+#: languages/gutenberg-translations.php:8 build/api-fetch/index.js:1
 msgid "The response is not a valid JSON response."
 msgstr "Yanıt geçerli bir JSON yanıtı değildir."
 
-#: languages/gutenberg-translations.php:1035
+#. translators: accessibility text for the publish landmark region.
+#: languages/gutenberg-translations.php:1405 build/edit-post/index.js:12
+msgid "Editor publish"
+msgstr "Düzenleyici yayını"
+
+#: languages/gutenberg-translations.php:932 build/block-library/index.js:12
 msgid "Muted"
 msgstr "Sessiz"
 
-#: languages/gutenberg-translations.php:1032
+#: languages/gutenberg-translations.php:929 build/block-library/index.js:12
 msgid "Video Settings"
 msgstr "Video ayarları"
 
-#: languages/gutenberg-translations.php:755
+#: languages/gutenberg-translations.php:625 build/block-library/index.js:12
 msgid "recent comments"
 msgstr "son yorumlar"
 
-#: languages/gutenberg-translations.php:749
+#: languages/gutenberg-translations.php:619 build/block-library/index.js:12
 msgid "Latest Comments"
 msgstr "En son yorumlar"
 
-#: languages/gutenberg-translations.php:743
+#: languages/gutenberg-translations.php:604 build/block-library/index.js:12
 msgid "Display Excerpt"
 msgstr "Özeti göster"
 
-#: languages/gutenberg-translations.php:740
+#: languages/gutenberg-translations.php:616 build/block-library/index.js:12
 msgid "Display Date"
 msgstr "Tarihi göster"
 
-#: languages/gutenberg-translations.php:737
+#: languages/gutenberg-translations.php:613 build/block-library/index.js:12
 msgid "Display Avatar"
 msgstr "Avatarı göster"
 
-#: languages/gutenberg-translations.php:734
+#: languages/gutenberg-translations.php:610 build/block-library/index.js:12
 msgid "Latest Comments Settings"
 msgstr "Son yorumlar ayarları"
 
-#: languages/gutenberg-translations.php:746
+#: languages/gutenberg-translations.php:607 build/block-library/index.js:12
 msgid "Number of Comments"
 msgstr "Yorum sayısı"
 
-#: languages/gutenberg-translations.php:489
+#: languages/gutenberg-translations.php:206 build/block-library/index.js:12
 msgid "Background Opacity"
 msgstr "Arka plan saydamlığı"
 
-#: languages/gutenberg-translations.php:345
+#: languages/gutenberg-translations.php:50 build/block-library/index.js:12
 msgid "Auto"
 msgstr "Otomatik"
 
-#: languages/gutenberg-translations.php:341
+#: languages/gutenberg-translations.php:46 build/block-library/index.js:12
 msgid "Preload"
 msgstr "Ön yükleme"
 
-#: languages/gutenberg-translations.php:329
+#: languages/gutenberg-translations.php:34 build/block-library/index.js:12
 msgid "Audio Settings"
 msgstr "Ses ayarları"
 
-#: languages/gutenberg-translations.php:315
-msgid "Display a monthly archive of your site’s Posts."
-msgstr "Sitenizin yazılarının aylık arşivini görüntüleyin."
+#: languages/gutenberg-translations.php:28 build/block-library/index.js:12
+msgid "Display a monthly archive of your posts."
+msgstr "Yazılarınızın aylık arşivini görüntüleyin."
 
-#: languages/gutenberg-translations.php:305
+#: languages/gutenberg-translations.php:18 build/block-library/index.js:12
 msgid "Display as Dropdown"
 msgstr "Açılır menü olarak görüntüle"
 
-#: languages/gutenberg-translations.php:309
+#: languages/gutenberg-translations.php:22 build/block-library/index.js:12
 msgid "Show Post Counts"
 msgstr "Yazı sayısını göster"
 
-#: languages/gutenberg-translations.php:301
+#: languages/gutenberg-translations.php:14 build/block-library/index.js:12
 msgid "Archives Settings"
 msgstr "Arşiv ayarları"
 
-#: gutenberg.php:71
+#: gutenberg.php:94
 msgid "https://wordpress.org/support/plugin/gutenberg"
 msgstr "https://wordpress.org/support/plugin/gutenberg"
 
-#: gutenberg.php:69
+#: gutenberg.php:92
 msgid "Support"
 msgstr "Destek"
 
-#: packages/block-library/src/latest-comments/index.php:144
+#: packages/block-library/src/latest-comments/index.php:146
 msgid "No comments to show."
 msgstr "Gösterilecek yorum yok."
 
 #. translators: 1: author name (inside <a> or <span> tag, based on if they have
 #. a URL), 2: post title related to this comment
-#: packages/block-library/src/latest-comments/index.php:99
+#: packages/block-library/src/latest-comments/index.php:101
 msgid "%1$s on %2$s"
 msgstr "%1$s - %2$s"
 
-#: packages/block-library/src/archives/index.php:63
+#: packages/block-library/src/archives/index.php:65
 msgid "Select Post"
 msgstr "Yazı seçin"
 
-#: packages/block-library/src/archives/index.php:60
+#: packages/block-library/src/archives/index.php:62
 msgid "Select Week"
 msgstr "Hafta seçin"
 
-#: packages/block-library/src/archives/index.php:57
+#: packages/block-library/src/archives/index.php:59
 msgid "Select Day"
 msgstr "Gün seçin"
 
-#: packages/block-library/src/archives/index.php:54
+#: packages/block-library/src/archives/index.php:56
 msgid "Select Month"
 msgstr "Ay seçin"
 
-#: packages/block-library/src/archives/index.php:51
+#: packages/block-library/src/archives/index.php:53
 msgid "Select Year"
 msgstr "Yıl seçin"
 
-#: languages/gutenberg-translations.php:312
-#: packages/block-library/src/archives/index.php:33
+#: languages/gutenberg-translations.php:25
+#: packages/block-library/src/archives/index.php:35
+#: build/block-library/index.js:12
 msgid "Archives"
 msgstr "Arşivler"
 
-#: languages/gutenberg-translations.php:1809
+#: languages/gutenberg-translations.php:2277 build/editor/index.js:50
 msgid "Very dark gray"
 msgstr "Çok koyu gri"
 
-#: languages/gutenberg-translations.php:1806
+#: languages/gutenberg-translations.php:2274 build/editor/index.js:50
 msgid "Cyan bluish gray"
 msgstr "Cam göbeği mavimsi gri"
 
-#: languages/gutenberg-translations.php:1803
+#: languages/gutenberg-translations.php:2271 build/editor/index.js:50
 msgid "Very light gray"
 msgstr "Çok açık gri"
 
-#: languages/gutenberg-translations.php:1800
+#: languages/gutenberg-translations.php:2268 build/editor/index.js:50
 msgid "Vivid cyan blue"
 msgstr "Canlı cam göbeği mavi"
 
-#: languages/gutenberg-translations.php:1797
+#: languages/gutenberg-translations.php:2265 build/editor/index.js:50
 msgid "Pale cyan blue"
 msgstr "Soluk cam göbeği mavi"
 
-#: languages/gutenberg-translations.php:1794
+#: languages/gutenberg-translations.php:2262 build/editor/index.js:50
 msgid "Vivid green cyan"
 msgstr "Canlı yeşil cam göbeği"
 
-#: languages/gutenberg-translations.php:1791
+#: languages/gutenberg-translations.php:2259 build/editor/index.js:50
 msgid "Light green cyan"
 msgstr "Açık yeşil cam göbeği"
 
-#: languages/gutenberg-translations.php:1788
+#: languages/gutenberg-translations.php:2256 build/editor/index.js:50
 msgid "Luminous vivid amber"
 msgstr "Canlı parlak amber"
 
-#: languages/gutenberg-translations.php:1785
+#: languages/gutenberg-translations.php:2253 build/editor/index.js:50
 msgid "Luminous vivid orange"
 msgstr "Parlak canlı turuncu"
 
-#: languages/gutenberg-translations.php:1782
+#: languages/gutenberg-translations.php:2250 build/editor/index.js:50
 msgid "Vivid red"
 msgstr "Canlı kırmızı"
 
-#: languages/gutenberg-translations.php:1779
+#: languages/gutenberg-translations.php:2247 build/editor/index.js:50
 msgid "Pale pink"
 msgstr "Açık pembe"
 
-#: languages/gutenberg-translations.php:1716
+#: languages/gutenberg-translations.php:1781 build/editor/index.js:50
 msgid "Inline Elements"
 msgstr "Satır içi öğeler"
 
-#: languages/gutenberg-translations.php:1698
+#: languages/gutenberg-translations.php:2338 build/format-library/index.js:12
 msgid "Inline Image"
 msgstr "Satır içi görsel"
 
-#: languages/gutenberg-translations.php:1408
+#: languages/gutenberg-translations.php:1791 build/editor/index.js:50
 msgid "Available block types"
 msgstr "Kullanılabilir blok türleri"
 
-#: languages/gutenberg-translations.php:35
+#: languages/gutenberg-translations.php:1247 build/edit-post/index.js:12
 msgid "Welcome to the wonderful world of blocks! Click the “+” (“Add block”) button to add a new block. There are blocks available for all kinds of content: you can insert text, headings, images, lists, and lots more!"
 msgstr "Blokların muhteşem dünyasına hoş geldiniz! Yeni blok eklemek için \"+\" (\"Blok ekle\") düğmesine tıklayın. Her içerik türü için uygun blok vardır, ekleyebilecekleriniz: metin, başlıklar, görseller, listeler ve çok daha fazlası!"
 
-#: languages/gutenberg-translations.php:1346
+#: languages/gutenberg-translations.php:1727 build/editor/index.js:50
 msgid "Transform To:"
 msgstr "Şuna dönüştür:"
 
-#: languages/gutenberg-translations.php:1334
-msgid "Apply style variation \"%s\""
-msgstr "\"%s\" biçim varyasyonunu uygula"
-
-#: languages/gutenberg-translations.php:1301
+#: languages/gutenberg-translations.php:1685 build/editor/index.js:50
 msgid "Remove Block"
 msgstr "Bloğu kaldır"
 
-#: languages/gutenberg-translations.php:182
+#: languages/gutenberg-translations.php:1411 build/edit-post/index.js:12
 msgid "Open publish panel"
 msgstr "Yayımlama panelini aç"
 
-#: languages/gutenberg-translations.php:919
+#: languages/gutenberg-translations.php:821 build/block-library/index.js:12
 msgid "Dots"
 msgstr "Noktalar"
 
-#: languages/gutenberg-translations.php:916
+#: languages/gutenberg-translations.php:818 build/block-library/index.js:12
 msgid "Wide Line"
 msgstr "Geniş çizgi"
 
-#: languages/gutenberg-translations.php:913
+#: languages/gutenberg-translations.php:815 build/block-library/index.js:12
 msgid "Short Line"
 msgstr "Kısa çizgi"
 
-#: languages/gutenberg-translations.php:898
+#: lib/client-assets.php:1004 languages/gutenberg-translations.php:2286
+#: build/editor/index.js:50
 msgid "Large"
 msgstr "Büyük"
 
-#: languages/gutenberg-translations.php:894
-msgid "Regular"
-msgstr "Normal"
-
-#: languages/gutenberg-translations.php:725
+#: languages/gutenberg-translations.php:576 build/block-library/index.js:12
 msgid "Link URL"
 msgstr "Bağlantı adresi"
 
-#: languages/gutenberg-translations.php:687
+#: languages/gutenberg-translations.php:538 build/block-library/index.js:12
 msgid "Custom URL"
 msgstr "Özel bağlantı"
 
-#: languages/gutenberg-translations.php:620
+#: languages/gutenberg-translations.php:449 build/block-library/index.js:12
 msgid "Show Download Button"
 msgstr "İndirme düğmesini göster"
 
-#: languages/gutenberg-translations.php:617
+#: languages/gutenberg-translations.php:446 build/block-library/index.js:12
 msgid "Download Button Settings"
 msgstr "İndirme düğmesi ayarları"
 
-#: languages/gutenberg-translations.php:614
-msgid "Open in New Window"
-msgstr "Yeni pencerede aç"
-
-#: languages/gutenberg-translations.php:610
+#: languages/gutenberg-translations.php:438 build/block-library/index.js:12
 msgid "Link To"
 msgstr "Bağlantı"
 
-#: languages/gutenberg-translations.php:605
+#: languages/gutenberg-translations.php:433 build/block-library/index.js:12
 msgid "Text Link Settings"
 msgstr "Metin bağlantı ayarları"
 
-#: languages/gutenberg-translations.php:588
+#: languages/gutenberg-translations.php:414 build/block-library/index.js:12
 msgid "The download button is hidden."
 msgstr "İndirme düğmesi gizlendi."
 
-#: languages/gutenberg-translations.php:585
-msgid "The download button is shown."
-msgstr "İndirme düğmesi gösterildi."
+#: languages/gutenberg-translations.php:411 build/block-library/index.js:12
+msgid "The download button is visible."
+msgstr "İndirme düğmesi görünüm durumda."
 
-#: languages/gutenberg-translations.php:582
-msgid "Download"
-msgstr "İndir"
-
-#: languages/gutenberg-translations.php:579
+#: languages/gutenberg-translations.php:408 build/block-library/index.js:12
 msgid "pdf"
 msgstr "pdf"
 
-#: languages/gutenberg-translations.php:576
+#: languages/gutenberg-translations.php:405 build/block-library/index.js:12
 msgid "document"
 msgstr "belge"
 
-#: languages/gutenberg-translations.php:573
-msgid "Add a link to a file that visitors can download."
-msgstr "Ziyaretçilerin indirebileceği bir dosyaya bağlantı ekle."
-
-#: languages/gutenberg-translations.php:570
+#: languages/gutenberg-translations.php:399 build/block-library/index.js:12
 msgid "Copy URL"
 msgstr "Bağlantıyı kopyala"
 
-#: languages/gutenberg-translations.php:567
+#: languages/gutenberg-translations.php:391 build/block-library/index.js:12
 msgid "Write file name…"
-msgstr "Dosya adı yaz..."
+msgstr "Dosya adı yaz…"
 
-#: languages/gutenberg-translations.php:564
+#: languages/gutenberg-translations.php:388 build/block-library/index.js:12
 msgid "Edit file"
 msgstr "Dosyayı düzenle"
 
-#: languages/gutenberg-translations.php:561
-msgid "a file"
-msgstr "bir dosya"
-
-#: languages/gutenberg-translations.php:558
+#: languages/gutenberg-translations.php:382 build/block-library/index.js:12
+#: build/list-reusable-blocks/index.js:1
 msgid "File"
 msgstr "Dosya"
 
-#: languages/gutenberg-translations.php:460
+#: languages/gutenberg-translations.php:178 build/block-library/index.js:12
 msgid "A single column within a columns block."
 msgstr "Sütun bloğunda tek bir sütun."
 
-#: languages/gutenberg-translations.php:457
+#: languages/gutenberg-translations.php:175 build/block-library/index.js:12
 msgid "Column"
 msgstr "Sütun"
 
-#: languages/gutenberg-translations.php:427
-msgid "Squared"
-msgstr "Kare"
-
-#: languages/gutenberg-translations.php:424
+#: languages/gutenberg-translations.php:134 build/block-library/index.js:12
 msgid "Outline"
 msgstr "Çevresi çizgili"
 
-#: languages/gutenberg-translations.php:421
-msgid "Rounded"
-msgstr "Yuvarlatılmış"
-
-#: languages/gutenberg-translations.php:337
+#: languages/gutenberg-translations.php:42 build/block-library/index.js:12
 msgid "Loop"
 msgstr "Döngü"
 
-#: languages/gutenberg-translations.php:333
+#: languages/gutenberg-translations.php:38 build/block-library/index.js:12
 msgid "Autoplay"
 msgstr "Otomatik oynat"
 
-#: languages/gutenberg-translations.php:1038
+#: languages/gutenberg-translations.php:935 build/block-library/index.js:12
 msgid "Playback Controls"
 msgstr "Oynatma kontrolleri"
 
-#: languages/gutenberg-translations.php:1140
+#: languages/gutenberg-translations.php:1196 build/components/index.js:19
 msgid "Close dialog"
 msgstr "Pencereyi kapat"
 
-#: languages/gutenberg-translations.php:1884
+#: languages/gutenberg-translations.php:2316 build/editor/index.js:50
 msgid "Sorry, this file type is not permitted for security reasons."
 msgstr "Üzgünüz, bu dosya türüne güvenlik nedenleriyle izin verilmez."
 
-#: languages/gutenberg-translations.php:1936
+#: languages/gutenberg-translations.php:2399 build/nux/index.js:1
 msgid "Disable tips"
 msgstr "İpuçlarını devre dışı bırak"
 
-#: languages/gutenberg-translations.php:1933
+#: languages/gutenberg-translations.php:2396 build/nux/index.js:1
 msgid "Got it"
 msgstr "Anladım"
 
-#: languages/gutenberg-translations.php:1930
+#: languages/gutenberg-translations.php:2393 build/nux/index.js:1
 msgid "See next tip"
 msgstr "Sonraki ipucunu gör"
 
-#: languages/gutenberg-translations.php:1927
+#: languages/gutenberg-translations.php:2390 build/nux/index.js:1
 msgid "Gutenberg tips"
 msgstr "Gutenberg ipuçları"
 
-#: languages/gutenberg-translations.php:1607
+#: languages/gutenberg-translations.php:1975 build/editor/index.js:50
 msgid "Finished writing? That’s great, let’s get this published right now. Just click “Publish” and you’re good to go."
 msgstr "Yazmayı bitirdiniz mi? Mükemmel, haydi şimdi bunu yayımlayalım. Sadece \"Yayımla\" düğmesine basın ve gitmek için hazırsınız."
 
-#: languages/gutenberg-translations.php:1592
+#: languages/gutenberg-translations.php:2042 build/editor/index.js:50
 msgid "When you’re ready, submit your work for review, and an Editor will be able to approve it for you."
 msgstr "Hazır olduğunuzda, çalışmanızı incelenmek üzere gönderin. Bir editör sizin için onaylayabilir."
 
-#: languages/gutenberg-translations.php:1586
+#: languages/gutenberg-translations.php:2039 build/editor/index.js:50
 msgid "Are you ready to submit for review?"
 msgstr "İnceleme için göndermeye hazır mısınız?"
 
-#: languages/gutenberg-translations.php:1523
+#: languages/gutenberg-translations.php:1963 build/editor/index.js:50
 msgid "Click “Preview” to load a preview of this page, so you can make sure you’re happy with your blocks."
 msgstr "Bu sayfanın ön izlemesini yüklemek için \"Ön izleme\"ye tıklayın, böylece  bloklardan memnun olduğunuza emin olabilirsiniz."
 
-#: languages/gutenberg-translations.php:1048
+#: languages/gutenberg-translations.php:945 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Replace image"
 msgstr "Görseli değiştir"
 
-#: languages/gutenberg-translations.php:1462
+#: languages/gutenberg-translations.php:1880 build/editor/index.js:50
 msgid "Remove image"
 msgstr "Görseli kaldır"
 
-#: languages/gutenberg-translations.php:1304
+#: languages/gutenberg-translations.php:1688 build/editor/index.js:50
 msgid "Hide options"
 msgstr "Seçenekleri gizle"
 
-#: languages/gutenberg-translations.php:71
-msgid "Show Tips"
-msgstr "İpuçlarını göster"
-
-#: languages/gutenberg-translations.php:45
+#: languages/gutenberg-translations.php:1256 build/edit-post/index.js:12
 msgid "You’ll find more settings for your page and blocks in the sidebar. Click “Settings” to open it."
 msgstr "Sayfalarınız ve bloklar için daha fazla ayarı kenar çubuğunda bulacaksınız. Açmak için \"Ayarlar\"a tıklayın."
 
-#: lib/class-wp-rest-autosaves-controller.php:275
+#: lib/class-wp-rest-autosaves-controller.php:301
 msgid "Preview link for the post."
 msgstr "Yazı için önizleme bağlantısı."
 
-#: lib/class-wp-rest-autosaves-controller.php:326
+#: lib/class-wp-rest-autosaves-controller.php:352
 msgid "There is nothing to save. The autosave and the post content are the same."
-msgstr "Kaydedilecek bir şey yok. Otomatik kaydedilen ile yazı içeriği aynı. "
+msgstr "Kaydedilecek bir şey yok. Otomatik kaydedilen ile yazı içeriği aynı."
 
-#: lib/class-wp-rest-autosaves-controller.php:226
+#: lib/class-wp-rest-autosaves-controller.php:252
 msgid "There is no autosave revision for this post."
 msgstr "Bu yazı için otomatik kaydedilmiş sürüm yok."
 
-#: lib/class-wp-rest-autosaves-controller.php:220
+#: lib/class-wp-rest-autosaves-controller.php:246
 msgid "Invalid parent post ID."
-msgstr "Geçersiz ebeveyn yazı ID no. "
+msgstr "Geçersiz ebeveyn yazı ID no."
 
-#: lib/class-wp-rest-autosaves-controller.php:156
+#: lib/class-wp-rest-autosaves-controller.php:182
 msgid "Invalid item ID."
 msgstr "Geçersiz öğe ID no."
 
-#: lib/class-wp-rest-autosaves-controller.php:112
+#: lib/class-wp-rest-autosaves-controller.php:116
 msgid "The ID for the object."
-msgstr "Nesne için ID numarası "
+msgstr "Nesne için ID numarası."
 
-#: lib/class-wp-rest-autosaves-controller.php:82
-#: lib/class-wp-rest-autosaves-controller.php:108
+#: lib/class-wp-rest-autosaves-controller.php:86
+#: lib/class-wp-rest-autosaves-controller.php:112
 msgid "The ID for the parent of the object."
 msgstr "Ebeveyn nesne için ID no."
 
 #. translators: %s: file name
-#: languages/gutenberg-translations.php:1897
+#: languages/gutenberg-translations.php:2329 build/editor/index.js:50
 msgid "Error while uploading file %s to the media library."
 msgstr "%s dosyası ortam kütüphanesine yüklenirken hata."
 
-#: languages/gutenberg-translations.php:1890
+#: languages/gutenberg-translations.php:2322 build/editor/index.js:50
 msgid "This file exceeds the maximum upload size for this site."
 msgstr "Bu dosya, bu site için azami yükleme boyutunu aşıyor."
 
-#: languages/gutenberg-translations.php:1833
+#: languages/gutenberg-translations.php:2166 build/editor/index.js:50
 msgid "View the autosave"
 msgstr "Otomatik kayıtları görüntüle"
 
-#: languages/gutenberg-translations.php:1830
+#: languages/gutenberg-translations.php:2163 build/editor/index.js:50
 msgid "There is an autosave of this post that is more recent than the version below."
 msgstr "Bu yazının, aşağıdaki sürümden daha yeni olan otomatik haydedilmiş bir sürümü var."
 
-#: languages/gutenberg-translations.php:1616
+#: languages/gutenberg-translations.php:2072 build/editor/index.js:50
 msgid "Autosaving"
 msgstr "Otomatik kayıt"
 
-#: languages/gutenberg-translations.php:1420
-msgid "Drag %s, upload a new one or select a file from your library."
-msgstr "%s sürükleyin, yeni bir tane yükleyin veya kitaplıktan bir dosya seçin."
+#: languages/gutenberg-translations.php:1812 build/editor/index.js:50
+msgid "Drag a video, upload a new one or select a file from your library."
+msgstr "Bir video sürükleyin, yeni bir tane yükleyin veya kitaplıktan bir dosya seçin."
 
-#: languages/gutenberg-translations.php:1423
-msgid "Enter URL here…"
-msgstr "Bağlantı girin..."
-
-#: languages/gutenberg-translations.php:1411
-msgid "Most Used"
-msgstr "En çok kullanılanlar"
-
-#: languages/gutenberg-translations.php:1026
-msgid "a video"
-msgstr "bir video"
-
-#: languages/gutenberg-translations.php:496
-msgid "an image"
-msgstr "bir görsel"
-
-#: languages/gutenberg-translations.php:473
-msgid "beta"
-msgstr "beta"
-
-#: languages/gutenberg-translations.php:323
-msgid "an audio"
-msgstr "bir ses"
-
-#: lib/rest-api.php:343
-msgid "Sorry, you are not allowed make unbounded queries."
-msgstr "Üzgünüm, sınırsız sorgu oluşturmanıza izin verilmiyor."
-
-#: languages/gutenberg-translations.php:215
+#: languages/gutenberg-translations.php:1458 build/edit-post/index.js:12
 msgid "Pin to toolbar"
 msgstr "Araç çubuğuna tuttur"
 
-#: languages/gutenberg-translations.php:212
+#: languages/gutenberg-translations.php:1455 build/edit-post/index.js:12
 msgid "Unpin from toolbar"
 msgstr "Araç çubuğundan kaldır"
 
-#: languages/gutenberg-translations.php:1054
-msgid "Embed a video file and a simple video player."
-msgstr "Bir video dosyası ve basit bir video oynatıcı gömün."
+#: languages/gutenberg-translations.php:896 build/block-library/index.js:12
+msgid "Insert a table — perfect for sharing charts and data."
+msgstr "Bir tablo ekle — çizelgeler ve veri paylaşmak için mükemmel."
 
-#: languages/gutenberg-translations.php:1012
-msgid "A block for haiku? Why not? Blocks for all the things! (See what we did here?)"
-msgstr "Haiku için bir blok mu? Neden olmasın? Her şey için bloklar! (Burada ne yaptığımızı gördünüz mü?)"
-
-#: languages/gutenberg-translations.php:991
-msgid "Insert a table -- perfect for sharing charts and data."
-msgstr "Tablo ekle -- çizelgeleri ve verileri paylaşmak için mükemmel."
-
-#: languages/gutenberg-translations.php:985
+#: languages/gutenberg-translations.php:887 build/block-library/index.js:12
 msgid "Fixed width table cells"
 msgstr "Sabit genişlikte tablo hücreleri"
 
-#: languages/gutenberg-translations.php:982
+#: languages/gutenberg-translations.php:884 build/block-library/index.js:12
 msgid "Table Settings"
 msgstr "Tablo ayarları"
 
-#: languages/gutenberg-translations.php:904
-msgid "Insert a horizontal line where you want to create a break between ideas."
-msgstr "Fikirler arasında, boşluk oluşturmak istediğiniz yere yatay bir çizgi ekleyin."
-
-#: languages/gutenberg-translations.php:887
-msgid "Maybe someone else said it better -- add some quoted text."
-msgstr "Başka biri daha iyi mi söyledi? -- alıntı metin ekle."
-
-#: languages/gutenberg-translations.php:870
-msgid "Highlight a quote from your post or page by displaying it as a graphic element."
-msgstr "Yazılarınız veya sayfanızdan bir alıntıyı grafik öğesi olarak görüntüleyerek vurgulayın."
-
-#: languages/gutenberg-translations.php:861
+#: languages/gutenberg-translations.php:765 build/block-library/index.js:12
 msgid "Add text that respects your spacing and tabs, and also allows styling."
 msgstr "Espas ve sekmelerinize uyumlu ve biçimlendirmenize de izin veren bir metin ekleyin."
 
-#: languages/gutenberg-translations.php:852
-msgid "Add some basic text."
-msgstr "Bazı temel metinleri ekle."
-
-#: languages/gutenberg-translations.php:819
-msgid "Want to show only part of this post on your blog’s home page? Insert a \"More\" block where you want the split."
-msgstr "Blogunuzun ana sayfasında bu yazının yalnızca bir kısmını mı göstermek istiyorsunuz? Bölmeyi istediğiniz yere \"Daha fazla\" bloğu ekleyin."
-
-#: languages/gutenberg-translations.php:801
-msgid "Numbers, bullets, up to you. Add a list of items."
-msgstr "Numaralar, yuvarlaklar, size kalmış. Bir öğe listesi ekleyin."
-
-#: languages/gutenberg-translations.php:777
+#: languages/gutenberg-translations.php:647 build/block-library/index.js:12
 msgid "Display a list of your most recent posts."
 msgstr "Son yazılarınızın listesini görüntüleyin."
 
-#: languages/gutenberg-translations.php:731
-msgid "They’re worth 1,000 words! Insert a single image."
-msgstr "1000 kelimeye değiyorlar! Tek bir görsel ekleyin."
-
-#: languages/gutenberg-translations.php:15
-msgid "Add your own HTML (and view it right here as you edit!)."
-msgstr "Kendi HTML kodunuzu ekleyin (ve düzenledikçe tam burada görüntüleyin!)."
-
-#: languages/gutenberg-translations.php:653
-msgid "Display multiple images in an elegantly organized tiled layout."
-msgstr "Zarif şekilde düzenlenmiş döşemeli bir düzende birden çok görsel görüntüleyin."
-
-#: languages/gutenberg-translations.php:9
-msgid "It’s the classic WordPress editor and it’s a block! Drop the editor right in."
-msgstr "Bu klasik WordPress düzenleyicisidir ve bir bloktur! Düzenleyiciye doğrudan bırakın."
-
 #. translators: %s: Name of service (e.g. VideoPress, YouTube)
-#: languages/gutenberg-translations.php:529
+#: languages/gutenberg-translations.php:377 build/block-library/index.js:12
 msgid "Add a block that displays content pulled from other sites, like Twitter, Instagram or YouTube."
 msgstr "Twitter, Instagram veya YouTube gibi diğer sitelerden çekilen içeriği gösteren bir blok ekleyin."
 
-#: languages/gutenberg-translations.php:502
-msgid "Add a full-width image, and layer text over it — great for headers."
-msgstr "Tam genişlikte bir görsel ve üstüne metin katmanı ekleyin - başlıklar için harika."
-
-#: languages/gutenberg-translations.php:476
+#: languages/gutenberg-translations.php:181 build/block-library/index.js:12
 msgid "Add a block that displays content in multiple columns, then add whatever content blocks you’d like."
 msgstr "İçeriği birden çok sütunda gösteren bir blok ekleyin, ardından istediğiniz içerik bloklarını ekleyin."
 
-#: languages/gutenberg-translations.php:454
-msgid "Add text that respects your spacing and tabs -- perfect for displaying code."
-msgstr "Boşluk ve sekmelerinize uyan metin ekleyin - kod görüntülemek için mükemmeldir."
-
-#: languages/gutenberg-translations.php:444
-msgid "Display a list of all your site’s categories."
-msgstr "Sitenizdeki tüm kategorilerin bir listesini görüntüleyin."
-
-#: languages/gutenberg-translations.php:418
-msgid "Want visitors to click to subscribe, buy, or read more? Get their attention with a button."
-msgstr "Ziyaretçilerin, abone olmak, satın almak veya daha fazlasını okumak için tıklamasını mı istersnizi? Bir düğme ile dikkatlerini çekin."
-
-#: languages/gutenberg-translations.php:365
-msgid "Embed an audio file and a simple audio player."
-msgstr "Bir ses dosyası ve basit ses oynatıcısı göm."
-
-#: languages/gutenberg-translations.php:1181
+#: languages/gutenberg-translations.php:1233 build/components/index.js:19
 msgid "No results found."
 msgstr "Sonuç bulunamadı."
 
 #. translators: %s: error message describing the problem
-#: languages/gutenberg-translations.php:1178
+#: languages/gutenberg-translations.php:1230 build/components/index.js:19
 msgid "Error loading block: %s"
 msgstr "Blok yüklenirken hata: %s"
 
-#: languages/gutenberg-translations.php:1921
+#: languages/gutenberg-translations.php:2384
+#: build/list-reusable-blocks/index.js:1
 msgid "Unknown error"
 msgstr "Bilinmeyen hata"
 
-#: lib/rest-api.php:91
+#: lib/rest-api.php:101
 msgid "Embed Handler"
 msgstr "Gömme tutucu"
 
-#: lib/class-wp-rest-block-renderer-controller.php:169
+#: lib/class-wp-rest-block-renderer-controller.php:170
 msgid "The rendered block."
 msgstr "İşlenmiş blok."
 
-#: lib/class-wp-rest-block-renderer-controller.php:94
-msgid "Sorry, you are not allowed to read Gutenberg blocks of this post"
-msgstr "Üzgünüm, bu yazının Gutenberg bloklarını okumaya izniniz yok."
+#: lib/class-wp-rest-block-renderer-controller.php:95
+msgid "Sorry, you are not allowed to read Gutenberg blocks of this post."
+msgstr "Üzgünüz, bu yazının Gutenberg bloklarını okumanıza izin verilmiyor."
 
-#: lib/class-wp-rest-block-renderer-controller.php:64
+#: lib/class-wp-rest-block-renderer-controller.php:65
 msgid "ID of the post context."
 msgstr "Yazı bağlamının ID nosu."
 
@@ -1298,646 +2369,647 @@ msgstr "%s bloğu için nitelikler"
 msgid "Unique registered name for the block."
 msgstr "Bloğun benzersiz kayıtlı adı."
 
-#: languages/gutenberg-translations.php:1956
+#: languages/gutenberg-translations.php:2482 build/editor/index.js:50
 msgctxt "term"
 msgid "Remove %s"
 msgstr "%s kaldır"
 
-#: languages/gutenberg-translations.php:1517
+#: languages/gutenberg-translations.php:1951 build/editor/index.js:50
 msgid "Copy the permalink"
 msgstr "Kalıcı bağlantıyı kopyala"
 
-#: languages/gutenberg-translations.php:1514
+#: languages/gutenberg-translations.php:1948 build/editor/index.js:50
 msgid "Permalink copied"
 msgstr "Kalıcı bağlantı kopyalandı"
 
-#: languages/gutenberg-translations.php:940
+#: languages/gutenberg-translations.php:842 build/block-library/index.js:12
 msgid "Height in pixels"
 msgstr "Piksel olarak yükseklik"
 
-#: languages/gutenberg-translations.php:937
+#: languages/gutenberg-translations.php:839 build/block-library/index.js:12
 msgid "Spacer Settings"
 msgstr "Aralayıcı ayarları"
 
-#: languages/gutenberg-translations.php:934
-msgid "Add an element with empty space and custom height."
-msgstr "Özel yükseklikte ve boş bir öğe ekleyin."
-
-#: languages/gutenberg-translations.php:931
+#: languages/gutenberg-translations.php:833 build/block-library/index.js:12
 msgid "Spacer"
 msgstr "Aralayıcı"
 
-#: languages/gutenberg-translations.php:846
+#: languages/gutenberg-translations.php:750 build/block-library/index.js:12
 msgid "Toggle to show a large initial letter."
 msgstr "Büyük bir başlangıç harfi gösterimini açıp kapatın."
 
-#: languages/gutenberg-translations.php:843
+#: languages/gutenberg-translations.php:747 build/block-library/index.js:12
 msgid "Showing large initial letter."
 msgstr "Büyük ilk harf gösteriliyor."
 
-#: languages/gutenberg-translations.php:379
+#: languages/gutenberg-translations.php:78 build/block-library/index.js:12
 msgid "Name:"
 msgstr "İsim:"
 
-#. translators: %s: The name of the color e.g: "vivid red" or color hex code if
-#. name is not available e.g: "#f00".
-#: languages/gutenberg-translations.php:1147
-msgid "(current color: %s)"
-msgstr "(geçerli renk: %s)"
-
 #. translators: 1: term name, 2: term position in a set of terms, 3: total term
 #. set count.
-#: languages/gutenberg-translations.php:1137
+#: languages/gutenberg-translations.php:1193 build/components/index.js:19
 msgid "%1$s (%2$s of %3$s)"
 msgstr "%1$s (%2$s / %3$s)"
 
-#: languages/gutenberg-translations.php:1133
+#: languages/gutenberg-translations.php:1189 build/components/index.js:19
 msgid "Remove item"
 msgstr "Öğeyi kaldır"
 
 #. translators: %s: color hex code e.g: "#f00".
-#: languages/gutenberg-translations.php:1096
+#: languages/gutenberg-translations.php:1001 build/components/index.js:19
 msgid "Color code: %s"
 msgstr "Renk kodu: %s"
 
-#: lib/class-wp-rest-block-renderer-controller.php:141
+#: lib/class-wp-rest-block-renderer-controller.php:142
 msgid "Invalid block."
 msgstr "Geçersiz blok."
 
-#: lib/rest-api.php:120
+#: lib/rest-api.php:157
+msgid "Whether to show the taxonomy in the quick/bulk edit panel."
+msgstr "Taksonominin hızlı/topu düzenleme panellerinde görüntülenip görüntülenmeyeceği."
+
+#: lib/rest-api.php:153
+msgid "Whether to make the taxonomy available for selection in navigation menus."
+msgstr "Taksonominin dolaşım menülerinde seçim için uygun olup olmayacağı."
+
+#: lib/rest-api.php:149
+msgid "Whether to allow automatic creation of taxonomy columns on associated post-types table."
+msgstr "İlişkili yazı-tipi tablosu üzerinde otomatik taksonomi oluşturulup oluşturulmayacağı."
+
+#: lib/rest-api.php:145
+msgid "Whether to generate a default UI for managing this taxonomy."
+msgstr "Bu taksonomiyi yönetmek için varsayılan arabirim oluşturulup oluşturulmayacağı."
+
+#: lib/rest-api.php:141
+msgid "Whether the taxonomy is publicly queryable."
+msgstr "Bir taksonominin açık olarak sorgulanıp sorgulanamayacağı."
+
+#: lib/rest-api.php:137
+msgid "Whether a taxonomy is intended for use publicly either via the admin interface or by front-end users."
+msgstr "Bir taksonominin açık olarak yönetim arabiriminden ya da ön yüz kullanıcıları tarafından sorgulanıp sorgulanamayacağı."
+
+#: lib/rest-api.php:131
 msgid "The visibility settings for the taxonomy."
 msgstr "Sınıflandırma için görünürlük ayarları."
 
-#: languages/gutenberg-translations.php:1719
+#: languages/gutenberg-translations.php:2181 build/editor/index.js:50
 msgid "Skip to the selected block"
 msgstr "Seçilen bloğa geç"
 
-#: languages/gutenberg-translations.php:1604
+#: languages/gutenberg-translations.php:1972 build/editor/index.js:50
 msgid "Publish…"
-msgstr "Yayımla..."
+msgstr "Yayımla…"
 
-#: languages/gutenberg-translations.php:1601
+#: languages/gutenberg-translations.php:1969 build/editor/index.js:50
 msgid "Schedule…"
-msgstr "Zamanla..."
+msgstr "Zamanla…"
 
-#: languages/gutenberg-translations.php:1511
+#: languages/gutenberg-translations.php:1957 build/editor/index.js:50
 msgid "Change Permalinks"
 msgstr "Kalıcı bağlantıları değiştirin"
 
-#: languages/gutenberg-translations.php:1505
-msgid "OK"
-msgstr "Tamam"
-
-#: languages/gutenberg-translations.php:1502
+#: languages/gutenberg-translations.php:1945 build/editor/index.js:50
 msgid "Edit post permalink"
 msgstr "Kalıcı bağlantıyı düzenle"
 
-#: languages/gutenberg-translations.php:263
+#: languages/gutenberg-translations.php:1518 build/edit-post/index.js:12
 msgid "Show Block Settings"
 msgstr "Blok ayarlarını göster"
 
-#: languages/gutenberg-translations.php:260
+#: languages/gutenberg-translations.php:1515 build/edit-post/index.js:12
 msgid "Hide Block Settings"
 msgstr "Blok ayarlarını gizle"
 
-#: languages/gutenberg-translations.php:254
+#: languages/gutenberg-translations.php:1509 build/edit-post/index.js:12
 msgid "Block settings closed"
 msgstr "Blok ayarları kapatıldı"
 
-#: languages/gutenberg-translations.php:209
+#: languages/gutenberg-translations.php:1452 build/edit-post/index.js:12
 msgid "Close plugin"
 msgstr "Eklentiyi kapat"
 
-#: languages/gutenberg-translations.php:194
+#: languages/gutenberg-translations.php:1495 build/edit-post/index.js:12
 msgid "Editor settings"
 msgstr "Düzenleyici ayarları"
 
-#: languages/gutenberg-translations.php:722
+#: languages/gutenberg-translations.php:573 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Link Settings"
 msgstr "Bağlantı ayarları"
 
-#: languages/gutenberg-translations.php:1704
+#: languages/gutenberg-translations.php:2344 build/format-library/index.js:12
 msgid "Unlink"
 msgstr "Bağlantıyı kaldır"
 
-#: languages/gutenberg-translations.php:831
+#: languages/gutenberg-translations.php:716 build/block-library/index.js:12
 msgid "Page break"
 msgstr "Sayfa sonu"
 
-#: languages/gutenberg-translations.php:828
+#: languages/gutenberg-translations.php:728 build/block-library/index.js:12
 msgid "pagination"
 msgstr "sayfalama"
 
-#: languages/gutenberg-translations.php:825
+#: languages/gutenberg-translations.php:725 build/block-library/index.js:12
 msgid "next page"
 msgstr "sonraki sayfa"
 
-#: languages/gutenberg-translations.php:822
-msgid "This block allows you to set break points on your post. Visitors of your blog are then presented with content split into multiple pages."
-msgstr "Bu blok, yayınınızdaki kırılma noktalarını ayarlamanıza olanak tanır. Daha sonra blogunuzun ziyaretçilerine birden çok sayfaya bölünmüş içerik sunulur."
-
-#: languages/gutenberg-translations.php:713
+#: languages/gutenberg-translations.php:564 build/block-library/index.js:12
 msgid "Image Size"
 msgstr "Görsel boyutu"
 
-#: languages/gutenberg-translations.php:710
+#: languages/gutenberg-translations.php:561 build/block-library/index.js:12
 msgid "Height"
 msgstr "Yükseklik"
 
-#: languages/gutenberg-translations.php:707
+#: languages/gutenberg-translations.php:558 build/block-library/index.js:12
 msgid "Width"
 msgstr "Genişlik"
 
-#: languages/gutenberg-translations.php:704
+#: languages/gutenberg-translations.php:555 build/block-library/index.js:12
 msgid "Image Dimensions"
 msgstr "Görsel boyutları"
 
-#: languages/gutenberg-translations.php:626
+#: languages/gutenberg-translations.php:455 build/block-library/index.js:12
 msgid "Thumbnails are not cropped."
 msgstr "Küçük resimler kırpılmadı."
 
-#: languages/gutenberg-translations.php:623
+#: languages/gutenberg-translations.php:452 build/block-library/index.js:12
 msgid "Thumbnails are cropped to align."
 msgstr "Küçük resimler hizalamak için kırpılır."
 
-#: languages/gutenberg-translations.php:1432
+#: languages/gutenberg-translations.php:1833 build/editor/index.js:50
 msgid "Media Library"
 msgstr "Ortam kütüphanesi"
 
-#: languages/gutenberg-translations.php:1224
+#: languages/gutenberg-translations.php:1598 build/editor/index.js:50
 msgid "Advanced"
 msgstr "Gelişmiş"
 
-#: languages/gutenberg-translations.php:1121
-msgid "Add item."
-msgstr "Öğe ekle."
+#: languages/gutenberg-translations.php:1177 build/components/index.js:19
+msgid "Add item"
+msgstr "Ürün ekle"
 
-#: languages/gutenberg-translations.php:1752
+#: languages/gutenberg-translations.php:2214 build/editor/index.js:50
 msgid "Reset the template"
 msgstr "Şablonu sıfırla"
 
-#: languages/gutenberg-translations.php:1749
+#: languages/gutenberg-translations.php:2211 build/editor/index.js:50
 msgid "Keep it as is"
 msgstr "Olduğu gibi bırak"
 
-#: languages/gutenberg-translations.php:1746
+#: languages/gutenberg-translations.php:2208 build/editor/index.js:50
 msgid "The content of your post doesn’t match the template assigned to your post type."
 msgstr "Yazınızın içeriği, yazı tipine atanan şablon ile eşleşmiyor."
 
-#: languages/gutenberg-translations.php:1743
+#: languages/gutenberg-translations.php:2205 build/editor/index.js:50
 msgid "Resetting the template may result in loss of content, do you want to continue?"
 msgstr "Şablounu sıfırlamak içerik kaybıyla sonuçlanabilir, devam etmek istediğinize emin misiniz?"
 
-#: languages/gutenberg-translations.php:1725
+#: languages/gutenberg-translations.php:2187 build/editor/index.js:50
 msgid "Document Statistics"
 msgstr "Belge istatistikleri"
 
-#: languages/gutenberg-translations.php:1577
-msgid "The post address will be:"
-msgstr "Yazı adresi şu olacak:"
-
-#: languages/gutenberg-translations.php:1571
+#: languages/gutenberg-translations.php:2030 build/editor/index.js:50
 msgid "is now scheduled. It will go live on"
 msgstr "şimdi planlandı. Bu tarihte yayınlanacak"
 
-#: languages/gutenberg-translations.php:1544
+#: languages/gutenberg-translations.php:2002 build/editor/index.js:50
 msgid "Scheduled"
 msgstr "Zamanlandı"
 
-#: languages/gutenberg-translations.php:1532
+#: languages/gutenberg-translations.php:1984 build/editor/index.js:50
 msgid "Scheduling…"
-msgstr "Zamanlanıyor..."
+msgstr "Zamanlanıyor…"
 
-#: languages/gutenberg-translations.php:295
+#: languages/gutenberg-translations.php:1549 build/edit-post/index.js:12
 msgid "Code editor selected"
 msgstr "Kod düzenleyici seçildi"
 
-#: languages/gutenberg-translations.php:292
+#: languages/gutenberg-translations.php:1546 build/edit-post/index.js:12
 msgid "Visual editor selected"
 msgstr "Görsel düzenleyici seçildi"
 
-#: languages/gutenberg-translations.php:68
+#: languages/gutenberg-translations.php:1278 build/edit-post/index.js:12
 msgid "Plugins"
 msgstr "Eklentiler"
 
-#: languages/gutenberg-translations.php:1118
+#: languages/gutenberg-translations.php:1168 build/components/index.js:19
 msgid "Custom Size"
 msgstr "Özel boyut"
 
-#: languages/gutenberg-translations.php:647
+#: languages/gutenberg-translations.php:475 build/block-library/index.js:12
 msgid "Upload an image"
 msgstr "Görsel yükle"
 
-#: languages/gutenberg-translations.php:1066 lib/client-assets.php:1209
+#: lib/client-assets.php:958 languages/gutenberg-translations.php:968
+#: build/blocks/index.js:2
 msgid "Layout Elements"
 msgstr "Yerleşim öğeleri"
 
-#: languages/gutenberg-translations.php:1953
+#: languages/gutenberg-translations.php:2479 build/editor/index.js:50
 msgctxt "term"
 msgid "%s removed"
 msgstr "%s kaldırıldı"
 
-#: languages/gutenberg-translations.php:1950
+#: languages/gutenberg-translations.php:2476 build/editor/index.js:50
 msgctxt "term"
 msgid "%s added"
 msgstr "%s eklendi"
 
-#: languages/gutenberg-translations.php:1946
+#: languages/gutenberg-translations.php:2469 build/editor/index.js:50
 msgctxt "imperative verb"
 msgid "Preview"
 msgstr "Ön izleme"
 
-#: languages/gutenberg-translations.php:1878
+#: languages/gutenberg-translations.php:2310 build/editor/index.js:50
 msgid "Block deleted."
 msgstr "Blok silindi."
 
-#: languages/gutenberg-translations.php:1875
+#: lib/register.php:467 languages/gutenberg-translations.php:2307
+#: build/editor/index.js:50
 msgid "Block updated."
 msgstr "Blok güncellendi."
 
-#: languages/gutenberg-translations.php:1872
+#: languages/gutenberg-translations.php:2304 build/editor/index.js:50
 msgid "Block created."
 msgstr "Blok oluşturuldu."
 
-#: languages/gutenberg-translations.php:1869
+#: languages/gutenberg-translations.php:2301 build/editor/index.js:50
 msgid "Trashing failed"
 msgstr "Çöpe gönderilemedi"
 
-#: languages/gutenberg-translations.php:1860
+#: languages/gutenberg-translations.php:2298 build/editor/index.js:50
 msgid "Updating failed"
 msgstr "Güncelleme başarısız oldu"
 
-#: languages/gutenberg-translations.php:1857
+#: languages/gutenberg-translations.php:2295 build/editor/index.js:50
 msgid "Scheduling failed"
 msgstr "Zamanlama başarısız oldu"
 
-#: languages/gutenberg-translations.php:1854
+#: languages/gutenberg-translations.php:2292 build/editor/index.js:50
 msgid "Publishing failed"
 msgstr "Yayımlama başarısız oldu"
 
-#: languages/gutenberg-translations.php:1851
-msgid "View post"
-msgstr "Yazıyı görüntüle"
+#: lib/rest-api.php:346
+msgid "Post updated."
+msgstr "Yazı güncellendi."
 
-#: languages/gutenberg-translations.php:1848
-msgid "Post updated!"
-msgstr "Yazı güncellendi!"
+#: lib/rest-api.php:345
+msgid "Post scheduled."
+msgstr "Yazı zamanlandı."
 
-#: languages/gutenberg-translations.php:1845
-msgid "Post scheduled!"
-msgstr "Yazı zamanlandı!"
+#: lib/rest-api.php:343
+msgid "Post published privately."
+msgstr "Yazı özel olarak yayımlandı."
 
-#: languages/gutenberg-translations.php:1842
-msgid "Post published privately!"
-msgstr "Yazı gizli olarak yayımlandı!"
+#: lib/rest-api.php:342
+msgid "Post published."
+msgstr "Yazı yayımlandı."
 
-#: languages/gutenberg-translations.php:1839
-msgid "Post published!"
-msgstr "Yazı yayımlandı!"
-
-#: languages/gutenberg-translations.php:1836
+#: lib/rest-api.php:344
 msgid "Post reverted to draft."
 msgstr "Yazı taslağa geri dönüştürüldü."
 
-#: languages/gutenberg-translations.php:1755
+#: languages/gutenberg-translations.php:2217 build/editor/index.js:50
 msgid "You have unsaved changes. If you proceed, they will be lost."
-msgstr "Kaydedilmemiş değişikliklerin var. Eğer devam edersen kaybedilecek"
+msgstr "Kaydedilmemiş değişiklikleriniz var. Eğer devam ederseniz değişiklikler yok olacak."
 
-#: languages/gutenberg-translations.php:1740
+#: languages/gutenberg-translations.php:2202 build/editor/index.js:50
 msgid "Document Outline"
 msgstr "Belge anahattı"
 
-#: languages/gutenberg-translations.php:1734
+#: languages/gutenberg-translations.php:2196 build/editor/index.js:50
 msgid "Paragraphs"
 msgstr "Paragraflar"
 
-#: languages/gutenberg-translations.php:1731
+#: languages/gutenberg-translations.php:2193 build/editor/index.js:50
 msgid "Headings"
 msgstr "Başlıklar"
 
-#: languages/gutenberg-translations.php:1728
+#: languages/gutenberg-translations.php:2190 build/editor/index.js:50
 msgid "Words"
 msgstr "Kelime"
 
-#: languages/gutenberg-translations.php:1722
+#: languages/gutenberg-translations.php:2184 build/editor/index.js:50
 msgid "Content structure"
 msgstr "İçerik yapısı"
 
-#: languages/gutenberg-translations.php:1692
+#: languages/gutenberg-translations.php:2157 build/editor/index.js:50
 msgid "Public"
 msgstr "Genel"
 
-#: languages/gutenberg-translations.php:1689
+#: languages/gutenberg-translations.php:2154 build/editor/index.js:50
 msgid "Protected with a password you choose. Only those with the password can view this post."
 msgstr "Seçtiğiniz parola ile korunmaktadır. Sadece parolayı bilenler bu yazıyı görüntüleyebilecektir."
 
-#: languages/gutenberg-translations.php:1686
+#: languages/gutenberg-translations.php:2151 build/editor/index.js:50
 msgid "Password Protected"
 msgstr "Parola korumalı"
 
-#: languages/gutenberg-translations.php:1683
+#: languages/gutenberg-translations.php:2148 build/editor/index.js:50
 msgid "Only visible to site admins and editors."
 msgstr "Yalnızca site yöneticileri ve editörleri tarafından görülebilir."
 
-#: languages/gutenberg-translations.php:1680
+#: languages/gutenberg-translations.php:2145 build/editor/index.js:50
 msgid "Private"
 msgstr "Özel"
 
-#: languages/gutenberg-translations.php:1695
+#: languages/gutenberg-translations.php:2160 build/editor/index.js:50
 msgid "Visible to everyone."
 msgstr "Herkese açık."
 
-#: languages/gutenberg-translations.php:1668
+#: languages/gutenberg-translations.php:2133 build/editor/index.js:50
 msgid "Post Visibility"
 msgstr "Yazı görünürlüğü"
 
-#: languages/gutenberg-translations.php:1677
+#: languages/gutenberg-translations.php:2142 build/editor/index.js:50
 msgid "Would you like to privately publish this post now?"
 msgstr "Bu yazıyı şimdi özel olarak yayımlamak ister misiniz?"
 
-#: languages/gutenberg-translations.php:1674
+#: languages/gutenberg-translations.php:2139 build/editor/index.js:50
 msgid "Use a secure password"
 msgstr "Güvenli bir parola kullanın"
 
-#: languages/gutenberg-translations.php:1671
+#: languages/gutenberg-translations.php:2136 build/editor/index.js:50
 msgid "Create password"
 msgstr "Parola oluştur"
 
-#: languages/gutenberg-translations.php:1665
+#: languages/gutenberg-translations.php:2130 build/editor/index.js:50
 msgid "Move to trash"
 msgstr "Çöpe taşı"
 
-#: languages/gutenberg-translations.php:1659
+#: languages/gutenberg-translations.php:2115 build/editor/index.js:50
 msgid "Parent Term"
 msgstr "Ebeveyn terim"
 
-#: languages/gutenberg-translations.php:1656
+#: languages/gutenberg-translations.php:2112 build/editor/index.js:50
 msgid "Parent Category"
 msgstr "Ebeveyn kategori"
 
-#: languages/gutenberg-translations.php:1653
+#: languages/gutenberg-translations.php:2109 build/editor/index.js:50
 msgid "Add new term"
 msgstr "Yeni terim ekle"
 
-#: languages/gutenberg-translations.php:1650
+#: languages/gutenberg-translations.php:2106 build/editor/index.js:50
 msgid "Add new category"
 msgstr "Yeni kategori ekle"
 
-#: languages/gutenberg-translations.php:1647
+#: languages/gutenberg-translations.php:2103 build/editor/index.js:50
 msgid "Term"
 msgstr "Terim"
 
-#: languages/gutenberg-translations.php:1643
+#: languages/gutenberg-translations.php:2099 build/editor/index.js:50
 msgid "Tag"
 msgstr "Etiket"
 
-#: languages/gutenberg-translations.php:1640
+#: languages/gutenberg-translations.php:2096 build/editor/index.js:50
 msgid "Add New Term"
 msgstr "Yeni terim ekle"
 
-#: languages/gutenberg-translations.php:1637
+#: languages/gutenberg-translations.php:2093 build/editor/index.js:50
 msgid "Add New Tag"
 msgstr "Yeni etiket ekle"
 
-#: languages/gutenberg-translations.php:1634
+#: languages/gutenberg-translations.php:2090 build/editor/index.js:50
 msgid "Switch to Draft"
 msgstr "Taslağa dönüştür"
 
-#: languages/gutenberg-translations.php:1628
+#: languages/gutenberg-translations.php:2084 build/editor/index.js:50
 msgid "Are you sure you want to unpublish this post?"
 msgstr "Bu yazıyı yayından kaldırmak istediğinize emin misiniz?"
 
-#: languages/gutenberg-translations.php:1625
+#: languages/gutenberg-translations.php:2081 build/editor/index.js:50
 msgid "Stick to the Front Page"
 msgstr "Ana sayfaya sabitle"
 
-#: languages/gutenberg-translations.php:1622
+#: languages/gutenberg-translations.php:2078 build/editor/index.js:50
 msgid "Immediately"
 msgstr "Hemen"
 
-#: languages/gutenberg-translations.php:1613
+#: languages/gutenberg-translations.php:2069 build/editor/index.js:50
 msgid "Save Draft"
 msgstr "Taslağı kaydet"
 
-#: languages/gutenberg-translations.php:1619
+#: languages/gutenberg-translations.php:2075 build/editor/index.js:50
 msgid "Saving"
 msgstr "Kaydediliyor"
 
-#: languages/gutenberg-translations.php:1598
+#: languages/gutenberg-translations.php:2060 build/editor/index.js:50
 msgid "Publish:"
 msgstr "Yayımla:"
 
-#: languages/gutenberg-translations.php:1595
+#: languages/gutenberg-translations.php:2057 build/editor/index.js:50
 msgid "Visibility:"
 msgstr "Görünürlük:"
 
-#: languages/gutenberg-translations.php:1583
+#: languages/gutenberg-translations.php:2051 build/editor/index.js:50
 msgid "Are you ready to publish?"
 msgstr "Yayımlamaya hazır mısınız?"
 
-#: languages/gutenberg-translations.php:1568
+#: languages/gutenberg-translations.php:2027 build/editor/index.js:50
 msgid "Copy Link"
 msgstr "Bağlantıyı kopyala"
 
-#: languages/gutenberg-translations.php:1580
+#: languages/gutenberg-translations.php:2036 build/editor/index.js:50
 msgid "What’s next?"
 msgstr "Sıradaki ne?"
 
-#: languages/gutenberg-translations.php:1574
+#: languages/gutenberg-translations.php:2033 build/editor/index.js:50
 msgid "is now live."
 msgstr "şimdi yayında."
 
-#: languages/gutenberg-translations.php:1547
+#: languages/gutenberg-translations.php:2005 build/editor/index.js:50
 msgid "Published"
 msgstr "Yayımlandı"
 
-#: languages/gutenberg-translations.php:1541
+#: languages/gutenberg-translations.php:1993 build/editor/index.js:50
 msgid "Schedule"
 msgstr "Zamanla"
 
-#: languages/gutenberg-translations.php:1538
+#: languages/gutenberg-translations.php:1990 build/editor/index.js:50
 msgid "Update"
 msgstr "Güncelle"
 
-#: languages/gutenberg-translations.php:1535
+#: languages/gutenberg-translations.php:1987 build/editor/index.js:50
 msgid "Submit for Review"
 msgstr "İnceleme için gönder"
 
-#: languages/gutenberg-translations.php:1529
+#: languages/gutenberg-translations.php:1981 build/editor/index.js:50
 msgid "Updating…"
-msgstr "Güncelleniyor..."
+msgstr "Güncelleniyor…"
 
-#: languages/gutenberg-translations.php:1526
+#: languages/gutenberg-translations.php:1978 build/editor/index.js:50
 msgid "Publishing…"
-msgstr "Yayımlanıyor..."
+msgstr "Yayımlanıyor…"
 
-#: languages/gutenberg-translations.php:1520
+#: languages/gutenberg-translations.php:1960 build/editor/index.js:50
 msgid "Allow Pingbacks & Trackbacks"
 msgstr "Geri bildirimlere ve geri izlemelere izin ver"
 
-#: languages/gutenberg-translations.php:1508
+#: languages/gutenberg-translations.php:1954 build/editor/index.js:50
 msgid "Permalink:"
 msgstr "Kalıcı bağlantı:"
 
-#: languages/gutenberg-translations.php:1499
+#: languages/gutenberg-translations.php:1942 build/editor/index.js:50
 msgid "Pending Review"
 msgstr "İnceleme bekliyor"
 
-#: languages/gutenberg-translations.php:1496
+#: languages/gutenberg-translations.php:1913 build/editor/index.js:50
 msgid "%d Revision"
 msgid_plural "%d Revisions"
 msgstr[0] "%d sürüm"
 msgstr[1] "%d sürüm"
 
-#: languages/gutenberg-translations.php:1493
+#: languages/gutenberg-translations.php:1910 build/editor/index.js:50
 msgid "Suggestion:"
 msgstr "Öneri:"
 
-#: languages/gutenberg-translations.php:1488
+#: languages/gutenberg-translations.php:1905 build/editor/index.js:50
 msgid "Post Format"
 msgstr "Yazı biçimi"
 
-#: languages/gutenberg-translations.php:1485
+#: languages/gutenberg-translations.php:1902 build/editor/index.js:50
 msgid "Chat"
 msgstr "Sohbet"
 
-#: languages/gutenberg-translations.php:1482
+#: languages/gutenberg-translations.php:1899 build/editor/index.js:50
 msgid "Status"
 msgstr "Durum"
 
-#: languages/gutenberg-translations.php:1479
+#: languages/gutenberg-translations.php:1896 build/editor/index.js:50
 msgid "Standard"
 msgstr "Standart"
 
-#: languages/gutenberg-translations.php:1471
+#: languages/gutenberg-translations.php:1889 build/editor/index.js:50
 msgid "Aside"
 msgstr "Ayrı"
 
-#: languages/gutenberg-translations.php:1465
-msgid "Featured image"
-msgstr "Öne çıkan görsel"
-
-#: languages/gutenberg-translations.php:1468
+#: languages/gutenberg-translations.php:1877 build/editor/index.js:50
 msgid "Set featured image"
 msgstr "Öne çıkan görsel belirle"
 
-#: languages/gutenberg-translations.php:1459
+#: languages/gutenberg-translations.php:1874 build/editor/index.js:50
 msgid "Learn more about manual excerpts"
-msgstr "Elle yazılan özetler hakkında daha fazlasını öğrenin."
+msgstr "Elle yazılan özetler hakkında daha fazlasını öğrenin"
 
-#: languages/gutenberg-translations.php:1456
+#: languages/gutenberg-translations.php:1871 build/editor/index.js:50
 msgid "Write an excerpt (optional)"
 msgstr "Özet yazın (isteğe bağlı)"
 
-#: languages/gutenberg-translations.php:1453
+#: languages/gutenberg-translations.php:1868 build/editor/index.js:50
 msgid "Allow Comments"
 msgstr "Yorumlara izin ver"
 
-#: lib/client-assets.php:1418
+#: lib/client-assets.php:1193
 msgid "Default template"
 msgstr "Varsayılan şablon"
 
-#: languages/gutenberg-translations.php:1444
+#: languages/gutenberg-translations.php:1859 build/editor/index.js:50
 msgid "Template:"
 msgstr "Şablon:"
 
-#: languages/gutenberg-translations.php:1441
+#: languages/gutenberg-translations.php:1856 build/editor/index.js:50
 msgid "no parent"
-msgstr "Ebeveyn yok"
+msgstr "ebeveyn yok"
 
-#: languages/gutenberg-translations.php:1438
+#: languages/gutenberg-translations.php:1853 build/editor/index.js:50
 msgid "no title"
 msgstr "başlıksız"
 
-#: languages/gutenberg-translations.php:1435
+#: languages/gutenberg-translations.php:1850 build/editor/index.js:50
 msgid "Order"
 msgstr "Sıra"
 
-#: languages/gutenberg-translations.php:1417
+#: lib/register.php:458 languages/gutenberg-translations.php:1797
+#: build/editor/index.js:50
 msgid "No blocks found."
 msgstr "Blok bulunamadı."
 
-#: languages/gutenberg-translations.php:1610
+#: languages/gutenberg-translations.php:1785 build/editor/index.js:50
+msgid "%d result found."
+msgid_plural "%d results found."
+msgstr[0] "%d sonuç bulundu."
+msgstr[1] "%d sonuç bulundu."
+
+#: languages/gutenberg-translations.php:2063 build/editor/index.js:50
 msgid "Saved"
 msgstr "Kaydedildi"
 
-#: languages/gutenberg-translations.php:1072 lib/client-assets.php:1217
+#: lib/client-assets.php:968 languages/gutenberg-translations.php:974
+#: build/blocks/index.js:2
 msgid "Embeds"
 msgstr "Gömülüler"
 
-#: languages/gutenberg-translations.php:1737 lib/register.php:465
+#: languages/gutenberg-translations.php:2199 build/editor/index.js:50
 msgid "Blocks"
 msgstr "Bloklar"
 
-#: languages/gutenberg-translations.php:1405
+#: languages/gutenberg-translations.php:1788 build/editor/index.js:50
 msgid "Search for a block"
 msgstr "Blok ara"
 
-#: languages/gutenberg-translations.php:1363
+#: languages/gutenberg-translations.php:1603 build/editor/index.js:50
 msgid "Add block"
 msgstr "Blok ekle"
 
-#: languages/gutenberg-translations.php:1402
+#: languages/gutenberg-translations.php:1778 build/editor/index.js:50
 msgid "Add %s"
 msgstr "%s ekle"
 
-#: languages/gutenberg-translations.php:1396
+#: languages/gutenberg-translations.php:1772 build/editor/index.js:50
 msgid "Copy Error"
 msgstr "Kopyalama hatası"
 
-#: languages/gutenberg-translations.php:1393
+#: languages/gutenberg-translations.php:1769 build/editor/index.js:50
 msgid "Copy Post Text"
 msgstr "Yazı metnini kopyala"
 
-#: languages/gutenberg-translations.php:1390
+#: languages/gutenberg-translations.php:1766 build/editor/index.js:50
 msgid "Attempt Recovery"
 msgstr "Kurtarma girişimi"
 
-#: languages/gutenberg-translations.php:1399
+#: languages/gutenberg-translations.php:1775 build/editor/index.js:50
 msgid "The editor has encountered an unexpected error."
 msgstr "Düzenleyici beklenmeyen bir hatayla karşılaştı."
 
-#: languages/gutenberg-translations.php:1387
+#: languages/gutenberg-translations.php:1763 build/editor/index.js:50
 msgid "Undo"
 msgstr "Geri al"
 
-#: languages/gutenberg-translations.php:1384
+#: languages/gutenberg-translations.php:1760 build/editor/index.js:50
 msgid "Redo"
 msgstr "Yinele"
 
-#: languages/gutenberg-translations.php:1381
+#: languages/gutenberg-translations.php:1757 build/editor/index.js:50
 msgid "(Click to focus this heading)"
 msgstr "(Bu başlığa odaklamak için tıklayın)"
 
-#: languages/gutenberg-translations.php:1378
+#: languages/gutenberg-translations.php:1754 build/editor/index.js:50
 msgid "(Multiple H1 headings are not recommended)"
 msgstr "(Birden fazla H1 etiketi önerilmez)"
 
-#: languages/gutenberg-translations.php:1375
+#: languages/gutenberg-translations.php:1751 build/editor/index.js:50
 msgid "(Your theme may already use a H1 for the post title)"
 msgstr "(Temanız zaten yazı başlığı için H1 etiketi kullanıyor)"
 
-#: languages/gutenberg-translations.php:1372
+#: languages/gutenberg-translations.php:1748 build/editor/index.js:50
 msgid "(Incorrect heading level)"
 msgstr "(Yanlış başlık seviyesi)"
 
-#: languages/gutenberg-translations.php:1369
+#: languages/gutenberg-translations.php:1745 build/editor/index.js:50
 msgid "(Empty heading)"
 msgstr "(Boş başlık)"
 
-#: languages/gutenberg-translations.php:1359 lib/client-assets.php:1461
-msgid "Write your story"
-msgstr "Hikayenizi yazın"
-
-#: languages/gutenberg-translations.php:1343
+#: languages/gutenberg-translations.php:1724 build/editor/index.js:50
 msgid "Block Styles"
 msgstr "Blok biçimleri"
 
-#: languages/gutenberg-translations.php:1337
+#: languages/gutenberg-translations.php:1718 build/editor/index.js:50
 msgid "Change block type"
 msgstr "Blok türünü değiştir"
 
-#: languages/gutenberg-translations.php:1329
+#: languages/gutenberg-translations.php:1713 build/editor/index.js:50
 msgid ""
 "Are you sure you want to delete this Reusable Block?\n"
 "\n"
@@ -1947,978 +3019,917 @@ msgstr ""
 "\n"
 "Bunu kullanan tüm sayfalardan ve yazılardan kalıcı olarak kaldırılacaktır."
 
-#: languages/gutenberg-translations.php:1323
+#: languages/gutenberg-translations.php:1707 build/editor/index.js:50
 msgid "Convert to Regular Block"
 msgstr "Normal bloğa dönüştür"
 
-#: languages/gutenberg-translations.php:1308
+#: languages/gutenberg-translations.php:1692 build/editor/index.js:50
 msgid "More options"
 msgstr "Daha fazla seçenek"
 
-#: languages/gutenberg-translations.php:1298
+#: languages/gutenberg-translations.php:1682 build/editor/index.js:50
 msgid "Edit visually"
 msgstr "Görsel olarak düzenle"
 
-#: languages/gutenberg-translations.php:1311
+#: languages/gutenberg-translations.php:1695 build/editor/index.js:50
 msgid "Duplicate"
 msgstr "Çoğalt"
 
-#: languages/gutenberg-translations.php:1284
+#: languages/gutenberg-translations.php:1658 build/editor/index.js:50
 msgid "Blocks cannot be moved down as they are already at the bottom"
 msgstr "Bloklar zaten altta oldukları için aşağı taşınamazlar"
 
-#: languages/gutenberg-translations.php:1281
+#: languages/gutenberg-translations.php:1655 build/editor/index.js:50
 msgid "Blocks cannot be moved up as they are already at the top"
 msgstr "Bloklar zaten üstte oldukları için yukarı taşınamazlar"
 
 #. translators: %s: Type of block (i.e. Text, Image etc)
-#: languages/gutenberg-translations.php:1278
+#: languages/gutenberg-translations.php:1652 build/editor/index.js:50
 msgid "Block %s is at the beginning of the content and can’t be moved up"
-msgstr "%s bloğu içeriğin başında ve yukarı taşınamaz."
+msgstr "%s bloğu içeriğin başında ve yukarı taşınamaz"
 
 #. translators: %s: Type of block (i.e. Text, Image etc)
-#: languages/gutenberg-translations.php:1270
+#: languages/gutenberg-translations.php:1644 build/editor/index.js:50
 msgid "Block %s is at the end of the content and can’t be moved down"
-msgstr "%s bloğu içeriğin sonunda ve aşağı taşınamaz."
+msgstr "%s bloğu içeriğin sonunda ve aşağı taşınamaz"
 
 #. translators: %s: Type of block (i.e. Text, Image etc)
-#: languages/gutenberg-translations.php:1262
+#: languages/gutenberg-translations.php:1636 build/editor/index.js:50
 msgid "Block %s is the only block, and cannot be moved"
-msgstr "%s tek bloktur bu yüzden taşınamaz."
+msgstr "%s tek bloktur bu yüzden taşınamaz"
 
-#: languages/gutenberg-translations.php:1258
+#: languages/gutenberg-translations.php:1632 build/editor/index.js:50
 msgid "Move down"
 msgstr "Aşağı indir"
 
-#: languages/gutenberg-translations.php:1255
+#: languages/gutenberg-translations.php:1629 build/editor/index.js:50
 msgid "Move up"
 msgstr "Yukarı taşı"
 
-#: languages/gutenberg-translations.php:1295
+#: languages/gutenberg-translations.php:1679 build/editor/index.js:50
 msgid "Edit as HTML"
 msgstr "HTML olarak düzenle"
 
-#: languages/gutenberg-translations.php:1246
+#: languages/gutenberg-translations.php:1623 build/editor/index.js:50
 msgid "Convert to Blocks"
 msgstr "Bloklara dönüştür"
 
-#: languages/gutenberg-translations.php:1252
-msgid "Insert block"
-msgstr "Blok ekle"
-
-#: languages/gutenberg-translations.php:1249
+#: languages/gutenberg-translations.php:1626 build/editor/index.js:50
 msgid "Block: %s"
 msgstr "Blok: %s"
 
-#: languages/gutenberg-translations.php:1230
+#: languages/gutenberg-translations.php:1609 build/editor/index.js:50
 msgid "This block has encountered an error and cannot be previewed."
 msgstr "Bu blok bir hatayla karşılaştı ve önizlenemiyor."
 
-#: languages/gutenberg-translations.php:1227
-msgid "Block Toolbar"
-msgstr "Blok araçları"
-
-#: languages/gutenberg-translations.php:1221
+#: languages/gutenberg-translations.php:1592 build/editor/index.js:50
 msgid "No block selected."
 msgstr "Blok seçilmedi."
 
-#: languages/gutenberg-translations.php:1218
-msgid "Coming Soon"
-msgstr "Çok yakında"
-
-#: languages/gutenberg-translations.php:286
+#: languages/gutenberg-translations.php:1533 build/edit-post/index.js:12
 msgid "Transform into:"
 msgstr "Dönüştür:"
 
-#: languages/gutenberg-translations.php:283
+#: languages/gutenberg-translations.php:1530 build/edit-post/index.js:12
 msgid "Remove"
 msgstr "Kaldır"
 
-#: languages/gutenberg-translations.php:280
+#: languages/gutenberg-translations.php:1527 build/edit-post/index.js:12
 msgid "Find original"
 msgstr "Orijinali bul"
 
-#: languages/gutenberg-translations.php:289
-msgid "This block may not be used more than once."
-msgstr "Bu blok birden fazla kullanılamaz."
-
-#: languages/gutenberg-translations.php:277
+#: languages/gutenberg-translations.php:1539 build/edit-post/index.js:12
 msgid "Copy All Content"
 msgstr "Bütün içeriği kopyala"
 
-#: languages/gutenberg-translations.php:274
+#: languages/gutenberg-translations.php:396 build/edit-post/index.js:12
+#: build/block-library/index.js:12 build/editor/index.js:50
 msgid "Copied!"
 msgstr "Kopyalandı!"
 
-#: languages/gutenberg-translations.php:257
+#: languages/gutenberg-translations.php:1512 build/edit-post/index.js:12
 msgid "Additional settings are now available in the Editor block settings sidebar"
-msgstr "Artık düzenleyici blok ayarları kenar çubuğunda ek ayarlar kullanılabilir."
+msgstr "Artık düzenleyici blok ayarları kenar çubuğunda ek ayarlar kullanılabilir"
 
-#: languages/gutenberg-translations.php:228
+#: languages/gutenberg-translations.php:1474 build/edit-post/index.js:12
 msgid "Visibility"
 msgstr "Görünürlük"
 
-#: languages/gutenberg-translations.php:225
+#: languages/gutenberg-translations.php:1471 build/edit-post/index.js:12
 msgid "Status & Visibility"
 msgstr "Durum ve görünürlük"
 
-#: languages/gutenberg-translations.php:203
+#: languages/gutenberg-translations.php:1440 build/edit-post/index.js:12
 msgid "Page Attributes"
 msgstr "Sayfa nitelikleri"
 
-#: languages/gutenberg-translations.php:231 lib/register.php:466
+#. translators: ARIA label for the Block sidebar tab, not selected.
+#: languages/gutenberg-translations.php:1486 build/edit-post/index.js:12
 msgid "Block"
 msgstr "Blok"
 
-#: languages/gutenberg-translations.php:246
-msgid "Block settings"
-msgstr "Blok ayarları"
-
-#: languages/gutenberg-translations.php:243
+#: languages/gutenberg-translations.php:1492 build/edit-post/index.js:12
 msgid "Document"
 msgstr "Belge"
 
-#: languages/gutenberg-translations.php:240
-msgid "Document settings"
-msgstr "Belge ayarları"
-
-#: languages/gutenberg-translations.php:200
+#: languages/gutenberg-translations.php:1428 build/edit-post/index.js:12
+#: build/editor/index.js:50
 msgid "Featured Image"
 msgstr "Öne çıkan görsel"
 
-#: languages/gutenberg-translations.php:237
+#: languages/gutenberg-translations.php:1489 build/edit-post/index.js:12
 msgid "Close settings"
 msgstr "Ayarları kapat"
 
-#: languages/gutenberg-translations.php:206
+#: languages/gutenberg-translations.php:1449 build/edit-post/index.js:12
 msgid "Editor plugins"
 msgstr "Düzenleyici eklentileri"
 
-#. translators: accessibility text for the content landmark region.
-#: languages/gutenberg-translations.php:190
+#: languages/gutenberg-translations.php:1408 build/edit-post/index.js:12
 msgid "Editor content"
 msgstr "Düzenleyici içeriği"
 
-#: languages/gutenberg-translations.php:61
+#: languages/gutenberg-translations.php:1281 build/edit-post/index.js:12
 msgid "Tools"
 msgstr "Araçlar"
 
-#: languages/gutenberg-translations.php:58
+#: languages/gutenberg-translations.php:1265 build/edit-post/index.js:12
 msgid "Editor"
 msgstr "Düzenleyici"
 
-#: languages/gutenberg-translations.php:55
+#: languages/gutenberg-translations.php:1262 build/edit-post/index.js:12
 msgid "Code Editor"
 msgstr "Kod düzenleyici"
 
-#: languages/gutenberg-translations.php:52
+#: languages/gutenberg-translations.php:1259 build/edit-post/index.js:12
 msgid "Visual Editor"
 msgstr "Görsel düzenleyici"
 
-#. translators: accessibility text for the top bar landmark region.
-#: languages/gutenberg-translations.php:39
+#: languages/gutenberg-translations.php:1250 build/edit-post/index.js:12
 msgid "Editor top bar"
 msgstr "Düzenleyici üst çubuğu"
 
-#: languages/gutenberg-translations.php:32
-msgid "Editor Toolbar"
-msgstr "Düzenleyici araç çubuğu"
-
-#: languages/gutenberg-translations.php:42
+#: languages/gutenberg-translations.php:1253 build/edit-post/index.js:12
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: languages/gutenberg-translations.php:718
+#: languages/gutenberg-translations.php:569 build/block-library/index.js:12
+#: build/components/index.js:19
 msgid "Reset"
 msgstr "Sıfırla"
 
-#: languages/gutenberg-translations.php:1143
+#: languages/gutenberg-translations.php:1199 build/components/index.js:19
 msgid "Dismiss this notice"
 msgstr "Uyarıyı görmezden gel"
 
-#: languages/gutenberg-translations.php:1130
+#: languages/gutenberg-translations.php:1186 build/components/index.js:19
 msgid "Item removed."
-msgstr "Öğe kaldırıldı"
+msgstr "Öğe kaldırıldı."
 
-#: languages/gutenberg-translations.php:1127
+#: languages/gutenberg-translations.php:1183 build/components/index.js:19
 msgid "Item added."
-msgstr "Öğe eklendi"
+msgstr "Öğe eklendi."
 
-#: languages/gutenberg-translations.php:1124
+#: languages/gutenberg-translations.php:1180 build/components/index.js:19
 msgid "Separate with commas"
 msgstr "Virgülle ayırın"
 
-#. translators: accessibility text
-#: languages/gutenberg-translations.php:1112
-msgid "(opens in a new window)"
-msgstr "(yeni pencerede açılır)"
-
-#: languages/gutenberg-translations.php:1108
+#: languages/gutenberg-translations.php:1157 build/components/index.js:19
 msgid "Drop files to upload"
 msgstr "Karşıya yüklemek için dosyaları sürükleyin"
 
-#: languages/gutenberg-translations.php:1105
+#: languages/gutenberg-translations.php:1154 build/components/index.js:19
 msgid "PM"
 msgstr "ÖS"
 
-#: languages/gutenberg-translations.php:1102
+#: languages/gutenberg-translations.php:1151 build/components/index.js:19
 msgid "AM"
 msgstr "ÖÖ"
 
-#: languages/gutenberg-translations.php:26
+#: languages/gutenberg-translations.php:11 build/api-fetch/index.js:1
 msgid "An unknown error occurred."
 msgstr "Bilinmeyen bir hata oluştu."
 
-#: languages/gutenberg-translations.php:1085
+#: languages/gutenberg-translations.php:987 build/editor/index.js:50
+#: build/components/index.js:19
 msgid "No results."
 msgstr "Sonuç yok."
 
-#: languages/gutenberg-translations.php:1080
+#: languages/gutenberg-translations.php:982 build/editor/index.js:50
+#: build/components/index.js:19
 msgid "%d result found, use up and down arrow keys to navigate."
 msgid_plural "%d results found, use up and down arrow keys to navigate."
 msgstr[0] "%d sonuç bulun bulundu, dolaşım için aşağı ve yukarı yön tuşlarını kullanın."
 msgstr[1] "%d sonuç bulun bulundu, dolaşım için aşağı ve yukarı yön tuşlarını kullanın."
 
-#: languages/gutenberg-translations.php:251
-#: packages/block-library/src/latest-comments/index.php:31
+#: languages/gutenberg-translations.php:1500
+#: packages/block-library/src/latest-comments/index.php:32
+#: build/edit-post/index.js:12 build/editor/index.js:50
 msgid "(no title)"
 msgstr "(başlıksız)"
 
-#: languages/gutenberg-translations.php:1767
-msgid "Paste URL or type"
-msgstr "Bağlantıyı veya türü yapıştır"
-
-#: languages/gutenberg-translations.php:592
+#: languages/gutenberg-translations.php:420 build/edit-post/index.js:12
+#: build/block-library/index.js:12 build/editor/index.js:50
 msgid "URL"
 msgstr "Bağlantı"
 
-#: languages/gutenberg-translations.php:1764
+#: languages/gutenberg-translations.php:2226 build/editor/index.js:50
 msgid "Submit"
 msgstr "Kaydet"
 
-#: languages/gutenberg-translations.php:179
+#: languages/gutenberg-translations.php:1088 build/edit-post/index.js:12
+#: build/editor/index.js:50 build/components/index.js:19
 msgid "Close"
 msgstr "Kapat"
 
-#: languages/gutenberg-translations.php:1761
+#: languages/gutenberg-translations.php:2223 build/editor/index.js:50
 msgid "Insert Link"
 msgstr "Bağlantı ekle"
 
-#: languages/gutenberg-translations.php:1758
+#: languages/gutenberg-translations.php:2220 build/editor/index.js:50
 msgid "Edit Link"
 msgstr "Bağlantıyı düzenle"
 
-#: languages/gutenberg-translations.php:1476
+#: languages/gutenberg-translations.php:1893 build/editor/index.js:50
+#: build/format-library/index.js:12
 msgid "Link"
 msgstr "Bağlantı"
 
-#: languages/gutenberg-translations.php:1710
+#: languages/gutenberg-translations.php:2363 build/format-library/index.js:12
 msgid "Strikethrough"
 msgstr "Üzeri çizili"
 
-#: languages/gutenberg-translations.php:1707
+#: languages/gutenberg-translations.php:2341 build/format-library/index.js:12
 msgid "Italic"
 msgstr "Eğik"
 
-#: languages/gutenberg-translations.php:1713
+#: languages/gutenberg-translations.php:2332 build/format-library/index.js:12
 msgid "Bold"
 msgstr "Kalın"
 
-#: languages/gutenberg-translations.php:1701
-msgid "Link added."
-msgstr "Bağlantı eklendi."
-
-#: languages/gutenberg-translations.php:1174
+#: languages/gutenberg-translations.php:1226 build/components/index.js:19
 msgid "Number of items"
 msgstr "Öğe sayısı"
 
-#: languages/gutenberg-translations.php:1171
+#: languages/gutenberg-translations.php:1223 build/components/index.js:19
 msgid "All"
 msgstr "Tümü"
 
-#: languages/gutenberg-translations.php:1168
+#: languages/gutenberg-translations.php:1220 build/editor/index.js:50
+#: build/components/index.js:19
 msgid "Category"
 msgstr "Kategori"
 
 #. translators: label for ordering posts by title in descending order
-#: languages/gutenberg-translations.php:1164
+#: languages/gutenberg-translations.php:1216 build/components/index.js:19
 msgid "Z → A"
 msgstr "Z \t A"
 
 #. translators: label for ordering posts by title in ascending order
-#: languages/gutenberg-translations.php:1160
+#: languages/gutenberg-translations.php:1212 build/components/index.js:19
 msgid "A → Z"
 msgstr "A \t Z"
 
-#: languages/gutenberg-translations.php:1156
+#: languages/gutenberg-translations.php:1208 build/components/index.js:19
 msgid "Oldest to Newest"
 msgstr "Eskiden yeniye"
 
-#: languages/gutenberg-translations.php:1153
+#: languages/gutenberg-translations.php:1205 build/components/index.js:19
 msgid "Newest to Oldest"
 msgstr "Yeniden eskiye"
 
-#: languages/gutenberg-translations.php:1150
+#: languages/gutenberg-translations.php:1202 build/components/index.js:19
 msgid "Order by"
 msgstr "Sırala"
 
-#: languages/gutenberg-translations.php:266
+#: languages/gutenberg-translations.php:1521 build/edit-post/index.js:12
 msgid "Select"
 msgstr "Seç"
 
-#: languages/gutenberg-translations.php:269
+#: languages/gutenberg-translations.php:1524 build/edit-post/index.js:12
 msgid "Select or Upload Media"
 msgstr "Ortam seç veya karşıya yükle"
 
-#: languages/gutenberg-translations.php:1023
+#: languages/gutenberg-translations.php:953 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Video"
 msgstr "Video"
 
-#: languages/gutenberg-translations.php:1029
+#: languages/gutenberg-translations.php:926 build/block-library/index.js:12
 msgid "Edit video"
 msgstr "Videoyu düzenle"
 
-#: languages/gutenberg-translations.php:1018
+#: languages/gutenberg-translations.php:923 build/block-library/index.js:12
 msgid "Write…"
-msgstr "Yaz..."
+msgstr "Yaz…"
 
-#: languages/gutenberg-translations.php:1015
+#: languages/gutenberg-translations.php:920 build/block-library/index.js:12
 msgid "poetry"
 msgstr "şiir"
 
-#: languages/gutenberg-translations.php:1009
+#: languages/gutenberg-translations.php:914 build/block-library/index.js:12
 msgid "Verse"
 msgstr "Dörtlük"
 
-#: languages/gutenberg-translations.php:1000
+#: languages/gutenberg-translations.php:905 build/block-library/index.js:12
 msgid "New Column"
 msgstr "Yeni sütun"
 
-#: languages/gutenberg-translations.php:967
+#: languages/gutenberg-translations.php:869 build/block-library/index.js:12
 msgid "Delete Column"
 msgstr "Sütunu sil"
 
-#: languages/gutenberg-translations.php:964
+#: languages/gutenberg-translations.php:866 build/block-library/index.js:12
 msgid "Add Column After"
 msgstr "Sütun sonrasına ekle"
 
-#: languages/gutenberg-translations.php:961
+#: languages/gutenberg-translations.php:863 build/block-library/index.js:12
 msgid "Add Column Before"
 msgstr "Sütun öncesine ekle"
 
-#: languages/gutenberg-translations.php:958
+#: languages/gutenberg-translations.php:860 build/block-library/index.js:12
 msgid "Delete Row"
 msgstr "Satırı sil"
 
-#: languages/gutenberg-translations.php:955
+#: languages/gutenberg-translations.php:857 build/block-library/index.js:12
 msgid "Add Row After"
 msgstr "Satırın sonrasına ekle"
 
-#: languages/gutenberg-translations.php:952
+#: languages/gutenberg-translations.php:854 build/block-library/index.js:12
 msgid "Add Row Before"
 msgstr "Satır öncesine ekle"
 
-#: languages/gutenberg-translations.php:979
+#: languages/gutenberg-translations.php:881 build/block-library/index.js:12
 msgid "Edit Table"
 msgstr "Tabloyu düzenle"
 
-#: languages/gutenberg-translations.php:988
+#: languages/gutenberg-translations.php:893 build/block-library/index.js:12
 msgid "Table"
 msgstr "Tablo"
 
-#: languages/gutenberg-translations.php:949
+#: languages/gutenberg-translations.php:851 build/block-library/index.js:12
 msgid "Write subheading…"
-msgstr "Alt başlık yaz..."
+msgstr "Alt başlık yaz…"
 
-#: languages/gutenberg-translations.php:928
+#: languages/gutenberg-translations.php:830 build/block-library/index.js:12
 msgid "Write shortcode here…"
-msgstr "Kısa kodu buraya yaz..."
+msgstr "Kısa kodu buraya yaz…"
 
-#: languages/gutenberg-translations.php:925
+#: languages/gutenberg-translations.php:827 build/block-library/index.js:12
 msgid "Shortcode"
 msgstr "Kısa kod"
 
-#: languages/gutenberg-translations.php:910
+#: languages/gutenberg-translations.php:812 build/block-library/index.js:12
 msgid "divider"
 msgstr "ayırıcı"
 
-#: languages/gutenberg-translations.php:907
+#: languages/gutenberg-translations.php:809 build/block-library/index.js:12
 msgid "horizontal-line"
 msgstr "yatay çizgi"
 
-#: languages/gutenberg-translations.php:901
+#: languages/gutenberg-translations.php:803 build/block-library/index.js:12
 msgid "Separator"
 msgstr "Ayırıcı"
 
-#: languages/gutenberg-translations.php:884
+#: languages/gutenberg-translations.php:794 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Quote"
 msgstr "Alıntı"
 
-#. translators: the individual or entity quoted
-#: languages/gutenberg-translations.php:880
+#. translators: placeholder text used for the citation
+#: languages/gutenberg-translations.php:778 build/block-library/index.js:12
 msgid "Write citation…"
 msgstr "Kaynak yaz…"
 
-#. translators: the text of the quotation
-#: languages/gutenberg-translations.php:875
+#. translators: placeholder text used for the quote
+#: languages/gutenberg-translations.php:773 build/block-library/index.js:12
 msgid "Write quote…"
 msgstr "Alıntı yaz…"
 
-#: languages/gutenberg-translations.php:867
+#: languages/gutenberg-translations.php:784 build/block-library/index.js:12
 msgid "Pullquote"
 msgstr "Alıntı yap"
 
-#: languages/gutenberg-translations.php:864
+#: languages/gutenberg-translations.php:768 build/block-library/index.js:12
 msgid "Write preformatted text…"
 msgstr "Önceden biçimlendirilmiş metin yaz…"
 
-#: languages/gutenberg-translations.php:858
+#: languages/gutenberg-translations.php:762 build/block-library/index.js:12
 msgid "Preformatted"
 msgstr "Önceden biçimlendirilmiş"
 
-#: languages/gutenberg-translations.php:855
+#: languages/gutenberg-translations.php:759 build/block-library/index.js:12
 msgid "text"
 msgstr "metin"
 
-#: languages/gutenberg-translations.php:849
+#: languages/gutenberg-translations.php:753 build/block-library/index.js:12
 msgid "Paragraph"
 msgstr "Paragraf"
 
-#: languages/gutenberg-translations.php:840
-msgid "Add text or type / to add content"
-msgstr "Metin ekleyin veya içerik eklemek için / yazın"
-
-#: languages/gutenberg-translations.php:1115
+#: languages/gutenberg-translations.php:1171 build/components/index.js:19
 msgid "Font Size"
 msgstr "Yazı tipi boyutu"
 
-#: languages/gutenberg-translations.php:837
+#: languages/gutenberg-translations.php:734 build/block-library/index.js:12
 msgid "Drop Cap"
 msgstr "İlk harfi büyük"
 
-#: languages/gutenberg-translations.php:834
+#: languages/gutenberg-translations.php:731 build/block-library/index.js:12
 msgid "Text Settings"
 msgstr "Metin ayarları"
 
-#: languages/gutenberg-translations.php:813
+#: languages/gutenberg-translations.php:710 build/block-library/index.js:12
+msgid "Hide the teaser before the \"More\" tag"
+msgstr "\"Daha fazla\" etiketinden önceki tanıtımı gizle"
+
+#: languages/gutenberg-translations.php:707 build/block-library/index.js:12
 msgid "Read more"
 msgstr "Daha fazla oku"
 
-#: languages/gutenberg-translations.php:795
+#: languages/gutenberg-translations.php:653 build/block-library/index.js:12
 msgid "Write list…"
-msgstr "Liste yaz..."
+msgstr "Liste yaz…"
 
-#: languages/gutenberg-translations.php:810
+#: languages/gutenberg-translations.php:668 build/block-library/index.js:12
 msgid "numbered list"
 msgstr "numaralı liste"
 
-#: languages/gutenberg-translations.php:807
+#: languages/gutenberg-translations.php:665 build/block-library/index.js:12
 msgid "ordered list"
 msgstr "sıralı liste"
 
-#: languages/gutenberg-translations.php:804
+#: languages/gutenberg-translations.php:662 build/block-library/index.js:12
 msgid "bullet list"
 msgstr "işaretli liste"
 
-#: languages/gutenberg-translations.php:792
+#: languages/gutenberg-translations.php:2169 build/editor/index.js:50
 msgid "Indent list item"
 msgstr "Liste öğesinin girintisini arttır"
 
-#: languages/gutenberg-translations.php:789
+#: languages/gutenberg-translations.php:2178 build/editor/index.js:50
 msgid "Outdent list item"
 msgstr "Liste öğesinin girintisini azalt"
 
-#: languages/gutenberg-translations.php:786
+#: languages/gutenberg-translations.php:2175 build/editor/index.js:50
 msgid "Convert to ordered list"
 msgstr "Sıralı listeye dönüştür"
 
-#: languages/gutenberg-translations.php:783
+#: languages/gutenberg-translations.php:2172 build/editor/index.js:50
 msgid "Convert to unordered list"
 msgstr "Sırasız listeye dönüştür"
 
-#: languages/gutenberg-translations.php:798
+#: languages/gutenberg-translations.php:656 build/block-library/index.js:12
 msgid "List"
 msgstr "Liste"
 
-#: languages/gutenberg-translations.php:780
+#: languages/gutenberg-translations.php:650 build/block-library/index.js:12
 msgid "recent posts"
 msgstr "son yazılar"
 
-#: languages/gutenberg-translations.php:752
-msgid "Show a list of your site’s most recent comments."
-msgstr "Sitenizin en yeni yorumlarının bir listesini gösterin."
-
-#: languages/gutenberg-translations.php:774
+#: languages/gutenberg-translations.php:638 build/block-library/index.js:12
 msgid "No posts found."
 msgstr "Yazı bulunamadı."
 
-#: languages/gutenberg-translations.php:771
+#: languages/gutenberg-translations.php:635 build/block-library/index.js:12
 msgid "Latest Posts"
 msgstr "Son yazılar"
 
-#: languages/gutenberg-translations.php:767
+#: languages/gutenberg-translations.php:631 build/block-library/index.js:12
 msgid "Display post date"
 msgstr "Yazı tarihini göster"
 
-#: languages/gutenberg-translations.php:764
+#: languages/gutenberg-translations.php:628 build/block-library/index.js:12
 msgid "Latest Posts Settings"
 msgstr "Son yazı ayarları"
 
-#: languages/gutenberg-translations.php:761
+#: languages/gutenberg-translations.php:644 build/block-library/index.js:12
 msgid "Grid View"
 msgstr "Izgara görünümü"
 
-#: languages/gutenberg-translations.php:758
+#: languages/gutenberg-translations.php:641 build/block-library/index.js:12
 msgid "List View"
 msgstr "Liste görünümü"
 
-#: languages/gutenberg-translations.php:728
+#: languages/gutenberg-translations.php:601 build/block-library/index.js:12
+#: build/format-library/index.js:12
 msgid "photo"
 msgstr "fotoğraf"
 
-#: languages/gutenberg-translations.php:701
-msgid "Describe the purpose of the image. Leave empty if the image is not a key part of the content."
-msgstr "Görselin amacını açıklayın. Görsel içeriğin önemli bir parçası değilse boş bırakın."
-
-#: languages/gutenberg-translations.php:695
+#: languages/gutenberg-translations.php:544 build/block-library/index.js:12
 msgid "Image Settings"
 msgstr "Görsel ayarları"
 
-#: languages/gutenberg-translations.php:692
+#: languages/gutenberg-translations.php:594 build/block-library/index.js:12
+#: build/editor/index.js:50 build/format-library/index.js:12
 msgid "Image"
 msgstr "Görsel"
 
-#: languages/gutenberg-translations.php:22
+#: languages/gutenberg-translations.php:529 build/edit-post/index.js:12
+#: build/block-library/index.js:12 build/editor/index.js:50
 msgid "Preview"
 msgstr "Ön izleme"
 
-#: languages/gutenberg-translations.php:18
+#: languages/gutenberg-translations.php:524 build/block-library/index.js:12
 msgid "embed"
 msgstr "göm"
 
-#: languages/gutenberg-translations.php:12
+#: languages/gutenberg-translations.php:518 build/block-library/index.js:12
 msgid "Custom HTML"
 msgstr "Özel HTML"
 
-#: languages/gutenberg-translations.php:684
+#: languages/gutenberg-translations.php:515 build/block-library/index.js:12
 msgid "subtitle"
 msgstr "alt başlık"
 
-#: languages/gutenberg-translations.php:681
+#: languages/gutenberg-translations.php:512 build/block-library/index.js:12
 msgid "title"
 msgstr "başlık"
 
-#: languages/gutenberg-translations.php:675
+#: languages/gutenberg-translations.php:506 build/block-library/index.js:12
 msgid "Heading"
 msgstr "Başlık"
 
-#: languages/gutenberg-translations.php:668
+#: languages/gutenberg-translations.php:499 build/block-library/index.js:12
 msgid "Write heading…"
 msgstr "Başlık yaz…"
 
 #. translators: %s: heading level e.g: "1", "2", "3"
-#: languages/gutenberg-translations.php:672
+#: languages/gutenberg-translations.php:503 build/block-library/index.js:12
 msgid "Heading %d"
 msgstr "Başlık %d"
 
-#: languages/gutenberg-translations.php:662
+#: languages/gutenberg-translations.php:493 build/block-library/index.js:12
 msgid "Level"
 msgstr "Seviye"
 
-#: languages/gutenberg-translations.php:659
+#: languages/gutenberg-translations.php:490 build/block-library/index.js:12
 msgid "Heading Settings"
 msgstr "Başlık ayarları"
 
-#: languages/gutenberg-translations.php:656
+#: languages/gutenberg-translations.php:484 build/block-library/index.js:12
 msgid "photos"
 msgstr "fotoğraflar"
 
-#: languages/gutenberg-translations.php:638
+#: languages/gutenberg-translations.php:481 build/block-library/index.js:12
 msgid "images"
 msgstr "görseller"
 
-#: languages/gutenberg-translations.php:650
+#: languages/gutenberg-translations.php:478 build/block-library/index.js:12
 msgid "Remove Image"
 msgstr "Görseli kaldır"
 
-#: languages/gutenberg-translations.php:355
+#: languages/gutenberg-translations.php:60 build/block-library/index.js:12
 msgid "None"
 msgstr "Yok"
 
-#: languages/gutenberg-translations.php:597
+#: languages/gutenberg-translations.php:425 build/block-library/index.js:12
 msgid "Media File"
 msgstr "Ortam dosyası"
 
-#: languages/gutenberg-translations.php:602
+#: languages/gutenberg-translations.php:430 build/block-library/index.js:12
 msgid "Attachment Page"
 msgstr "Ek sayfası"
 
-#: languages/gutenberg-translations.php:644
+#: languages/gutenberg-translations.php:472 build/block-library/index.js:12
 msgid "Crop Images"
 msgstr "Görselleri kırp"
 
-#: languages/gutenberg-translations.php:641
+#: languages/gutenberg-translations.php:469 build/block-library/index.js:12
 msgid "Gallery Settings"
 msgstr "Galeri ayarları"
 
-#: languages/gutenberg-translations.php:634
+#: languages/gutenberg-translations.php:463 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Gallery"
 msgstr "Galeri"
 
-#: languages/gutenberg-translations.php:629
+#: languages/gutenberg-translations.php:458 build/block-library/index.js:12
 msgid "Edit Gallery"
 msgstr "Galeriyi düzenle"
 
-#: languages/gutenberg-translations.php:6
+#: languages/gutenberg-translations.php:158 build/block-library/index.js:12
 msgid "Classic"
 msgstr "Klasik"
 
-#: languages/gutenberg-translations.php:553
+#: languages/gutenberg-translations.php:297 build/block-library/index.js:12
 msgid "video"
 msgstr "video"
 
-#: languages/gutenberg-translations.php:550
+#: languages/gutenberg-translations.php:254 build/block-library/index.js:12
 msgid "audio"
 msgstr "ses"
 
-#: languages/gutenberg-translations.php:547
+#: languages/gutenberg-translations.php:251 build/block-library/index.js:12
 msgid "music"
 msgstr "müzik"
 
-#: languages/gutenberg-translations.php:544
+#: languages/gutenberg-translations.php:328 build/block-library/index.js:12
 msgid "image"
 msgstr "görsel"
 
-#: languages/gutenberg-translations.php:535
-msgid "The Embed block allows you to easily add videos, images, tweets, audio, and other content to your post or page."
-msgstr "Gömme bloğu yazınıza veya sayfanıza videoları, görselleri, tweet'leri, sesleri ve diğer içerikleri kolayca eklemenizi sağlar."
-
-#: languages/gutenberg-translations.php:541
+#: languages/gutenberg-translations.php:315 build/block-library/index.js:12
 msgid "blog"
 msgstr "blog"
 
-#: languages/gutenberg-translations.php:538
+#: languages/gutenberg-translations.php:312 build/block-library/index.js:12
 msgid "post"
 msgstr "yazı"
 
-#: languages/gutenberg-translations.php:525
+#: languages/gutenberg-translations.php:370 build/block-library/index.js:12
 msgid "Previews for this are unavailable in the editor, sorry!"
 msgstr "Ön izleme düzenleyicide kullanılamıyor, üzgünüz!"
 
-#. translators: %s: host providing embed content e.g: www.youtube.com
-#: languages/gutenberg-translations.php:522
+#: languages/gutenberg-translations.php:367 build/block-library/index.js:12
 msgid "Embedded content from %s"
 msgstr "%s adresinden gömülen içerik"
 
-#: languages/gutenberg-translations.php:518
+#: languages/gutenberg-translations.php:364 build/block-library/index.js:12
 msgid "Sorry, we could not embed that content."
 msgstr "Üzgünüm, bu içeriği gömemedik."
 
-#: languages/gutenberg-translations.php:515
+#: languages/gutenberg-translations.php:361 build/block-library/index.js:12
 msgid "Enter URL to embed here…"
 msgstr "Buraya gömülecek bağlantıyı girin…"
 
-#. translators: %s: type of embed e.g: "YouTube", "Twitter", etc. "Embed" is
-#. used when no specific type exists
-#: languages/gutenberg-translations.php:512
+#: languages/gutenberg-translations.php:346 build/block-library/index.js:12
 msgid "%s URL"
 msgstr "%s bağlantısı"
 
-#: languages/gutenberg-translations.php:508
+#: languages/gutenberg-translations.php:358 build/block-library/index.js:12
 msgid "Embedding…"
-msgstr "Gömülüyor..."
+msgstr "Gömülüyor…"
 
-#: languages/gutenberg-translations.php:499
+#: languages/gutenberg-translations.php:215 build/block-library/index.js:12
 msgid "Write title…"
-msgstr "Başlık yaz..."
+msgstr "Başlık yaz…"
 
-#: languages/gutenberg-translations.php:492
-msgid "Cover Image"
-msgstr "Kapak görseli"
-
-#: languages/gutenberg-translations.php:665
+#: languages/gutenberg-translations.php:496 build/block-library/index.js:12
 msgid "Text Alignment"
 msgstr "Metin hizalama"
 
-#: languages/gutenberg-translations.php:486
+#: languages/gutenberg-translations.php:197 build/block-library/index.js:12
 msgid "Fixed Background"
 msgstr "Sabir arka plan"
 
-#: languages/gutenberg-translations.php:483
-msgid "Cover Image Settings"
-msgstr "Kapak resmi ayarları"
-
-#: languages/gutenberg-translations.php:480
+#: languages/gutenberg-translations.php:541 build/block-library/index.js:12
 msgid "Edit image"
 msgstr "Görseli düzenle"
 
-#: languages/gutenberg-translations.php:466
+#: languages/gutenberg-translations.php:187 build/block-library/index.js:12
 msgid "Columns"
 msgstr "Sütunlar"
 
-#. translators: Block title modifier
-#: languages/gutenberg-translations.php:470
-msgid "%1$s (%2$s)"
-msgstr "%1$s (%2$s)"
-
-#: languages/gutenberg-translations.php:451
+#: languages/gutenberg-translations.php:169 build/block-library/index.js:12
+#: build/format-library/index.js:12
 msgid "Code"
 msgstr "Kod"
 
-#: languages/gutenberg-translations.php:447
+#: languages/gutenberg-translations.php:164 build/block-library/index.js:12
 msgid "Write code…"
-msgstr "Kod yaz..."
+msgstr "Kod yaz…"
 
-#: languages/gutenberg-translations.php:437
+#: languages/gutenberg-translations.php:149 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Categories"
 msgstr "Kategoriler"
 
-#: languages/gutenberg-translations.php:433
+#: languages/gutenberg-translations.php:144 build/block-library/index.js:12
 msgid "Show Hierarchy"
 msgstr "Hiyerarşiyi göster"
 
-#: languages/gutenberg-translations.php:430
+#: languages/gutenberg-translations.php:141 build/block-library/index.js:12
 msgid "Categories Settings"
 msgstr "Kategori ayarları"
 
-#: languages/gutenberg-translations.php:412
+#: languages/gutenberg-translations.php:125 build/block-library/index.js:12
 msgid "Add text…"
-msgstr "Metin ekle..."
+msgstr "Metin ekle…"
 
-#: languages/gutenberg-translations.php:415
+#: languages/gutenberg-translations.php:128 build/block-library/index.js:12
 msgid "Button"
 msgstr "Düğme"
 
-#: languages/gutenberg-translations.php:408
+#: languages/gutenberg-translations.php:121 build/block-library/index.js:12
+#: build/editor/index.js:50 build/format-library/index.js:12
 msgid "Apply"
 msgstr "Uygula"
 
-#: languages/gutenberg-translations.php:404
+#: languages/gutenberg-translations.php:116 build/block-library/index.js:12
 msgid "Text Color"
 msgstr "Metin rengi"
 
-#: languages/gutenberg-translations.php:400
+#: languages/gutenberg-translations.php:111 build/block-library/index.js:12
 msgid "Background Color"
 msgstr "Arka plan rengi"
 
-#: languages/gutenberg-translations.php:382
+#: languages/gutenberg-translations.php:90 build/block-library/index.js:12
 msgid "Block has been deleted or is unavailable."
 msgstr "Blok silindi veya kullanılamıyor."
 
-#: languages/gutenberg-translations.php:1075 lib/client-assets.php:1221
+#: lib/client-assets.php:973 languages/gutenberg-translations.php:977
+#: build/blocks/index.js:2
 msgid "Reusable Blocks"
 msgstr "Tekrar kullanılabilir bloklar"
 
-#: languages/gutenberg-translations.php:371
-msgid "Cancel"
-msgstr "İptal"
-
-#: languages/gutenberg-translations.php:376
+#: languages/gutenberg-translations.php:87 build/block-library/index.js:12
+#: build/editor/index.js:50 build/format-library/index.js:12
 msgid "Edit"
 msgstr "Düzenle"
 
-#: languages/gutenberg-translations.php:326
+#: languages/gutenberg-translations.php:31 build/block-library/index.js:12
 msgid "Edit audio"
 msgstr "Sesi düzenle"
 
-#: languages/gutenberg-translations.php:362
+#: languages/gutenberg-translations.php:67 build/block-library/index.js:12
 msgid "Write caption…"
-msgstr "Altyazı yaz..."
+msgstr "Altyazı yaz…"
 
-#: languages/gutenberg-translations.php:1426
-msgid "Use URL"
-msgstr "Bağlantı kullan"
-
-#: languages/gutenberg-translations.php:320
+#: languages/gutenberg-translations.php:72 build/block-library/index.js:12
+#: build/editor/index.js:50
 msgid "Audio"
 msgstr "Ses"
 
-#: languages/gutenberg-translations.php:1429
+#: languages/gutenberg-translations.php:1830 build/editor/index.js:50
 msgid "Upload"
 msgstr "Karşıya yükle"
 
-#: languages/gutenberg-translations.php:1776
+#: languages/gutenberg-translations.php:2241 build/editor/index.js:50
 msgid "Additional CSS Class"
 msgstr "Ek CSS sınıfı"
 
-#: languages/gutenberg-translations.php:1773
+#: languages/gutenberg-translations.php:2238 build/editor/index.js:50
 msgid "Anchors lets you link directly to a section on a page."
 msgstr "Çapalar, bir sayfadaki bir bölüme doğrudan bağlamanıza olanak tanır."
 
-#: languages/gutenberg-translations.php:1770
+#: languages/gutenberg-translations.php:2235 build/editor/index.js:50
 msgid "HTML Anchor"
 msgstr "HTML çapası"
 
-#: languages/gutenberg-translations.php:1355
+#: languages/gutenberg-translations.php:1739 build/editor/index.js:50
 msgid "This color combination may be hard for people to read. Try using a brighter background color and/or a darker text color."
 msgstr "Bu renk kombinasyonu insanların okumasını zorlaştırabilir. Daha açık arka plan rengi ve/veya daha koyu metin rengi kullanmayı deneyebilirsiniz."
 
-#: languages/gutenberg-translations.php:1352
+#: languages/gutenberg-translations.php:1736 build/editor/index.js:50
 msgid "This color combination may be hard for people to read. Try using a darker background color and/or a brighter text color."
 msgstr "Bu renk kombinasyonu insanların okumasını zorlaştırabilir. Daha koyu arka plan rengi ve/veya daha açık metin rengi kullanmayı deneyebilirsiniz."
 
-#: languages/gutenberg-translations.php:1099
+#: languages/gutenberg-translations.php:990 build/components/index.js:19
 msgid "Clear"
 msgstr "Temizle"
 
-#: languages/gutenberg-translations.php:1088
+#: languages/gutenberg-translations.php:993 build/components/index.js:19
 msgid "Custom color picker"
 msgstr "Özel renk seçici"
 
 #. translators: %s: The name of the color e.g: "vivid red".
-#: languages/gutenberg-translations.php:1092
+#: languages/gutenberg-translations.php:997 build/components/index.js:19
 msgid "Color: %s"
 msgstr "Renk: %s"
 
-#: languages/gutenberg-translations.php:1202
+#: languages/gutenberg-translations.php:1576 build/editor/index.js:50
 msgid "Full width"
 msgstr "Tam genişlik"
 
-#: languages/gutenberg-translations.php:1199
+#: languages/gutenberg-translations.php:1573 build/editor/index.js:50
 msgid "Wide width"
 msgstr "Büyük genişlik"
 
-#: languages/gutenberg-translations.php:532
-msgid "Embed"
-msgstr "Göm"
-
-#: languages/gutenberg-translations.php:1069 lib/client-assets.php:1213
+#: lib/client-assets.php:963 languages/gutenberg-translations.php:971
+#: build/blocks/index.js:2
 msgid "Widgets"
 msgstr "Bileşenler"
 
-#: languages/gutenberg-translations.php:1063 lib/client-assets.php:1205
+#: lib/client-assets.php:953 languages/gutenberg-translations.php:965
+#: build/blocks/index.js:2
 msgid "Formatting"
 msgstr "Biçimlendirme"
 
-#: languages/gutenberg-translations.php:1060 lib/client-assets.php:1201
+#: lib/client-assets.php:948 languages/gutenberg-translations.php:962
+#: build/blocks/index.js:2
 msgid "Common Blocks"
 msgstr "Ortak bloklar"
 
-#: languages/gutenberg-translations.php:1193
+#: languages/gutenberg-translations.php:1570 build/editor/index.js:50
 msgid "Align right"
 msgstr "Sağa hizala"
 
-#: languages/gutenberg-translations.php:1189
+#: languages/gutenberg-translations.php:1567 build/editor/index.js:50
 msgid "Align center"
 msgstr "Ortala"
 
-#: languages/gutenberg-translations.php:1185
+#: languages/gutenberg-translations.php:1564 build/editor/index.js:50
 msgid "Align left"
 msgstr "Sola hizala"
 
-#. Description of the plugin/theme
+#. Description of the plugin
 msgid "Printing since 1440. This is the development plugin for the new block editor in core."
 msgstr "1440'ten beri basım. Bu, çekirdekteki yeni blok düzenleyicisinin geliştirme eklentisidir."
 
-#: languages/gutenberg-translations.php:1662 lib/client-assets.php:1460
+#: lib/client-assets.php:1291 languages/gutenberg-translations.php:2127
+#: build/editor/index.js:50
 msgid "Add title"
 msgstr "Başlık ekle"
 
-#: lib/class-wp-rest-blocks-controller.php:111
-msgid "The block’s title."
-msgstr "Blok başlığı"
-
-#: lib/class-wp-rest-blocks-controller.php:106
-msgid "Unique identifier for the block."
-msgstr "Blok için benzersiz tanımlayıcı"
-
-#: gutenberg.php:138
+#: gutenberg.php:169
 msgid "Gutenberg development mode requires files to be built. Run <code>npm install</code> to install dependencies, <code>npm run build</code> to build the files or <code>npm run dev</code> to build the files and watch for changes. Read the <a href=\"https://github.com/WordPress/gutenberg/blob/master/CONTRIBUTING.md\">contributing</a> file for more information."
 msgstr "Gutenberg geliştirme modu, dosyaların oluşturulmasını gerektirir. Bağımlılıkları yüklemek için <code>npm install</code> komutunu çalıştırın ve dosyaları oluşturmak ve izlemek için <code>npm run dev</code> komutunu çalıştırın. Daha fazla bilgi için <a href=\"https://github.com/WordPress/gutenberg/blob/master/CONTRIBUTING.md\">katkıda bulunma</a> dosyasını okuyun."
 
-#. Author of the plugin/theme
+#. Author of the plugin
 msgid "Gutenberg Team"
 msgstr "Gutenberg Ekibi"
 
-#. Plugin URI of the plugin/theme
+#. Plugin URI of the plugin
 msgid "https://github.com/WordPress/gutenberg"
 msgstr "https://github.com/WordPress/gutenberg"
 
-#. Plugin Name of the plugin/theme
+#. Plugin Name of the plugin
 msgid "Gutenberg"
 msgstr "Gutenberg"
 
-#: languages/gutenberg-translations.php:1450 lib/register.php:188
+#: lib/register.php:168 languages/gutenberg-translations.php:1865
+#: build/editor/index.js:50
 msgid "Author"
 msgstr "Yazar"
 
-#: lib/register.php:184
+#: lib/register.php:164
 msgid "Slug"
 msgstr "Kısa isim"
 
-#: lib/register.php:179
+#: lib/register.php:159
 msgid "Comments"
 msgstr "Yorumlar"
 
-#: languages/gutenberg-translations.php:197 lib/register.php:166
+#: lib/register.php:146 languages/gutenberg-translations.php:1436
+#: build/edit-post/index.js:12
 msgid "Discussion"
 msgstr "Tartışma"
 
-#: lib/register.php:150
+#: lib/register.php:130 languages/gutenberg-translations.php:1446
+#: build/edit-post/index.js:12
 msgid "Custom Fields"
 msgstr "Özel alanlar"
 
-#: lib/register.php:146
+#: lib/register.php:126
 msgid "Send Trackbacks"
 msgstr "Geri izleme gönder"
 
-#: languages/gutenberg-translations.php:218 lib/register.php:142
+#: lib/register.php:122 languages/gutenberg-translations.php:1432
+#: build/edit-post/index.js:12
 msgid "Excerpt"
 msgstr "Özet"
 
-#: lib/register.php:112
+#: lib/register.php:92
 msgctxt "post format"
 msgid "Format"
 msgstr "Biçim"
 
-#: languages/gutenberg-translations.php:222 lib/register.php:108
+#: lib/register.php:88 languages/gutenberg-translations.php:1465
+#: build/edit-post/index.js:12 build/editor/index.js:50
 msgid "Publish"
 msgstr "Yayımla"
 
-#: languages/gutenberg-translations.php:349 lib/register.php:105
+#: lib/register.php:85 languages/gutenberg-translations.php:54
+#: build/block-library/index.js:12
 msgid "Metadata"
 msgstr "Meta veri"
 
-#: languages/gutenberg-translations.php:368 lib/register.php:101
+#: lib/register.php:81 languages/gutenberg-translations.php:82
+#: build/block-library/index.js:12 build/editor/index.js:50
 msgid "Save"
 msgstr "Kaydet"
 
-#: lib/register.php:94
+#: lib/register.php:74
 msgid "Revisions"
 msgstr "Sürümler"
 
 #. translators: %s is the name of the plugin that generated this meta box.
-#: lib/meta-box-partial-page.php:261
+#: lib/meta-box-partial-page.php:273
 msgid "Gutenberg incompatible meta box, from the \"%s\" plugin."
 msgstr "\"%s\" eklentisinden Gutenberg ile uyumsuz meta kutusu."
 
-#: lib/client-assets.php:346
+#: lib/client-assets.php:243 lib/client-assets.php:274
 msgid "F j, Y g:i a"
-msgstr "j F Y h:i"
+msgstr "j F Y H:i"
 
-#: lib/client-assets.php:345
+#: lib/client-assets.php:242 lib/client-assets.php:273
 msgid "F j, Y"
 msgstr "j F Y"
 
-#: lib/client-assets.php:344
+#: lib/client-assets.php:241 lib/client-assets.php:270
 msgid "g:i a"
 msgstr "h:i"
 
 #. translators: %s: duration
-#: lib/client-assets.php:340
+#: lib/client-assets.php:237
 msgid "%s ago"
 msgstr "%s önce"
 
 #. translators: %s: duration
-#: lib/client-assets.php:338
+#: lib/client-assets.php:235
 msgid "%s from now"
-msgstr "%s den sonra"
+msgstr "%s şimdiye"
 
-#: lib/class-wp-rest-blocks-controller.php:116
-msgid "The block’s HTML content."
-msgstr "Bloğun HTML içeriği."
-
-#: lib/class-wp-rest-block-renderer-controller.php:104
+#: lib/class-wp-rest-block-renderer-controller.php:105
 msgid "Sorry, you are not allowed to read Gutenberg blocks as this user."
 msgstr "Üzgünüm, bu kullanıcıyla tekrar kullanılabilir blokları görmenize izin verilmiyor."
 
@@ -2944,40 +3955,41 @@ msgstr "Blok türü adları büyük harf içermemelidir."
 msgid "Block type names must be strings."
 msgstr "Blok türü adları metin olmalıdır."
 
-#: gutenberg.php:441
+#: gutenberg.php:491
 msgid "Toggle editor selection menu"
 msgstr "Düzenleyici seçim menüsünü aç / kapat"
 
-#: gutenberg.php:293 gutenberg.php:443
+#: gutenberg.php:343 gutenberg.php:493
 msgid "Classic Editor"
 msgstr "Klasik düzenleyici"
 
 #. translators: %s: post title
-#: gutenberg.php:289
+#: gutenberg.php:339
 msgid "Edit &#8220;%s&#8221; in the classic editor"
 msgstr "Klasik düzenleyici ile &#8220;%s&#8221; düzenle"
 
-#: gutenberg.php:125
+#: gutenberg.php:156
 msgid "Gutenberg requires WordPress 4.9.8 or later to function properly. Please upgrade WordPress before activating Gutenberg."
 msgstr "Gutenbergin düzgün çalışması için WordPress 4.9.8 veya üstü gerekir. Lütfen Gutenbergi etkinleştirmeden önce WordPress sürümünüzü yükseltin."
 
-#: gutenberg.php:81
+#: gutenberg.php:104
 msgid "Documentation"
 msgstr "Belgeler"
 
-#: gutenberg.php:75
+#: gutenberg.php:98
 msgid "Feedback"
 msgstr "Geri besleme"
 
-#: gutenberg.php:61 gutenberg.php:62
+#: gutenberg.php:84 gutenberg.php:85
 msgid "Demo"
 msgstr "Demo"
 
-#: languages/gutenberg-translations.php:441
-#: packages/block-library/src/latest-posts/index.php:33
+#: languages/gutenberg-translations.php:138
+#: packages/block-library/src/latest-posts/index.php:36
+#: build/block-library/index.js:12
 msgid "(Untitled)"
 msgstr "(Başlıksız)"
 
-#: packages/block-library/src/categories/index.php:35
+#: packages/block-library/src/categories/index.php:30
 msgid "Select Category"
 msgstr "Kategori seçin"

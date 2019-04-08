@@ -22,11 +22,7 @@
                     $this->functions    =   new WPH_functions();
                     
                 }
-            
-            function __destruct()
-                {
-                
-                }
+
                    
             function _render($interface_name)
                 {
@@ -74,6 +70,8 @@
                             <?php
                                 
                                 echo $this->functions->get_ad_banner();
+                                
+                                $this->show_recovery();
                                 
                                 if($this->module->use_tabs  === TRUE)
                                     $this->_generate_interface_tabs();
@@ -184,7 +182,7 @@
                                         <?php
                                         
                                             $option_name    =   $module_setting['id'];
-                                            $value          =   $this->wph->get_setting_value(  $option_name, $module_setting['default_value']);
+                                            $value          =   $this->wph->get_setting_value(  $option_name, $module_setting );
                                             
                                             switch($module_setting['input_type'])
                                                 {
@@ -194,6 +192,13 @@
                                                                     ?><input name="<?php echo $module_setting['id'] ?>" class="<?php echo $class ?>" value="<?php echo esc_html($value) ?>" placeholder="<?php echo esc_html($module_setting['placeholder']) ?>" type="text"><?php
                                                                     
                                                                     break;
+                                                                    
+                                                    case 'textarea' :
+                                                                        $class          =   'textarea';
+                                                                        
+                                                                        ?><textarea rows="7" name="<?php echo $module_setting['id'] ?>" class="<?php echo $class ?>"><?php echo stripslashes ( esc_html($value) ) ?></textarea><?php
+                                                                        
+                                                                        break;
                                                                     
                                                     case 'radio' :
                                                                     $class          =   'radio';
@@ -222,6 +227,18 @@
                         </div>   
                     
                     <?php   
+                    
+                }
+            
+            
+            function show_recovery()
+                {
+                    ?>
+                        <div class="wph-notice">
+                            <p class="important"><span class="dashicons dashicons-warning important" alt="f534"></span><?php _e('Copy the following link to a safe place, which you can use to reset all options, if something go wrong.',    'wp-hide-security-enhancer') ?> <span id="wph-recovery-link" onClick="WPH.selectText( 'wph-recovery-link' )"><?php echo site_url() ?>?wph-recovery=<?php  echo $this->functions->get_recovery_code() ?></span></p>
+                        </div>
+                    <?php   
+                    
                     
                 }
                 

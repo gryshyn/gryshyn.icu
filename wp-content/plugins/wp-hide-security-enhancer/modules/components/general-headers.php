@@ -44,6 +44,7 @@
                                                                     'sanitize_type' =>  array('sanitize_title', 'strtolower'),
                                                                     'processing_order'  =>  70
                                                                     );
+                    
                                                                     
                     return $this->module_settings;   
                 }

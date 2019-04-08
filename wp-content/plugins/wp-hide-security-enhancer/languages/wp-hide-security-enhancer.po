@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Hide & Security Enhancer\n"
-"POT-Creation-Date: 2018-11-14 19:11+0200\n"
-"PO-Revision-Date: 2018-11-14 19:11+0200\n"
+"POT-Creation-Date: 2018-12-28 11:39+0200\n"
+"PO-Revision-Date: 2018-12-28 11:39+0200\n"
 "Last-Translator: NspCode <contact@nsp-code.com>\n"
 "Language-Team: Nsp Code\n"
 "Language: en\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: conflicts/wp-simple-firewall.php:93
+#: compatibility/wp-simple-firewall.php:99
 msgid ""
 "<b>Conflict notice</b>: The Security Firewall - Login Protection use the "
 "Rename WP Login Page functionality which is the same as WP Hide - Admin "
@@ -56,111 +56,111 @@ msgid ""
 "changes to apply"
 msgstr ""
 
-#: include/functions.class.php:2126
+#: include/functions.class.php:2123
 #, php-format
 msgid "The %1$s plugin header is deprecated. Use %2$s instead."
 msgstr ""
 
-#: include/functions.class.php:2211
+#: include/functions.class.php:2208
 #, php-format
 msgid "By %s."
 msgstr ""
 
-#: include/functions.class.php:2488
+#: include/functions.class.php:2525
 msgid ""
 "Help us to improve this plugin by sending any improvement suggestions and "
 "reporting any issues at "
 msgstr ""
 
-#: include/functions.class.php:2489
+#: include/functions.class.php:2526
 msgid "Did you know there is a"
 msgstr ""
 
-#: include/functions.class.php:2489
+#: include/functions.class.php:2526
 msgid "version of this plug-in?"
 msgstr ""
 
-#: include/functions.class.php:2490
+#: include/functions.class.php:2527
 msgid ""
 "Did you find this plugin useful? Please support our work by spread the word "
 "about the code, or write an article about the plugin in your blog with a "
 "link to development site"
 msgstr ""
 
-#: include/wph.class.php:315
+#: include/wph.class.php:316
 msgid ""
 "Are you sure to reset all settings? All options will be removed. Manual "
 "remove of rewrite lines is required if no access from php"
 msgstr ""
 
-#: include/wph.class.php:352
+#: include/wph.class.php:353
 msgid ""
 "Your server run on WPEngine which works on Nginx rewrite rules, please check "
 "with WP Hide PRO version at."
 msgstr ""
 
-#: include/wph.class.php:357
+#: include/wph.class.php:358
 msgid ""
 "This plugin version can't handle MultiSite environment, please check with WP "
 "Hide PRO version at"
 msgstr ""
 
-#: include/wph.class.php:362
+#: include/wph.class.php:363
 msgid ""
 "Unable to launch WP Hide through mu-plugins/wp-hide-loader.php<br /> Please "
 "make sure this location is writable so the plugin create the required file."
 msgstr ""
 
-#: include/wph.class.php:368
+#: include/wph.class.php:369
 msgid ""
 "Permalink is required to be turned ON for WP Hide & Security Enhancer to work"
 msgstr ""
 
-#: include/wph.class.php:373
+#: include/wph.class.php:374
 msgid ""
 "<b>WP Hide</b> This plugin version can't handle this server type, please "
 "check with PRO version at"
 msgstr ""
 
-#: include/wph.class.php:384
+#: include/wph.class.php:385
 msgid ""
 "Unable to write custom rules to your .htaccess. Is this file writable? <br /"
 ">No changes are being applied."
 msgstr ""
 
-#: include/wph.class.php:387
+#: include/wph.class.php:388
 msgid ""
 "Unable to write custom rules to your web.config. Is this file writable? <br /"
 ">No changes are being applied."
 msgstr ""
 
-#: include/wph.class.php:395
+#: include/wph.class.php:396
 msgid ""
 "Unable to create cache folder. Is the wp-content writable? <br />No cache "
 "data will be available."
 msgstr ""
 
-#: include/wph.class.php:400
+#: include/wph.class.php:401
 msgid "All Settings where restored to default"
 msgstr ""
 
-#: include/wph.class.php:429
+#: include/wph.class.php:430
 msgid "Settings saved"
 msgstr ""
 
-#: include/wph.class.php:471
+#: include/wph.class.php:472
 msgid "Cache cleared"
 msgstr ""
 
-#: include/wph.class.php:786
+#: include/wph.class.php:787
 msgid "Unable to create environment static file. Is "
 msgstr ""
 
-#: include/wph.class.php:786
+#: include/wph.class.php:787
 msgid "writable"
 msgstr ""
 
-#: include/wph.class.php:786
+#: include/wph.class.php:787
 msgid "will not work correctly, so where turned off."
 msgstr ""
 
@@ -250,10 +250,10 @@ msgstr ""
 #: modules/components/rewrite-comments.php:34
 #: modules/components/rewrite-json-rest.php:23
 #: modules/components/rewrite-json-rest.php:41
-#: modules/components/rewrite-json-rest.php:63
-#: modules/components/rewrite-json-rest.php:87
-#: modules/components/rewrite-json-rest.php:105
-#: modules/components/rewrite-json-rest.php:122
+#: modules/components/rewrite-json-rest.php:65
+#: modules/components/rewrite-json-rest.php:89
+#: modules/components/rewrite-json-rest.php:107
+#: modules/components/rewrite-json-rest.php:124
 #: modules/components/rewrite-new_include_path.php:34
 #: modules/components/rewrite-new_plugin_path.php:35
 #: modules/components/rewrite-new_theme_path.php:60
@@ -307,10 +307,10 @@ msgstr ""
 #: modules/components/rewrite-comments.php:35
 #: modules/components/rewrite-json-rest.php:24
 #: modules/components/rewrite-json-rest.php:42
-#: modules/components/rewrite-json-rest.php:64
-#: modules/components/rewrite-json-rest.php:88
-#: modules/components/rewrite-json-rest.php:106
-#: modules/components/rewrite-json-rest.php:123
+#: modules/components/rewrite-json-rest.php:66
+#: modules/components/rewrite-json-rest.php:90
+#: modules/components/rewrite-json-rest.php:108
+#: modules/components/rewrite-json-rest.php:125
 #: modules/components/rewrite-new_include_path.php:35
 #: modules/components/rewrite-new_plugin_path.php:36
 #: modules/components/rewrite-new_theme_path.php:61
@@ -331,25 +331,25 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: modules/components/admin-admin_url.php:190
+#: modules/components/admin-admin_url.php:185
 msgid "Hello"
 msgstr ""
 
-#: modules/components/admin-admin_url.php:191
+#: modules/components/admin-admin_url.php:186
 msgid ""
 "This is an automated message to inform that your login url has been changed "
 "at"
 msgstr ""
 
-#: modules/components/admin-admin_url.php:192
+#: modules/components/admin-admin_url.php:187
 msgid "The new login url is"
 msgstr ""
 
-#: modules/components/admin-admin_url.php:193
+#: modules/components/admin-admin_url.php:188
 msgid "Additionality you can use this to recover the old login / admin links "
 msgstr ""
 
-#: modules/components/admin-admin_url.php:194
+#: modules/components/admin-admin_url.php:189
 msgid "Please keep this url safe for recover, if forgot"
 msgstr ""
 
@@ -389,7 +389,7 @@ msgstr ""
 #: modules/components/cdn-setup.php:17
 msgid ""
 "Some CDN providers (like stackpath.com ) replace site assets with custom "
-"url, enter here such url. Oterwise this option should stay empy."
+"url, enter here such url. Otherwise this option should stay empty."
 msgstr ""
 
 #: modules/components/general-feed.php:16
@@ -565,12 +565,12 @@ msgid "Remove the wlwmanifest tag within head."
 msgstr ""
 
 #: modules/components/general-meta.php:114
-#: modules/components/rewrite-json-rest.php:82
+#: modules/components/rewrite-json-rest.php:84
 msgid "Disable output the REST API link tag into page header"
 msgstr ""
 
 #: modules/components/general-meta.php:115
-#: modules/components/rewrite-json-rest.php:83
+#: modules/components/rewrite-json-rest.php:85
 msgid "By default a REST API link tag is being append to HTML."
 msgstr ""
 
@@ -709,19 +709,25 @@ msgstr ""
 msgid "Any call for JSON REST API service will be blocked."
 msgstr ""
 
-#: modules/components/rewrite-json-rest.php:100
+#: modules/components/rewrite-json-rest.php:60
+msgid ""
+"<span class=\"info\"> This might be required by spedific plugins, including "
+"new WordPress editor <b>Gutenberg</b>.</span>"
+msgstr ""
+
+#: modules/components/rewrite-json-rest.php:102
 msgid "Disable JSON REST WP RSD endpoint from XML-RPC responses"
 msgstr ""
 
-#: modules/components/rewrite-json-rest.php:101
+#: modules/components/rewrite-json-rest.php:103
 msgid "By default a WP RSD endpoint is being append to the XML respose."
 msgstr ""
 
-#: modules/components/rewrite-json-rest.php:117
+#: modules/components/rewrite-json-rest.php:119
 msgid "Disable Sends a Link header for the REST API"
 msgstr ""
 
-#: modules/components/rewrite-json-rest.php:118
+#: modules/components/rewrite-json-rest.php:120
 msgid "On template_redirect, disable Sends a Link header for the REST API."
 msgstr ""
 
@@ -869,11 +875,13 @@ msgid "e.g. my_uploads"
 msgstr ""
 
 #: modules/components/rewrite-new_upload_path.php:30
-msgid "Block uploads URL"
+msgid "Block default uploads URL"
 msgstr ""
 
 #: modules/components/rewrite-new_upload_path.php:31
-msgid "Block upload files from being accesible through default urls."
+msgid ""
+"Block default wp-content/uploads/ media folder from being accesible through "
+"default urls."
 msgstr ""
 
 #: modules/components/rewrite-new_upload_path.php:31
