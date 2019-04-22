@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - W3 Total Cache - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-08-01 12:05:23+0000\n"
+"PO-Revision-Date: 2019-04-15 08:29:44+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +21,7 @@ msgstr "Frederick Townes"
 
 #. Description of the plugin/theme
 msgid "The highest rated and most complete WordPress performance plugin. Dramatically improve the speed and user experience of your site. Add browser, page, object and database caching as well as minify and content delivery network (CDN) to WordPress."
-msgstr "L'extension de performance la mieux notée et la plus complète de WordPress. Améliore considérablement la vitesse et l'expérience utilisateur de votre site. Ajout de la mise en cache de navigateur, de page, d'objet et de base de données ainsi que de la minification de (CDN) pour WordPress."
+msgstr "L’extension de performance la mieux notée et la plus complète de WordPress. Améliore considérablement la vitesse et l’expérience utilisateur de votre site. Ajout de la mise en cache de navigateur, de page, d’objet et de base de données ainsi que de la minification de (CDN) pour WordPress."
 
 #. Plugin URI of the plugin/theme
 msgid "http://www.w3-edge.com/wordpress-plugins/w3-total-cache/"
@@ -229,15 +229,15 @@ msgstr "Précharger le cache d'article dès la publication d'évènements."
 
 #: lib/W3/UI/Settings/PageCache.php:25
 msgid "Sitemap <acronym title=\"Uniform Resource Indicator\">URL</acronym>:"
-msgstr "<acronym title=\"Uniform Resource Indicator\">URL</acronym> du plan de site :"
+msgstr "<acronym title=\"Uniform Resource Indicator\">URL</acronym> du plan de site :"
 
 #: lib/W3/UI/Settings/PageCache.php:24
 msgid "Pages per interval:"
-msgstr "Pages par intervalle :"
+msgstr "Pages par intervalle :"
 
 #: lib/W3/UI/Settings/PageCache.php:23
 msgid "Update interval:"
-msgstr "Intervalle de mise à jour :"
+msgstr "Intervalle de mise à jour :"
 
 #: lib/W3/UI/Settings/PageCache.php:22
 msgid "Automatically prime the page cache"

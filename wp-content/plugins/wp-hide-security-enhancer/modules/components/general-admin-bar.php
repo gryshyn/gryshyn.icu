@@ -16,9 +16,11 @@
             function get_module_settings()
                 {
                     
-                    $wp_roles   =   wp_roles();
+                    global $wpdb;
                     
-                    foreach  ( $wp_roles->roles     as  $role_slug  =>  $role )
+                    $wp_roles   =   get_option( $wpdb->base_prefix . 'user_roles');
+                    
+                    foreach  ( $wp_roles     as  $role_slug  =>  $role )
                         {
                     
                             $this->module_settings[]                  =   $this->_prepare_modle_setting( $role_slug, $role['name'] );

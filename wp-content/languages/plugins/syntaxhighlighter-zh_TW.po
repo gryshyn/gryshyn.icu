@@ -525,4 +525,4 @@ msgstr "Django"
 
 #: syntaxhighlighter.php:1406
 msgid "Enable &quot;HTML script&quot; mode by default (see the bottom of this page for details). Checking this box is not recommended as this mode only works with certain languages."
-msgstr "Enable &quot;HTML script&quot; mode by default (see the bottom of this page for details). Checking this box is not recommended as this mode only w ÚW     ÚW                 
+msgstr "Enable &quot;HTML script&quot; mode by default (see the bottom of this page for details). Checking this box is not recommended as this mode only works with certain languages."

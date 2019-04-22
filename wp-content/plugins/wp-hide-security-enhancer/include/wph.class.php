@@ -370,10 +370,11 @@
                 {
                     global $wp_rewrite;
 
+                    do_action('wp-hide/admin_notices');
                     
                     if (    getenv('IS_WPE')    ==  "1"   ||  getenv('IS_WPE_SNAPSHOT')    == "1" ) 
                         {
-                            echo "<div class='error'><p><b>WP Hide</b> ". __("Your server run on WPEngine which works on Nginx rewrite rules, please check with WP Hide PRO version at.", 'wp-hide-security-enhancer') .' <a target="_blank" href="https://www.wp-hide.com/wp-hide-pro-now-available/">WP-Hide PRO</a><</p></div>';    
+                            echo "<div class='error'><p><b>WP Hide</b> ". __("Your server run on WPEngine which works on Nginx rewrite rules, please check with WP Hide PRO version at.", 'wp-hide-security-enhancer') .' <a target="_blank" href="https://www.wp-hide.com/wp-hide-pro-now-available/">WP-Hide PRO</a></p></div>';    
                         }
                     
                     if ( is_multisite() )
@@ -450,7 +451,7 @@
                                 }
                             
                             if( $found_errors   === FALSE )
-                                echo "<div class='notice notice-success'><p>". __('Settings saved', 'wp-hide-security-enhancer')  ."</p></div>";
+                                echo "<div class='notice notice-success'><p>". __('Settings saved', 'wp-hide-security-enhancer')  ."<br />" .  __('Remember, site cache clear is required.', 'wp-hide-security-enhancer')  ."</p></div>";
                             
                             if( is_array($process_interface_save_errors)    &&  count($process_interface_save_errors) > 0)
                                 {

@@ -4,10 +4,10 @@ Donate link: https://www.nsp-code.com/
 Tags: wordpress hide, hide, security, improve security, hacking, wp hide, custom login, wp-loging.php, wp-admin, admin hide, login change, 
 Requires at least: 2.8
 Tested up to: 5.1.1
-Stable tag: 1.5.5.9
+Stable tag: 1.5.6.3
 License: GPLv2 or later
 
-Hide and increase Security for your WordPress site instance using smart techniques. No files are changed on your server.
+Hide and increase Security for your WordPress site using smart techniques. No files are changed on your server. Change default admin and wp-login urls
 
 == Description ==
 
@@ -231,6 +231,8 @@ Since version 1.2 Change individual plugin urls which make them unrecognizable, 
 
 * CDN Url - Set-up CDN if apply, some providers replace site assets with custom urls.
 
+<br />This free version works with Apache and IIS server types. 
+
 <br />Something is wrong with this plugin on your site? Just use the forum or get in touch with us at <a target="_blank" href="http://www.wp-hide.com">Contact</a> and we'll check it out.
 
 <br />A website example can be found at <a target="_blank" href="http://nsp-code.com/demo/wp-hide/">http://nsp-code.com/demo/wp-hide/</a> or our website <a target="_blank" href="http://www.wp-hide.com/">WP Hide and Security Enhancer</a>
@@ -258,12 +260,16 @@ Absolute none! No file and directory is being changed anywhere, everything is pr
 
 Everything works as before, no functionality is being breaked. You can run updates at any time.
 
+= What servers this plugin can work  =
+
+This free code can with Apache and IIS server types. For all others check the PRO version at http://www.wp-hide.com
+
 = Something is wrong, what can i do? How can i recover my site? =
 
 * First, stay calm. There will be no harm, guaranteed :)
 * Go to admin and change some of plugin options to see which one cause the problem. Then report it to forum or get in touch with us to fix it.
 * If you can't login to admin, use the Recovery Link which has been sent to your e-mail. This will reset the login to default.
-* If none of above worked for you, or you can't find the recovery link, delete the plugin from your wp-content/plugins directory. Then remove any lines in your .htaccess file between 
+* If you can't find the recovery link or none mentioned  above worked, delete the plugin from your wp-content/plugins directory. Then remove any lines in your .htaccess file between 
  BEGIN WP Hide & Security Enhancer
 ..
  END WP Hide & Security Enhancer 
@@ -284,6 +290,19 @@ Please get in touch with us and we'll do our best to include it for a next versi
 2. Sample front html code.
 
 == Changelog ==
+
+= 1.5.6.3 =
+* Fix: remove javascript comments produce worng replacements on specific format.
+
+= 1.5.6.2 =
+* Use curent site prefix when retreiving 'user_roles'
+
+= 1.5.6 =
+* Fix BBPress menus by calling directly the wp_user_roles option ratter get_roles()
+* Replace comments within inline JavaScript code when Remove Comments active
+* Possible login conflict notices when using WebArx, WPS Hide Login
+* New action wp-hide/admin_notices when plugin admin notices
+* Return updated url when calling admin_url instead replaced when buffer outputs to ensure compatibility with specific plugins
 
 = 1.5.5.9 =
 * Compatibility module for ShortPixel Adaptive Image plugin

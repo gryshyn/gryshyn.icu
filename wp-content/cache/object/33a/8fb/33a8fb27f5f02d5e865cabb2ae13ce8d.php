@@ -1,1 +1,1 @@
-­©\<?php exit; ?>a:1:{s:7:"content";a:2:{s:26:"syntaxhighlighter_settings";b:1;s:12:"rtl_standard";b:1;}}
+	&¹\<?php exit; ?>a:1:{s:7:"content";a:3:{s:26:"syntaxhighlighter_settings";b:1;s:29:"_transient_timeout_doing_cron";b:1;s:12:"rtl_standard";b:1;}}

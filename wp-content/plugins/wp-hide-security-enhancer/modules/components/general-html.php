@@ -149,8 +149,11 @@
                     if(defined('WP_ADMIN'))
                         return $buffer;    
                     
-                    //replace any comments 
+                    //replace any Html comments 
                     $buffer =   preg_replace('/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->)(.|\n))*-->/sm', "" , $buffer);
+                    
+                    //replace any JavaScript comments
+                    //$buffer =   preg_replace('/\/\*[\s\S]*?\*\/|([^:]|^)\/\/.*$/sm', "" , $buffer);
                     
                     //remove empty multiple new lines
                     $buffer =   preg_replace("/(\n){2,}/", "\n", $buffer);

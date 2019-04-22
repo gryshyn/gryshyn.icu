@@ -235,7 +235,7 @@
                 {
                     ?>
                         <div class="wph-notice">
-                            <p class="important"><span class="dashicons dashicons-warning important" alt="f534"></span><?php _e('Copy the following link to a safe place, which you can use to reset all options, if something go wrong.',    'wp-hide-security-enhancer') ?> <span id="wph-recovery-link" onClick="WPH.selectText( 'wph-recovery-link' )"><?php echo site_url() ?>?wph-recovery=<?php  echo $this->functions->get_recovery_code() ?></span></p>
+                            <p class="important"><span class="dashicons dashicons-warning important" alt="f534"></span><?php _e('Copy the following link to a safe place. You can use later to reset all plugin options, if something go wrong.',    'wp-hide-security-enhancer') ?> <span id="wph-recovery-link" onClick="WPH.selectText( 'wph-recovery-link' )"><?php echo site_url() ?>?wph-recovery=<?php  echo $this->functions->get_recovery_code() ?></span></p>
                         </div>
                     <?php   
                     

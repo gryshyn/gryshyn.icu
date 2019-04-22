@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - All-in-One WP Migration - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-02-07 20:23:14+0000\n"
+"PO-Revision-Date: 2019-04-01 10:13:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,15 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: sv_SE\n"
 "Project-Id-Version: Plugins - All-in-One WP Migration - Stable (latest release)\n"
+
+#: lib/controller/class-ai1wm-main-controller.php:880
+msgid "Unable to add label for backup because: "
+msgstr "Kan inte lägga till etikett för säkerhetskopia eftersom:"
+
+#: lib/view/backups/index.php:79
+#: lib/controller/class-ai1wm-main-controller.php:881
+msgid "Click to set a label for this backup"
+msgstr "Klicka för att ställa in en etikett för denna säkerhetskopia"
 
 #: lib/model/export/class-ai1wm-export-download.php:64
 msgid "<a href=\"%s\" class=\"ai1wm-button-green ai1wm-emphasize ai1wm-button-download\" title=\"%s\" download=\"%s\"><span>Download %s</span><em>Size: %s</em></a>"
@@ -357,7 +366,7 @@ msgid "Archiving database...<br />%d%% complete"
 msgstr "Arkiverar databas&hellip;<br />%d&nbsp;%% färdigt"
 
 #: lib/model/import/class-ai1wm-import-database.php:78
-#: lib/model/import/class-ai1wm-import-database.php:808
+#: lib/model/import/class-ai1wm-import-database.php:788
 msgid "Restoring database...<br />%d%% complete"
 msgstr "Återställer databas&hellip;<br />%d&nbsp;%% färdigt"
 
@@ -366,7 +375,7 @@ msgstr "Återställer databas&hellip;<br />%d&nbsp;%% färdigt"
 msgid "Checking extensions compatibility..."
 msgstr "Kontrollerar tilläggskompatibilitet&hellip;"
 
-#: lib/model/import/class-ai1wm-import-database.php:788
+#: lib/model/import/class-ai1wm-import-database.php:768
 msgid "Done restoring database."
 msgstr "Färdig med återställningen av databas."
 

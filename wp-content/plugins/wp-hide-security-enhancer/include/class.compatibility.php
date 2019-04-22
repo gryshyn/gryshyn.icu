@@ -67,6 +67,14 @@
                     include_once(WPH_PATH . 'compatibility/shortpixel-adaptive-images.php');
                     WPH_conflict_shortpixel_ai::init();
                     
+                    //WebArx
+                    include_once(WPH_PATH . 'compatibility/webarx.php');
+                    WPH_conflict_webarx::init();
+                    
+                    //WPS Hide Login
+                    include_once(WPH_PATH . 'compatibility/wps-hide-login.php');
+                    WPH_conflict_wps_hide_login::init();
+                    
                     /**
                     * Themes
                     */

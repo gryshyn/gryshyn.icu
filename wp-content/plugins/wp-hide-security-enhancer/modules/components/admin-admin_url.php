@@ -266,8 +266,8 @@
             
             function update_admin_url( $url, $path, $blog_id )
                 {
-                    if( strpos( $_SERVER['REQUEST_URI'], "/admin-ajax.php")    === FALSE )
-                        return $url;
+                    //if( strpos( $_SERVER['REQUEST_URI'], "/admin-ajax.php")    === FALSE )
+                        //return $url;
                     
                     //replace the wp-admin with custom slug
                     $admin_url     =   $this->wph->functions->get_module_item_setting('admin_url');
