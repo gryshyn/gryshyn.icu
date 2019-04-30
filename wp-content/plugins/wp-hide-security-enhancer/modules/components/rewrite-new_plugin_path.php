@@ -28,7 +28,7 @@
                     $this->module_settings[]                  =   array(
                                                                         'id'            =>  'block_plugins_url',
                                                                         'label'         =>  __('Block plugins URL',    'wp-hide-security-enhancer'),
-                                                                        'description'   =>  __('Block plugins files from being accesible through default urls.',    'wp-hide-security-enhancer') . '<br />'.__('Apply only if ',    'wp-hide-security-enhancer') . '<b>New Plugin Path</b> ' . __('is not empty.',    'wp-hide-security-enhancer'),
+                                                                        'description'   =>  '<span class="important">'. __('Ensure the above option works correctly on your server before activate this.',    'wp-hide-security-enhancer') .'</span><br />'. __('Block plugins files from being accesible through default urls.',    'wp-hide-security-enhancer') . '<br />'.__('Apply only if ',    'wp-hide-security-enhancer') . '<b>New Plugin Path</b> ' . __('is not empty.',    'wp-hide-security-enhancer'),
                                                                         
                                                                         'input_type'    =>  'radio',
                                                                         'options'       =>  array(

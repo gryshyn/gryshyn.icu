@@ -11,6 +11,9 @@
                            
             static function init()
                 {
+                    if( !   self::is_plugin_active())
+                        return FALSE;
+                    
                     add_action('wp_calculate_image_srcset',        array( 'WPH_conflict_shortpixel_ai', 'wp_calculate_image_srcset') , -1, 5);   
                     
                     add_action( 'init',                            array( 'WPH_conflict_shortpixel_ai', 'init_ob'), 2 ); 

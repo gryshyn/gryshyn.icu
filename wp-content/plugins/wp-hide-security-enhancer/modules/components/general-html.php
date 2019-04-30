@@ -153,7 +153,8 @@
                     $buffer =   preg_replace('/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->)(.|\n))*-->/sm', "" , $buffer);
                     
                     //replace any JavaScript comments
-                    //$buffer =   preg_replace('/\/\*[\s\S]*?\*\/|([^:]|^)\/\/.*$/sm', "" , $buffer);
+                    //$buffer =   preg_replace('/(\s+)(\/\/)([a-zA-Z\s]+)(\s+)/sm', "" , $buffer);
+                    //$buffer =   preg_replace('/(\s+)(\/\*)([a-zA-Z\s\n]+)(\*\/)(\s+)/sm', "" , $buffer);
                     
                     //remove empty multiple new lines
                     $buffer =   preg_replace("/(\n){2,}/", "\n", $buffer);

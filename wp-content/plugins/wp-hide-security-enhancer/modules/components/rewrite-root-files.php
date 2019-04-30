@@ -62,10 +62,21 @@
                                                                     'processing_order'  =>  55
                                                                     );
                     
+                    $local_ip   =   $this->domain_get_ip();
+                    $option_description     =   __('Block access to wp-cron.php file. If remote cron calls not being used this can be set to Yes.',    'wp-hide-security-enhancer');
+                    if (    $local_ip   === FALSE )
+                        {
+                            $option_description     .=   '<br /><span class="important">'  .   __('Unable to identify site domain IP, blocking wp-cron.php will stop the site internal WordPress cron functionality.',    'wp-hide-security-enhancer') .   '</span>';   
+                        }
+                        else
+                        {
+                            $option_description     .=   '<br /><span class="important">'  .   __('Site domain rezolved to IP',    'wp-hide-security-enhancer') . ' ' . $local_ip . ' ' .  __('If blocked, all internal calls to cron will continue to run fine. All calls from a different IP are blocked, including direct calls.',    'wp-hide-security-enhancer') . '</span>';
+                        }
+                    
                     $this->module_settings[]                  =   array(
                                                                     'id'            =>  'block_wp_cron_php',
                                                                     'label'         =>  __('Block wp-cron.php',    'wp-hide-security-enhancer'),
-                                                                    'description'   =>  __('Block access to wp-cron.php file. If remote cron calls not being used this can be set to Yes.',    'wp-hide-security-enhancer'),
+                                                                    'description'   =>  $option_description,
                                                                     
                                                                     'input_type'    =>  'radio',
                                                                     'options'       =>  array(
@@ -246,19 +257,39 @@
                     
                     $text   =   '';
                     
+                    $local_ip   =   $this->domain_get_ip();
+                    
                     if($this->wph->server_htaccess_config   === TRUE)
                         {                                        
                             $text   =   "RewriteCond %{ENV:REDIRECT_STATUS} ^$\n";
+                            
+                            if  ( $local_ip !== FALSE )
+                                {
+                                    $text   .=  "RewriteCond %{REMOTE_ADDR} !^".  str_replace(".",'\.', $local_ip )  ."$\n";
+                                }
+                            
                             $text   .=   "RewriteRule ^" . $rewrite_base ." ".  $rewrite_to ."?wph-throw-404 [L]";
                         }
                     
                     if($this->wph->server_web_config   === TRUE)
+                        {
                             $text   = '
                                         <rule name="wph-block_wp_cron_php" stopProcessing="true">
-                                            <match url="^' . $rewrite_base . '"  />
+                                            <match url="^' . $rewrite_base . '"  />';
+                            
+                            if  ( $local_ip !== FALSE )
+                                {
+                                    $text   .=  '
+                                                <conditions>  
+                                                    <add input="{REMOTE_ADDR}" pattern="^'.  str_replace(".",'\.', $local_ip )  . '$" ignoreCase="true" negate="true" />
+                                                </conditions>';
+                                }
+                                            
+                            $text   .=  '             
                                             <action type="Rewrite" url="'.  $rewrite_to .'?wph-throw-404" />  
                                         </rule>
                                                             ';
+                        }
                                
                     $processing_response['rewrite'] = $text;            
                                 
@@ -379,5 +410,28 @@
                                                     
                     return  $processing_response;   
                 }
+                
+            
+            /**
+            * Return curent domain reversed ip
+            *     
+            */
+            function domain_get_ip()
+                {
+                    $local_ip   =   FALSE;
+                    $site_domain_parsed =   parse_url( home_url() );
+                    if ( $site_domain_parsed !==    FALSE   &&  function_exists('gethostbyname')    &&  function_exists('ip2long') )
+                        {
+                            $site_domain_is_ip  =   ip2long( $site_domain_parsed['host'] )  === FALSE   ?   FALSE   :   TRUE;
+                            $local_ip   =   gethostbyname( $site_domain_parsed['host'] );
+                            
+                            if  ( $site_domain_is_ip    === FALSE  &&   $local_ip  ==  $site_domain_parsed['host'] )
+                                $local_ip   =   FALSE;
+                            
+                        }
+                    
+                    return $local_ip;
+                }
+                
         }
 ?>

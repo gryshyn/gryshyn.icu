@@ -11,6 +11,25 @@
                                     
             function get_module_settings()
                 {
+                    
+                    $this->module_settings[]                  =   array(
+                                                                    'id'            =>  'remove_header_link',
+                                                                    'label'         =>  __('Remove Link Header',    'wp-hide-security-enhancer'),
+                                                                    'description'   =>  __('Remove Link Header being set as default by WordPress which outputs the site JSON url.', 'wp-hide-security-enhancer') . ' ' .
+                                                                                        __('More details at ', 'wp-hide-security-enhancer') . '<a target="_blank" href="http://www.wp-hide.com/documentation/request-headers/">Request Headers</a>',
+                                                                    
+                                                                    'input_type'    =>  'radio',
+                                                                    'options'       =>  array(
+                                                                                                'yes'       =>  __('Yes',    'wp-hide-security-enhancer'),
+                                                                                                'no'        =>  __('No',     'wp-hide-security-enhancer'),
+                                                                                                ),
+                                                                    'default_value' =>  'no',
+                                                                    
+                                                                    'sanitize_type' =>  array('sanitize_title', 'strtolower'),
+                                                                    'processing_order'  =>  70
+                                                                    );
+          
+                    
                     $this->module_settings[]                  =   array(
                                                                     'id'            =>  'remove_x_powered_by',
                                                                     'label'         =>  __('Remove X-Powered-By Header',    'wp-hide-security-enhancer'),
@@ -49,6 +68,15 @@
                     return $this->module_settings;   
                 }
                 
+            
+            function _init_remove_header_link( $saved_field_data )
+                {
+                    if(empty($saved_field_data) ||  $saved_field_data   ==  'no')
+                        return FALSE;
+                    
+                    remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );    
+                    
+                }
                 
                 
             function _init_remove_x_powered_by($saved_field_data)

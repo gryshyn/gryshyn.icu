@@ -213,6 +213,13 @@
                                     WPH_functions::copy_mu_loader( TRUE );
                                                                         
                                     $version =   '1.4.8.3';
+                                }
+                                
+                            if(version_compare($version, '1.5.6.6', '<'))
+                                {
+                                    $_trigger_flush_rules   =   TRUE;
+                                                                        
+                                    $version =   '1.5.6.6';
                                 }     
                             
                             
@@ -230,12 +237,12 @@
                             
                             
                             //Always generate the environment file
-                            $this->wph->set_static_environment_file();
+                            //$this->wph->set_static_environment_file();
                             
                             
                             //save the last code version
                             $this->wph->settings['version'] =   WPH_CORE_VERSION;
-                            $this->wph->functions->update_settings($this->wph->settings);
+                            //$this->wph->functions->update_settings($this->wph->settings);
                                     
                         }
                     
@@ -257,25 +264,7 @@
                     
                     flush_rewrite_rules();
                     
-                    //clear the cache for W3 Cache              
-                    if (function_exists('w3tc_pgcache_flush'))
-                        w3tc_pgcache_flush();
-                    
-                    //recheck if permalinks where saved sucessfully and redirect
-                    
-                    /**
-                    * ToDo Possible not necesarely?  
-                    * 1) Through AJAX, plugin update - it trigger the first update so flush_rules()
-                    * 2) Through regular plugin update, no new plugin files are being run
-                    */
-                    /*
-                    if( !defined( 'DOING_AJAX' ) &&  $this->wph->permalinks_not_applied   === FALSE   &&  $this->wph->functions->rewrite_rules_applied()  === TRUE)
-                        {
-                            //reload the page
-                            wp_redirect($this->wph->functions->get_current_url());
-                            die();
-                        }
-                    */      
+                    $this->wph->functions->site_cache_clear();    
                 }
                 
         }

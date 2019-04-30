@@ -27,7 +27,7 @@
                     $this->module_settings[]                  =   array(
                                                                     'id'            =>  'block_wpinclude_url',
                                                                     'label'         =>  __('Block wp-includes URL',    'wp-hide-security-enhancer'),
-                                                                    'description'   =>  __('Block wp-includes files from being accesible through default urls. <br />Apply only if <b>New Includes Path</b> is not empty. It block only for non loged-in users.',    'wp-hide-security-enhancer'),
+                                                                    'description'   =>  '<span class="important">'. __('Ensure the above option works correctly on your server before activate this.',    'wp-hide-security-enhancer') .'</span><br />'. __('Block wp-includes files from being accesible through default urls. <br />Apply only if <b>New Includes Path</b> is not empty. Blocks only for non loged-in users.',    'wp-hide-security-enhancer'),
                                                                     
                                                                     'input_type'    =>  'radio',
                                                                     'options'       =>  array(

@@ -4,7 +4,7 @@ Donate link: https://www.nsp-code.com/
 Tags: wordpress hide, hide, security, improve security, hacking, wp hide, custom login, wp-loging.php, wp-admin, admin hide, login change, 
 Requires at least: 2.8
 Tested up to: 5.1.1
-Stable tag: 1.5.6.3
+Stable tag: 1.5.6.9
 License: GPLv2 or later
 
 Hide and increase Security for your WordPress site using smart techniques. No files are changed on your server. Change default admin and wp-login urls
@@ -204,6 +204,7 @@ Since version 1.2 Change individual plugin urls which make them unrecognizable, 
 
 **General / Html > Headers**
 
+* Remove Link Header
 * Remove X-Powered-By Header
 * Remove X-Pingback Header
 
@@ -290,6 +291,24 @@ Please get in touch with us and we'll do our best to include it for a next versi
 2. Sample front html code.
 
 == Changelog ==
+
+= 1.5.6.9 =
+* New functionality: Remove Link Header 
+
+= 1.5.6.8 =
+* Fix: Call for invalid method WP_Error::has_errors()
+* Fix: Attempt to clear Opcache if API not being restricted
+
+= 1.5.6.7 =
+* Allow internal cron jobs to run even if wp-cron.php is blocked.
+* Check with wp_filesystem for any errors and output the messages, before attempt to write any content
+* Trigger site cache clear on settings changed or code update
+* Slight css updates
+* Mark block option in red text for better visibility and user awareness
+
+= 1.5.6.4 =
+* Fix: Keep double quote at the start of the replacements when doing JSON matches to avoid replacing strings for other domains
+* Fix: Run compatibility pachage for "ShortPixel Adaptive Images" only when plugin is active
 
 = 1.5.6.3 =
 * Fix: remove javascript comments produce worng replacements on specific format.

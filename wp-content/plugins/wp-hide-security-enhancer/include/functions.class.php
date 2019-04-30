@@ -1438,9 +1438,16 @@
                         }
                         
                     //check for url encoded urls
-                    foreach($_relative_domain_url_replacements_dq   as $old_url =>  $new_url)
+                    foreach( $_relative_domain_url_replacements_dq   as $old_url =>  $new_url )
                         {
-                            $text   =   str_ireplace(    trim( json_encode( trim( $old_url, '"')), '"' ) , trim( json_encode( trim ( $new_url, '"')), '"' )  ,$text   );
+                            /*
+                            *   JSON always use double quotes
+                            *   use double quote type at the start of the string (per json encodync) to avoid replacing for non-local domains    
+                            *   e.g. "collectionThumbnail":"https:\/\/wp.envatoextensions.com\/kit-57\/wp-content\/uploads\/sites\/60\/2018\/08\/screenshot-20-1540279812-300x997.jpg"
+                            */
+                            //$text   =   str_ireplace(   "'" .  trim( json_encode( trim( $old_url, '"')), '"' ) , "'" . trim( json_encode( trim ( $new_url, '"')), '"' )  ,$text   );
+                            $text   =   str_ireplace(   '"' .  trim( json_encode( trim( $old_url, '"')), '"' ) , '"' . trim( json_encode( trim ( $new_url, '"')), '"' )  ,$text   );
+                            
                             $text   =   str_ireplace(    trim( urlencode(trim( $old_url, '"')), '"' ) ,  trim( urlencode(trim ( $new_url, '"')), '"' )  ,$text   );
                         }
                              
@@ -2449,6 +2456,46 @@
                     
                     do_action('wp-hide/after_cache_clear');
                     
+                }
+                
+                
+            
+            /**
+            * Clear any cache plugins
+            *     
+            */
+            function site_cache_clear()
+                {
+                    if (function_exists('wp_cache_clear_cache'))
+                        wp_cache_clear_cache();
+                    
+                    if (function_exists('w3tc_flush_all'))
+                        w3tc_flush_all();
+                        
+                    if (function_exists('opcache_reset')    &&  ! ini_get( 'opcache.restrict_api' ) )
+                        @opcache_reset();
+                    
+                    if ( function_exists( 'rocket_clean_domain' ) )
+                        rocket_clean_domain();
+                
+                    global $wp_fastest_cache;
+                    if ( method_exists( 'WpFastestCache', 'deleteCache' ) && !empty( $wp_fastest_cache ) )
+                        $wp_fastest_cache->deleteCache();
+                
+                    //If your host has installed APC cache this plugin allows you to clear the cache from within WordPress
+                    if (function_exists('apc_clear_cache'))
+                        apc_clear_cache();
+
+                    //WPEngine
+                    if ( class_exists( 'WpeCommon' ) ) 
+                        {
+                            if ( method_exists( 'WpeCommon', 'purge_memcached' ) )
+                                WpeCommon::purge_memcached();
+                            if ( method_exists( 'WpeCommon', 'clear_maxcdn_cache' ) )
+                                WpeCommon::clear_maxcdn_cache();
+                            if ( method_exists( 'WpeCommon', 'purge_varnish_cache' ) )
+                                WpeCommon::purge_varnish_cache();
+                        }   
                 }
                 
                 

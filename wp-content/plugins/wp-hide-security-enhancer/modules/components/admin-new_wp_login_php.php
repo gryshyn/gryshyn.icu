@@ -17,7 +17,7 @@
                                                                     'description'   =>  array(
                                                                                                 __('Map a new wp-login.php instead default. This also need to include <i>.php</i> extension.',  'wp-hide-security-enhancer') . '<br />'
                                                                                                 . __('More details can be found at',    'wp-hide-security-enhancer') .' <a href="http://www.wp-hide.com/documentation/admin-change-wp-login-php/" target="_blank">Link</a>',
-                                                                                                '<div class="notice-error"><div class="dashicons dashicons-warning important" alt="f534">'. __('warning',    'wp-hide-security-enhancer') .'</div> <span class="important">' . __('Make sure your log-in url is not already modified by another plugin or theme. In such case, you should disable other code and take advantage of these features. More details at ',  'wp-hide-security-enhancer') . '<a target="_blank" href="http://www.wp-hide.com/login-conflicts/">'. __('Login Conflicts',    'wp-hide-security-enhancer') .'</a></span></div>'
+                                                                                                '<div class="notice-error"><span class="important"><span class="dashicons dashicons-warning important" alt="f534">'. __('warning',    'wp-hide-security-enhancer') .'</span> ' . __('Make sure your log-in url is not already modified by another plugin or theme. In such case, you should disable other code and take advantage of these features. More details at ',  'wp-hide-security-enhancer') . '<a target="_blank" href="http://www.wp-hide.com/login-conflicts/">'. __('Login Conflicts',    'wp-hide-security-enhancer') .'</a></span></div>'
                                                                                                 
                                                                                                 ),
                                                                     'input_type'    =>  'text',
@@ -30,7 +30,7 @@
                     $this->module_settings[]                  =   array(
                                                                     'id'            =>  'block_default_wp_login_php',
                                                                     'label'         =>  __('Block default wp-login.php',    'wp-hide-security-enhancer'),
-                                                                    'description'   =>  __('Block default wp-login.php file from being accesible.',  'wp-hide-security-enhancer'),
+                                                                    'description'   =>  '<span class="important">'. __('Ensure the above option works correctly on your server before activate this.',    'wp-hide-security-enhancer') .'</span><br />' . __('Block default wp-login.php file from being accesible.',  'wp-hide-security-enhancer'),
                                                                     
                                                                     'input_type'    =>  'radio',
                                                                     'options'       =>  array(

@@ -497,6 +497,58 @@
                         
                         }
                         
+                        
+                    //output any other errors message
+                    $process_errors  =   get_transient( 'wph-process_set_static_environment_errors' );
+                    if  (  is_array( $process_errors )  &&  count ( $process_errors ) > 0 )
+                        {
+                            $found_warnings     =   FALSE;
+                            $found_errors       =   FALSE;
+                            
+                            if( is_array($process_errors )    &&  count($process_errors ) > 0)
+                                {
+                                    foreach ( $process_errors     as  $process_interface_save_error )
+                                        {
+                                            if($process_interface_save_error['type']    === 'warning')
+                                                $found_warnings =   TRUE;
+                                                
+                                            if($process_interface_save_error['type']    === 'error')
+                                                $found_errors   =   TRUE;
+                                        }
+                                    
+                                }
+                            
+                            //display the warnings
+                            if( $found_warnings  === TRUE )
+                                {
+                                    echo "<div class='notice notice-warning'><p>";
+                                    foreach ( $process_errors     as  $process_interface_save_error )
+                                        {
+                                            if($process_interface_save_error['type']    == 'warning')
+                                                {
+                                                    echo $process_interface_save_error['message'] .'<br />';
+                                                }
+                                        }
+                                    echo "</p></div>";
+                                }
+                                
+                            //display the errors
+                            if( $found_errors  === TRUE )
+                                {
+                                    echo "<div class='notice notice-error'><p>";
+                                    foreach ( $process_errors     as  $process_interface_save_error )
+                                        {
+                                            if($process_interface_save_error['type']    == 'error')
+                                                {
+                                                    echo $process_interface_save_error['message'] .'<br />';
+                                                }
+                                        }
+                                    echo "</p></div>";
+                                }   
+                            
+                            
+                        }
+                        
                 }
                         
             /**
@@ -735,39 +787,7 @@
                     //allow rewrite
                     flush_rewrite_rules(); 
                     
-                    /**
-                    * Clear any cache plugins
-                    */
-                    if (function_exists('wp_cache_clear_cache'))
-                        wp_cache_clear_cache();
-                    
-                    if (function_exists('w3tc_flush_all'))
-                        w3tc_flush_all();
-                        
-                    if (function_exists('opcache_reset'))
-                        opcache_reset();
-                    
-                    if ( function_exists( 'rocket_clean_domain' ) )
-                        rocket_clean_domain();
-                
-                    global $wp_fastest_cache;
-                    if ( method_exists( 'WpFastestCache', 'deleteCache' ) && !empty( $wp_fastest_cache ) )
-                        $wp_fastest_cache->deleteCache();
-                
-                    //If your host has installed APC cache this plugin allows you to clear the cache from within WordPress
-                    if (function_exists('apc_clear_cache'))
-                        apc_clear_cache();
-
-                    //WPEngine
-                    if ( class_exists( 'WpeCommon' ) ) 
-                        {
-                            if ( method_exists( 'WpeCommon', 'purge_memcached' ) )
-                                WpeCommon::purge_memcached();
-                            if ( method_exists( 'WpeCommon', 'clear_maxcdn_cache' ) )
-                                WpeCommon::clear_maxcdn_cache();
-                            if ( method_exists( 'WpeCommon', 'purge_varnish_cache' ) )
-                                WpeCommon::purge_varnish_cache();
-                        }
+                    $this->functions->site_cache_clear();
                     
                 }
                 
@@ -825,7 +845,11 @@
                             
                             //if nothing has changed exit
                             if ( $environment_variable   ==  json_encode($_environment_variable) )
-                                return;
+                                {
+                                    //delete any error notice   
+                                    delete_transient( 'wph-process_set_static_environment_errors' );
+                                    return;
+                                }
                         }
                          
                     global $wp_filesystem;
@@ -846,14 +870,39 @@
                     
                     $file_data = ob_get_contents();
                     ob_end_clean();
-                        
-                    if( ! $wp_filesystem->put_contents( WPH_PATH . 'router/environment.php', $file_data , FS_CHMOD_FILE) ) 
+                    
+                    $process_interface_save_errors  =   array();
+                    
+                    if ( is_wp_error( $wp_filesystem->errors ) && $wp_filesystem->errors->get_error_code() )
                         {
-                            $process_interface_save_errors  =   get_transient( 'wph-process_interface_save_errors' );
-                            delete_transient( 'wph-process_interface_save_errors' );
+                            delete_transient( 'wph-process_set_static_environment_errors' );
+                                             
+                            $process_interface_save_errors[]    =   array(  'type'      =>  'error',
+                                                                            'message'   =>  __('Unable to create environment static file. The system returned the following error: ', 'wp-hide-security-enhancer') . implode(". ", $wp_filesystem->errors->get_error_messages() ) .
+                                                                                        '<br /><b>Remove description header from Style file</b> and <b>Child - Remove description header from Style file</b> ' . __('will not work correctly, so where turned off.', 'wp-hide-security-enhancer')
+                                                                                    );
+                            set_transient( 'wph-process_set_static_environment_errors', $process_interface_save_errors, 0 );
+                            
+                            //disable certain options
+                            $this->settings['module_settings']['style_file_clean']          =   'no';
+                            $this->settings['module_settings']['child_style_file_clean']    =   'no';
+                            
+                            //save the new options
+                            $this->functions->update_settings($this->settings);
+                            
+                            //regenerate permalinks
+                            $this->settings_changed();
+                            
+                            return;   
+                        }
+                        
+                    if ( ! $wp_filesystem->put_contents( WPH_PATH . 'router/environment.php', $file_data , FS_CHMOD_FILE) ) 
+                        {
+
+                            delete_transient( 'wph-process_set_static_environment_errors' );
                             
                             $process_interface_save_errors[]    =   array(  'type'      =>  'error',
-                                                                            'message'   =>  __('Unable to create environment static file. Is ', 'wp-hide-security-enhancer') . WPH_PATH . 'router/ ' . __('writable', 'wp-hide-security-enhancer') . '? <b>Remove description header from Style file</b> and <b>Child - Remove description header from Style file</b> ' . __('will not work correctly, so where turned off.', 'wp-hide-security-enhancer')
+                                                                            'message'   =>  __('Unable to create environment static file. Is ', 'wp-hide-security-enhancer') . WPH_PATH . 'router/ ' . __('writable', 'wp-hide-security-enhancer') . '? <br /><b>Remove description header from Style file</b> and <b>Child - Remove description header from Style file</b> ' . __('will not work correctly, so where turned off.', 'wp-hide-security-enhancer')
                                                                                     );
                             
                             //disable certain options
@@ -866,7 +915,12 @@
                             //regenerate permalinks
                             $this->settings_changed();
                             
-                            set_transient( 'wph-process_interface_save_errors', $process_interface_save_errors, HOUR_IN_SECONDS );
+                            set_transient( 'wph-process_set_static_environment_errors', $process_interface_save_errors, 0 );
+                        }
+                        else
+                        {
+                            //delete any error notice   
+                            delete_transient( 'wph-process_set_static_environment_errors' );
                         }
                
 

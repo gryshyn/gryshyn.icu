@@ -28,7 +28,7 @@
                     $this->module_settings[]                  =   array(
                                                                     'id'            =>  'block_wp_content_path',
                                                                     'label'         =>  __('Block wp-content URL',    'wp-hide-security-enhancer'),
-                                                                    'description'   =>  __('Block default content path. Your default wp-content path is set to',    'wp-hide-security-enhancer') . ' <strong>'.   $this->wph->default_variables['content_directory'] .'</strong>
+                                                                    'description'   =>  '<span class="important">'. __('Ensure the above option works correctly on your server before activate this.',    'wp-hide-security-enhancer') .'</span><br />'. __('Block default content path. Your default wp-content path is set to',    'wp-hide-security-enhancer') . ' <strong>'.   $this->wph->default_variables['content_directory'] .'</strong>
                                                                                          '. __('Apply only if <b>New Content Path</b> is not empty. It block only for non loged-in users.',    'wp-hide-security-enhancer'),
                                                                     
                                                                     'input_type'    =>  'radio',

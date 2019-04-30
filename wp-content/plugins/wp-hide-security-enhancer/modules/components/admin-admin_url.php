@@ -29,7 +29,7 @@
                                                                         'id'            =>  'block_default_admin_url',
                                                                         'label'         =>  __('Block default Admin Url',    'wp-hide-security-enhancer'),
                                                                         'description'   =>  array(
-                                                                                                    __('Block default admin url and files from being accesible.',  'wp-hide-security-enhancer')
+                                                                                                    '<span class="important">'. __('Ensure the above option works correctly on your server before activate this.',    'wp-hide-security-enhancer') .'</span><br />' . __('Block default admin url and files from being accesible.',  'wp-hide-security-enhancer')
                                                                                                     ),
                                                                         'input_type'    =>  'radio',
                                                                         'options'       =>  array(
